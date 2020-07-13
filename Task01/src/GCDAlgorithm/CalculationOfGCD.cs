@@ -28,15 +28,6 @@ namespace GCDAlgorithm
             return euclidGcdForFourNumbers;
         }
 
-        public static int GetEuclidGcd(int numOne, int numTwo, int numThree, int numFour, int numFive)
-        {
-            int euclidGcdForTwoNumbers = GetEuclidGcdForTwoNumbers(numOne, numTwo);
-            int euclidGcdForThreeNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForTwoNumbers, numThree);
-            int euclidGcdForFourNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForThreeNumbers, numFour);
-            int euclidGcdForFiveNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForFourNumbers, numFive);
-            return euclidGcdForFiveNumbers;
-        }
-
         private static int GetEuclidGcdForTwoNumbers(int numOne, int numTwo)
         {
             while (numTwo != 0)
