@@ -16,7 +16,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualEuclidGcd;
             //Act
-            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo);
+            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
@@ -31,7 +31,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualEuclidGcd;
             //Act
-            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo);
+            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
@@ -46,7 +46,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualEuclidGcd;
             //Act
-            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo);
+            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
@@ -61,7 +61,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualEuclidGcd;
             //Act
-            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree);
+            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
@@ -76,7 +76,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualEuclidGcd;
             //Act
-            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree);
+            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
@@ -91,7 +91,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualEuclidGcd;
             //Act
-            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree);
+            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
@@ -106,7 +106,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualEuclidGcd;
             //Act
-            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree, numFour);
+            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree, numFour, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
@@ -121,7 +121,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualEuclidGcd;
             //Act
-            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree, numFour);
+            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree, numFour, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
@@ -136,7 +136,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualEuclidGcd;
             //Act
-            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree, numFour);
+            actualEuclidGcd = CalculationOfGCD.GetEuclidGcd(numOne, numTwo, numThree, numFour, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
@@ -152,7 +152,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualBinaryGcd;
             //Act
-            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo);
+            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
@@ -167,7 +167,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualBinaryGcd;
             //Act
-            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo);
+            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
@@ -182,7 +182,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualBinaryGcd;
             //Act
-            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo);
+            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
@@ -197,7 +197,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualBinaryGcd;
             //Act
-            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree);
+            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
@@ -212,7 +212,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualBinaryGcd;
             //Act
-            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree);
+            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
@@ -227,7 +227,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualBinaryGcd;
             //Act
-            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree);
+            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
@@ -242,7 +242,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualBinaryGcd;
             //Act
-            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree, numFour);
+            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree, numFour, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
@@ -257,7 +257,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualBinaryGcd;
             //Act
-            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree, numFour);
+            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree, numFour, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
@@ -272,7 +272,7 @@ namespace GCDAlgorithmTests
             //Arrange
             int actualBinaryGcd;
             //Act
-            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree, numFour);
+            actualBinaryGcd = CalculationOfGCD.GetBinaryGcd(numOne, numTwo, numThree, numFour, out double totalMs);
             //Assert
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }

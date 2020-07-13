@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace GCDAlgorithm
 {
@@ -7,25 +8,71 @@ namespace GCDAlgorithm
     /// </summary>
     public static class CalculationOfGCD
     {
-        public static int GetEuclidGcd(int numOne, int numTwo)
+        public static int GetEuclidGcd(int numOne, int numTwo, out double totalMs)
         {
+            Stopwatch stopwatch = Stopwatch.StartNew();
             int euclidGcdForTwoNumbers = GetEuclidGcdForTwoNumbers(numOne, numTwo);
+            stopwatch.Stop();
+
+            totalMs = stopwatch.Elapsed.TotalMilliseconds;
+            
             return euclidGcdForTwoNumbers;
         }
 
-        public static int GetEuclidGcd(int numOne, int numTwo, int numThree)
+        public static int GetEuclidGcd(int numOne, int numTwo, int numThree, out double totalMs)
         {
+            Stopwatch stopwatch = Stopwatch.StartNew();
             int euclidGcdForTwoNumbers = GetEuclidGcdForTwoNumbers(numOne, numTwo);
             int euclidGcdForThreeNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForTwoNumbers, numThree);
+
+            totalMs = stopwatch.Elapsed.TotalMilliseconds;
+
             return euclidGcdForThreeNumbers;
         }
 
-        public static int GetEuclidGcd(int numOne, int numTwo, int numThree, int numFour)
+        public static int GetEuclidGcd(int numOne, int numTwo, int numThree, int numFour, out double totalMs)
         {
+            Stopwatch stopwatch = Stopwatch.StartNew();
             int euclidGcdForTwoNumbers = GetEuclidGcdForTwoNumbers(numOne, numTwo);
             int euclidGcdForThreeNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForTwoNumbers, numThree);
             int euclidGcdForFourNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForThreeNumbers, numFour);
+           
+            totalMs = stopwatch.Elapsed.TotalMilliseconds;
+
             return euclidGcdForFourNumbers;
+        }
+
+        public static int GetBinaryGcd(int numOne, int numTwo, out double totalMs)
+        {
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            int binaryGcdForTwoNum = GetBinaryGcdForTwoNum(numOne, numTwo);
+
+            totalMs = stopwatch.Elapsed.TotalMilliseconds;
+
+            return binaryGcdForTwoNum;
+        }
+
+        public static int GetBinaryGcd(int numOne, int numTwo, int numThree, out double totalMs)
+        {
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            int binaryGcdForTwoNum = GetBinaryGcdForTwoNum(numOne, numTwo);
+            int binaryGcdForThreeNum = GetBinaryGcdForTwoNum(binaryGcdForTwoNum, numThree);
+
+            totalMs = stopwatch.Elapsed.TotalMilliseconds;
+
+            return binaryGcdForThreeNum;
+        }
+
+        public static int GetBinaryGcd(int numOne, int numTwo, int numThree, int numFour, out double totalMs)
+        {
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            int binaryGcdForTwoNum = GetBinaryGcdForTwoNum(numOne, numTwo);
+            int binaryGcdForThreeNum = GetBinaryGcdForTwoNum(binaryGcdForTwoNum, numThree);
+            int binaryGcdForFourNum = GetBinaryGcdForTwoNum(binaryGcdForThreeNum, numFour);
+
+            totalMs = stopwatch.Elapsed.TotalMilliseconds;
+
+            return binaryGcdForFourNum;
         }
 
         private static int GetEuclidGcdForTwoNumbers(int numOne, int numTwo)
@@ -33,27 +80,6 @@ namespace GCDAlgorithm
             while (numTwo != 0)
                 numTwo = numOne % (numOne = numTwo);
             return Math.Abs(numOne);
-        }
-
-        public static int GetBinaryGcd(int numOne, int numTwo)
-        {
-            int binaryGcdForTwoNum = GetBinaryGcdForTwoNum(numOne, numTwo);
-            return binaryGcdForTwoNum;
-        }
-
-        public static int GetBinaryGcd(int numOne, int numTwo, int numThree)
-        {
-            int binaryGcdForTwoNum = GetBinaryGcdForTwoNum(numOne, numTwo);
-            int binaryGcdForThreeNum = GetBinaryGcdForTwoNum(binaryGcdForTwoNum, numThree);
-            return binaryGcdForThreeNum;
-        }
-
-        public static int GetBinaryGcd(int numOne, int numTwo, int numThree, int numFour)
-        {
-            int binaryGcdForTwoNum = GetBinaryGcdForTwoNum(numOne, numTwo);
-            int binaryGcdForThreeNum = GetBinaryGcdForTwoNum(binaryGcdForTwoNum, numThree);
-            int binaryGcdForFourNum = GetBinaryGcdForTwoNum(binaryGcdForThreeNum, numFour);
-            return binaryGcdForFourNum;
         }
 
         private static int GetBinaryGcdForTwoNum(int numbOne, int numbTwo)
