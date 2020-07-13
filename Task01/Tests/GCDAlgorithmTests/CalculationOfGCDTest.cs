@@ -3,9 +3,18 @@ using NUnit.Framework;
 
 namespace GCDAlgorithmTests
 {
+    /// <summary>
+    /// Class for testing CalculationOfGCDTest methods.
+    /// </summary>
     [TestFixture()]
     public class CalculationOfGCDTest
     {
+        /// <summary>
+        /// Testing the GetEuclidGcd method with two parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(1, 2, 1)]
         [TestCase(10, 0, 10)]
         [TestCase(100000, 27, 1)]
@@ -21,6 +30,12 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
 
+        /// <summary>
+        /// Testing the GetEuclidGcd method with two parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, -2, 1)]
         [TestCase(-10, 0, 10)]
         [TestCase(-100000, -27, 1)]
@@ -36,6 +51,12 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
 
+        /// <summary>
+        /// Testing the GetEuclidGcd method with two parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, 2, 1)]
         [TestCase(-10, 0, 10)]
         [TestCase(100000, -27, 1)]
@@ -51,6 +72,13 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
 
+        /// <summary>
+        /// Testing the GetEuclidGcd method with three parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(1, 2, 1, 1)]
         [TestCase(10, 0, 10, 10)]
         [TestCase(100000, 27, 1, 1)]
@@ -66,6 +94,13 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
 
+        /// <summary>
+        /// Testing the GetEuclidGcd method with three parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, -2, -1, 1)]
         [TestCase(-10, 0, -10, 10)]
         [TestCase(-100000, -27, -1, 1)]
@@ -81,6 +116,13 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
 
+        /// <summary>
+        /// Testing the GetEuclidGcd method with three parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, 2, 1, 1)]
         [TestCase(-10, 0, 10, 10)]
         [TestCase(100000, -27, 1, 1)]
@@ -96,6 +138,14 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
 
+        /// <summary>
+        /// Testing the GetEuclidGcd method with four parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="numFour">The fourth parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(1, 2, 1, 1, 1)]
         [TestCase(10, 0, 10, 10, 10)]
         [TestCase(100000, 27, 1, 1, 1)]
@@ -111,6 +161,14 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
 
+        /// <summary>
+        /// Testing the GetEuclidGcd method with four parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="numFour">The fourth parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, -2, -1, -1, 1)]
         [TestCase(-10, 0, -10, -10, 10)]
         [TestCase(-100000, -27, -1, -1, 1)]
@@ -126,6 +184,14 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
 
+        /// <summary>
+        /// Testing the GetEuclidGcd method with four parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="numFour">The fourth parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, 2, 1, 1, 1)]
         [TestCase(-10, 0, 10, 10, 10)]
         [TestCase(100000, -27, 1, 1, 1)]
@@ -141,7 +207,12 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualEuclidGcd);
         }
 
-
+        /// <summary>
+        /// Testing the GetBinaryGcd method with two parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(1, 2, 1)]
         [TestCase(10, 0, 10)]
         [TestCase(100000, 27, 1)]
@@ -157,6 +228,12 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
 
+        /// <summary>
+        /// Testing the GetBinaryGcd method with two parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, -2, 1)]
         [TestCase(-10, 0, 10)]
         [TestCase(-100000, -27, 1)]
@@ -172,6 +249,12 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
 
+        /// <summary>
+        /// Testing the GetBinaryGcd method with two parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, 2, 1)]
         [TestCase(-10, 0, 10)]
         [TestCase(100000, -27, 1)]
@@ -187,6 +270,13 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
 
+        /// <summary>
+        /// Testing the GetBinaryGcd method with three parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(1, 2, 1, 1)]
         [TestCase(10, 0, 10, 10)]
         [TestCase(100000, 27, 1, 1)]
@@ -202,6 +292,13 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
 
+        /// <summary>
+        /// Testing the GetBinaryGcd method with three parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, -2, -1, 1)]
         [TestCase(-10, 0, -10, 10)]
         [TestCase(-100000, -27, -1, 1)]
@@ -217,6 +314,13 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
 
+        /// <summary>
+        /// Testing the GetBinaryGcd method with three parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, 2, 1, 1)]
         [TestCase(-10, 0, 10, 10)]
         [TestCase(100000, -27, 1, 1)]
@@ -232,6 +336,14 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
 
+        /// <summary>
+        /// Testing the GetBinaryGcd method with four parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="numFour">The fourth parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(1, 2, 1, 1, 1)]
         [TestCase(10, 0, 10, 10, 10)]
         [TestCase(100000, 27, 1, 1, 1)]
@@ -247,6 +359,14 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
 
+        /// <summary>
+        /// Testing the GetBinaryGcd method with four parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="numFour">The fourth parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, -2, -1, -1, 1)]
         [TestCase(-10, 0, -10, -10, 10)]
         [TestCase(-100000, -27, -1, -1, 1)]
@@ -262,6 +382,14 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
 
+        /// <summary>
+        /// Testing the GetBinaryGcd method with four parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="numFour">The fourth parameter.</param>
+        /// <param name="expectedResult">Expected result is positive number.</param>
         [TestCase(-1, 2, 1, 1, 1)]
         [TestCase(-10, 0, 10, 10, 10)]
         [TestCase(100000, -27, 1, 1, 1)]
@@ -277,6 +405,14 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
 
+        /// <summary>
+        /// Testing the PrepareDataForHistogram method with four parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="numFour">The fourth parameter.</param>
+        /// <param name="expectedResult">Expected result is true.</param>
         [TestCase(-1, -2, -1, -1, true)]
         [TestCase(-10, 0, -10, -10, true)]
         [TestCase(-100000, -27, -1, -1, true)]
@@ -297,6 +433,15 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualIsPrepeared);
         }
 
+        /// <summary>
+        /// Testing the PrepareDataForHistogram method with five parameters.
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="numFour">The fourth parameter.</param>
+        /// <param name="numFive">The fifth parameter.</param>
+        /// <param name="expectedResult">Expected result is false.</param>
         [TestCase(16, -100000, 16, 16, 10, false)]
         public void PrepareDataForHistogram_ForFiveNubmers_OutIsFalse(int numOne, int numTwo, int numThree, int numFour, int numFive, bool expectedResult)
         {
@@ -308,6 +453,10 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualIsPrepeared);
         }
 
+        /// <summary>
+        /// Testing the PrepareDataForHistogram method.
+        /// </summary>
+        /// <param name="expectedResult">Expected result is false.</param>
         [TestCase(false)]
         public void PrepareDataForHistogram_ForZeroNumbers_OutIsFalse(bool expectedResult)
         {

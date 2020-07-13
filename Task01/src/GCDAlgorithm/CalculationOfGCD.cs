@@ -1,17 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace GCDAlgorithm
 {
     /// <summary>
-    /// 
+    /// Static class, which includes a set of methods for calculating the GCD.
     /// </summary>
     public static class CalculationOfGCD
     {
+        /// <summary>
+        /// Minimum number of parameters for building a histogram.
+        /// </summary>
         public const int MinGcdNum = 2;
+
+        /// <summary>
+        /// Maximum number of parameters for building a histogram.
+        /// </summary>
         public const int MaxGcdNum = 4;
 
+        /// <summary>
+        /// The method calculates the GCD in a Euclid way for four two. 
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="totalMs">The time taken to execute the method in milliseconds.</param>
+        /// <returns>The greatest common divisor.</returns>
         public static int GetEuclidGcd(int numOne, int numTwo, out double totalMs)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
@@ -23,6 +36,14 @@ namespace GCDAlgorithm
             return euclidGcdForTwoNumbers;
         }
 
+        /// <summary>
+        /// The method calculates the GCD in a Euclid way for four three. 
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="totalMs">The time taken to execute the method in milliseconds.</param>
+        /// <returns>The greatest common divisor.</returns>
         public static int GetEuclidGcd(int numOne, int numTwo, int numThree, out double totalMs)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
@@ -34,6 +55,15 @@ namespace GCDAlgorithm
             return euclidGcdForThreeNumbers;
         }
 
+        /// <summary>
+        /// The method calculates the GCD in a Euclid way for four parameters. 
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="numFour">The fourth parameter.</param>
+        /// <param name="totalMs">The time taken to execute the method in milliseconds.</param>
+        /// <returns>The greatest common divisor.</returns>
         public static int GetEuclidGcd(int numOne, int numTwo, int numThree, int numFour, out double totalMs)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
@@ -46,6 +76,13 @@ namespace GCDAlgorithm
             return euclidGcdForFourNumbers;
         }
 
+        /// <summary>
+        /// The method calculates the GCD in a Binary way for two parameters. 
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="totalMs">The time taken to execute the method in milliseconds.</param>
+        /// <returns>The greatest common divisor.</returns>
         public static int GetBinaryGcd(int numOne, int numTwo, out double totalMs)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
@@ -56,6 +93,14 @@ namespace GCDAlgorithm
             return binaryGcdForTwoNum;
         }
 
+        /// <summary>
+        /// The method calculates the GCD in a Binary way for three parameters. 
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="totalMs">The time taken to execute the method in milliseconds.</param>
+        /// <returns>The greatest common divisor.</returns>
         public static int GetBinaryGcd(int numOne, int numTwo, int numThree, out double totalMs)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
@@ -67,6 +112,15 @@ namespace GCDAlgorithm
             return binaryGcdForThreeNum;
         }
 
+        /// <summary>
+        /// The method calculates the GCD in a Binary way for four parameters. 
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <param name="numThree">The third parameter.</param>
+        /// <param name="numFour">The fourth parameter.</param>
+        /// <param name="totalMs">The time taken to execute the method in milliseconds.</param>
+        /// <returns>The greatest common divisor.</returns>
         public static int GetBinaryGcd(int numOne, int numTwo, int numThree, int numFour, out double totalMs)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
@@ -79,51 +133,11 @@ namespace GCDAlgorithm
             return binaryGcdForFourNum;
         }
 
-        private static int GetEuclidGcdForTwoNumbers(int numOne, int numTwo)
-        {
-            while (numTwo != 0)
-                numTwo = numOne % (numOne = numTwo);
-            return Math.Abs(numOne);
-        }
-
-        private static int GetBinaryGcdForTwoNum(int numbOne, int numbTwo)
-        {
-            numbOne = Math.Abs(numbOne);
-            numbTwo = Math.Abs(numbTwo);
-
-            if (numbOne == 0)
-                return numbTwo;
-
-            if (numbTwo == 0)
-                return numbOne;
-
-            int k;
-
-            for (k = 0; ((numbOne | numbTwo) & 1) == 0; ++k)
-            {
-                numbOne >>= 1;
-                numbTwo >>= 1;
-            }
-
-            while ((numbOne & 1) == 0)
-                numbOne >>= 1;
-            do
-            {
-                while ((numbTwo & 1) == 0)
-                    numbTwo >>= 1;
-                if (numbOne > numbTwo)
-                {
-                    int temp = numbOne;
-                    numbOne = numbTwo;
-                    numbTwo = temp;
-                }
-                numbTwo = (numbTwo - numbOne);
-            } 
-            while (numbTwo != 0);
-
-            return numbOne << k;
-        }
-
+        /// <summary>
+        /// Method preparing data for building histograms.
+        /// </summary>
+        /// <param name="numbers">Parameters for calculating the GCD. The minimum number of parameters is two, and the maximum is 4.</param>
+        /// <returns>Returns a boolean expression. Where: true is prepared; false isn't prepeared.</returns>
         public static bool PrepareDataForHistogram(params Int32[] numbers)
         {
             double totalMsForEuclidGcd;
@@ -132,28 +146,29 @@ namespace GCDAlgorithm
 
             if (numbers != null & numbers.Length >= MinGcdNum & numbers.Length <= MaxGcdNum)
             {
-                string s = string.Format("{0,45} {1,11}", "Euclid", "Binary") + Environment.NewLine;
+                string s = $"{"Euclid",45} {"Binary",11}" + Environment.NewLine;
 
                 for (int i = MinGcdNum; i <= numbers.Length; i++)
                 {
-                    string numParams = "Number of Gcd parameters: " + i.ToString();
+                    string numParams = $"Number of Gcd parameters: {i.ToString() }";
+
                     if (i == MinGcdNum)
                     {
                         GetEuclidGcd(numbers[0], numbers[1], out totalMsForEuclidGcd);
                         GetBinaryGcd(numbers[0], numbers[1], out totalMsForBinaryGcd);
-                        s += string.Format("{0};{1,7:N4} ms {2, 7:N4} ms", numParams, totalMsForEuclidGcd, totalMsForBinaryGcd) + Environment.NewLine;
+                        s += $"{numParams};{totalMsForEuclidGcd,7:N4} ms {totalMsForBinaryGcd, 7:N4} ms" + Environment.NewLine;
                     }
                     else if (i == 3)
                     {
                         GetEuclidGcd(numbers[0], numbers[1], numbers[2], out totalMsForEuclidGcd);
                         GetBinaryGcd(numbers[0], numbers[1], numbers[2], out totalMsForBinaryGcd);
-                        s += string.Format("{0};{1,7:N4} ms {2, 7:N4} ms", numParams, totalMsForEuclidGcd, totalMsForBinaryGcd) + Environment.NewLine;
+                        s += $"{numParams};{totalMsForEuclidGcd,7:N4} ms {totalMsForBinaryGcd, 7:N4} ms" + Environment.NewLine;
                     }
                     else if (i == MaxGcdNum)
                     {
                         GetEuclidGcd(numbers[0], numbers[1], numbers[2], numbers[3], out totalMsForEuclidGcd);
                         GetBinaryGcd(numbers[0], numbers[1], numbers[2], numbers[3], out totalMsForBinaryGcd);
-                        s += string.Format("{0};{1,7:N4} ms {2, 7:N4} ms", numParams, totalMsForEuclidGcd, totalMsForBinaryGcd);
+                        s += $"{numParams};{totalMsForEuclidGcd,7:N4} ms {totalMsForBinaryGcd, 7:N4} ms";
                     }
                 }
 
@@ -162,5 +177,63 @@ namespace GCDAlgorithm
 
             return isPrepeared;
         }
+
+        /// <summary>
+        /// The method calculates the GCD in a Euclid way for four two. 
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <returns>The greatest common divisor.</returns>
+        private static int GetEuclidGcdForTwoNumbers(int numOne, int numTwo)
+        {
+            while (numTwo != 0)
+                numTwo = numOne % (numOne = numTwo);
+            return Math.Abs(numOne);
+        }
+
+        /// <summary>
+        /// The method calculates the GCD in a Binary way for four two. 
+        /// </summary>
+        /// <param name="numOne">The first parameter.</param>
+        /// <param name="numTwo">The second parameter.</param>
+        /// <returns>The greatest common divisor.</returns>
+        private static int GetBinaryGcdForTwoNum(int numOne, int numTwo)
+        {
+            numOne = Math.Abs(numOne);
+            numTwo = Math.Abs(numTwo);
+
+            if (numOne == 0)
+                return numTwo;
+
+            if (numTwo == 0)
+                return numOne;
+
+            int k;
+
+            for (k = 0; ((numOne | numTwo) & 1) == 0; ++k)
+            {
+                numOne >>= 1;
+                numTwo >>= 1;
+            }
+
+            while ((numOne & 1) == 0)
+                numOne >>= 1;
+            do
+            {
+                while ((numTwo & 1) == 0)
+                    numTwo >>= 1;
+                if (numOne > numTwo)
+                {
+                    int temp = numOne;
+                    numOne = numTwo;
+                    numTwo = temp;
+                }
+                numTwo = (numTwo - numOne);
+            } 
+            while (numTwo != 0);
+
+            return numOne << k;
+        }
+
     }
 }
