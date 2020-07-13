@@ -4,5 +4,10 @@
         <name>GCDAlgorithm</name>
     </assembly>
     <members>
+        <member name="T:GCDAlgorithm.CalculationOfGCD">
+            <summary>
+            
+            </summary>
+        </member>
     </members>
 </doc>

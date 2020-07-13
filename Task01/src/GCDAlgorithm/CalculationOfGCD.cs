@@ -1,16 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 
 namespace GCDAlgorithm
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class CalculationOfGCD
     {
         public static int GetEuclidGcd(int numOne, int numTwo)
         {
-            int GcdForTwoNumbers = GetEuclidGcdForTwoNumbers(numOne, numTwo);
-            return GcdForTwoNumbers;
+            int euclidGcdForTwoNumbers = GetEuclidGcdForTwoNumbers(numOne, numTwo);
+            return euclidGcdForTwoNumbers;
+        }
+
+        public static int GetEuclidGcd(int numOne, int numTwo, int numThree)
+        {
+            int euclidGcdForTwoNumbers = GetEuclidGcdForTwoNumbers(numOne, numTwo);
+            int euclidGcdForThreeNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForTwoNumbers, numThree);
+            return euclidGcdForThreeNumbers;
+        }
+
+        public static int GetEuclidGcd(int numOne, int numTwo, int numThree, int numFour)
+        {
+            int euclidGcdForTwoNumbers = GetEuclidGcdForTwoNumbers(numOne, numTwo);
+            int euclidGcdForThreeNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForTwoNumbers, numThree);
+            int euclidGcdForFourNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForThreeNumbers, numFour);
+            return euclidGcdForFourNumbers;
+        }
+
+        public static int GetEuclidGcd(int numOne, int numTwo, int numThree, int numFour, int numFive)
+        {
+            int euclidGcdForTwoNumbers = GetEuclidGcdForTwoNumbers(numOne, numTwo);
+            int euclidGcdForThreeNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForTwoNumbers, numThree);
+            int euclidGcdForFourNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForThreeNumbers, numFour);
+            int euclidGcdForFiveNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForFourNumbers, numFive);
+            return euclidGcdForFiveNumbers;
         }
 
         private static int GetEuclidGcdForTwoNumbers(int numOne, int numTwo)
