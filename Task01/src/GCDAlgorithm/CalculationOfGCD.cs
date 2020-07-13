@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace GCDAlgorithm
@@ -8,6 +9,9 @@ namespace GCDAlgorithm
     /// </summary>
     public static class CalculationOfGCD
     {
+        public const int MinGcdNum = 2;
+        public const int MaxGcdNum = 4;
+
         public static int GetEuclidGcd(int numOne, int numTwo, out double totalMs)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
@@ -120,5 +124,43 @@ namespace GCDAlgorithm
             return numbOne << k;
         }
 
+        public static bool PrepareDataForHistogram(params Int32[] numbers)
+        {
+            double totalMsForEuclidGcd;
+            double totalMsForBinaryGcd;
+            bool isPrepeared = false;
+
+            if (numbers != null & numbers.Length >= MinGcdNum & numbers.Length <= MaxGcdNum)
+            {
+                string s = string.Format("{0,45} {1,11}", "Euclid", "Binary") + Environment.NewLine;
+
+                for (int i = MinGcdNum; i <= numbers.Length; i++)
+                {
+                    string numParams = "Number of Gcd parameters: " + i.ToString();
+                    if (i == MinGcdNum)
+                    {
+                        GetEuclidGcd(numbers[0], numbers[1], out totalMsForEuclidGcd);
+                        GetBinaryGcd(numbers[0], numbers[1], out totalMsForBinaryGcd);
+                        s += string.Format("{0};{1,7:N4} ms {2, 7:N4} ms", numParams, totalMsForEuclidGcd, totalMsForBinaryGcd) + Environment.NewLine;
+                    }
+                    else if (i == 3)
+                    {
+                        GetEuclidGcd(numbers[0], numbers[1], numbers[2], out totalMsForEuclidGcd);
+                        GetBinaryGcd(numbers[0], numbers[1], numbers[2], out totalMsForBinaryGcd);
+                        s += string.Format("{0};{1,7:N4} ms {2, 7:N4} ms", numParams, totalMsForEuclidGcd, totalMsForBinaryGcd) + Environment.NewLine;
+                    }
+                    else if (i == MaxGcdNum)
+                    {
+                        GetEuclidGcd(numbers[0], numbers[1], numbers[2], numbers[3], out totalMsForEuclidGcd);
+                        GetBinaryGcd(numbers[0], numbers[1], numbers[2], numbers[3], out totalMsForBinaryGcd);
+                        s += string.Format("{0};{1,7:N4} ms {2, 7:N4} ms", numParams, totalMsForEuclidGcd, totalMsForBinaryGcd);
+                    }
+                }
+
+                isPrepeared = true;
+            }
+
+            return isPrepeared;
+        }
     }
 }

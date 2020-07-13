@@ -277,5 +277,46 @@ namespace GCDAlgorithmTests
             Assert.AreEqual(expectedResult, actualBinaryGcd);
         }
 
+        [TestCase(-1, -2, -1, -1, true)]
+        [TestCase(-10, 0, -10, -10, true)]
+        [TestCase(-100000, -27, -1, -1, true)]
+        [TestCase(-100000, -28, -4, -4, true)]
+        [TestCase(-16, -100000, -16, -16, true)]
+        [TestCase(-1, 2, 1, 1, true)]
+        [TestCase(-10, 0, 10, 10, true)]
+        [TestCase(100000, -27, 1, 1, true)]
+        [TestCase(-100000, 28, 4, 4, true)]
+        [TestCase(16, -100000, 16, 16, true)]
+        public void PrepareDataForHistogram_ForFourNubmers_PositiveAndNegativeNumbers_OutIsTrue(int numOne, int numTwo, int numThree, int numFour, bool expectedResult)
+        {        
+            //Arrange
+            bool actualIsPrepeared;
+            //Act
+            actualIsPrepeared = CalculationOfGCD.PrepareDataForHistogram(numOne, numTwo, numThree, numFour);
+            //Assert
+            Assert.AreEqual(expectedResult, actualIsPrepeared);
+        }
+
+        [TestCase(16, -100000, 16, 16, 10, false)]
+        public void PrepareDataForHistogram_ForFiveNubmers_OutIsFalse(int numOne, int numTwo, int numThree, int numFour, int numFive, bool expectedResult)
+        {
+            //Arrange
+            bool actualIsPrepeared;
+            //Act
+            actualIsPrepeared = CalculationOfGCD.PrepareDataForHistogram(numOne, numTwo, numThree, numFour, numFive);
+            //Assert
+            Assert.AreEqual(expectedResult, actualIsPrepeared);
+        }
+
+        [TestCase(false)]
+        public void PrepareDataForHistogram_ForZeroNumbers_OutIsFalse(bool expectedResult)
+        {
+            //Arrange
+            bool actualIsPrepeared;
+            //Act
+            actualIsPrepeared = CalculationOfGCD.PrepareDataForHistogram();
+            //Assert
+            Assert.AreEqual(expectedResult, actualIsPrepeared);
+        }
     }
 }
