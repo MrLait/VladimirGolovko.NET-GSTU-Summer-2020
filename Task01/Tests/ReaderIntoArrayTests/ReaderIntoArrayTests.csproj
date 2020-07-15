@@ -58,9 +58,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ReaderIntoArray\ReaderIntoArray.csproj">
-      <Project>{E878FF21-8E02-45AF-B516-A6D2D69355BA}</Project>
-      <Name>ReaderIntoArray</Name>
+    <ProjectReference Include="..\..\src\Shape.Data\Shapes.Data.csproj">
+      <Project>{e878ff21-8e02-45af-b516-a6d2d69355ba}</Project>
+      <Name>Shapes.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Shapes.Domain\Shapes.Domain.csproj">
+      <Project>{61be5e9b-df9d-47af-bfca-00927e1271e6}</Project>
+      <Name>Shapes.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

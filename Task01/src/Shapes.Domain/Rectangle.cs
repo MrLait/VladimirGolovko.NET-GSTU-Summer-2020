@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ShapesOnThePlane.Shapes
+namespace Shapes.Domain
 {
-    public class Rectangle : Shape
+    public class Rectangle : BaseShape
     {
         public Rectangle(double length, double width)
         {

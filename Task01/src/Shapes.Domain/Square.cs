@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ShapesOnThePlane.Shapes
+namespace Shapes.Domain
 {
-    public class Square : Shape
+    public class Square : BaseShape
     {
         public Square(double length)
         {

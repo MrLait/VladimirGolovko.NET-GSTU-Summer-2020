@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShapesOnThePlane
+namespace Shapes.Domain
 {
-    public abstract class Shape
+    public abstract class BaseShape
     {
         public abstract double Area { get; }
 

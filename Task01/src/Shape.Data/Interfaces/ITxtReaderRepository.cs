@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ReaderIntoArray
+namespace Shape.Data.Interfaces
 {
-    public interface IReaderRepository<T>
+    public interface ITxtFileReader<T>
     {
-        T GetAll();
+        T GetAllText();
+        T[] GetAllRow();
     }
 }

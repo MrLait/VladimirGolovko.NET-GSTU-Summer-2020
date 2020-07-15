@@ -1,18 +1,19 @@
-﻿using System;
+﻿using Shape.Data.Interfaces;
+using System;
 using System.IO;
 
-namespace ReaderIntoArray.Repositories
+namespace Shape.Data.Util
 {
-    public class ReadDataFromTxtFileRepository : IReaderRepository<string>
+    public class TxtFileReader : ITxtFileReader<string>
     {
         public string PathToFile { get; private set; }
 
-		public ReadDataFromTxtFileRepository(string pathToFile)
+		public TxtFileReader(string pathToFile)
         {
             PathToFile = pathToFile;
         }
 
-        public string GetAll()
+        public virtual string GetAllText()
         {
             string textFromFile = string.Empty;
             
@@ -20,7 +21,6 @@ namespace ReaderIntoArray.Repositories
             {
                 using (FileStream fstream = File.OpenRead(PathToFile))
                 {
-                    // преобразуем строку в байты
                     byte[] array = new byte[fstream.Length];
                     fstream.Read(array, 0, array.Length);
                     textFromFile = System.Text.Encoding.Default.GetString(array);
@@ -30,7 +30,15 @@ namespace ReaderIntoArray.Repositories
 			{
 				throw new FileNotFoundException("The file with path: " + PathToFile + " is not found");
 			}
+
             return textFromFile;
+        }
+
+        public virtual string[] GetAllRow()
+        {
+            string[] textRows = GetAllText().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+
+            return textRows;
         }
     }
 }

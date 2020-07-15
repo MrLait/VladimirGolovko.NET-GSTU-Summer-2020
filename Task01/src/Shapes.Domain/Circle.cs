@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ShapesOnThePlane.Shapes
+namespace Shapes.Domain
 {
-    public class Circle : Shape
+    public class Circle : BaseShape
     {
         public Circle(double radius)
         {
