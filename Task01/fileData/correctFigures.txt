@@ -1,0 +1,22 @@
+Rectangle; 10; 20
+Rectangle; 10; 20
+Square; 5,1
+Square; 5,1
+Circle; 30
+Rectangle; 100; 30
+Rectangle; 1000; 1
+Rectangle; 11515; 21510
+Rectangle; 13630; 264560
+Square; 1,1
+Square; 511,1
+Square; 5123,1
+Square; 125,1
+Circle; 30
+Circle; 30
+Circle; 30
+Circle; 30
+Circle; 31
+Circle; 100
+Rectangle; 0; 0
+Square; 0
+Circle; 0

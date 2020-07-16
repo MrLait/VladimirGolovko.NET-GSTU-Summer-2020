@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.DataTests</name>
+    </assembly>
+    <members>
+        <member name="T:Shapes.DataTests.Repositories.TxtShapeRepositoryTests">
+            <summary>
+            Test cases to testing class TxtShapeRepository.
+            </summary>
+        </member>
+        <member name="M:Shapes.DataTests.Repositories.TxtShapeRepositoryTests.GivenGetShapeList_WhenInputIsThreeDifferentShape_ThenOutIsEqual">
+            <summary>
+            Test case to testing GetShapeLis method. 
+            </summary>
+        </member>
+        <member name="M:Shapes.DataTests.Repositories.TxtShapeRepositoryTests.GivenGetShapeList_WhenInputIsThreeDifferentShape_ThenOutAreNotEqual">
+            <summary>
+            Test case to testing GetShapeLis method.  
+            </summary>
+        </member>
+        <member name="M:Shapes.DataTests.Repositories.TxtShapeRepositoryTests.GivenGetShapeList_WhenInputIsCorrectFigures_ThenOutIsEqual">
+            <summary>
+            Test case to testing GetShapeLis method.  
+            </summary>
+        </member>
+        <member name="M:Shapes.DataTests.Repositories.TxtShapeRepositoryTests.GivenGetAllRow_WhenPathtToFileIsNotValid_ThenOutIsDirectoryNotFoundException(System.String)">
+            <summary>
+            Test case to testing GetAllRow method.  
+            </summary>
+            <param name="pathToFile">Path to file.</param>
+        </member>
+        <member name="T:Shapes.Data.Util.Tests.TxtFileReaderTests">
+            <summary>
+            Test cases to testing class TxtFileReader.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Util.Tests.TxtFileReaderTests.GivenGetAllText_WhenPathtToFileIsDifferentText_ThenOutIsEqual">
+            <summary>
+            Test case to testing GetAllText method. 
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Util.Tests.TxtFileReaderTests.GivenGetAllRow_WhenPathtToFileIsThreeDifferentShape_ThenOutIsEqual">
+            <summary>
+            Test case to testing GetAllRow method.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Util.Tests.TxtFileReaderTests.GivenGetAllText_WhenPathtToFileIsNotValid_ThenOutIsFileNotFoundException">
+            <summary>
+            Test case to testing GetAllText method. 
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Util.Tests.TxtFileReaderTests.GivenGetAllRow_WhenPathtToFileIsNotValid_ThenOutIsFileNotFoundException">
+            <summary>
+            Test case to testing GetAllRow method.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Util.Tests.TxtFileReaderTests.GivenGetAllText_WhenPathtToFileIsNotValid_ThenOutIsDirectoryNotFoundException">
+            <summary>
+            Test case to testing GetAllText method.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Util.Tests.TxtFileReaderTests.GivenGetAllRow_WhenPathtToFileIsNotValid_ThenOutIsDirectoryNotFoundException">
+            <summary>
+            Test case to testing GetAllRow method.
+            </summary>
+        </member>
+    </members>
+</doc>

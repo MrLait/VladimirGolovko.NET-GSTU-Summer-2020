@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Shapes.Data.Interfaces.IRepository`1">
+            <summary>
+            IRepositoryinterface.
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+        </member>
+        <member name="M:Shapes.Data.Interfaces.IRepository`1.GetShapeList">
+            <summary>
+            Get IEnumerable list with shapes.
+            </summary>
+            <returns>Returns IEnumerable list with shapes.</returns>
+        </member>
+        <member name="T:Shapes.Data.Interfaces.ITxtFileReader`1">
+            <summary>
+            Txt reader interface.
+            </summary>
+            <typeparam name="T">Object type</typeparam>
+        </member>
+        <member name="M:Shapes.Data.Interfaces.ITxtFileReader`1.GetAllText">
+            <summary>
+            Get all text from file.
+            </summary>
+            <returns>Returns text from file.</returns>
+        </member>
+        <member name="M:Shapes.Data.Interfaces.ITxtFileReader`1.GetAllRow">
+            <summary>
+            Get all rows from file.
+            </summary>
+            <returns>Returns rows array.</returns>
+        </member>
+        <member name="T:Shapes.Data.Util.TxtFileReader">
+            <summary>
+            A class to read from a text file.
+            </summary>
+        </member>
+        <member name="P:Shapes.Data.Util.TxtFileReader.PathToFile">
+            <summary>
+            Property to the path to the file.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Util.TxtFileReader.#ctor(System.String)">
+            <summary>
+            Constructor to initialize property pathToFile.
+            </summary>
+            <param name="pathToFile">Parameter path to the file.</param>
+        </member>
+        <member name="M:Shapes.Data.Util.TxtFileReader.GetAllText">
+            <summary>
+            Get all text from file in string.
+            </summary>
+            <returns>Returns text from file.</returns>
+        </member>
+        <member name="M:Shapes.Data.Util.TxtFileReader.GetAllRow">
+            <summary>
+            Get all rows from file.
+            </summary>
+            <returns>Returns array with rows from file.</returns>
+        </member>
+        <member name="T:Shapes.Data.Repositories.TxtShapeRepository">
+            <summary>
+            A class to get all shapes from a text file in array.
+            </summary>
+        </member>
+        <member name="F:Shapes.Data.Repositories.TxtShapeRepository._txtFileReader">
+            <summary>
+            Field TxtFileReader
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Repositories.TxtShapeRepository.#ctor(System.String)">
+            <summary>
+            Constructor to initialize field _txtFileReader.
+            </summary>
+            <param name="pathToTxtFile">Parameter path to the file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repositories.TxtShapeRepository.GetShapeList">
+            <summary>
+            Method to parsing txt file in object array. 
+            </summary>
+            <returns>Returns IEnumerable list with shapes.</returns>
+        </member>
+    </members>
+</doc>
