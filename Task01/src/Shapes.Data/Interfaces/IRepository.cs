@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Shape.Data.Interfaces
+namespace Shapes.Data.Interfaces
 {
     interface IRepository<T>
             where T : class

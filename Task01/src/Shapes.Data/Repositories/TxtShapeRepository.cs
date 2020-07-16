@@ -1,11 +1,11 @@
-﻿using Shape.Data.Interfaces;
-using Shape.Data.Util;
+﻿using Shapes.Data.Interfaces;
+using Shapes.Data.Util;
 using Shapes.Domain;
 using Shapes.Domain.Enum;
 using System;
 using System.Collections.Generic;
 
-namespace Shape.Data.Repositories
+namespace Shapes.Data.Repositories
 {
     public class TxtShapeRepository : IRepository<BaseShape>
     {

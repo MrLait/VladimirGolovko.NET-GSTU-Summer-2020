@@ -1,8 +1,8 @@
-﻿using Shape.Data.Interfaces;
+﻿using Shapes.Data.Interfaces;
 using System;
 using System.IO;
 
-namespace Shape.Data.Util
+namespace Shapes.Data.Util
 {
     public class TxtFileReader : ITxtFileReader<string>
     {

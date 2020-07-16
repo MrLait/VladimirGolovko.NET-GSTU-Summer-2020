@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ReaderIntoArrayTests")]
+[assembly: AssemblyTitle("Shapes.DomainTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ReaderIntoArrayTests")]
+[assembly: AssemblyProduct("Shapes.DomainTests")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("15050e47-5ccd-44b5-940e-34cacc2472d7")]
+[assembly: Guid("aae3dcae-2e22-4793-9780-21334da4d863")]
 
 // Version information for an assembly consists of the following four values:
 //

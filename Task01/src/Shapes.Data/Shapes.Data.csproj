@@ -7,8 +7,8 @@
     <ProjectGuid>{E878FF21-8E02-45AF-B516-A6D2D69355BA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ReaderIntoArray</RootNamespace>
-    <AssemblyName>ReaderIntoArray</AssemblyName>
+    <RootNamespace>Shapes.Data</RootNamespace>
+    <AssemblyName>Shapes.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\xmlDocuments\Shapes.Data.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

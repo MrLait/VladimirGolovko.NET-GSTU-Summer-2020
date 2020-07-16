@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.Domain</name>
+    </assembly>
+    <members>
+        <member name="M:Shapes.Domain.Circle.Equals(System.Object)">
+            <summary>
+            Comparing one circle wit another.
+            </summary>
+            <param name="obj">The compared circle.</param>
+            <returns>True if equal. False if not eqal.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Circle.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Circle.ToString">
+            <summary>
+            Represents class members in string format.
+            </summary>
+            <returns>Returns class members in string format.</returns>
+        </member>
+        <member name="T:Shapes.Domain.Enum.ShapeEnum">
+            <summary>
+            Enum type with shapes.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.ShapeEnum.Circle">
+            <summary>
+            Circle shape.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.ShapeEnum.Rectangle">
+            <summary>
+            Rectangle shape.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.ShapeEnum.Square">
+            <summary>
+            Square shape
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Rectangle.Equals(System.Object)">
+            <summary>
+            Comparing one rectangle with another.
+            </summary>
+            <param name="obj">The compared rectangle.</param>
+            <returns>True if equal. False if not equal.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Rectangle.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Rectangle.ToString">
+            <summary>
+            Represents class members in string format.
+            </summary>
+            <returns>Returns class members in string format.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Square.Equals(System.Object)">
+            <summary>
+            Comparing one square with another.
+            </summary>
+            <param name="obj">The compared square.</param>
+            <returns>True if equal. False if not eqal.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Square.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Square.ToString">
+            <summary>
+            Represents class members in string format.
+            </summary>
+            <returns>Returns class members in string format.</returns>
+        </member>
+    </members>
+</doc>
