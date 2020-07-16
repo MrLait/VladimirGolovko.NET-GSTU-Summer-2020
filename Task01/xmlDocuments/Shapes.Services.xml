@@ -4,5 +4,19 @@
         <name>Shapes.Services</name>
     </assembly>
     <members>
+        <member name="T:Shapes.Services.ShapeService`1">
+            <summary>
+            Static class for searching in the array of all figures equal to this shape.
+            </summary>
+            <typeparam name="T">Object</typeparam>
+        </member>
+        <member name="M:Shapes.Services.ShapeService`1.FindEqualsObjectsByObject(System.Collections.Generic.IEnumerable{`0},`0)">
+            <summary>
+            Static method for searching in the array of all figures equal to this shape.
+            </summary>
+            <param name="objects">Shapes array.</param>
+            <param name="baseShape">A sample of the figure to be found.</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

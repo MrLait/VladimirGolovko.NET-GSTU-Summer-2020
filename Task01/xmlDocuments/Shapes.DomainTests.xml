@@ -4,5 +4,127 @@
         <name>Shapes.DomainTests</name>
     </assembly>
     <members>
+        <member name="T:Shapes.Domain.Tests.CircleTests">
+            <summary>
+            Test cases to testing class circle.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Tests.CircleTests.GivenArea_WhenRadiusIsPositive_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.CircleTests.GivenArea_WhenRadiusIsNegative_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area. 
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.CircleTests.GivenArea_WhenRadiusIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.CircleTests.GivenPerimeter_WhenRadiusIsPositive_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.CircleTests.GivenPerimeter_WhenRadiusIsNegative_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.CircleTests.GivenPerimeter_WhenRadiusIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.CircleTests.GivenEquals_ThenOutIsTrue(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expected">Expected True</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.CircleTests.GivenEquals_ThenOutIsFalse(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expected">Expected False</param>
+        </member>
+        <member name="T:Shapes.DomainTests.SquareTest">
+            <summary>
+            Test cases to testing class square.
+            </summary>
+        </member>
+        <member name="M:Shapes.DomainTests.SquareTest.GivenArea_WhenLengthIsPositive_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="length">Square length.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.SquareTest.GivenArea_WhenLengthIsNegative_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.SquareTest.GivenArea_WhenLengthIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.SquareTest.GivenPerimeter_WhenLengthIsPositive_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.SquareTest.GivenPerimeter_WhenLengthIsNegative_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.SquareTest.GivenPerimeter_WhenLengthIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.  
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.SquareTest.GivenEquals_ThenOutIsTrue(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing method equals.  
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expected">Expected True</param>
+        </member>
+        <member name="M:Shapes.DomainTests.SquareTest.GivenEquals_ThenOutIsFalse(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing method equals.  
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expected">Expected False</param>
+        </member>
     </members>
 </doc>

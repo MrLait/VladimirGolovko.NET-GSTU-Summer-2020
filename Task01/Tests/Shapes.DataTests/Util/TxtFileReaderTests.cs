@@ -2,6 +2,9 @@
 
 namespace Shapes.Data.Util.Tests
 {
+    /// <summary>
+    /// Test cases to testing class TxtFileReader.
+    /// </summary>
     [TestFixture()]
     public class TxtFileReaderTests
     {
@@ -10,6 +13,9 @@ namespace Shapes.Data.Util.Tests
         private string _fileNotFoundExceptionPathToFile = @"figuress.txt";
         private string _directoryNotFoundExceptionPathToFile = @"asd\figuress.txt";
 
+        /// <summary>
+        /// Test case to testing GetAllText method. 
+        /// </summary>
         [TestCase()]
         public void GivenGetAllText_WhenPathtToFileIsDifferentText_ThenOutIsEqual()
         {
@@ -21,6 +27,9 @@ namespace Shapes.Data.Util.Tests
             Assert.AreEqual(expectedResult, actualText);
         }
 
+        /// <summary>
+        /// Test case to testing GetAllRow method.
+        /// </summary>
         [TestCase()]
         public void GivenGetAllRow_WhenPathtToFileIsThreeDifferentShape_ThenOutIsEqual()
         {
@@ -32,6 +41,9 @@ namespace Shapes.Data.Util.Tests
             Assert.AreEqual(expectedResult, actualText);
         }
 
+        /// <summary>
+        /// Test case to testing GetAllText method. 
+        /// </summary>
         [TestCase()]
         public void GivenGetAllText_WhenPathtToFileIsNotValid_ThenOutIsFileNotFoundException()
         {
@@ -39,6 +51,9 @@ namespace Shapes.Data.Util.Tests
             Assert.That(() => new TxtFileReader(_fileNotFoundExceptionPathToFile).GetAllText(), Throws.TypeOf<System.IO.FileNotFoundException>());
         }
 
+        /// <summary>
+        /// Test case to testing GetAllRow method.
+        /// </summary>
         [TestCase()]
         public void GivenGetAllRow_WhenPathtToFileIsNotValid_ThenOutIsFileNotFoundException()
         {
@@ -46,6 +61,9 @@ namespace Shapes.Data.Util.Tests
             Assert.That(() => new TxtFileReader(_fileNotFoundExceptionPathToFile).GetAllText(), Throws.TypeOf<System.IO.FileNotFoundException>());
         }
 
+        /// <summary>
+        /// Test case to testing GetAllText method.
+        /// </summary>
         [TestCase()]
         public void GivenGetAllText_WhenPathtToFileIsNotValid_ThenOutIsDirectoryNotFoundException()
         {
@@ -53,6 +71,9 @@ namespace Shapes.Data.Util.Tests
             Assert.That(() => new TxtFileReader(_directoryNotFoundExceptionPathToFile).GetAllText(), Throws.TypeOf<System.IO.DirectoryNotFoundException>());
         }
 
+        /// <summary>
+        /// Test case to testing GetAllRow method.
+        /// </summary>
         [TestCase()]
         public void GivenGetAllRow_WhenPathtToFileIsNotValid_ThenOutIsDirectoryNotFoundException()
         {

@@ -32,7 +32,7 @@ namespace GCDAlgorithm
             stopwatch.Stop();
 
             totalMs = stopwatch.Elapsed.TotalMilliseconds;
-            
+
             return euclidGcdForTwoNumbers;
         }
 
@@ -70,7 +70,7 @@ namespace GCDAlgorithm
             int euclidGcdForTwoNumbers = GetEuclidGcdForTwoNumbers(numOne, numTwo);
             int euclidGcdForThreeNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForTwoNumbers, numThree);
             int euclidGcdForFourNumbers = GetEuclidGcdForTwoNumbers(euclidGcdForThreeNumbers, numFour);
-           
+
             totalMs = stopwatch.Elapsed.TotalMilliseconds;
 
             return euclidGcdForFourNumbers;
@@ -156,19 +156,19 @@ namespace GCDAlgorithm
                     {
                         GetEuclidGcd(numbers[0], numbers[1], out totalMsForEuclidGcd);
                         GetBinaryGcd(numbers[0], numbers[1], out totalMsForBinaryGcd);
-                        s += $"{numParams};{totalMsForEuclidGcd,7:N4} ms {totalMsForBinaryGcd, 7:N4} ms" + Environment.NewLine;
+                        s += $"{numParams};{totalMsForEuclidGcd,7:N4} ms {totalMsForBinaryGcd,7:N4} ms" + Environment.NewLine;
                     }
                     else if (i == 3)
                     {
                         GetEuclidGcd(numbers[0], numbers[1], numbers[2], out totalMsForEuclidGcd);
                         GetBinaryGcd(numbers[0], numbers[1], numbers[2], out totalMsForBinaryGcd);
-                        s += $"{numParams};{totalMsForEuclidGcd,7:N4} ms {totalMsForBinaryGcd, 7:N4} ms" + Environment.NewLine;
+                        s += $"{numParams};{totalMsForEuclidGcd,7:N4} ms {totalMsForBinaryGcd,7:N4} ms" + Environment.NewLine;
                     }
                     else if (i == MaxGcdNum)
                     {
                         GetEuclidGcd(numbers[0], numbers[1], numbers[2], numbers[3], out totalMsForEuclidGcd);
                         GetBinaryGcd(numbers[0], numbers[1], numbers[2], numbers[3], out totalMsForBinaryGcd);
-                        s += $"{numParams};{totalMsForEuclidGcd,7:N4} ms {totalMsForBinaryGcd, 7:N4} ms";
+                        s += $"{numParams};{totalMsForEuclidGcd,7:N4} ms {totalMsForBinaryGcd,7:N4} ms";
                     }
                 }
 
@@ -229,11 +229,10 @@ namespace GCDAlgorithm
                     numTwo = temp;
                 }
                 numTwo = (numTwo - numOne);
-            } 
+            }
             while (numTwo != 0);
 
             return numOne << k;
         }
-
     }
 }

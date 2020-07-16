@@ -38,6 +38,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes.Data", "src\Shapes.Data\Shapes.Data.csproj", "{E878FF21-8E02-45AF-B516-A6D2D69355BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{F19AF6C3-4042-47AF-98D7-B2F86EE6F7BB}"
+	ProjectSection(SolutionItems) = preProject
+		xmlDocuments\GCDAlgorithmTests.xml = xmlDocuments\GCDAlgorithmTests.xml
+		xmlDocuments\Shapes.Data.xml = xmlDocuments\Shapes.Data.xml
+		xmlDocuments\Shapes.DataTests.xml = xmlDocuments\Shapes.DataTests.xml
+		xmlDocuments\Shapes.Domain.xml = xmlDocuments\Shapes.Domain.xml
+		xmlDocuments\Shapes.DomainTests.xml = xmlDocuments\Shapes.DomainTests.xml
+		xmlDocuments\Shapes.Services.xml = xmlDocuments\Shapes.Services.xml
+		xmlDocuments\Shapes.ServicesTests.xml = xmlDocuments\Shapes.ServicesTests.xml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

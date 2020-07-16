@@ -7,15 +7,29 @@ using System.Collections.Generic;
 
 namespace Shapes.Data.Repositories
 {
+    /// <summary>
+    /// A class to get all shapes from a text file in array.
+    /// </summary>
     public class TxtShapeRepository : IRepository<BaseShape>
     {
+        /// <summary>
+        /// Field TxtFileReader
+        /// </summary>
         private TxtFileReader _txtFileReader;
 
+        /// <summary>
+        /// Constructor to initialize field _txtFileReader.
+        /// </summary>
+        /// <param name="pathToTxtFile">Parameter path to the file.</param>
         public TxtShapeRepository(string pathToTxtFile)
         {
             _txtFileReader = new TxtFileReader(pathToTxtFile);
         }
 
+        /// <summary>
+        /// Method to parsing txt file in object array. 
+        /// </summary>
+        /// <returns>Returns IEnumerable list with shapes.</returns>
         public IEnumerable<BaseShape> GetShapeList()
         {
             string[] dataFromTxt = _txtFileReader.GetAllRow();

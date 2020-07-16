@@ -2,20 +2,35 @@
 
 namespace Shapes.Domain
 {
+    /// <summary>
+    ///  Class square shape.
+    /// </summary>
     public class Square : BaseShape
     {
+        /// <summary>
+        /// Constructor with length parameter.
+        /// </summary>
+        /// <param name="length"></param>
         public Square(double length)
         {
             Side = length;
         }
-
+        /// <summary>
+        /// Property side
+        /// </summary>
         public double Side { get; private set; }
 
+        /// <summary>
+        /// Property to getting area of square.
+        /// </summary>
         public override double Area
         {
             get => Math.Pow(Side, 2);
         }
 
+        /// <summary>
+        /// Property to getting perimeter of square.
+        /// </summary>
         public override double Perimeter
         {
             get => Side * 4;

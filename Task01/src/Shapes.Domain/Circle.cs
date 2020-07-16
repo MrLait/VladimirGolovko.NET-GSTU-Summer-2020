@@ -2,20 +2,36 @@
 
 namespace Shapes.Domain
 {
+    /// <summary>
+    /// Class circle shape.
+    /// </summary>
     public class Circle : BaseShape
     {
+        /// <summary>
+        /// Constructor with radius parameter.
+        /// </summary>
+        /// <param name="radius">Parameter for init radius.</param>
         public Circle(double radius)
         {
             Radius = radius;
         }
-        
+
+        /// <summary>
+        /// Property radius.
+        /// </summary>
         public double Radius { get; }
 
+        /// <summary>
+        /// Property to getting Area of circle.
+        /// </summary>
         public override double Area
         {
             get => Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
         }
 
+        /// <summary>
+        /// Property to getting perimeter of circle.
+        /// </summary>
         public override double Perimeter
         {
             get => Math.Round(Math.PI * 2 * Radius, 2);

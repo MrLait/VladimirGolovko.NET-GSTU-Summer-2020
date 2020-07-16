@@ -2,9 +2,17 @@
 
 namespace Shapes.Domain.Tests
 {
+    /// <summary>
+    /// Test cases to testing class circle.
+    /// </summary>
     [TestFixture()]
     public class CircleTests
     {
+        /// <summary>
+        /// Test case to testing property area.
+        /// </summary>
+        /// <param name="radius">Circle radius.</param>
+        /// <param name="expectedArea">Expected area.</param>
         [TestCase(10.0, 314.16000000000003)]
         [TestCase(100.1, 31478.790000000001)]
         [TestCase(1000.15, 3142535.2000000002d)]
@@ -18,6 +26,11 @@ namespace Shapes.Domain.Tests
             Assert.AreEqual(expectedArea, actualArea);
         }
 
+        /// <summary>
+        /// Test case to testing property area. 
+        /// </summary>
+        /// <param name="radius">Circle radius.</param>
+        /// <param name="expectedArea">Expected area.</param>
         [TestCase(-10.0, 314.16000000000003)]
         [TestCase(-100.1, 31478.790000000001)]
         [TestCase(-1000.15, 3142535.2000000002d)]
@@ -31,6 +44,11 @@ namespace Shapes.Domain.Tests
             Assert.AreEqual(expectedArea, actualArea);
         }
 
+        /// <summary>
+        /// Test case to testing property area.
+        /// </summary>
+        /// <param name="radius">Circle radius.</param>
+        /// <param name="expectedArea">Expected area.</param>
         [TestCase(0.0, 0)]
         public void GivenArea_WhenRadiusIsZero_ThenOutIsZero(double radius, double expectedArea)
         {
@@ -42,6 +60,11 @@ namespace Shapes.Domain.Tests
             Assert.AreEqual(expectedArea, actualArea);
         }
 
+        /// <summary>
+        /// Test case to testing property perimeter.
+        /// </summary>
+        /// <param name="radius">Circle radius.</param>
+        /// <param name="expectedPerimeter">Expected perimeter.</param>
         [TestCase(10.0, 62.829999999999998d)]
         [TestCase(100.1, 628.95000000000005)]
         [TestCase(1000.15, 6284.1300000000001)]
@@ -55,6 +78,11 @@ namespace Shapes.Domain.Tests
             Assert.AreEqual(expectedPerimeter, actualPerimetera);
         }
 
+        /// <summary>
+        /// Test case to testing property perimeter.
+        /// </summary>
+        /// <param name="radius">Circle radius.</param>
+        /// <param name="expectedPerimeter">Expected perimeter.</param>
         [TestCase(-10.0, -62.829999999999998)]
         [TestCase(-100.1, -628.95000000000005)]
         [TestCase(-1000.15, -6284.1300000000001)]
@@ -68,6 +96,11 @@ namespace Shapes.Domain.Tests
             Assert.AreEqual(expectedPerimeter, actualPerimeter);
         }
 
+        /// <summary>
+        /// Test case to testing property perimeter.
+        /// </summary>
+        /// <param name="radius">Circle radius.</param>
+        /// <param name="expectedPerimeter">Expected perimeter.</param>
         [TestCase(0.0, 0)]
         public void GivenPerimeter_WhenRadiusIsZero_ThenOutIsZero(double radius, double expectedPerimeter)
         {
@@ -79,6 +112,11 @@ namespace Shapes.Domain.Tests
             Assert.AreEqual(expectedPerimeter, actualPerimeter);
         }
 
+        /// <summary>
+        /// Test case to testing equals.
+        /// </summary>
+        /// <param name="radius">Circle radius.</param>
+        /// <param name="expected">Expected True</param>
         [TestCase(0.0, true)]
         public void GivenEquals_ThenOutIsTrue(double radius, bool expected)
         {
@@ -91,6 +129,11 @@ namespace Shapes.Domain.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Test case to testing equals.
+        /// </summary>
+        /// <param name="radius">Circle radius.</param>
+        /// <param name="expected">Expected False</param>
         [TestCase(10.0, false)]
         public void GivenEquals_ThenOutIsFalse(double radius, bool expected)
         {

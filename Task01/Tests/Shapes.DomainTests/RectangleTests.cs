@@ -97,7 +97,7 @@ namespace Shapes.DomainTests
         {
             //Arrange
             Rectangle actualRectangle = new Rectangle(length, width);
-            Rectangle expectedRectangle = new Rectangle(3,3);
+            Rectangle expectedRectangle = new Rectangle(3, 3);
             //Act
             var actual = actualRectangle.Equals(expectedRectangle);
             //Assert

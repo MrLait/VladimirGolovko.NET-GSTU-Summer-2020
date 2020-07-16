@@ -5,23 +5,32 @@ using System.Collections.Generic;
 
 namespace Shapes.DataTests.Repositories
 {
+    /// <summary>
+    /// Test cases to testing class TxtShapeRepository.
+    /// </summary>
     [TestFixture()]
     public class TxtShapeRepositoryTests
     {
         private string _pathToTxtFilecCorrectFigures = @"fileData\correctFigures.txt";
         private string _pathToTxtFiletThreeDifferentShape = @"fileData\threeDifferentShape.txt";
 
+        /// <summary>
+        /// Test case to testing GetShapeLis method. 
+        /// </summary>
         [TestCase()]
         public void GivenGetShapeList_WhenInputIsThreeDifferentShape_ThenOutIsEqual()
         {
             //Arrange
-            List<BaseShape> expectedResult = new List<BaseShape> { new Rectangle(10, 20), new Circle(30), new Square(11)};
+            List<BaseShape> expectedResult = new List<BaseShape> { new Rectangle(10, 20), new Circle(30), new Square(11) };
             //Act
             IEnumerable<BaseShape> actualResult = new TxtShapeRepository(_pathToTxtFiletThreeDifferentShape).GetShapeList();
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+        /// <summary>
+        /// Test case to testing GetShapeLis method.  
+        /// </summary>
         [TestCase()]
         public void GivenGetShapeList_WhenInputIsThreeDifferentShape_ThenOutAreNotEqual()
         {
@@ -33,6 +42,9 @@ namespace Shapes.DataTests.Repositories
             Assert.AreNotEqual(expectedResult, actualResult);
         }
 
+        /// <summary>
+        /// Test case to testing GetShapeLis method.  
+        /// </summary>
         [TestCase()]
         public void GivenGetShapeList_WhenInputIsCorrectFigures_ThenOutIsEqual()
         {
@@ -67,8 +79,10 @@ namespace Shapes.DataTests.Repositories
             Assert.AreEqual(expectedResult, actualResult);
         }
 
-
-
+        /// <summary>
+        /// Test case to testing GetAllRow method.  
+        /// </summary>
+        /// <param name="pathToFile">Path to file.</param>
         [TestCase(@"fileData\figureWithEmptyName.txt")]
         [TestCase(@"fileData\figureWithEmptyParameter.txt")]
         [TestCase(@"fileData\figureWithStringParameter.txt")]

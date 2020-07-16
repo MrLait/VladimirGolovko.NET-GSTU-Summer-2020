@@ -5,11 +5,17 @@ using System.Collections.Generic;
 
 namespace Shapes.Services.Tests
 {
+    /// <summary>
+    /// Tests to shapeService.cs
+    /// </summary>
     [TestFixture()]
     public class ShapeServiceTests
     {
         private string correctPathToTxtFile = @"fileData\correctFigures.txt";
 
+        /// <summary>
+        /// Test case to testing metoh FindEqualsObjectsByObject.
+        /// </summary>
         [TestCase()]
         public void FindEqualsObjectsByObject_WhenInputIsCorrectFigures_ThenOutIsFiveCircle()
         {
@@ -17,11 +23,14 @@ namespace Shapes.Services.Tests
             List<BaseShape> expectedResult = new List<BaseShape> { new Circle(30), new Circle(30), new Circle(30), new Circle(30), new Circle(30) };
             //Act
             IEnumerable<BaseShape> shapes = new TxtShapeRepository(correctPathToTxtFile).GetShapeList();
-            IEnumerable<BaseShape> actualShapes =  ShapeService<BaseShape>.FindEqualsObjectsByObject(shapes, new Circle(30));
+            IEnumerable<BaseShape> actualShapes = ShapeService<BaseShape>.FindEqualsObjectsByObject(shapes, new Circle(30));
             //Assert
             Assert.AreEqual(expectedResult, actualShapes);
         }
 
+        /// <summary>
+        /// Test case to testing metoh FindEqualsObjectsByObject.
+        /// </summary>
         [TestCase()]
         public void FindEqualsObjectsByObject_WhenInputIsCorrectFigures_ThenOutIsZeroFigures()
         {
@@ -34,6 +43,9 @@ namespace Shapes.Services.Tests
             Assert.AreEqual(expectedResult, actualShapes);
         }
 
+        /// <summary>
+        /// Test case to testing metoh FindEqualsObjectsByObject.
+        /// </summary>
         [TestCase()]
         public void FindEqualsObjectsByObject_WhenShapesIsNull_ThenOutIsNullReferenceException()
         {
@@ -41,6 +53,9 @@ namespace Shapes.Services.Tests
             Assert.That(() => ShapeService<BaseShape>.FindEqualsObjectsByObject(null, new Circle(300)), Throws.TypeOf<System.NullReferenceException>());
         }
 
+        /// <summary>
+        /// Test case to testing metoh FindEqualsObjectsByObject.
+        /// </summary>
         [TestCase()]
         public void FindEqualsObjectsByObject_WhenBaseShapeIsNull_ThenOutIsNullReferenceException()
         {
@@ -50,6 +65,9 @@ namespace Shapes.Services.Tests
             Assert.That(() => ShapeService<BaseShape>.FindEqualsObjectsByObject(shapes, null), Throws.TypeOf<System.NullReferenceException>());
         }
 
+        /// <summary>
+        /// Test case to testing metoh FindEqualsObjectsByObject.
+        /// </summary>
         [TestCase()]
         public void FindEqualsObjectsByObject_WhenBaseShapeAndShapeIsNull_ThenOutIsNullReferenceException()
         {

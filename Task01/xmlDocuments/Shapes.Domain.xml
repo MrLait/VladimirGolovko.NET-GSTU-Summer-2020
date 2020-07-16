@@ -4,6 +4,32 @@
         <name>Shapes.Domain</name>
     </assembly>
     <members>
+        <member name="T:Shapes.Domain.Circle">
+            <summary>
+            Class circle shape.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Circle.#ctor(System.Double)">
+            <summary>
+            Constructor with radius parameter.
+            </summary>
+            <param name="radius">Parameter for init radius.</param>
+        </member>
+        <member name="P:Shapes.Domain.Circle.Radius">
+            <summary>
+            Property radius.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Circle.Area">
+            <summary>
+            Property to getting Area of circle.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Circle.Perimeter">
+            <summary>
+            Property to getting perimeter of circle.
+            </summary>
+        </member>
         <member name="M:Shapes.Domain.Circle.Equals(System.Object)">
             <summary>
             Comparing one circle wit another.
@@ -43,6 +69,38 @@
             Square shape
             </summary>
         </member>
+        <member name="T:Shapes.Domain.Rectangle">
+            <summary>
+             Class rectangle shape.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Rectangle.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor with length and width parameters.
+            </summary>
+            <param name="length">Length param.</param>
+            <param name="width">Width param.</param>
+        </member>
+        <member name="P:Shapes.Domain.Rectangle.Length">
+            <summary>
+            Property length
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Rectangle.Width">
+            <summary>
+            Property width
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Rectangle.Area">
+            <summary>
+            Property to getting area of rectangle.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Rectangle.Perimeter">
+            <summary>
+            Property to getting perimeter of rectangle. 
+            </summary>
+        </member>
         <member name="M:Shapes.Domain.Rectangle.Equals(System.Object)">
             <summary>
             Comparing one rectangle with another.
@@ -61,6 +119,53 @@
             Represents class members in string format.
             </summary>
             <returns>Returns class members in string format.</returns>
+        </member>
+        <member name="T:Shapes.Domain.BaseShape">
+            <summary>
+            Base abstract class for others shapes.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.BaseShape.Area">
+            <summary>
+            Abstract property area.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.BaseShape.Perimeter">
+            <summary>
+            Abstract property perimeter.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.BaseShape.ToString">
+            <summary>
+            Ovverriden method for get name of class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Shapes.Domain.Square">
+            <summary>
+             Class square shape.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Square.#ctor(System.Double)">
+            <summary>
+            Constructor with length parameter.
+            </summary>
+            <param name="length"></param>
+        </member>
+        <member name="P:Shapes.Domain.Square.Side">
+            <summary>
+            Property side
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Square.Area">
+            <summary>
+            Property to getting area of square.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Square.Perimeter">
+            <summary>
+            Property to getting perimeter of square.
+            </summary>
         </member>
         <member name="M:Shapes.Domain.Square.Equals(System.Object)">
             <summary>

@@ -4,5 +4,35 @@
         <name>Shapes.ServicesTests</name>
     </assembly>
     <members>
+        <member name="T:Shapes.Services.Tests.ShapeServiceTests">
+            <summary>
+            Tests to shapeService.cs
+            </summary>
+        </member>
+        <member name="M:Shapes.Services.Tests.ShapeServiceTests.FindEqualsObjectsByObject_WhenInputIsCorrectFigures_ThenOutIsFiveCircle">
+            <summary>
+            Test case to testing metoh FindEqualsObjectsByObject.
+            </summary>
+        </member>
+        <member name="M:Shapes.Services.Tests.ShapeServiceTests.FindEqualsObjectsByObject_WhenInputIsCorrectFigures_ThenOutIsZeroFigures">
+            <summary>
+            Test case to testing metoh FindEqualsObjectsByObject.
+            </summary>
+        </member>
+        <member name="M:Shapes.Services.Tests.ShapeServiceTests.FindEqualsObjectsByObject_WhenShapesIsNull_ThenOutIsNullReferenceException">
+            <summary>
+            Test case to testing metoh FindEqualsObjectsByObject.
+            </summary>
+        </member>
+        <member name="M:Shapes.Services.Tests.ShapeServiceTests.FindEqualsObjectsByObject_WhenBaseShapeIsNull_ThenOutIsNullReferenceException">
+            <summary>
+            Test case to testing metoh FindEqualsObjectsByObject.
+            </summary>
+        </member>
+        <member name="M:Shapes.Services.Tests.ShapeServiceTests.FindEqualsObjectsByObject_WhenBaseShapeAndShapeIsNull_ThenOutIsNullReferenceException">
+            <summary>
+            Test case to testing metoh FindEqualsObjectsByObject.
+            </summary>
+        </member>
     </members>
 </doc>
