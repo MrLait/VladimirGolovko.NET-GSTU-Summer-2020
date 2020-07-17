@@ -18,12 +18,12 @@ namespace Shapes.DataTests.Repositories
         /// Test case to testing GetShapeLis method. 
         /// </summary>
         [TestCase()]
-        public void GivenGetShapeList_WhenInputIsThreeDifferentShape_ThenOutIsEqual()
+        public void GivenGetShapeArray_WhenInputIsThreeDifferentShape_ThenOutIsEqual()
         {
             //Arrange
             List<BaseShape> expectedResult = new List<BaseShape> { new Rectangle(10, 20), new Circle(30), new Square(11) };
             //Act
-            IEnumerable<BaseShape> actualResult = new TxtShapeRepository(_pathToTxtFiletThreeDifferentShape).GetShapeList();
+            IEnumerable<BaseShape> actualResult = new TxtShapeRepository(_pathToTxtFiletThreeDifferentShape).GetShapeArray();
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -32,12 +32,12 @@ namespace Shapes.DataTests.Repositories
         /// Test case to testing GetShapeLis method.  
         /// </summary>
         [TestCase()]
-        public void GivenGetShapeList_WhenInputIsThreeDifferentShape_ThenOutAreNotEqual()
+        public void GivenGetShapeArray_WhenInputIsThreeDifferentShape_ThenOutAreNotEqual()
         {
             //Arrange
             List<BaseShape> expectedResult = new List<BaseShape> { new Rectangle(10, 21), new Circle(30), new Square(11) };
             //Act
-            IEnumerable<BaseShape> actualResult = new TxtShapeRepository(_pathToTxtFiletThreeDifferentShape).GetShapeList();
+            IEnumerable<BaseShape> actualResult = new TxtShapeRepository(_pathToTxtFiletThreeDifferentShape).GetShapeArray();
             //Assert
             Assert.AreNotEqual(expectedResult, actualResult);
         }
@@ -46,7 +46,7 @@ namespace Shapes.DataTests.Repositories
         /// Test case to testing GetShapeLis method.  
         /// </summary>
         [TestCase()]
-        public void GivenGetShapeList_WhenInputIsCorrectFigures_ThenOutIsEqual()
+        public void GivenGetShapeArray_WhenInputIsCorrectFigures_ThenOutIsEqual()
         {
             //Arrange
             List<BaseShape> expectedResult = new List<BaseShape> {
@@ -74,7 +74,7 @@ namespace Shapes.DataTests.Repositories
                 new Circle( 0)
             };
             //Act
-            IEnumerable<BaseShape> actualResult = new TxtShapeRepository(_pathToTxtFilecCorrectFigures).GetShapeList();
+            IEnumerable<BaseShape> actualResult = new TxtShapeRepository(_pathToTxtFilecCorrectFigures).GetShapeArray();
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -90,7 +90,7 @@ namespace Shapes.DataTests.Repositories
         public void GivenGetAllRow_WhenPathtToFileIsNotValid_ThenOutIsDirectoryNotFoundException(string pathToFile)
         {
             //Assert
-            Assert.That(() => new TxtShapeRepository(pathToFile).GetShapeList(), Throws.TypeOf<System.FormatException>());
+            Assert.That(() => new TxtShapeRepository(pathToFile).GetShapeArray(), Throws.TypeOf<System.FormatException>());
         }
 
     }

@@ -1,18 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using Shapes.Domain;
 
 namespace Shapes.Data.Interfaces
 {
     /// <summary>
-    /// IRepositoryinterface.
+    /// IRepository interface.
     /// </summary>
-    /// <typeparam name="T">Object type</typeparam>
-    interface IRepository<T>
-            where T : class
+    interface IRepository
     {
         /// <summary>
-        /// Get IEnumerable list with shapes.
+        /// Get baseShape array with shapes.
         /// </summary>
-        /// <returns>Returns IEnumerable list with shapes.</returns>
-        IEnumerable<T> GetShapeList();
+        /// <returns>Returns baseShape array with shapes.</returns>
+        BaseShape[] GetShapeArray();
     }
 }
