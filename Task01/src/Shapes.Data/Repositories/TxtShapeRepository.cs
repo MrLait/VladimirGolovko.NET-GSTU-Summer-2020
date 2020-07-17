@@ -10,7 +10,7 @@ namespace Shapes.Data.Repositories
     /// <summary>
     /// A class to get all shapes from a text file in array.
     /// </summary>
-    public class TxtShapeRepository : IRepository<BaseShape>
+    public class TxtShapeRepository : IRepository
     {
         /// <summary>
         /// Field TxtFileReader
@@ -30,7 +30,7 @@ namespace Shapes.Data.Repositories
         /// Method to parsing txt file in object array. 
         /// </summary>
         /// <returns>Returns IEnumerable list with shapes.</returns>
-        public IEnumerable<BaseShape> GetShapeList()
+        public BaseShape[] GetShapeArray()
         {
             string[] dataFromTxt = _txtFileReader.GetAllRow();
             List<BaseShape> shapes = new List<BaseShape>();
@@ -70,7 +70,7 @@ namespace Shapes.Data.Repositories
             {
                 throw new FormatException("The input string was in the wrong format.");
             }
-            return shapes;
+            return shapes.ToArray(); ;
         }
     }
 }

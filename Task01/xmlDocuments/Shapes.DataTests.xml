@@ -9,17 +9,17 @@
             Test cases to testing class TxtShapeRepository.
             </summary>
         </member>
-        <member name="M:Shapes.DataTests.Repositories.TxtShapeRepositoryTests.GivenGetShapeList_WhenInputIsThreeDifferentShape_ThenOutIsEqual">
+        <member name="M:Shapes.DataTests.Repositories.TxtShapeRepositoryTests.GivenGetShapeArray_WhenInputIsThreeDifferentShape_ThenOutIsEqual">
             <summary>
             Test case to testing GetShapeLis method. 
             </summary>
         </member>
-        <member name="M:Shapes.DataTests.Repositories.TxtShapeRepositoryTests.GivenGetShapeList_WhenInputIsThreeDifferentShape_ThenOutAreNotEqual">
+        <member name="M:Shapes.DataTests.Repositories.TxtShapeRepositoryTests.GivenGetShapeArray_WhenInputIsThreeDifferentShape_ThenOutAreNotEqual">
             <summary>
             Test case to testing GetShapeLis method.  
             </summary>
         </member>
-        <member name="M:Shapes.DataTests.Repositories.TxtShapeRepositoryTests.GivenGetShapeList_WhenInputIsCorrectFigures_ThenOutIsEqual">
+        <member name="M:Shapes.DataTests.Repositories.TxtShapeRepositoryTests.GivenGetShapeArray_WhenInputIsCorrectFigures_ThenOutIsEqual">
             <summary>
             Test case to testing GetShapeLis method.  
             </summary>

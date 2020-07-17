@@ -16,7 +16,7 @@ namespace Shapes.Services
         /// <param name="objects">Shapes array.</param>
         /// <param name="baseShape">A sample of the figure to be found.</param>
         /// <returns></returns>
-        public static IEnumerable<T> FindEqualsObjectsByObject(IEnumerable<T> objects, T baseShape)
+        public static T[] FindEqualsObjectsByObject(IEnumerable<T> objects, T baseShape)
         {
             if (objects == null)
                 throw new NullReferenceException("Null reference to the objects");
@@ -25,7 +25,7 @@ namespace Shapes.Services
 
             IEnumerable<T> foundEqualsObjects = objects.ToList().FindAll(x => x.Equals(baseShape));
 
-            return foundEqualsObjects;
+            return foundEqualsObjects.ToArray();
         }
     }
 }
