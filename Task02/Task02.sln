@@ -14,10 +14,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fileData", "fileData", "{8B438FD0-749E-4B2A-BE98-6F59F65CF09C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{F19AF6C3-4042-47AF-98D7-B2F86EE6F7BB}"
+	ProjectSection(SolutionItems) = preProject
+		xmlDocuments\Vectors.Domain.xml = xmlDocuments\Vectors.Domain.xml
+		xmlDocuments\Vectors.DomainTests.xml = xmlDocuments\Vectors.DomainTests.xml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task02.3", "task02.3", "{CF248F48-4362-4AD6-88EB-ED8E1766632C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector.Domain", "src\Vector.Domain\Vector.Domain.csproj", "{8E725952-0A99-4D42-ADEF-367DF00AF5F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectors.Domain", "src\Vector.Domain\Vectors.Domain.csproj", "{8E725952-0A99-4D42-ADEF-367DF00AF5F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectors.DomainTests", "tests\Vector.DomainTests\Vectors.DomainTests.csproj", "{742642A5-2A58-44D7-987D-285C71E42304}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +35,10 @@ Global
 		{8E725952-0A99-4D42-ADEF-367DF00AF5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E725952-0A99-4D42-ADEF-367DF00AF5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E725952-0A99-4D42-ADEF-367DF00AF5F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742642A5-2A58-44D7-987D-285C71E42304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742642A5-2A58-44D7-987D-285C71E42304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742642A5-2A58-44D7-987D-285C71E42304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742642A5-2A58-44D7-987D-285C71E42304}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +48,7 @@ Global
 		{D41888AF-B8A2-47BF-BAF4-9116789057FE} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
 		{CF248F48-4362-4AD6-88EB-ED8E1766632C} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
 		{8E725952-0A99-4D42-ADEF-367DF00AF5F7} = {75CD832E-3992-4F8C-8D11-775CAE350882}
+		{742642A5-2A58-44D7-987D-285C71E42304} = {AAD36CCF-9FD1-45EB-8C18-9F7D6707272E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E83C1FB-42FB-4EB0-9899-758624C42C31}

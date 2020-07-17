@@ -1,22 +1,22 @@
 ﻿using System;
 
-namespace Vector.Domain
+namespace Vectors.Domain
 {
     /// <summary>
-    /// Class vector with overloading opertors
+    /// Class vector with overloading opertors.
     /// </summary>
     public class Vector
     {
         /// <summary>
-        /// X readonly coordinate
+        /// X readonly coordinate.
         /// </summary>
         private readonly double x;
         /// <summary>
-        /// Y readonly coordinate
+        /// Y readonly coordinate.
         /// </summary>
         private readonly double y;
         /// <summary>
-        /// Z readonly coordinate
+        /// Z readonly coordinate.
         /// </summary>
         private readonly double z;
 
