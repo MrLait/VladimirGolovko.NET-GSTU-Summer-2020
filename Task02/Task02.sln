@@ -17,7 +17,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocument
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "task02.3", "task02.3", "{CF248F48-4362-4AD6-88EB-ED8E1766632C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector.Domain", "src\Vector.Domain\Vector.Domain.csproj", "{8E725952-0A99-4D42-ADEF-367DF00AF5F7}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E725952-0A99-4D42-ADEF-367DF00AF5F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E725952-0A99-4D42-ADEF-367DF00AF5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E725952-0A99-4D42-ADEF-367DF00AF5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E725952-0A99-4D42-ADEF-367DF00AF5F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -25,6 +37,7 @@ Global
 		{75CD832E-3992-4F8C-8D11-775CAE350882} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
 		{D41888AF-B8A2-47BF-BAF4-9116789057FE} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
 		{CF248F48-4362-4AD6-88EB-ED8E1766632C} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
+		{8E725952-0A99-4D42-ADEF-367DF00AF5F7} = {75CD832E-3992-4F8C-8D11-775CAE350882}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E83C1FB-42FB-4EB0-9899-758624C42C31}
