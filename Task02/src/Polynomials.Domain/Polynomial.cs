@@ -120,5 +120,89 @@ namespace Polynomials.Domain
 
             return new Polynomial(multPolynomialsResult);
         }
+
+        /// <summary>
+        /// Method for summing a polynomial into a polynomial.
+        /// Where polynomial index is degree.
+        /// <param name="polynomialOne">Elements of the polynomial one.</param>
+        /// <param name="polynomialTwo">Elements of the polynomial two.</param>
+        /// <returns>Returns the new polynomial.</returns>
+        public static Polynomial operator +(Polynomial polynomialOne, Polynomial polynomialTwo)
+        {
+            if (polynomialOne == null)
+                throw new NullReferenceException();
+            if (polynomialTwo == null)
+                throw new NullReferenceException();
+
+            double[] sumPolynomialResult = polynomialOne.Elements.Length >= polynomialTwo.Elements.Length
+                ? polynomialOne.Elements
+                : polynomialTwo.Elements;
+
+            if (polynomialOne.Elements.Length >= polynomialTwo.Elements.Length)
+                sumPolynomialResult = SumPolynomialElementsWithArray(polynomialTwo.Elements, sumPolynomialResult);
+            else
+                sumPolynomialResult = SumPolynomialElementsWithArray(polynomialOne.Elements, sumPolynomialResult);
+
+            return new Polynomial(sumPolynomialResult);
+        }
+
+        /// <summary>
+        /// Method for substracting a polynomial from polynomial.
+        /// Where polynomial index is degree.
+        /// <param name="polynomialOne">Elements of the polynomial one.</param>
+        /// <param name="polynomialTwo">Elements of the polynomial two.</param>
+        /// <returns>Returns the new polynomial.</returns>
+        public static Polynomial operator -(Polynomial polynomialOne, Polynomial polynomialTwo)
+        {
+            if (polynomialOne == null)
+                throw new NullReferenceException();
+            if (polynomialTwo == null)
+                throw new NullReferenceException();
+
+            double[] sumPolynomialResult = polynomialOne.Elements.Length >= polynomialTwo.Elements.Length
+                ? polynomialOne.Elements
+                : polynomialTwo.Elements;
+
+            if (polynomialOne.Elements.Length >= polynomialTwo.Elements.Length)
+                sumPolynomialResult = SubtractionPolynomialElementsFromArray(polynomialTwo.Elements, sumPolynomialResult);
+            else
+                sumPolynomialResult = SubtractionPolynomialElementsFromArray(polynomialOne.Elements, sumPolynomialResult);
+
+            return new Polynomial(sumPolynomialResult);
+        }
+
+        /// <summary>
+        /// Method for summing a polinomial elements with an array.
+        /// Where polynomial elements index is degree.
+        /// </summary>
+        /// <param name="polynomialElements"> Elements of a polynomial.</param>
+        /// <param name="arrNumber">Array for summing with a polynomial elements.</param>
+        /// <returns>Returns the summation of polynomial elements with array elements.</returns>
+        private static double[] SumPolynomialElementsWithArray(double[] polynomialElements, double[] arrNumber)
+        {
+            for (int i = 0; i < polynomialElements.Length; i++)
+            {
+                arrNumber[i] += polynomialElements[i];
+            }
+
+            return arrNumber;
+        }
+
+        /// <summary>
+        /// Subtracting a polynomial from an array.
+        /// Where polynomial elements index is degree.
+        /// </summary>
+        /// <param name="polynomialElements"> Elements of a polynomial.</param>
+        /// <param name="arrNumber">Array for summing with a polynomial elements.</param>
+        /// <returns>Returns the substracion of polynomial elements from array elements.</returns>
+        private static double[] SubtractionPolynomialElementsFromArray(double[] polynomialElements, double[] arrNumber)
+        {
+            for (int i = 0; i < polynomialElements.Length; i++)
+            {
+                arrNumber[i] -= polynomialElements[i];
+            }
+
+            return arrNumber;
+        }
     }
 }
