@@ -2,12 +2,26 @@
 
 namespace Polynomials.Domain
 {
+    /// <summary>
+    /// Class polynomial with overloading opertors.
+    /// </summary>
     public class Polynomial
     {
         private readonly double[] _elements;
 
+        /// <summary>
+        /// Elements arraay.
+        /// </summary>
         public double[] Elements => _elements;
+
+        /// <summary>
+        /// Quotient elements array.
+        /// </summary>
         public double[] QuotientElements { get; }
+
+        /// <summary>
+        /// Remainder elements array.
+        /// </summary>
         public double[] RemainderElements { get; }
 
         /// <summary>
@@ -98,6 +112,7 @@ namespace Polynomials.Domain
         /// <summary>
         /// The method of multiplication a polynomial into a polynomial.
         /// Where polynomial index is degree.
+        /// </summary>
         /// <param name="polynomialOne">Elements of the polynomial one.</param>
         /// <param name="polynomialTwo">Elements of the polynomial two.</param>
         /// <returns>Returns the new polynomial.</returns>
@@ -124,6 +139,7 @@ namespace Polynomials.Domain
         /// <summary>
         /// Method for summing a polynomial into a polynomial.
         /// Where polynomial index is degree.
+        /// </summary>
         /// <param name="polynomialOne">Elements of the polynomial one.</param>
         /// <param name="polynomialTwo">Elements of the polynomial two.</param>
         /// <returns>Returns the new polynomial.</returns>
@@ -149,6 +165,7 @@ namespace Polynomials.Domain
         /// <summary>
         /// Method for substracting a polynomial from polynomial.
         /// Where polynomial index is degree.
+        /// </summary>
         /// <param name="polynomialOne">Elements of the polynomial one.</param>
         /// <param name="polynomialTwo">Elements of the polynomial two.</param>
         /// <returns>Returns the new polynomial.</returns>

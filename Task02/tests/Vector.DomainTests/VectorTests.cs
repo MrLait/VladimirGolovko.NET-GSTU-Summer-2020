@@ -465,6 +465,7 @@ namespace Vectors.DomainTests
         /// <summary>
         /// Test for correct get property SqrMagnitude from vector 
         /// when numbers is positive.
+        /// </summary>
         /// <param name="vectorOneX">X coordinate of the vector one.</param>
         /// <param name="vectorOneY">X coordinate of the vector one.</param>
         /// <param name="vectorOneZ">X coordinate of the vector one.</param>
@@ -526,7 +527,9 @@ namespace Vectors.DomainTests
             int index)
         {
             // Assert
-            Assert.That(() => new Vector(0, 0, 0)[index], Throws.TypeOf<ArgumentOutOfRangeException>());
+            Assert.That(() => 
+            new Vector(0, 0, 0)[index], Throws.TypeOf<ArgumentOutOfRangeException>()
+            );
         }
     }
 }

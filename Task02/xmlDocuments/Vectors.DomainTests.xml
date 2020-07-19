@@ -194,7 +194,15 @@
             <param name="vectorOneY">X coordinate of the vector one.</param>
             <param name="vectorOneZ">X coordinate of the vector one.</param>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Vectors.DomainTests.VectorTests.GivenSqrMagnitude_WhenDifferentDigits(System.Int32,System.Int32,System.Int32)" -->
+        <member name="M:Vectors.DomainTests.VectorTests.GivenSqrMagnitude_WhenDifferentDigits(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct get property SqrMagnitude from vector 
+            when numbers is positive.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+        </member>
         <member name="M:Vectors.DomainTests.VectorTests.GivenThisInt_i_ForGetDataWhenNumbers_2_4_6_OutIs2_4_6(System.Int32,System.Int32,System.Int32)">
             <summary>
             Test for correct get property this[int i] from vector 
