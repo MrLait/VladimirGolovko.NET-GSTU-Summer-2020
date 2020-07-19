@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vectors.DomainTests</name>
+    </assembly>
+    <members>
+        <member name="T:Vectors.DomainTests.VectorTests">
+            <summary>
+            Test cases to testing class Vector.
+            </summary>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorSubtracts_WhenNumbersIsPositive_ThenOutIsPositive(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct calculation operator -subtracts one vector from another 
+            when numbers is positive.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="vectorTwoX">Y coordinate of the vector two.</param>
+            <param name="vectorTwoY">Z coordinate of the vector two.</param>
+            <param name="vectorTwoZ">Z coordinate of the vector two.</param>
+            <param name="vectorExpectedX">X coordinate of the expected vector.</param>
+            <param name="vectorExpectedY">X coordinate of the expected vector.</param>
+            <param name="vectorExpectedZ">X coordinate of the expected vector.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorSubtracts_WhenNumbersIsNegativeOutIsNegative(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct calculation operator -subtracts one vector from another 
+            when numbers is negative.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="vectorTwoX">Y coordinate of the vector two.</param>
+            <param name="vectorTwoY">Z coordinate of the vector two.</param>
+            <param name="vectorTwoZ">Z coordinate of the vector two.</param>
+            <param name="vectorExpectedX">X coordinate of the expected vector.</param>
+            <param name="vectorExpectedY">X coordinate of the expected vector.</param>
+            <param name="vectorExpectedZ">X coordinate of the expected vector.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorSubtracts_WhenNumbersIsZeroOutIsZero(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct calculation operator -subtracts one vector from another 
+            when numbers is negative.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="vectorTwoX">Y coordinate of the vector two.</param>
+            <param name="vectorTwoY">Z coordinate of the vector two.</param>
+            <param name="vectorTwoZ">Z coordinate of the vector two.</param>
+            <param name="vectorExpectedX">X coordinate of the expected vector.</param>
+            <param name="vectorExpectedY">X coordinate of the expected vector.</param>
+            <param name="vectorExpectedZ">X coordinate of the expected vector.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorNotEqual_WhenVectorIsDifferentOutIsTrue(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for operator != when vectors is different.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="vectorTwoX">Y coordinate of the vector two.</param>
+            <param name="vectorTwoY">Z coordinate of the vector two.</param>
+            <param name="vectorTwoZ">Z coordinate of the vector two.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorNotEqual_WhenVectorIsSameOutIsFalse(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for operator != when vectors is the same.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="vectorTwoX">Y coordinate of the vector two.</param>
+            <param name="vectorTwoY">Z coordinate of the vector two.</param>
+            <param name="vectorTwoZ">Z coordinate of the vector two.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorEqual_ForVectorWhenVectorIsDifferentOutIsFalse(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for operator == when vectors is different.
+            </summary>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorEqual_ForVectorWhenVectorIsTheSameOutIsTrue(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for operator == when vectors is the same.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="vectorTwoX">Y coordinate of the vector two.</param>
+            <param name="vectorTwoY">Z coordinate of the vector two.</param>
+            <param name="vectorTwoZ">Z coordinate of the vector two.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorAdds_ForVectorWhenNumbersIsPositiveOutIsPositive(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct calculation operator +Adds one vector to another 
+            when numbers is positive.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="vectorTwoX">Y coordinate of the vector two.</param>
+            <param name="vectorTwoY">Z coordinate of the vector two.</param>
+            <param name="vectorTwoZ">Z coordinate of the vector two.</param>
+            <param name="vectorExpectedX">X coordinate of the expected vector.</param>
+            <param name="vectorExpectedY">X coordinate of the expected vector.</param>
+            <param name="vectorExpectedZ">X coordinate of the expected vector.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorAdds_ForVectorWhenNumbersIsNegativeOutIsNegative(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct calculation operator +Adds one vector to another 
+            when numbers is negative.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="vectorTwoX">Y coordinate of the vector two.</param>
+            <param name="vectorTwoY">Z coordinate of the vector two.</param>
+            <param name="vectorTwoZ">Z coordinate of the vector two.</param>
+            <param name="vectorExpectedX">X coordinate of the expected vector.</param>
+            <param name="vectorExpectedY">X coordinate of the expected vector.</param>
+            <param name="vectorExpectedZ">X coordinate of the expected vector.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorAdds_ForVectorWhenNumbersIsZeroOutIsZero(System.Int32)">
+            <summary>
+            Test for correct calculation operator +Adds one vector to another 
+            when numbers is zero.
+            </summary>
+            <param name="zero">Zero number.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorMultiplies_WhenVectorMultipleOnDigit(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct calculation operator *Multiplies a vector by a number 
+            when numbers is positive.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="multiplier">Multiplier.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorMultiplies_WhenDigitMultipleOnVector(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct calculation operator *Multiplies a number  by a vector  
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="multiplier">Multiplier.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorDivides_WhenVectorDevideOnDigit(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct calculation operator / Divides a vector by a number.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="devider">Devider.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenOperatorDivides_WhenDigitDevideOnVector(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct calculation operator / Divides a vector by a number 
+            when numbers is positive.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+            <param name="devider">Devider.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenX_Y_Z_ForGetDataWhen(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct get property X, Y and Z from vector 
+            when numbers is positive.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenMagnitude_WhenDifferentDigits(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct get property Magnitude from vector 
+            when numbers is positive.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenNormalized_WhenDifferentDigits_ThenOutIsOne(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct get property Normalized from vector 
+            when numbers is positive.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenSqrMagnitude_WhenDifferentDigits(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct get property SqrMagnitude from vector 
+            when numbers is positive.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenThisInt_i_ForGetDataWhenNumbers_2_4_6_OutIs2_4_6(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test for correct get property this[int i] from vector 
+            when numbers is positive.
+            </summary>
+            <param name="vectorOneX">X coordinate of the vector one.</param>
+            <param name="vectorOneY">X coordinate of the vector one.</param>
+            <param name="vectorOneZ">X coordinate of the vector one.</param>
+        </member>
+        <member name="M:Vectors.DomainTests.VectorTests.GivenThisInt_i_WhenIndexMoreThenTWO_OutIsArgumentOutOfRangeException(System.Int32)">
+            <summary>
+            Test for correct get property this[int i] from vector 
+            when numbers is out of range.
+            </summary>
+            <param name="index">Index.</param>
+        </member>
+    </members>
+</doc>

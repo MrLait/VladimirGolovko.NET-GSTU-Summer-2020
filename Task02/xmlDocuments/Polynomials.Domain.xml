@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Polynomials.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:Polynomials.Domain.Polynomial">
+            <summary>
+            Class polynomial with overloading opertors.
+            </summary>
+        </member>
+        <member name="P:Polynomials.Domain.Polynomial.Elements">
+            <summary>
+            Elements arraay.
+            </summary>
+        </member>
+        <member name="P:Polynomials.Domain.Polynomial.QuotientElements">
+            <summary>
+            Quotient elements array.
+            </summary>
+        </member>
+        <member name="P:Polynomials.Domain.Polynomial.RemainderElements">
+            <summary>
+            Remainder elements array.
+            </summary>
+        </member>
+        <member name="M:Polynomials.Domain.Polynomial.#ctor(System.Double[])">
+            <summary>
+            Constructor for initializing polynomial elements.
+            The array element index is the degree of the polynomial.
+            </summary>
+            <param name="elements">Elements of the polynomial.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Polynomial.#ctor(System.Double[],System.Double[])">
+            <summary>
+            Constructor for initializing polynomial elements in quotient remainder format.
+            The array element index is the degree of the polynomial.
+            </summary>
+            <param name="quotientElements">Quotient elements of the polynomial.</param>
+            <param name="remainderElements">Remainder elements of the polynomial.</param>
+        </member>
+        <member name="P:Polynomials.Domain.Polynomial.Item(System.Int32)">
+            <summary>
+            Access polynomial elements by index.
+            Where the index number is the degree of the polynomial.
+            </summary>
+            <param name="i">Polynomial index.</param>
+            <returns>The element with a given index.</returns>
+        </member>
+        <member name="M:Polynomials.Domain.Polynomial.op_Division(Polynomials.Domain.Polynomial,Polynomials.Domain.Polynomial)">
+            <summary>
+            The method of dividing a polynomial into a polynomial.
+            Where polynomial index is degree.
+            </summary>
+            <param name="dividend">Parameters of a divisible polynomial.</param>
+            <param name="divider">Polynomial divisor coefficients.</param>
+            <returns>Returns the new polynomial in the quotient remainder format.</returns>
+        </member>
+        <member name="M:Polynomials.Domain.Polynomial.op_Multiply(Polynomials.Domain.Polynomial,Polynomials.Domain.Polynomial)">
+            <summary>
+            The method of multiplication a polynomial into a polynomial.
+            Where polynomial index is degree.
+            </summary>
+            <param name="polynomialOne">Elements of the polynomial one.</param>
+            <param name="polynomialTwo">Elements of the polynomial two.</param>
+            <returns>Returns the new polynomial.</returns>
+        </member>
+        <member name="M:Polynomials.Domain.Polynomial.op_Addition(Polynomials.Domain.Polynomial,Polynomials.Domain.Polynomial)">
+            <summary>
+            Method for summing a polynomial into a polynomial.
+            Where polynomial index is degree.
+            </summary>
+            <param name="polynomialOne">Elements of the polynomial one.</param>
+            <param name="polynomialTwo">Elements of the polynomial two.</param>
+            <returns>Returns the new polynomial.</returns>
+        </member>
+        <member name="M:Polynomials.Domain.Polynomial.op_Subtraction(Polynomials.Domain.Polynomial,Polynomials.Domain.Polynomial)">
+            <summary>
+            Method for substracting a polynomial from polynomial.
+            Where polynomial index is degree.
+            </summary>
+            <param name="polynomialOne">Elements of the polynomial one.</param>
+            <param name="polynomialTwo">Elements of the polynomial two.</param>
+            <returns>Returns the new polynomial.</returns>
+        </member>
+        <member name="M:Polynomials.Domain.Polynomial.SumPolynomialElementsWithArray(System.Double[],System.Double[])">
+            <summary>
+            Method for summing a polinomial elements with an array.
+            Where polynomial elements index is degree.
+            </summary>
+            <param name="polynomialElements"> Elements of a polynomial.</param>
+            <param name="arrNumber">Array for summing with a polynomial elements.</param>
+            <returns>Returns the summation of polynomial elements with array elements.</returns>
+        </member>
+        <member name="M:Polynomials.Domain.Polynomial.SubtractionPolynomialElementsFromArray(System.Double[],System.Double[])">
+            <summary>
+            Subtracting a polynomial from an array.
+            Where polynomial elements index is degree.
+            </summary>
+            <param name="polynomialElements"> Elements of a polynomial.</param>
+            <param name="arrNumber">Array for summing with a polynomial elements.</param>
+            <returns>Returns the substracion of polynomial elements from array elements.</returns>
+        </member>
+    </members>
+</doc>

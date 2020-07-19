@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Polynomials.DomainTests</name>
+    </assembly>
+    <members>
+        <member name="T:Polynomials.Domain.Tests.PolynomialTests">
+            <summary>
+            Test cases to testing class Polynomial.
+            </summary>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GivenThisInt_i_ForGetData_WhenNumbers_2_4_6_ThenOutIs2_4_6(System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            Test for correct get property this[int i] from polynomial elements 
+            Where the index number is the degree of the polynomial.
+            </summary>
+            <param name="elementOne">Polinomial element with degree zero.</param>
+            <param name="elementTwo">Polinomial element with degree two.</param>
+            <param name="elementThree">Polinomial element with degree three.</param>
+            <param name="index">Polinomial element index.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GivenThisInt_i_ForGetData_WhenNumbersIsDifferent_ThenOutIsArgumentOutOfRangeException(System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            Test for correct get property this[int i] from polynomial elements 
+            Where the index number is the degree of the polynomial.
+            </summary>
+            <param name="elementOne">Polinomial element with degree zero.</param>
+            <param name="elementTwo">Polinomial element with degree two.</param>
+            <param name="elementThree">Polinomial element with degree three.</param>
+            <param name="index">Polinomial element index.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetDivisionForTwoPolynomialWhenInputPolynomialIsValidThenOutIsQuotient(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing division operator overload quotien element.
+            </summary>
+            <param name="dividendElDegZero">Dividend element with degree zero.</param>
+            <param name="dividendElDegOne">Dividend element with degree one.</param>
+            <param name="dividendElDegTwo">Dividend element with degree two.</param>
+            <param name="dividendElDegeThree">Dividend element with degree three.</param>
+            <param name="dividendElDegFour">Dividend element with degree four.</param>
+            <param name="dividendElDegFive">Dividend element with degree five.</param>
+            <param name="dividerElDegZero">Divider element with degree zero.</param>
+            <param name="dividerElDegOne">Divider element with degree one.</param>
+            <param name="dividerElDegTwo">Divider element with degree two.</param>
+            <param name="dividerElDegeThree">Divider element with degree three.</param>
+            <param name="quotientElDegZero">Quotient element with degree zero.</param>
+            <param name="quotientElDegOne">Quotient element with degree one.</param>
+            <param name="quotientElDegTwo">Quotient element with degree two.</param>
+            <param name="remainderElDegZero">Remainder element with degree zero.</param>
+            <param name="remainderElDegOne">Remainder element with degree one.</param>
+            <param name="remainderElDegTwo">Remainder element with degree two.</param>
+            <param name="remainderElDegeThree">Remainder element with degree three.</param>
+            <param name="remainderElDegFour">Remainder element with degree four.</param>
+            <param name="remainderElDegFive">Remainder element with degree five.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetDivisionForTwoPolynomialWhenInputPolynomialIsValidThenOutIsRemainder(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing division operator overload remainder element.
+            </summary>
+            <param name="dividendElDegZero">Dividend element with degree zero.</param>
+            <param name="dividendElDegOne">Dividend element with degree one.</param>
+            <param name="dividendElDegTwo">Dividend element with degree two.</param>
+            <param name="dividendElDegeThree">Dividend element with degree three.</param>
+            <param name="dividendElDegFour">Dividend element with degree four.</param>
+            <param name="dividendElDegFive">Dividend element with degree five.</param>
+            <param name="dividerElDegZero">Divider element with degree zero.</param>
+            <param name="dividerElDegOne">Divider element with degree one.</param>
+            <param name="dividerElDegTwo">Divider element with degree two.</param>
+            <param name="dividerElDegeThree">Divider element with degree three.</param>
+            <param name="quotientElDegZero">Quotient element with degree zero.</param>
+            <param name="quotientElDegOne">Quotient element with degree one.</param>
+            <param name="quotientElDegTwo">Quotient element with degree two.</param>
+            <param name="remainderElDegZero">Remainder element with degree zero.</param>
+            <param name="remainderElDegOne">Remainder element with degree one.</param>
+            <param name="remainderElDegTwo">Remainder element with degree two.</param>
+            <param name="remainderElDegeThree">Remainder element with degree three.</param>
+            <param name="remainderElDegFour">Remainder element with degree four.</param>
+            <param name="remainderElDegFive">Remainder element with degree five.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetDivisionForTwoValidPolynomialWhenFirstPolynomialMoreThenSecondThenOutIsQuotienElement(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing division operator overload quotien element.
+            </summary>
+            <param name="dividendElDegZero">Dividend element with degree zero.</param>
+            <param name="dividendElDegOne">Dividend element with degree one.</param>
+            <param name="dividendElDegTwo">Dividend element with degree two.</param>
+            <param name="dividendElDegeThree">Dividend element with degree three.</param>
+            <param name="dividerElDegZero">Divider element with degree zero.</param>
+            <param name="dividerElDegOne">Divider element with degree one.</param>
+            <param name="quotientElDegZero">Quotient element with degree zero.</param>
+            <param name="quotientElDegOne">Quotient element with degree one.</param>
+            <param name="quotientElDegTwo">Quotient element with degree two.</param>
+            <param name="remainderElDegZero">Remainder element with degree zero.</param>
+            <param name="remainderElDegOne">Remainder element with degree one.</param>
+            <param name="remainderElDegTwo">Remainder element with degree two.</param>
+            <param name="remainderElDegeThree">Remainder element with degree three.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetDivisionForTwoValidPolynomialWhenFirstPolynomialMoreThenSecondThenOutIsRemainderElement(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing division operator overload remainde element.
+            </summary>
+            <param name="dividendElDegZero">Dividend element with degree zero.</param>
+            <param name="dividendElDegOne">Dividend element with degree one.</param>
+            <param name="dividendElDegTwo">Dividend element with degree two.</param>
+            <param name="dividendElDegeThree">Dividend element with degree three.</param>
+            <param name="dividerElDegZero">Divider element with degree zero.</param>
+            <param name="dividerElDegOne">Divider element with degree one.</param>
+            <param name="quotientElDegZero">Quotient element with degree zero.</param>
+            <param name="quotientElDegOne">Quotient element with degree one.</param>
+            <param name="quotientElDegTwo">Quotient element with degree two.</param>
+            <param name="remainderElDegZero">Remainder element with degree zero.</param>
+            <param name="remainderElDegOne">Remainder element with degree one.</param>
+            <param name="remainderElDegTwo">Remainder element with degree two.</param>
+            <param name="remainderElDegeThree">Remainder element with degree three.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetDivisionForTwoPolynomialWhenInputPolynomialWithFirstNumIsZeroThenOutIsArgumentException(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing division operator overload.
+            </summary>
+            <param name="dividendElDegZero">Dividend element with degree zero.</param>
+            <param name="dividendElDegOne">Dividend element with degree one.</param>
+            <param name="dividendElDegTwo">Dividend element with degree two.</param>
+            <param name="dividendElDegeThree">Dividend element with degree three.</param>
+            <param name="dividendElDegFour">Dividend element with degree four.</param>
+            <param name="dividendElDegFive">Dividend element with degree five.</param>
+            <param name="dividerElDegZero">Divider element with degree zero.</param>
+            <param name="dividerElDegOne">Divider element with degree one.</param>
+            <param name="dividerElDegTwo">Divider element with degree two.</param>
+            <param name="dividerElDegeThree">Divider element with degree three.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetDivisionForTwoPolynomialWhenFirstPolynomialLessThenSecondThenOutIsArithmeticException(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing division operator overload.
+            </summary>
+            <param name="dividendElDegZero">Dividend element with degree zero.</param>
+            <param name="dividendElDegOne">Dividend element with degree one.</param>
+            <param name="dividendElDegTwo">Dividend element with degree two.</param>
+            <param name="dividendElDegeThree">Dividend element with degree three.</param>
+            <param name="dividerElDegZero">Divider element with degree zero.</param>
+            <param name="dividerElDegOne">Divider element with degree one.</param>
+            <param name="dividerElDegTwo">Divider element with degree two.</param>
+            <param name="dividerElDegeThree">Divider element with degree three.</param>
+            <param name="dividerElDegFour">Divider element with degree four.</param>
+            <param name="dividerdElDegFive">Divider element with degree five.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetMultiplicationForTwoPolynomialWithFourArgWhenArg(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing multiplication operator overload.
+            </summary>
+            <param name="polOneElDegZero">Polinom one element with degree zero.</param>
+            <param name="polOneElDegOne">Polinom one element with degree one.</param>
+            <param name="polOneElDegTwo">Polinom one element with degree two.</param>
+            <param name="polOneElDegeThree">Polinom one element with degree three.</param>
+            <param name="polTwoElDegZero">Polinom two element with degree zero.</param>
+            <param name="polTwoElDegOne">Polinom two element with degree one.</param>
+            <param name="polTwoElDegTwo">Polinom two element with degree two.</param>
+            <param name="polTwoElDegeThree">Polinom two element with degree three.</param>
+            <param name="expectElDegZero">Expected polinom element with degree zero.</param>
+            <param name="expectElDegOne">Expected polinom element with degree one.</param>
+            <param name="expectElDegTwo">Expected polinom element with degree two.</param>
+            <param name="expectElDegeThree">Expected polinom element with degree three.</param>
+            <param name="expectElDegFour">Expected polinom element with degree four.</param>
+            <param name="expectElDegFive">Expected polinom element with degree five.</param>
+            <param name="expectElDegSix">Expected polinom element with degree six.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetSumForTwoPolynomialWhenPolynomialHasFoutArgThenOutIsFourArgument(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing the overload of the summation operator.
+            </summary>
+            <param name="polOneElDegZero">Polinom one element with degree zero.</param>
+            <param name="polOneElDegOne">Polinom one element with degree one.</param>
+            <param name="polOneElDegTwo">Polinom one element with degree two.</param>
+            <param name="polOneElDegeThree">Polinom one element with degree three.</param>
+            <param name="polTwoElDegZero">Polinom two element with degree zero.</param>
+            <param name="polTwoElDegOne">Polinom two element with degree one.</param>
+            <param name="polTwoElDegTwo">Polinom two element with degree two.</param>
+            <param name="polTwoElDegeThree">Polinom two element with degree three.</param>
+            <param name="expectElDegZero">Expected polinom element with degree zero.</param>
+            <param name="expectElDegOne">Expected polinom element with degree one.</param>
+            <param name="expectElDegTwo">Expected polinom element with degree two.</param>
+            <param name="expectElDegeThree">Expected polinom element with degree three.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetSumForTwoPolynomialWhenFirstPolynomialLessThenSecondThenOutIsFourArgument(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing the overload of the summation operator.
+            </summary>
+            <param name="polOneElDegZero">Polinom one element with degree zero.</param>
+            <param name="polOneElDegOne">Polinom one element with degree one.</param>
+            <param name="polOneElDegTwo">Polinom one element with degree two.</param>
+            <param name="polTwoElDegZero">Polinom two element with degree zero.</param>
+            <param name="polTwoElDegOne">Polinom two element with degree one.</param>
+            <param name="polTwoElDegTwo">Polinom two element with degree two.</param>
+            <param name="polTwoElDegeThree">Polinom two element with degree three.</param>
+            <param name="expectElDegZero">Expected polinom element with degree zero.</param>
+            <param name="expectElDegOne">Expected polinom element with degree one.</param>
+            <param name="expectElDegTwo">Expected polinom element with degree two.</param>
+            <param name="expectElDegeThree">Expected polinom element with degree three.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetSumForTwoPolynomialWhenSecondtPolynomialLessThenFirstThenOutIsFourArgument(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing the overload of the summation operator.
+            </summary>
+            <param name="polOneElDegZero">Polinom one element with degree zero.</param>
+            <param name="polOneElDegOne">Polinom one element with degree one.</param>
+            <param name="polOneElDegTwo">Polinom one element with degree two.</param>
+            <param name="polOneElDegThree">Polinom one element with degree three.</param>
+            <param name="polTwoElDegZero">Polinom two element with degree zero.</param>
+            <param name="polTwoElDegOne">Polinom two element with degree one.</param>
+            <param name="polTwoElDegTwo">Polinom two element with degree two.</param>
+            <param name="expectElDegZero">Expected polinom element with degree zero.</param>
+            <param name="expectElDegOne">Expected polinom element with degree one.</param>
+            <param name="expectElDegTwo">Expected polinom element with degree two.</param>
+            <param name="expectElDegeThree">Expected polinom element with degree three.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetSumForTwoPolynomialWhenFirstPolynomialIsNullThenOutIsNullReferenceException(System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing the overload of the summation operator.
+            </summary>
+            <param name="polOneElDegZero">Polinom one element with degree zero.</param>
+            <param name="polOneElDegOne">Polinom one element with degree one.</param>
+            <param name="polOneElDegTwo">Polinom one element with degree two.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetSubtractionForTwoPolynomialWhenPolynomialHasFoutArgThenOutIsFourArgument(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing the overload of the subtraction operator.
+            </summary>
+            <param name="polOneElDegZero">Polinom one element with degree zero.</param>
+            <param name="polOneElDegOne">Polinom one element with degree one.</param>
+            <param name="polOneElDegTwo">Polinom one element with degree two.</param>
+            <param name="polOneElDegeThree">Polinom one element with degree three.</param>
+            <param name="polTwoElDegZero">Polinom two element with degree zero.</param>
+            <param name="polTwoElDegOne">Polinom two element with degree one.</param>
+            <param name="polTwoElDegTwo">Polinom two element with degree two.</param>
+            <param name="polTwoElDegeThree">Polinom two element with degree three.</param>
+            <param name="expectElDegZero">Expected polinom element with degree zero.</param>
+            <param name="expectElDegOne">Expected polinom element with degree one.</param>
+            <param name="expectElDegTwo">Expected polinom element with degree two.</param>
+            <param name="expectElDegeThree">Expected polinom element with degree three.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetSubtractionForTwoPolynomialWhenFirstPolynomialLessThenSecondThenOutIsFourArgument(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing the overload of the subtraction operator.
+            </summary>
+            <param name="polOneElDegZero">Polinom one element with degree zero.</param>
+            <param name="polOneElDegOne">Polinom one element with degree one.</param>
+            <param name="polOneElDegTwo">Polinom one element with degree two.</param>
+            <param name="polTwoElDegZero">Polinom two element with degree zero.</param>
+            <param name="polTwoElDegOne">Polinom two element with degree one.</param>
+            <param name="polTwoElDegTwo">Polinom two element with degree two.</param>
+            <param name="polTwoElDegeThree">Polinom two element with degree three.</param>
+            <param name="expectElDegZero">Expected polinom element with degree zero.</param>
+            <param name="expectElDegOne">Expected polinom element with degree one.</param>
+            <param name="expectElDegTwo">Expected polinom element with degree two.</param>
+            <param name="expectElDegeThree">Expected polinom element with degree three.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetSubtractionForTwoPolynomialWhenSecondtPolynomialLessThenFirstThenOutIsFourArgument(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing the overload of the subtraction operator.
+            </summary>
+            <param name="polOneElDegZero">Polinom one element with degree zero.</param>
+            <param name="polOneElDegOne">Polinom one element with degree one.</param>
+            <param name="polOneElDegTwo">Polinom one element with degree two.</param>
+            <param name="polOneElDegThree">Polinom one element with degree three.</param>
+            <param name="polTwoElDegZero">Polinom two element with degree zero.</param>
+            <param name="polTwoElDegOne">Polinom two element with degree one.</param>
+            <param name="polTwoElDegTwo">Polinom two element with degree two.</param>
+            <param name="expectElDegZero">Expected polinom element with degree zero.</param>
+            <param name="expectElDegOne">Expected polinom element with degree one.</param>
+            <param name="expectElDegTwo">Expected polinom element with degree two.</param>
+            <param name="expectElDegeThree">Expected polinom element with degree three.</param>
+        </member>
+        <member name="M:Polynomials.Domain.Tests.PolynomialTests.GetSubtractionForTwoPolynomialWhenFirstPolynomialIsNullThenOutIsNullReferenceException(System.Double,System.Double,System.Double)">
+            <summary>
+            Method for testing the overload of the summation operator.
+            </summary>
+            <param name="polOneElDegZero">Polinom one element with degree zero.</param>
+            <param name="polOneElDegOne">Polinom one element with degree one.</param>
+            <param name="polOneElDegTwo">Polinom one element with degree two.</param>
+        </member>
+    </members>
+</doc>
