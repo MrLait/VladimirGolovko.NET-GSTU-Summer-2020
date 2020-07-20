@@ -10,15 +10,15 @@ namespace Vectors.Domain
         /// <summary>
         /// X readonly coordinate.
         /// </summary>
-        private readonly double x;
+        private readonly double _x;
         /// <summary>
         /// Y readonly coordinate.
         /// </summary>
-        private readonly double y;
+        private readonly double _y;
         /// <summary>
         /// Z readonly coordinate.
         /// </summary>
-        private readonly double z;
+        private readonly double _z;
 
         /// <summary>
         /// This is a constructor for initializing x,y,z coordinates.
@@ -28,32 +28,32 @@ namespace Vectors.Domain
         /// <param name="z">z coordinate.</param>
         public Vector(double x, double y, double z)
         {
-            this.x = x;
-            this.y = y;
-            this.z = z;
+            _x = x;
+            _y = y;
+            _z = z;
         }
 
         /// <summary>
         /// X coordinate of the vector.
         /// </summary>
-        public double X => x;
+        public double X => _x;
 
         /// <summary>
         /// Y coordinate of the vector.
         /// </summary>
-        public double Y => y;
+        public double Y => _y;
 
         /// <summary>
         /// Z coordinate of the vector.
         /// </summary>
-        public double Z => z;
+        public double Z => _z;
 
         /// <summary>
         /// The length property of the vector.
         /// </summary>
         public double Magnitude
         {
-            get => Math.Sqrt(x * x + y * y + z * z);
+            get => Math.Sqrt(_x * _x + _y * _y + _z * _z);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Vectors.Domain
         /// </summary>
         public Vector Normalized
         {
-            get => new Vector(x / Magnitude, y / Magnitude, z / Magnitude);
+            get => new Vector(_x / Magnitude, _y / Magnitude, _z / Magnitude);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Vectors.Domain
         /// </summary>
         public double SqrMagnitude
         {
-            get => (x * x + y * y + z * z);
+            get => (_x * _x + _y * _y + _z * _z);
         }
 
         /// <summary>
@@ -83,9 +83,9 @@ namespace Vectors.Domain
             {
                 switch (i)
                 {
-                    case 0: { return x; }
-                    case 1: { return y; }
-                    case 2: { return z; }
+                    case 0: { return _x; }
+                    case 1: { return _y; }
+                    case 2: { return _z; }
                     default:
                         throw new ArgumentOutOfRangeException("A vector can " +
                    "contain only three elements.");
