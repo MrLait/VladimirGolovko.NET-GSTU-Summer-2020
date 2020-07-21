@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Products.DomainTests</name>
+    </assembly>
+    <members>
+        <member name="T:Products.Domain.Tests.BookTests">
+            <summary>
+            Test cases to testing class Book.
+            </summary>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorSum_WhenNumbersIsPositive_ThenOutIsPositive(System.String,System.Decimal,System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="bookTwoName">Name of book two.</param>
+            <param name="priceTwo">Price two</param>
+            <param name="expectedName">Expected name of book.</param>
+            <param name="expectedPrice">Expected prices of book/</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorSum_WhenNumbersIsNegative_ThenOutIsNegative(System.String,System.Decimal,System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="bookTwoName">Name of book two.</param>
+            <param name="priceTwo">Price two</param>
+            <param name="expectedName">Expected name of book.</param>
+            <param name="expectedPrice">Expected prices of book/</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorSum_WhenFirstBookReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorSum_WhenSecondBookReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="bookTwoName">Name of book two.</param>
+            <param name="priceTwo">Price one.</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorPhoneToBook_ThenOutIsBook(System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for explicit operator Book to phone.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceTwo">Price two</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorComputerMonitorToBook_ThenOutIsBook(System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for explicit operator Book to ComputerMonitor.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="computerMonitorName">Name of phone one.</param>
+            <param name="priceTwo">Price two</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorInt_WhenNumbersIsPositive_ThenOutIsPositivePennyInt(System.String,System.Decimal,System.Int32)">
+            <summary>
+            Test cases for explicit operator int.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorInt_WhenNumbersIsNegative_ThenOutIsNegativePennyInt(System.String,System.Decimal,System.Int32)">
+            <summary>
+            Test cases for explicit operator int.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorFloat_WhenNumbersIsPositive_ThenOutIsPositiveFloat(System.String,System.Decimal,System.Single)">
+            <summary>
+            Test cases for explicit operator float.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorFloat_WhenNumbersIsNegative_ThenOutIsNegativeFloat(System.String,System.Decimal,System.Single)">
+            <summary>
+            Test cases for explicit operator float.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorDouble_WhenNumbersIsPositive_ThenOutIsPositiveDouble(System.String,System.Decimal,System.Double)">
+            <summary>
+            Test cases for explicit operator double.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorDouble_WhenNumbersIsNegative_ThenOutIsNegativeDouble(System.String,System.Decimal,System.Double)">
+            <summary>
+            Test cases for explicit operator double.
+            </summary>
+            <param name="bookOneName">Name of book one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="T:Products.DomainTests.ComputerMonitorTests">
+            <summary>
+            Test cases to testing class ComputerMonitor.
+            </summary>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorSum_WhenNumbersIsPositive_ThenOutIsPositive(System.String,System.Decimal,System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="computerMonitorTwoName">Name of computer monitor two.</param>
+            <param name="priceTwo">Price two</param>
+            <param name="expectedName">Expected name of computerMonitor.</param>
+            <param name="expectedPrice">Expected prices of computerMonitor/</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorSum_WhenNumbersIsNegative_ThenOutIsNegative(System.String,System.Decimal,System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="computerMonitorTwoName">Name of computer monitor two.</param>
+            <param name="priceTwo">Price two</param>
+            <param name="expectedName">Expected name of computerMonitor.</param>
+            <param name="expectedPrice">Expected prices of computerMonitor/</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorSum_WhenFirstComputerMonitorReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorSum_WhenSecondComputerMonitorReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="computerMonitorTwoName">Name of computer monitor two.</param>
+            <param name="priceTwo">Price one.</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorBookToComputerMonitor_ThenOutIsComputerMonitor(System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for explicit operator Book to computerMonitor.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="bookOneName">Name of computer monitor one.</param>
+            <param name="priceTwo">Price two</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorComputerMonitorToComputerMonitor_ThenOutIsComputerMonitor(System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for explicit operator Phone to ComputerMonitor.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="computerMonitorName">Name of computer monitor one.</param>
+            <param name="priceTwo">Price two</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorInt_WhenNumbersIsPositive_ThenOutIsPositivePennyInt(System.String,System.Decimal,System.Int32)">
+            <summary>
+            Test cases for explicit operator int.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorInt_WhenNumbersIsNegative_ThenOutIsNegativePennyInt(System.String,System.Decimal,System.Int32)">
+            <summary>
+            Test cases for explicit operator int.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorFloat_WhenNumbersIsPositive_ThenOutIsPositiveFloat(System.String,System.Decimal,System.Single)">
+            <summary>
+            Test cases for explicit operator float.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorFloat_WhenNumbersIsNegative_ThenOutIsNegativeFloat(System.String,System.Decimal,System.Single)">
+            <summary>
+            Test cases for explicit operator float.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorDouble_WhenNumbersIsPositive_ThenOutIsPositiveDouble(System.String,System.Decimal,System.Double)">
+            <summary>
+            Test cases for explicit operator double.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorDouble_WhenNumbersIsNegative_ThenOutIsNegativeDouble(System.String,System.Decimal,System.Double)">
+            <summary>
+            Test cases for explicit operator double.
+            </summary>
+            <param name="computerMonitorOneName">Name of computer monitor one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="T:Products.DomainTests.PhoneTests">
+            <summary>
+            Test cases to testing class phone.
+            </summary>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorSum_WhenNumbersIsPositive_ThenOutIsPositive(System.String,System.Decimal,System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="phoneTwoName">Name of phone two.</param>
+            <param name="priceTwo">Price two</param>
+            <param name="expectedName">Expected name of phone.</param>
+            <param name="expectedPrice">Expected prices of phone/</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorSum_WhenNumbersIsNegative_ThenOutIsNegative(System.String,System.Decimal,System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="phoneTwoName">Name of phone two.</param>
+            <param name="priceTwo">Price two</param>
+            <param name="expectedName">Expected name of phone.</param>
+            <param name="expectedPrice">Expected prices of phone/</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorSum_WhenFirstPhoneReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorSum_WhenSecondPhoneReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+            <summary>
+            Test cases for operator +.
+            </summary>
+            <param name="phoneTwoName">Name of phone two.</param>
+            <param name="priceTwo">Price one.</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorBookToPhone_ThenOutIsPhone(System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for explicit operator Book to Phone.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="bookOneName">Name of phone one.</param>
+            <param name="priceTwo">Price two</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorComputerMonitorToPhone_ThenOutIsPhone(System.String,System.Decimal,System.String,System.Decimal)">
+            <summary>
+            Test cases for explicit operator ComputerMonitor to Phone.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="computerMonitorName">Name of phone one.</param>
+            <param name="priceTwo">Price two</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorInt_WhenNumbersIsPositive_ThenOutIsPositivePennyInt(System.String,System.Decimal,System.Int32)">
+            <summary>
+            Test cases for explicit operator int.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorInt_WhenNumbersIsNegative_ThenOutIsNegativePennyInt(System.String,System.Decimal,System.Int32)">
+            <summary>
+            Test cases for explicit operator int.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorFloat_WhenNumbersIsPositive_ThenOutIsPositiveFloat(System.String,System.Decimal,System.Single)">
+            <summary>
+            Test cases for explicit operator float.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorFloat_WhenNumbersIsNegative_ThenOutIsNegativeFloat(System.String,System.Decimal,System.Single)">
+            <summary>
+            Test cases for explicit operator float.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorDouble_WhenNumbersIsPositive_ThenOutIsPositiveDouble(System.String,System.Decimal,System.Double)">
+            <summary>
+            Test cases for explicit operator double.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorDouble_WhenNumbersIsNegative_ThenOutIsNegativeDouble(System.String,System.Decimal,System.Double)">
+            <summary>
+            Test cases for explicit operator double.
+            </summary>
+            <param name="phoneOneName">Name of phone one.</param>
+            <param name="priceOne">Price one.</param>
+            <param name="expectedPrice">Expected price.</param>
+        </member>
+    </members>
+</doc>

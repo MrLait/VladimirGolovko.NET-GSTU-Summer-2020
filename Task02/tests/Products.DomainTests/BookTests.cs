@@ -80,8 +80,8 @@ namespace Products.Domain.Tests
         /// <summary>
         /// Test cases for operator +.
         /// </summary>
-        /// <param name="bookOneName">Name of book one.</param>
-        /// <param name="priceOne">Price one.</param>
+        /// <param name="bookTwoName">Name of book two.</param>
+        /// <param name="priceTwo">Price one.</param>
         [TestCase("bookTwo", 10.1)]
         [TestCase("bookTwo", 10.12)]
         [TestCase("bookTwo", 110.99)]

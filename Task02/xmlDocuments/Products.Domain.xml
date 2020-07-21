@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Products.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:Products.Domain.Book">
+            <summary>
+            Class Book with overloading opertors.
+            </summary>
+        </member>
+        <member name="M:Products.Domain.Book.#ctor(System.String,System.Decimal)">
+            <summary>
+            Constructor with name and book parameters.
+            </summary>
+            <param name="name">Name of book.</param>
+            <param name="price">Price of book.</param>
+        </member>
+        <member name="M:Products.Domain.Book.op_Addition(Products.Domain.Book,Products.Domain.Book)">
+            <summary>
+            Operator + returns the average price of products.
+            </summary>
+            <param name="productOne">Product one.</param>
+            <param name="productTwo">Product two.</param>
+            <returns>Returns the average price of products.</returns>
+        </member>
+        <member name="M:Products.Domain.Book.op_Explicit(Products.Domain.Phone)~Products.Domain.Book">
+            <summary>
+            Convet phone type to book.
+            </summary>
+            <param name="v">Return book.</param>
+        </member>
+        <member name="M:Products.Domain.Book.op_Explicit(Products.Domain.ComputerMonitor)~Products.Domain.Book">
+            <summary>
+            Convert ComputerMonitor type to book.
+            </summary>
+            <param name="v">Returns book.</param>
+        </member>
+        <member name="M:Products.Domain.Book.op_Explicit(Products.Domain.Book)~System.Int32">
+            <summary>
+            Returns penny.
+            </summary>
+            <param name="book">Returns penny.</param>
+        </member>
+        <member name="M:Products.Domain.Book.op_Explicit(Products.Domain.Book)~System.Single">
+            <summary>
+            Returns price in float.
+            </summary>
+            <param name="book">Returns price in float.</param>
+        </member>
+        <member name="M:Products.Domain.Book.op_Explicit(Products.Domain.Book)~System.Double">
+            <summary>
+            Returns price in double.
+            </summary>
+            <param name="book">Returns price in double.</param>
+        </member>
+        <member name="T:Products.Domain.ComputerMonitor">
+            <summary>
+            Class computer monitor with overloading opertors.
+            </summary>
+        </member>
+        <member name="M:Products.Domain.ComputerMonitor.#ctor(System.String,System.Decimal)">
+            <summary>
+            Constructor with name and computer monitor parameters.
+            </summary>
+            <param name="name">Name of computer monitor.</param>
+            <param name="price">Price of computer monitor.</param>
+        </member>
+        <member name="M:Products.Domain.ComputerMonitor.op_Addition(Products.Domain.ComputerMonitor,Products.Domain.ComputerMonitor)">
+            <summary>
+            Operator + returns the average price of products.
+            </summary>
+            <param name="productOne">Product one.</param>
+            <param name="productTwo">Product two.</param>
+            <returns>Returns the average price of products.</returns>
+        </member>
+        <member name="M:Products.Domain.ComputerMonitor.op_Explicit(Products.Domain.Book)~Products.Domain.ComputerMonitor">
+            <summary>
+            Convet book type to computer monitor.
+            </summary>
+            <param name="v">Return computer monitor.</param>
+        </member>
+        <member name="M:Products.Domain.ComputerMonitor.op_Explicit(Products.Domain.Phone)~Products.Domain.ComputerMonitor">
+            <summary>
+            Convert ComputerMonitor type to computer monitor.
+            </summary>
+            <param name="v">Returns computer monitor.</param>
+        </member>
+        <member name="M:Products.Domain.ComputerMonitor.op_Explicit(Products.Domain.ComputerMonitor)~System.Int32">
+            <summary>
+            Returns penny.
+            </summary>
+            <param name="computerMonitor">Returns penny.</param>
+        </member>
+        <member name="M:Products.Domain.ComputerMonitor.op_Explicit(Products.Domain.ComputerMonitor)~System.Single">
+            <summary>
+            Returns price in float.
+            </summary>
+            <param name="computerMonitor">Returns price in float.</param>
+        </member>
+        <member name="M:Products.Domain.ComputerMonitor.op_Explicit(Products.Domain.ComputerMonitor)~System.Double">
+            <summary>
+            Returns price in double.
+            </summary>
+            <param name="computerMonitor">Returns price in double.</param>
+        </member>
+        <member name="T:Products.Domain.Enums.ProductType">
+            <summary>
+            Enums Product type.
+            </summary>
+        </member>
+        <member name="F:Products.Domain.Enums.ProductType.Phone">
+            <summary>
+            Phone type.
+            </summary>
+        </member>
+        <member name="F:Products.Domain.Enums.ProductType.ComputerMonitor">
+            <summary>
+            Computer monitor type.
+            </summary>
+        </member>
+        <member name="F:Products.Domain.Enums.ProductType.Book">
+            <summary>
+            Book type.
+            </summary>
+        </member>
+        <member name="T:Products.Domain.Phone">
+            <summary>
+            Class phone with overloading opertors.
+            </summary>
+        </member>
+        <member name="M:Products.Domain.Phone.#ctor(System.String,System.Decimal)">
+            <summary>
+            Constructor with name and phone parameters.
+            </summary>
+            <param name="name">Name of phone.</param>
+            <param name="price">Price of phone.</param>
+        </member>
+        <member name="M:Products.Domain.Phone.op_Addition(Products.Domain.Phone,Products.Domain.Phone)">
+            <summary>
+            Operator + returns the average price of products.
+            </summary>
+            <param name="productOne">Product one.</param>
+            <param name="productTwo">Product two.</param>
+            <returns>Returns the average price of products.</returns>
+        </member>
+        <member name="M:Products.Domain.Phone.op_Explicit(Products.Domain.Book)~Products.Domain.Phone">
+            <summary>
+            Convet book type to phone.
+            </summary>
+            <param name="v">Return phone.</param>
+        </member>
+        <member name="M:Products.Domain.Phone.op_Explicit(Products.Domain.ComputerMonitor)~Products.Domain.Phone">
+            <summary>
+            Convert ComputerMonitor type to phone.
+            </summary>
+            <param name="v">Returns phone.</param>
+        </member>
+        <member name="M:Products.Domain.Phone.op_Explicit(Products.Domain.Phone)~System.Int32">
+            <summary>
+            Returns penny.
+            </summary>
+            <param name="phone">Returns penny.</param>
+        </member>
+        <member name="M:Products.Domain.Phone.op_Explicit(Products.Domain.Phone)~System.Single">
+            <summary>
+            Returns price in float.
+            </summary>
+            <param name="phone">Returns price in float.</param>
+        </member>
+        <member name="M:Products.Domain.Phone.op_Explicit(Products.Domain.Phone)~System.Double">
+            <summary>
+            Returns price in double.
+            </summary>
+            <param name="phone">Returns price in double.</param>
+        </member>
+        <member name="T:Products.Domain.BaseProduct">
+            <summary>
+            Base class BaseProduct.
+            </summary>
+        </member>
+        <member name="M:Products.Domain.BaseProduct.#ctor(System.String,System.Decimal,Products.Domain.Enums.ProductType)">
+            <summary>
+            Constructor with name, price and productType parameters.
+            </summary>
+            <param name="name">Name of book.</param>
+            <param name="price">Price of book.</param>
+            <param name="productType">ProductType of broduct.</param>
+        </member>
+        <member name="P:Products.Domain.BaseProduct.ProductType">
+            <summary>
+            Product type property.
+            </summary>
+        </member>
+        <member name="P:Products.Domain.BaseProduct.Name">
+            <summary>
+            Name property.
+            </summary>
+        </member>
+        <member name="P:Products.Domain.BaseProduct.Price">
+            <summary>
+            Price property.
+            </summary>
+        </member>
+        <member name="M:Products.Domain.BaseProduct.Equals(System.Object)">
+            <summary>
+            Comparison of the properties of products.
+            </summary>
+            <param name="obj">Object.</param>
+            <returns>Returns bool after comparison.</returns>
+        </member>
+        <member name="M:Products.Domain.BaseProduct.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+    </members>
+</doc>

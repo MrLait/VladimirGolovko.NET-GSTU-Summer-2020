@@ -3,8 +3,17 @@ using System;
 
 namespace Products.Domain
 {
+    /// <summary>
+    /// Base class BaseProduct.
+    /// </summary>
     public class BaseProduct
     {
+        /// <summary>
+        /// Constructor with name, price and productType parameters.
+        /// </summary>
+        /// <param name="name">Name of book.</param>
+        /// <param name="price">Price of book.</param>
+        /// <param name="productType">ProductType of broduct.</param>
         public BaseProduct(string name, decimal price, ProductType productType)
         {
             ProductType = productType;
@@ -12,12 +21,23 @@ namespace Products.Domain
             Price = price;
         }
 
+        /// <summary>
+        /// Product type property.
+        /// </summary>
         public ProductType ProductType { get; }
+
+        /// <summary>
+        /// Name property.
+        /// </summary>
         public string Name { get; }
+
+        /// <summary>
+        /// Price property.
+        /// </summary>
         public decimal Price { get; }
 
         /// <summary>
-        /// Comparison of the properties of vectors.
+        /// Comparison of the properties of products.
         /// </summary>
         /// <param name="obj">Object.</param>
         /// <returns>Returns bool after comparison.</returns>

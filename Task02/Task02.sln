@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocument
 	ProjectSection(SolutionItems) = preProject
 		xmlDocuments\Polynomials.Domain.xml = xmlDocuments\Polynomials.Domain.xml
 		xmlDocuments\Polynomials.DomainTests.xml = xmlDocuments\Polynomials.DomainTests.xml
+		xmlDocuments\Products.Domain.xml = xmlDocuments\Products.Domain.xml
+		xmlDocuments\Products.DomainTests.xml = xmlDocuments\Products.DomainTests.xml
 		xmlDocuments\Vectors.Domain.xml = xmlDocuments\Vectors.Domain.xml
 		xmlDocuments\Vectors.DomainTests.xml = xmlDocuments\Vectors.DomainTests.xml
 	EndProjectSection
