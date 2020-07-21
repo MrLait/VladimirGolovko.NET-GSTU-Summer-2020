@@ -9,17 +9,17 @@
             Class vector with overloading opertors.
             </summary>
         </member>
-        <member name="F:Vectors.Domain.Vector.x">
+        <member name="F:Vectors.Domain.Vector._x">
             <summary>
             X readonly coordinate.
             </summary>
         </member>
-        <member name="F:Vectors.Domain.Vector.y">
+        <member name="F:Vectors.Domain.Vector._y">
             <summary>
             Y readonly coordinate.
             </summary>
         </member>
-        <member name="F:Vectors.Domain.Vector.z">
+        <member name="F:Vectors.Domain.Vector._z">
             <summary>
             Z readonly coordinate.
             </summary>

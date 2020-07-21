@@ -14,13 +14,24 @@ namespace Products.Domain.Tests
         [TestCase()]
         public void BaseProductTest()
         {
-            var bookOne = new Book("cool", 10);
-            var bookTwo = new Book("cool2", 1000);
-            var samsungPhone = new Phone("Samsung", 100);
+            Book bookOne = new Book("cool", 10.1m);
+            Book bookTwo = new Book("cool2", 1000.0001m);
+            ComputerMonitor computerMonitorOne = new ComputerMonitor("Asus", 100);
+            Phone samsungPhoneOne = new Phone("Samsung", 100);
 
-            var sum = bookOne + bookTwo;
+            BaseProduct sumProducts = (Book)bookOne + (Book)bookTwo;
 
-            int justForTest;
+            int penny = (int)bookOne.Price;
+
+            samsungPhoneOne = (Phone)bookOne;
+            samsungPhoneOne = (Phone)computerMonitorOne;
+
+            bookOne = (Book)samsungPhoneOne;
+            bookOne = (Book)computerMonitorOne;
+
+            computerMonitorOne = (ComputerMonitor)bookOne;
+            computerMonitorOne = (ComputerMonitor)samsungPhoneOne;
+
         }
     }
 }

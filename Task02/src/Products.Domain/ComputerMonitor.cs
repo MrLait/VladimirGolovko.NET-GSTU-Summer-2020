@@ -1,4 +1,5 @@
 ﻿using Products.Domain.Enums;
+using System;
 
 namespace Products.Domain
 {
@@ -8,5 +9,25 @@ namespace Products.Domain
         {
 
         }
+
+        public static explicit operator ComputerMonitor(Book v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static explicit operator ComputerMonitor(Phone v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static explicit operator int(ComputerMonitor computerMonitor)
+        {
+            int intNum = (int)computerMonitor.Price;
+            int penny = (int)((computerMonitor.Price - intNum) * 100);
+            return penny;
+        }
+
+        public static explicit operator float(ComputerMonitor computerMonitor) => (float)computerMonitor.Price;
+        public static explicit operator double(ComputerMonitor computerMonitor) => (double)computerMonitor.Price;
     }
 }
