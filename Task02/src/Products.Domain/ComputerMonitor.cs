@@ -12,12 +12,12 @@ namespace Products.Domain
 
         public static explicit operator ComputerMonitor(Book v)
         {
-            throw new NotImplementedException();
+            return new ComputerMonitor(v.Name, v.Price);
         }
 
         public static explicit operator ComputerMonitor(Phone v)
         {
-            throw new NotImplementedException();
+            return new ComputerMonitor(v.Name, v.Price);
         }
 
         public static explicit operator int(ComputerMonitor computerMonitor)

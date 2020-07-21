@@ -206,12 +206,12 @@ namespace Vectors.Domain
         /// </summary>
         /// <param name="obj">Object.</param>
         /// <returns>Returns bool after comparison.</returns>
-        public override bool Equals(Object obj)
+        public override bool Equals(object obj)
         {
             if (obj == null || GetType() != obj.GetType())
                 return false;
             Vector v = (Vector)obj;
-            return (X.Equals(v.X) && Y.Equals(v.Y) && Z.Equals(v.Z));
+            return X.Equals(v.X) && Y.Equals(v.Y) && Z.Equals(v.Z);
         }
 
         /// <summary>
@@ -220,8 +220,7 @@ namespace Vectors.Domain
         /// <returns>The total hesh code.</returns>
         public override int GetHashCode()
         {
-            return 33 * X.GetHashCode() + Y.GetHashCode()
-                + Z.GetHashCode();
+            return Tuple.Create(X, Y, Z).GetHashCode();
         }
     }
 }

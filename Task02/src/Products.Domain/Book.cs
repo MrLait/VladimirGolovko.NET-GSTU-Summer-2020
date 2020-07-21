@@ -12,9 +12,9 @@ namespace Products.Domain
         public static Book operator +(Book productOne, Book productTwo)
         {
             if (productOne == null)
-                throw new ArgumentNullException("Product one is null");
+                throw new NullReferenceException("Product one is null");
             if (productTwo == null)
-                throw new ArgumentNullException("Product two is null");
+                throw new NullReferenceException("Product two is null");
 
             return new Book(
                name: string.Format("{0}-{1}", productOne.Name, productTwo.Name),
@@ -24,12 +24,12 @@ namespace Products.Domain
 
         public static explicit operator Book(Phone v)
         {
-            throw new NotImplementedException();
+            return new Book(v.Name, v.Price);
         }
 
         public static explicit operator Book(ComputerMonitor v)
         {
-            throw new NotImplementedException();
+            return new Book(v.Name, v.Price);
         }
 
         public static explicit operator int(Book book)
