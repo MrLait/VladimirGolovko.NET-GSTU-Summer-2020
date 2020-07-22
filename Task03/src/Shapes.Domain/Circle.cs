@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shapes.Domain.Enum;
+using System;
 
 namespace Shapes.Domain
 {
@@ -7,11 +8,17 @@ namespace Shapes.Domain
     /// </summary>
     public class Circle : BaseShape
     {
+
+        public Circle(double radius)
+        {
+            Radius = radius;
+        }
+
         /// <summary>
         /// Constructor with radius parameter.
         /// </summary>
         /// <param name="radius">Parameter for init radius.</param>
-        public Circle(double radius)
+        public Circle(double radius, Color color) : base(color)
         {
             Radius = radius;
         }
@@ -24,18 +31,16 @@ namespace Shapes.Domain
         /// <summary>
         /// Property to getting Area of circle.
         /// </summary>
-        public override double Area
-        {
-            get => Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
-        }
+        public override double Area => GetArea();
 
         /// <summary>
         /// Property to getting perimeter of circle.
         /// </summary>
-        public override double Perimeter
-        {
-            get => Math.Round(Math.PI * 2 * Radius, 2);
-        }
+        public override double Perimeter => GetPerimeter();
+
+        private double GetArea() => Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
+        private double GetPerimeter() => Math.Round(Math.PI * 2 * Radius, 2);
+
 
         /// <summary>
         /// Comparing one circle wit another.

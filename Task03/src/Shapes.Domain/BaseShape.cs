@@ -1,10 +1,22 @@
-﻿namespace Shapes.Domain
+﻿using Shapes.Domain.Enum;
+
+namespace Shapes.Domain
 {
     /// <summary>
     /// Base abstract class for others shapes.
     /// </summary>
     public abstract class BaseShape
     {
+        public BaseShape()
+        {
+        }
+        public BaseShape(Color color)
+        {
+            Color = color;
+        }
+
+        public Color Color { get; set; }
+
         /// <summary>
         /// Abstract property area.
         /// </summary>

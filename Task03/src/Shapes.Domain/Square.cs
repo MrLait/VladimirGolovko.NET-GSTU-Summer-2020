@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shapes.Domain.Enum;
+using System;
 
 namespace Shapes.Domain
 {
@@ -7,11 +8,17 @@ namespace Shapes.Domain
     /// </summary>
     public class Square : BaseShape
     {
+
+        public Square(double length)
+        {
+            Side = length;
+        }
+
         /// <summary>
         /// Constructor with length parameter.
         /// </summary>
         /// <param name="length"></param>
-        public Square(double length)
+        public Square(double length, Color color) : base(color)
         {
             Side = length;
         }
@@ -23,18 +30,15 @@ namespace Shapes.Domain
         /// <summary>
         /// Property to getting area of square.
         /// </summary>
-        public override double Area
-        {
-            get => Math.Pow(Side, 2);
-        }
+        public override double Area => GetArea();
 
         /// <summary>
         /// Property to getting perimeter of square.
         /// </summary>
-        public override double Perimeter
-        {
-            get => Side * 4;
-        }
+        public override double Perimeter => GetPerimeter();
+
+        private double GetArea() => Math.Pow(Side, 2);
+        private double GetPerimeter() => Side * 4;
 
         /// <summary>
         /// Comparing one square with another.

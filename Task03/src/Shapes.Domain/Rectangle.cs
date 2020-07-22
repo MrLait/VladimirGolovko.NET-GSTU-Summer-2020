@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shapes.Domain.Enum;
+using System;
 
 namespace Shapes.Domain
 {
@@ -7,12 +8,18 @@ namespace Shapes.Domain
     /// </summary>
     public class Rectangle : BaseShape
     {
+        public Rectangle(double length, double width)
+        {
+            Length = length;
+            Width = width;
+        }
+
         /// <summary>
         /// Constructor with length and width parameters.
         /// </summary>
         /// <param name="length">Length param.</param>
         /// <param name="width">Width param.</param>
-        public Rectangle(double length, double width)
+        public Rectangle(double length, double width, Color color) : base(color)
         {
             Length = length;
             Width = width;
@@ -31,18 +38,15 @@ namespace Shapes.Domain
         /// <summary>
         /// Property to getting area of rectangle.
         /// </summary>
-        public override double Area
-        {
-            get => Length * Width;
-        }
+        public override double Area => GetArea();
 
         /// <summary>
         /// Property to getting perimeter of rectangle. 
         /// </summary>
-        public override double Perimeter
-        {
-            get => 2 * Length + 2 * Width;
-        }
+        public override double Perimeter => GetPerimeter();
+
+        private double GetArea() => Length * Width;
+        private double GetPerimeter() => 2 * Length + 2 * Width;
 
         /// <summary>
         /// Comparing one rectangle with another.
@@ -63,7 +67,7 @@ namespace Shapes.Domain
         /// <returns>The total hesh code.</returns>
         public override int GetHashCode()
         {
-            return Length.GetHashCode() + Width.GetHashCode();
+            return Tuple.Create(Length, Width).GetHashCode();
         }
 
         /// <summary>
