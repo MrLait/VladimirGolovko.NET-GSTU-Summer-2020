@@ -9,25 +9,25 @@ namespace Shapes.Domain
     /// </summary>
     public class Circle : BaseShape
     {
+        public Circle(IMaterial previousShape, IMaterial currentShape) : base(previousShape, currentShape)
+        {
+            Circle curCircle;
+            try
+            {
+                curCircle = (Circle)currentShape;
+            }
+            catch (InvalidCastException)
+            {
+
+                throw new InvalidCastException();
+            }
+            Radius = curCircle.Radius;
+        }
+
         public Circle(double radius)
         {
             Radius = radius;
         }
-
-
-
-        public bool GetMaterial()
-        {
-            var bools = false;
-           if (this.GetType() is IPaper)
-            {
-                bools = true;
-                return bools;
-            }
-
-            return bools;
-        }
-
 
         /// <summary>
         /// Constructor with radius parameter.
@@ -53,7 +53,7 @@ namespace Shapes.Domain
         /// </summary>
         public override double Perimeter => GetPerimeter();
 
-        public override bool IsFilm { get => GetMaterial(); set => throw new NotImplementedException(); }
+        public override bool IsFilm { get; set; }
 
         private double GetArea() => Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
         private double GetPerimeter() => Math.Round(Math.PI * 2 * Radius, 2);
@@ -90,9 +90,6 @@ namespace Shapes.Domain
             return string.Format("{0};{1}", base.ToString(), Radius);
         }
 
-        public override void GetMaterial()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

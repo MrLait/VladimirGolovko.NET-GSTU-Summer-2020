@@ -9,9 +9,5 @@ namespace Shapes.Domain.Matarial
 {
     public class Film : IFilm
     {
-        public bool GetMaterial()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

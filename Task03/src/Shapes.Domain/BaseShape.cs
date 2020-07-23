@@ -6,11 +6,23 @@ namespace Shapes.Domain
     /// <summary>
     /// Base abstract class for others shapes.
     /// </summary>
-    public abstract class BaseShape: IFilm, IPaper
+    public abstract class BaseShape : IFilm, IPaper
     {
         public BaseShape()
         {
         }
+
+        public BaseShape(IMaterial previousShape, IMaterial currentShape)
+        {
+            var basePrevShape = (BaseShape)previousShape;
+            var baseCurShape = (BaseShape)currentShape;
+
+            if (basePrevShape.Area < baseCurShape.Area)
+            {
+                throw new System.ArgumentException("The cut shape cannot be larger than the previous shape.");
+            }
+        }
+
         public BaseShape(Color color)
         {
             Color = color;
@@ -29,8 +41,6 @@ namespace Shapes.Domain
         /// Abstract property perimeter.
         /// </summary>
         public abstract double Perimeter { get; }
-
-        public abstract void GetMaterial();
 
         /// <summary>
         /// Ovverriden method for get name of class.

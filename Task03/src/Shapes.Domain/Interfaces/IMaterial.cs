@@ -1,6 +1,6 @@
 ﻿namespace Shapes.Domain.Interfaces
 {
-    public interface IFilm : IMaterial
+    public interface IMaterial
     {
     }
 }

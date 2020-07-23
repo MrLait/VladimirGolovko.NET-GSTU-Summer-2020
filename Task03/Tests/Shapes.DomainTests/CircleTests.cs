@@ -14,7 +14,12 @@ namespace Shapes.Domain.Tests
         public void TestTestCase(double radius, double expectedArea)
         {
 
-            IFilm filmCircleOne = new Circle(10);
+            IFilm square = new Square(17.72455923288362);
+
+
+            IFilm filmCircleOne = new Square(10);
+
+            Circle circle = new Circle(square, filmCircleOne);
 
 
             var bools = false;

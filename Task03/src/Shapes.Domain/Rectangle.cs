@@ -1,4 +1,5 @@
 ﻿using Shapes.Domain.Enum;
+using Shapes.Domain.Interfaces;
 using System;
 
 namespace Shapes.Domain
@@ -8,6 +9,22 @@ namespace Shapes.Domain
     /// </summary>
     public class Rectangle : BaseShape
     {
+
+        public Rectangle(IMaterial previousShape, IMaterial currentShape) : base(previousShape, currentShape)
+        {
+            Rectangle curRectangle;
+            try
+            {
+                curRectangle = (Rectangle)currentShape;
+            }
+            catch (InvalidCastException)
+            {
+                throw new InvalidCastException();
+            }
+            Length = curRectangle.Length;
+            Width = curRectangle.Width;
+        }
+
         public Rectangle(double length, double width)
         {
             Length = length;
@@ -45,7 +62,7 @@ namespace Shapes.Domain
         /// </summary>
         public override double Perimeter => GetPerimeter();
 
-        public override bool IsFilm => throw new NotImplementedException();
+        public override bool IsFilm { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         private double GetArea() => Length * Width;
         private double GetPerimeter() => 2 * Length + 2 * Width;

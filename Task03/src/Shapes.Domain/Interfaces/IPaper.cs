@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Shapes.Domain.Interfaces
 {
-    public interface IPaper
+    public interface IPaper : IMaterial
     {
+
     }
 }

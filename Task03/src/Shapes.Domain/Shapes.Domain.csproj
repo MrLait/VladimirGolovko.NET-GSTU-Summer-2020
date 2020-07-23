@@ -46,6 +46,7 @@
     <Compile Include="Enum\Color.cs" />
     <Compile Include="Enum\ShapeEnum.cs" />
     <Compile Include="Interfaces\IFilm.cs" />
+    <Compile Include="Interfaces\IMaterial.cs" />
     <Compile Include="Interfaces\IPaper.cs" />
     <Compile Include="Matarial\Film.cs" />
     <Compile Include="Matarial\Paper.cs" />

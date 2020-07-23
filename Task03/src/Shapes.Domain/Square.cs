@@ -1,4 +1,5 @@
 ﻿using Shapes.Domain.Enum;
+using Shapes.Domain.Interfaces;
 using System;
 
 namespace Shapes.Domain
@@ -8,6 +9,19 @@ namespace Shapes.Domain
     /// </summary>
     public class Square : BaseShape
     {
+        public Square(IMaterial previousShape, IMaterial currentShape) : base(previousShape, currentShape)
+        {
+            Square curSquare;
+            try
+            {
+                curSquare = (Square)currentShape;
+            }
+            catch (InvalidCastException)
+            {
+                throw new InvalidCastException();
+            }
+            Side = curSquare.Side;
+        }
 
         public Square(double length)
         {
@@ -37,7 +51,7 @@ namespace Shapes.Domain
         /// </summary>
         public override double Perimeter => GetPerimeter();
 
-        public override bool IsFilm => throw new NotImplementedException();
+        public override bool IsFilm { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         private double GetArea() => Math.Pow(Side, 2);
         private double GetPerimeter() => Side * 4;
@@ -72,5 +86,6 @@ namespace Shapes.Domain
         {
             return string.Format("{0};{1}", base.ToString(), Side);
         }
+
     }
 }
