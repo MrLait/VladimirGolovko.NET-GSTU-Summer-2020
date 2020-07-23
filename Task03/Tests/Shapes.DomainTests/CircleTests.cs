@@ -1,4 +1,6 @@
 ﻿using NUnit.Framework;
+using Shapes.Domain.Interfaces;
+using Shapes.Domain.Matarial;
 
 namespace Shapes.Domain.Tests
 {
@@ -8,6 +10,33 @@ namespace Shapes.Domain.Tests
     [TestFixture()]
     public class CircleTests
     {
+        [TestCase(10.0, 314.16000000000003)]
+        public void TestTestCase(double radius, double expectedArea)
+        {
+
+            IFilm filmCircleOne = new Circle(10);
+
+
+            var bools = false;
+            if (filmCircleOne is IFilm)
+            {
+                bools = true;
+            }
+
+
+
+
+
+            IPaper paperCircleOne = new Circle(12);
+
+            //Circle circle = new Circle(15);
+            //var isFilm = circle.IsFilm;
+
+            //Circle filmCircle = new Circle(radius);
+            //Circle paperCircle = new Circle(radius);
+
+        }
+
         /// <summary>
         /// Test case to testing property area.
         /// </summary>

@@ -45,6 +45,8 @@ namespace Shapes.Domain
         /// </summary>
         public override double Perimeter => GetPerimeter();
 
+        public override bool IsFilm => throw new NotImplementedException();
+
         private double GetArea() => Length * Width;
         private double GetPerimeter() => 2 * Length + 2 * Width;
 

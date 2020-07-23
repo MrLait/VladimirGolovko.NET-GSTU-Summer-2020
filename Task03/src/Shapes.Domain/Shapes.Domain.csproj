@@ -45,6 +45,10 @@
     <Compile Include="Circle.cs" />
     <Compile Include="Enum\Color.cs" />
     <Compile Include="Enum\ShapeEnum.cs" />
+    <Compile Include="Interfaces\IFilm.cs" />
+    <Compile Include="Interfaces\IPaper.cs" />
+    <Compile Include="Matarial\Film.cs" />
+    <Compile Include="Matarial\Paper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
     <Compile Include="Square.cs" />

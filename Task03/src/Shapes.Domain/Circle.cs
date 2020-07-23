@@ -1,4 +1,5 @@
 ﻿using Shapes.Domain.Enum;
+using Shapes.Domain.Interfaces;
 using System;
 
 namespace Shapes.Domain
@@ -8,11 +9,25 @@ namespace Shapes.Domain
     /// </summary>
     public class Circle : BaseShape
     {
-
         public Circle(double radius)
         {
             Radius = radius;
         }
+
+
+
+        public bool GetMaterial()
+        {
+            var bools = false;
+           if (this.GetType() is IPaper)
+            {
+                bools = true;
+                return bools;
+            }
+
+            return bools;
+        }
+
 
         /// <summary>
         /// Constructor with radius parameter.
@@ -37,6 +52,8 @@ namespace Shapes.Domain
         /// Property to getting perimeter of circle.
         /// </summary>
         public override double Perimeter => GetPerimeter();
+
+        public override bool IsFilm { get => GetMaterial(); set => throw new NotImplementedException(); }
 
         private double GetArea() => Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
         private double GetPerimeter() => Math.Round(Math.PI * 2 * Radius, 2);
@@ -71,6 +88,11 @@ namespace Shapes.Domain
         public override string ToString()
         {
             return string.Format("{0};{1}", base.ToString(), Radius);
+        }
+
+        public override void GetMaterial()
+        {
+            throw new NotImplementedException();
         }
     }
 }
