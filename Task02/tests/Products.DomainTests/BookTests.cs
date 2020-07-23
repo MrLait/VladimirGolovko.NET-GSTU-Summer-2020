@@ -68,13 +68,13 @@ namespace Products.Domain.Tests
         [TestCase("bookOne", 10.1)]
         [TestCase("bookOne", 10.12)]
         [TestCase("bookOne", 110.99)]
-        public void GivenOperatorSum_WhenFirstBookReferenceNull_ThenOutIsNullReferenceException(
+        public void GivenOperatorSum_WhenFirstBookReferenceNull_ThenOutIsArgumentNullException(
             string bookOneName, decimal priceOne)
         {
             //Arrange
             Book bookOne = new Book(bookOneName, priceOne);
             //Assert
-            Assert.That(() => bookOne + null, Throws.TypeOf<NullReferenceException>());
+            Assert.That(() => bookOne + null, Throws.TypeOf<ArgumentNullException>());
         }
 
         /// <summary>
@@ -85,13 +85,13 @@ namespace Products.Domain.Tests
         [TestCase("bookTwo", 10.1)]
         [TestCase("bookTwo", 10.12)]
         [TestCase("bookTwo", 110.99)]
-        public void GivenOperatorSum_WhenSecondBookReferenceNull_ThenOutIsNullReferenceException(
+        public void GivenOperatorSum_WhenSecondBookReferenceNull_ThenOutIsArgumentNullException(
             string bookTwoName, decimal priceTwo)
         {
             //Arrange
             Book bookTwo = new Book(bookTwoName, priceTwo);
             //Assert
-            Assert.That(() => null + bookTwo, Throws.TypeOf<NullReferenceException>());
+            Assert.That(() => null + bookTwo, Throws.TypeOf<ArgumentNullException>());
         }
 
         /// <summary>

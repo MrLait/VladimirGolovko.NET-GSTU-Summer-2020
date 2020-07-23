@@ -69,13 +69,13 @@ namespace Products.DomainTests
         [TestCase("computerMonitorOne", 10.1)]
         [TestCase("computerMonitorOne", 10.12)]
         [TestCase("computerMonitorOne", 110.99)]
-        public void GivenOperatorSum_WhenFirstComputerMonitorReferenceNull_ThenOutIsNullReferenceException(
+        public void GivenOperatorSum_WhenFirstComputerMonitorReferenceNull_ThenOutIsArgumentNullException(
             string computerMonitorOneName, decimal priceOne)
         {
             //Arrange
             ComputerMonitor computerMonitorOne = new ComputerMonitor(computerMonitorOneName, priceOne);
             //Assert
-            Assert.That(() => computerMonitorOne + null, Throws.TypeOf<NullReferenceException>());
+            Assert.That(() => computerMonitorOne + null, Throws.TypeOf<ArgumentNullException>());
         }
 
         /// <summary>
@@ -86,13 +86,13 @@ namespace Products.DomainTests
         [TestCase("computerMonitorTwo", 10.1)]
         [TestCase("computerMonitorTwo", 10.12)]
         [TestCase("computerMonitorTwo", 110.99)]
-        public void GivenOperatorSum_WhenSecondComputerMonitorReferenceNull_ThenOutIsNullReferenceException(
+        public void GivenOperatorSum_WhenSecondComputerMonitorReferenceNull_ThenOutIsArgumentNullException(
             string computerMonitorTwoName, decimal priceTwo)
         {
             //Arrange
             ComputerMonitor computerMonitorTwo = new ComputerMonitor(computerMonitorTwoName, priceTwo);
             //Assert
-            Assert.That(() => null + computerMonitorTwo, Throws.TypeOf<NullReferenceException>());
+            Assert.That(() => null + computerMonitorTwo, Throws.TypeOf<ArgumentNullException>());
         }
 
         /// <summary>

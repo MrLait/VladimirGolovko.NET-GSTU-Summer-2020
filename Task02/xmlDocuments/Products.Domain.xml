@@ -36,24 +36,6 @@
             </summary>
             <param name="v">Returns book.</param>
         </member>
-        <member name="M:Products.Domain.Book.op_Explicit(Products.Domain.Book)~System.Int32">
-            <summary>
-            Returns penny.
-            </summary>
-            <param name="book">Returns penny.</param>
-        </member>
-        <member name="M:Products.Domain.Book.op_Explicit(Products.Domain.Book)~System.Single">
-            <summary>
-            Returns price in float.
-            </summary>
-            <param name="book">Returns price in float.</param>
-        </member>
-        <member name="M:Products.Domain.Book.op_Explicit(Products.Domain.Book)~System.Double">
-            <summary>
-            Returns price in double.
-            </summary>
-            <param name="book">Returns price in double.</param>
-        </member>
         <member name="T:Products.Domain.ComputerMonitor">
             <summary>
             Class computer monitor with overloading opertors.
@@ -85,24 +67,6 @@
             Convert ComputerMonitor type to computer monitor.
             </summary>
             <param name="v">Returns computer monitor.</param>
-        </member>
-        <member name="M:Products.Domain.ComputerMonitor.op_Explicit(Products.Domain.ComputerMonitor)~System.Int32">
-            <summary>
-            Returns penny.
-            </summary>
-            <param name="computerMonitor">Returns penny.</param>
-        </member>
-        <member name="M:Products.Domain.ComputerMonitor.op_Explicit(Products.Domain.ComputerMonitor)~System.Single">
-            <summary>
-            Returns price in float.
-            </summary>
-            <param name="computerMonitor">Returns price in float.</param>
-        </member>
-        <member name="M:Products.Domain.ComputerMonitor.op_Explicit(Products.Domain.ComputerMonitor)~System.Double">
-            <summary>
-            Returns price in double.
-            </summary>
-            <param name="computerMonitor">Returns price in double.</param>
         </member>
         <member name="T:Products.Domain.Enums.ProductType">
             <summary>
@@ -156,24 +120,6 @@
             </summary>
             <param name="v">Returns phone.</param>
         </member>
-        <member name="M:Products.Domain.Phone.op_Explicit(Products.Domain.Phone)~System.Int32">
-            <summary>
-            Returns penny.
-            </summary>
-            <param name="phone">Returns penny.</param>
-        </member>
-        <member name="M:Products.Domain.Phone.op_Explicit(Products.Domain.Phone)~System.Single">
-            <summary>
-            Returns price in float.
-            </summary>
-            <param name="phone">Returns price in float.</param>
-        </member>
-        <member name="M:Products.Domain.Phone.op_Explicit(Products.Domain.Phone)~System.Double">
-            <summary>
-            Returns price in double.
-            </summary>
-            <param name="phone">Returns price in double.</param>
-        </member>
         <member name="T:Products.Domain.BaseProduct">
             <summary>
             Base class BaseProduct.
@@ -201,6 +147,24 @@
             <summary>
             Price property.
             </summary>
+        </member>
+        <member name="M:Products.Domain.BaseProduct.op_Explicit(Products.Domain.BaseProduct)~System.Int32">
+            <summary>
+            Returns penny.
+            </summary>
+            <param name="baseProduct">Returns penny.</param>
+        </member>
+        <member name="M:Products.Domain.BaseProduct.op_Explicit(Products.Domain.BaseProduct)~System.Single">
+            <summary>
+            Returns price in float.
+            </summary>
+            <param name="baseProduct">Returns price in float.</param>
+        </member>
+        <member name="M:Products.Domain.BaseProduct.op_Explicit(Products.Domain.BaseProduct)~System.Double">
+            <summary>
+            Returns price in double.
+            </summary>
+            <param name="baseProduct">Returns price in double.</param>
         </member>
         <member name="M:Products.Domain.BaseProduct.Equals(System.Object)">
             <summary>

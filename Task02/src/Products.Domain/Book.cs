@@ -26,9 +26,9 @@ namespace Products.Domain
         public static Book operator +(Book productOne, Book productTwo)
         {
             if (productOne == null)
-                throw new NullReferenceException("Product one is null");
+                throw new ArgumentNullException("Product one is null");
             if (productTwo == null)
-                throw new NullReferenceException("Product two is null");
+                throw new ArgumentNullException("Product two is null");
 
             return new Book(
                name: string.Format("{0}-{1}", productOne.Name, productTwo.Name),
@@ -53,29 +53,5 @@ namespace Products.Domain
         {
             return new Book(v.Name, v.Price);
         }
-
-        /// <summary>
-        /// Returns penny.
-        /// </summary>
-        /// <param name="book">Returns penny.</param>
-        public static explicit operator int(Book book)
-        {
-            int intNum = (int)book.Price;
-            int penny = (int)((book.Price - intNum) * 100);
-            return penny;
-        }
-
-        /// <summary>
-        /// Returns price in float.
-        /// </summary>
-        /// <param name="book">Returns price in float.</param>
-        public static explicit operator float(Book book) => (float)book.Price;
-
-        /// <summary>
-        /// Returns price in double.
-        /// </summary>
-        /// <param name="book">Returns price in double.</param>
-        public static explicit operator double(Book book) => (double)book.Price;
-
     }
 }

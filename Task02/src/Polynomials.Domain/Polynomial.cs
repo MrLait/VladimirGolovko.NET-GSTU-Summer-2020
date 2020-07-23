@@ -73,9 +73,9 @@ namespace Polynomials.Domain
         public static Polynomial operator /(Polynomial dividend, Polynomial divider)
         {
             if (dividend == null)
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
             if (divider == null)
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
 
             double[] numDividendElements = dividend.Elements;
             double[] numDividerElements = divider.Elements;
@@ -119,9 +119,9 @@ namespace Polynomials.Domain
         public static Polynomial operator *(Polynomial polynomialOne, Polynomial polynomialTwo)
         {
             if (polynomialOne == null)
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
             if (polynomialTwo == null)
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
 
             double[] multPolynomialsResult = new double[polynomialOne.Elements.Length + polynomialTwo.Elements.Length - 1];
 
@@ -146,9 +146,9 @@ namespace Polynomials.Domain
         public static Polynomial operator +(Polynomial polynomialOne, Polynomial polynomialTwo)
         {
             if (polynomialOne == null)
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
             if (polynomialTwo == null)
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
 
             double[] sumPolynomialResult = polynomialOne.Elements.Length >= polynomialTwo.Elements.Length
                 ? polynomialOne.Elements
@@ -172,9 +172,9 @@ namespace Polynomials.Domain
         public static Polynomial operator -(Polynomial polynomialOne, Polynomial polynomialTwo)
         {
             if (polynomialOne == null)
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
             if (polynomialTwo == null)
-                throw new NullReferenceException();
+                throw new ArgumentNullException();
 
             double[] sumPolynomialResult = polynomialOne.Elements.Length >= polynomialTwo.Elements.Length
                 ? polynomialOne.Elements

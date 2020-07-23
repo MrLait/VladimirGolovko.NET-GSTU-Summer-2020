@@ -69,13 +69,13 @@ namespace Products.DomainTests
         [TestCase("phoneOne", 10.1)]
         [TestCase("phoneOne", 10.12)]
         [TestCase("phoneOne", 110.99)]
-        public void GivenOperatorSum_WhenFirstPhoneReferenceNull_ThenOutIsNullReferenceException(
+        public void GivenOperatorSum_WhenFirstPhoneReferenceNull_ThenOutIsArgumentNullException(
             string phoneOneName, decimal priceOne)
         {
             //Arrange
             Phone phoneOne = new Phone(phoneOneName, priceOne);
             //Assert
-            Assert.That(() => phoneOne + null, Throws.TypeOf<NullReferenceException>());
+            Assert.That(() => phoneOne + null, Throws.TypeOf<ArgumentNullException>());
         }
 
         /// <summary>
@@ -86,13 +86,13 @@ namespace Products.DomainTests
         [TestCase("phoneTwo", 10.1)]
         [TestCase("phoneTwo", 10.12)]
         [TestCase("phoneTwo", 110.99)]
-        public void GivenOperatorSum_WhenSecondPhoneReferenceNull_ThenOutIsNullReferenceException(
+        public void GivenOperatorSum_WhenSecondPhoneReferenceNull_ThenOutIsArgumentNullException(
             string phoneTwoName, decimal priceTwo)
         {
             //Arrange
             Phone phoneTwo = new Phone(phoneTwoName, priceTwo);
             //Assert
-            Assert.That(() => null + phoneTwo, Throws.TypeOf<NullReferenceException>());
+            Assert.That(() => null + phoneTwo, Throws.TypeOf<ArgumentNullException>());
         }
 
         /// <summary>

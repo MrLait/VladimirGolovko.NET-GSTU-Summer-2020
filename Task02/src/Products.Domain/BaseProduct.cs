@@ -37,6 +37,30 @@ namespace Products.Domain
         public decimal Price { get; }
 
         /// <summary>
+        /// Returns penny.
+        /// </summary>
+        /// <param name="baseProduct">Returns penny.</param>
+        public static explicit operator int(BaseProduct baseProduct)
+        {
+            int intNum = (int)baseProduct.Price;
+            int penny = (int)((baseProduct.Price - intNum) * 100);
+            return penny;
+        }
+
+        /// <summary>
+        /// Returns price in float.
+        /// </summary>
+        /// <param name="baseProduct">Returns price in float.</param>
+        public static explicit operator float(BaseProduct baseProduct) => (float)baseProduct.Price;
+
+        /// <summary>
+        /// Returns price in double.
+        /// </summary>
+        /// <param name="baseProduct">Returns price in double.</param>
+        public static explicit operator double(BaseProduct baseProduct) => (double)baseProduct.Price;
+
+
+        /// <summary>
         /// Comparison of the properties of products.
         /// </summary>
         /// <param name="obj">Object.</param>

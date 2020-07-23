@@ -31,14 +31,14 @@
             <param name="expectedName">Expected name of book.</param>
             <param name="expectedPrice">Expected prices of book/</param>
         </member>
-        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorSum_WhenFirstBookReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorSum_WhenFirstBookReferenceNull_ThenOutIsArgumentNullException(System.String,System.Decimal)">
             <summary>
             Test cases for operator +.
             </summary>
             <param name="bookOneName">Name of book one.</param>
             <param name="priceOne">Price one.</param>
         </member>
-        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorSum_WhenSecondBookReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+        <member name="M:Products.Domain.Tests.BookTests.GivenOperatorSum_WhenSecondBookReferenceNull_ThenOutIsArgumentNullException(System.String,System.Decimal)">
             <summary>
             Test cases for operator +.
             </summary>
@@ -138,14 +138,14 @@
             <param name="expectedName">Expected name of computerMonitor.</param>
             <param name="expectedPrice">Expected prices of computerMonitor/</param>
         </member>
-        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorSum_WhenFirstComputerMonitorReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorSum_WhenFirstComputerMonitorReferenceNull_ThenOutIsArgumentNullException(System.String,System.Decimal)">
             <summary>
             Test cases for operator +.
             </summary>
             <param name="computerMonitorOneName">Name of computer monitor one.</param>
             <param name="priceOne">Price one.</param>
         </member>
-        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorSum_WhenSecondComputerMonitorReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+        <member name="M:Products.DomainTests.ComputerMonitorTests.GivenOperatorSum_WhenSecondComputerMonitorReferenceNull_ThenOutIsArgumentNullException(System.String,System.Decimal)">
             <summary>
             Test cases for operator +.
             </summary>
@@ -245,14 +245,14 @@
             <param name="expectedName">Expected name of phone.</param>
             <param name="expectedPrice">Expected prices of phone/</param>
         </member>
-        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorSum_WhenFirstPhoneReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorSum_WhenFirstPhoneReferenceNull_ThenOutIsArgumentNullException(System.String,System.Decimal)">
             <summary>
             Test cases for operator +.
             </summary>
             <param name="phoneOneName">Name of phone one.</param>
             <param name="priceOne">Price one.</param>
         </member>
-        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorSum_WhenSecondPhoneReferenceNull_ThenOutIsNullReferenceException(System.String,System.Decimal)">
+        <member name="M:Products.DomainTests.PhoneTests.GivenOperatorSum_WhenSecondPhoneReferenceNull_ThenOutIsArgumentNullException(System.String,System.Decimal)">
             <summary>
             Test cases for operator +.
             </summary>

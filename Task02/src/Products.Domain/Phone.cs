@@ -26,9 +26,9 @@ namespace Products.Domain
         public static Phone operator +(Phone productOne, Phone productTwo)
         {
             if (productOne == null)
-                throw new NullReferenceException("Product one is null");
+                throw new ArgumentNullException("Product one is null");
             if (productTwo == null)
-                throw new NullReferenceException("Product two is null");
+                throw new ArgumentNullException("Product two is null");
 
             return new Phone(
                name: string.Format("{0}-{1}", productOne.Name, productTwo.Name),
@@ -53,28 +53,5 @@ namespace Products.Domain
         {
             return new Phone(v.Name, v.Price);
         }
-
-        /// <summary>
-        /// Returns penny.
-        /// </summary>
-        /// <param name="phone">Returns penny.</param>
-        public static explicit operator int(Phone phone)
-        {
-            int intNum = (int)phone.Price;
-            int penny = (int)((phone.Price - intNum) * 100);
-            return penny;
-        }
-
-        /// <summary>
-        /// Returns price in float.
-        /// </summary>
-        /// <param name="phone">Returns price in float.</param>
-        public static explicit operator float(Phone phone) => (float)phone.Price;
-
-        /// <summary>
-        /// Returns price in double.
-        /// </summary>
-        /// <param name="phone">Returns price in double.</param>
-        public static explicit operator double(Phone phone) => (double)phone.Price;
     }
-}   
+}
