@@ -8,6 +8,5 @@ namespace Shapes.Domain.Interfaces
 {
     public interface IPaper : IMaterial
     {
-
     }
 }

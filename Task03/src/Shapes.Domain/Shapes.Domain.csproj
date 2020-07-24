@@ -49,6 +49,7 @@
     <Compile Include="Interfaces\IMaterial.cs" />
     <Compile Include="Interfaces\IPaper.cs" />
     <Compile Include="Matarial\Film.cs" />
+    <Compile Include="Matarial\Material.cs" />
     <Compile Include="Matarial\Paper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />

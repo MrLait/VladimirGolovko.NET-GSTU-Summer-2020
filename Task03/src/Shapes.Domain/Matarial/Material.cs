@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace Shapes.Domain.Matarial
 {
-    public class Paper : IPaper
+    public class Material : IPaper, IFilm
     {
-        public int _painTimes = 0;
     }
 }

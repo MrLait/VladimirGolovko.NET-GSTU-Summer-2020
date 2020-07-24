@@ -1,5 +1,6 @@
 ﻿using Shapes.Domain.Enum;
 using Shapes.Domain.Interfaces;
+using Shapes.Domain.Matarial;
 using System;
 
 namespace Shapes.Domain
@@ -23,12 +24,20 @@ namespace Shapes.Domain
             }
             Radius = curCircle.Radius;
         }
-
         public Circle(double radius)
         {
             Radius = radius;
         }
+        public Circle(double radius, IMaterial material)
+        {
+            var b = material is IFilm;
+            var m = (Film)material;
+            var t = material.GetType().Name;
+            Material = material;
 
+            Radius = radius;
+        }
+        public IMaterial Material { get; set; }
         /// <summary>
         /// Constructor with radius parameter.
         /// </summary>
@@ -89,7 +98,5 @@ namespace Shapes.Domain
         {
             return string.Format("{0};{1}", base.ToString(), Radius);
         }
-
-
     }
 }
