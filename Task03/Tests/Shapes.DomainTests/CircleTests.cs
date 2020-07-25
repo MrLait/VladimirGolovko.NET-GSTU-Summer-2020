@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Girls.Data.Repository;
+using NUnit.Framework;
 using Shapes.Domain.Enum;
 using Shapes.Domain.Shape.FilmShapes;
 using Shapes.Domain.Shape.PaperShapes;
@@ -30,8 +31,27 @@ namespace Shapes.Domain.Tests
             var paperCircleWhite = new PaperCircle(paperCircleOne, paperCircleTwo);
             //var paperCircleGreen = new PaperCircle(paperCircleOne, paperCircleGreenCut);
             //var filmCircle = new FilmCircle(paperCircleOne, filmCircleOne);
-            var filmCircle = new FilmCircle(filmCircleCur, filmCircleCut);
-           
+            //var filmCircle = new FilmCircle(filmCircleCur, filmCircleCut);
+
+
+            ShapeBoxRepository shapeBoxRepository = new ShapeBoxRepository();
+            shapeBoxRepository.AddShapeToBox(paperCircleTwo);
+            shapeBoxRepository.AddShapeToBox(filmCircleCut);
+
+            var getShape = shapeBoxRepository.FindShapeById(0);
+            var getShape2 = shapeBoxRepository.ExecuteShapeById(1);
+
+            shapeBoxRepository.ReplaceById(5, filmCircleOne);
+
+            var getByPattern = shapeBoxRepository.FindShapeByPattern(filmCircleOne);
+
+            var numShape = shapeBoxRepository.GetNumOfShapesInBox();
+
+            var totalArea = shapeBoxRepository.GetTotalArea();
+            var totalPerimeter = shapeBoxRepository.GetTotalPerimeter();
+
+            var getAllCircle = shapeBoxRepository.GetAllCircles();
+            var getAllFilmShape = shapeBoxRepository.GetAllFilmShapes();
         }
 
         ///// <summary>

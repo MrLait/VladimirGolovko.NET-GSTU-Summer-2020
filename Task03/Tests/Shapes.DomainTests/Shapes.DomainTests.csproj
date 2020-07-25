@@ -61,6 +61,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Girls.Data\Girls.Data.csproj">
+      <Project>{9D720761-92DA-4526-A63D-384D070B3C57}</Project>
+      <Name>Girls.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\Shapes.Domain\Shapes.Domain.csproj">
       <Project>{61BE5E9B-DF9D-47AF-BFCA-00927E1271E6}</Project>
       <Name>Shapes.Domain</Name>

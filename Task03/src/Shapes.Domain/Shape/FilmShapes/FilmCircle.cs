@@ -1,8 +1,9 @@
-﻿using Shapes.Domain.Shape.AbstractShapes;
+﻿using Shapes.Domain.Interfaces;
+using Shapes.Domain.Shape.AbstractShapes;
 
 namespace Shapes.Domain.Shape.FilmShapes
 {
-    public class FilmCircle : AbstractCircle
+    public class FilmCircle : AbstractCircle, IFilm
     {
         public FilmCircle(double radius) : base(radius){}
 

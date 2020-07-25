@@ -1,8 +1,9 @@
-﻿using Shapes.Domain.Shape.AbstractShapes;
+﻿using Shapes.Domain.Interfaces;
+using Shapes.Domain.Shape.AbstractShapes;
 
 namespace Shapes.Domain.Shape.FilmShapes
 {
-    public class FilmSquare : AbstractSquare
+    public class FilmSquare : AbstractSquare, IFilm
     {
         public FilmSquare(double length) : base(length) { }
 

@@ -1,4 +1,5 @@
-﻿using Shapes.Domain.Shape.AbstractShapes;
+﻿using Shapes.Domain.Interfaces;
+using Shapes.Domain.Shape.AbstractShapes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Shapes.Domain.Shape.FilmShapes
 {
-    class FilmRectangle : AbstractRectangle
+    class FilmRectangle : AbstractRectangle, IFilm
     {
         public FilmRectangle(double length, double width) : base(length, width){}
 
