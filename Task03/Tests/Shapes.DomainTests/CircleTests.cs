@@ -20,12 +20,14 @@ namespace Shapes.Domain.Tests
             FilmCircle filmCircleOne = new FilmCircle(11);
             FilmCircle filmCircleCur = new FilmCircle(11);
             FilmCircle filmCircleCut = new FilmCircle(12);
+            paperCircleOne.Color = Color.Green;
+            paperCircleOne.Color = Color.Orange;
 
             var paperCircleWhite = new PaperCircle(paperCircleOne, paperCircleTwo);
             //var paperCircleGreen = new PaperCircle(paperCircleOne, paperCircleGreenCut);
             //var filmCircle = new FilmCircle(paperCircleOne, filmCircleOne);
             var filmCircle = new FilmCircle(filmCircleCur, filmCircleCut);
-
+           
         }
 
         ///// <summary>

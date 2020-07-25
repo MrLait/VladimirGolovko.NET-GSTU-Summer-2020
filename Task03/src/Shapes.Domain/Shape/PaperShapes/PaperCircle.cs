@@ -7,10 +7,12 @@ namespace Shapes.Domain.Shape.PaperShapes
 {
     public class PaperCircle : AbstractCircle, IColor
     {
+        private bool _isReColored = false;
+        private Color _color;
 
         public PaperCircle(double radius, Color color):base(radius)
         {
-            Color = color;
+           _color = color;
         }
 
         public PaperCircle(BaseAbstractShape prevShape, PaperCircle curShape) : base(prevShape, curShape)
@@ -21,6 +23,23 @@ namespace Shapes.Domain.Shape.PaperShapes
             Color = curShape.Color;
         }
 
-        public Color Color { get; set; }
+        public bool IsReColored => _isReColored;
+
+        public Color Color
+        {
+            get => _color;
+
+            set
+            {
+                if (!_isReColored)
+                {
+                    _color = value;
+                    _isReColored = true;
+                }
+                else
+                    throw new ShapeException("A paper figure can only be painted once.");
+            }
+        }
+
     }
 }
