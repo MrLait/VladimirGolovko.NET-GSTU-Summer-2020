@@ -48,8 +48,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shape\AbstractShapes\AbstractRectangle.cs" />
     <Compile Include="Shape\FilmShapes\FilmCircle.cs" />
+    <Compile Include="Shape\FilmShapes\FilmRectangle.cs" />
+    <Compile Include="Shape\FilmShapes\FilmSquare.cs" />
     <Compile Include="Shape\PaperShapes\PaperCircle.cs" />
     <Compile Include="Shape\AbstractShapes\AbstractSquare.cs" />
+    <Compile Include="Shape\PaperShapes\PaperRectangle.cs" />
+    <Compile Include="Shape\PaperShapes\PaperSquare.cs" />
     <Compile Include="UserExceprion\ShapeException.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -6,7 +6,7 @@ namespace Shapes.Domain.Shape.FilmShapes
     {
         public FilmCircle(double radius) : base(radius){}
 
-        public FilmCircle(BaseAbstractShape prevShape, FilmCircle curShape) : base(prevShape, curShape)
+        public FilmCircle(BaseAbstractShape curShape, FilmCircle cutShape) : base(curShape, cutShape)
         {
         }
 

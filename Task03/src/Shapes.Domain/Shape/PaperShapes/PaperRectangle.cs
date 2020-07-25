@@ -6,16 +6,16 @@ using System;
 
 namespace Shapes.Domain.Shape.PaperShapes
 {
-    public class PaperCircle : AbstractCircle, IColor
+    public class PaperRectangle : AbstractRectangle, IColor
     {
         private Color _color;
 
-        public PaperCircle(double radius, Color color):base(radius)
+        public PaperRectangle(double length, double width, Color color) : base(length, width)
         {
-           _color = color;
+            _color = color;
         }
 
-        public PaperCircle(BaseAbstractShape curShape, PaperCircle cutShape) : base(curShape, cutShape)
+        public PaperRectangle(BaseAbstractShape curShape, PaperRectangle cutShape) : base(curShape, cutShape)
         {
             var coloredCurShape = (IColor)curShape;
             var paperPrevShapeColor = coloredCurShape.Color;
@@ -50,8 +50,8 @@ namespace Shapes.Domain.Shape.PaperShapes
         {
             if (obj == null || GetType() != obj.GetType())
                 return false;
-            PaperCircle r = (PaperCircle)obj;
-            return Color.Equals(r.Color) && base.Equals((AbstractCircle)obj);
+            PaperRectangle r = (PaperRectangle)obj;
+            return Color.Equals(r.Color) && base.Equals((AbstractRectangle)obj);
         }
 
         /// <summary>
