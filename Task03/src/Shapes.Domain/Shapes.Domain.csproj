@@ -41,19 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseShape.cs" />
-    <Compile Include="Circle.cs" />
+    <Compile Include="Interfaces\IColor.cs" />
+    <Compile Include="Shape\AbstractShapes\BaseAbstractShape.cs" />
+    <Compile Include="Shape\AbstractShapes\AbstractCircle.cs" />
     <Compile Include="Enum\Color.cs" />
-    <Compile Include="Enum\ShapeEnum.cs" />
-    <Compile Include="Interfaces\IFilm.cs" />
-    <Compile Include="Interfaces\IMaterial.cs" />
-    <Compile Include="Interfaces\IPaper.cs" />
-    <Compile Include="Matarial\Film.cs" />
-    <Compile Include="Matarial\Material.cs" />
-    <Compile Include="Matarial\Paper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Square.cs" />
+    <Compile Include="Shape\AbstractShapes\AbstractRectangle.cs" />
+    <Compile Include="Shape\FilmShapes\FilmCircle.cs" />
+    <Compile Include="Shape\PaperShapes\PaperCircle.cs" />
+    <Compile Include="Shape\AbstractShapes\AbstractSquare.cs" />
+    <Compile Include="UserExceprion\ShapeException.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
