@@ -6,7 +6,7 @@ using System;
 
 namespace Shapes.Domain.Shape.PaperShapes
 {
-    public class PaperRectangle : AbstractRectangle, IColor
+    public class PaperRectangle : AbstractRectangle, IColor, IPaper
     {
         private Color _color;
 

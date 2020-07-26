@@ -6,7 +6,7 @@ using System;
 
 namespace Shapes.Domain.Shape.PaperShapes
 {
-    public class PaperSquare:AbstractSquare, IColor
+    public class PaperSquare:AbstractSquare, IColor, IPaper
     {
         private Color _color;
 

@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\ShapeEnum.cs" />
     <Compile Include="Interfaces\IColor.cs" />
     <Compile Include="Interfaces\IFilm.cs" />
+    <Compile Include="Interfaces\IPaper.cs" />
     <Compile Include="Shape\AbstractShapes\BaseAbstractShape.cs" />
     <Compile Include="Shape\AbstractShapes\AbstractCircle.cs" />
     <Compile Include="Enum\Color.cs" />

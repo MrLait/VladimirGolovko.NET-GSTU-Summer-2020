@@ -6,7 +6,7 @@ using System;
 
 namespace Shapes.Domain.Shape.PaperShapes
 {
-    public class PaperCircle : AbstractCircle, IColor
+    public class PaperCircle : AbstractCircle, IColor, IPaper
     {
         private Color _color;
 

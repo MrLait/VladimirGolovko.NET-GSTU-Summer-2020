@@ -20,7 +20,10 @@ namespace Shapes.Domain.Tests
             PaperCircle paperCircleGreenCut = new PaperCircle(10, Color.Green);
             FilmCircle filmCircleOne = new FilmCircle(11);
             FilmCircle filmCircleCur = new FilmCircle(11);
-            FilmCircle filmCircleCut = new FilmCircle(12);
+            PaperSquare paperSquareGrean = new PaperSquare(20,Color.Green);
+            FilmSquare filmSquareGrean = new FilmSquare(21);
+            PaperRectangle paperRectangleBlue = new PaperRectangle(27,15, Color.Blue);
+            FilmRectangle filmRectangle = new FilmRectangle(27, 15);
 
 
             var paperSquareCut = new PaperSquare(1, Color.White);
@@ -36,10 +39,10 @@ namespace Shapes.Domain.Tests
 
             ShapeBoxRepository shapeBoxRepository = new ShapeBoxRepository();
             shapeBoxRepository.AddShapeToBox(paperCircleTwo);
-            shapeBoxRepository.AddShapeToBox(filmCircleCut);
+            //shapeBoxRepository.AddShapeToBox(filmCircleCut);
 
             var getShape = shapeBoxRepository.FindShapeById(0);
-            var getShape2 = shapeBoxRepository.ExecuteShapeById(1);
+            //var getShape2 = shapeBoxRepository.ExecuteShapeById(1);
 
             shapeBoxRepository.ReplaceById(5, filmCircleOne);
 
@@ -52,6 +55,26 @@ namespace Shapes.Domain.Tests
 
             var getAllCircle = shapeBoxRepository.GetAllCircles();
             var getAllFilmShape = shapeBoxRepository.GetAllFilmShapes();
+
+
+
+            shapeBoxRepository.AddShapeToBox(filmRectangle);
+            shapeBoxRepository.AddShapeToBox(paperRectangleBlue);
+
+            shapeBoxRepository.AddShapeToBox(filmSquareGrean);
+            shapeBoxRepository.AddShapeToBox(paperSquareGrean);
+
+            shapeBoxRepository.SaveAllFiguresInXmlUsingStreamWriter(@"xmlData/saveAllFiguresInXmlUsingStreamWriter.xml");
+            shapeBoxRepository.SaveAllFilmFiguresInXmlUsingStreamWriter(@"xmlData/saveAllFilmFiguresInXmlUsingStreamWriter.xml");
+            shapeBoxRepository.SaveAllPaperFiguresInXmlUsingStreamWriter(@"xmlData/saveAllPaperFiguresInXmlUsingStreamWriter.xml");
+
+            shapeBoxRepository.SaveAllFiguresInXmlUsingXmlWriter(@"xmlData/saveAllFiguresInXmlUsingXmlWriter.xml");
+            shapeBoxRepository.SaveAllFilmFiguresInXmlUsingXmlWriter(@"xmlData/saveAllFilmFiguresInXmlUsingXmlWriter.xml");
+            shapeBoxRepository.SaveAllPaperFiguresInXmlUsingXmlWriter(@"xmlData/saveAllPaperFiguresInXmlUsingXmlWriter.xml");
+
+            shapeBoxRepository.LoadAllFiguresFromXmlUsingStreamReader(@"xmlData/saveAllFiguresInXmlUsingStreamWriter.xml");
+            shapeBoxRepository.LoadAllFiguresFromXmlUsingXmlReader(@"xmlData/saveAllFiguresInXmlUsingStreamWriter.xml");
+
         }
 
         ///// <summary>

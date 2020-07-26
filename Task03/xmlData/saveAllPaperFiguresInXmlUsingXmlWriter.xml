@@ -1,0 +1,21 @@
+﻿<Shapes>
+  <PaperCircle Name="PaperCircle">
+    <Name>Circle</Name>
+    <Material>Paper</Material>
+    <Radius>10</Radius>
+    <Color>White</Color>
+  </PaperCircle>
+  <PaperRectangle Name="PaperRectangle">
+    <Name>Rectangle</Name>
+    <Material>Paper</Material>
+    <Length>27</Length>
+    <Width>15</Width>
+    <Color>Blue</Color>
+  </PaperRectangle>
+  <PaperSquare Name="PaperSquare">
+    <Name>Square</Name>
+    <Material>Paper</Material>
+    <Side>20</Side>
+    <Color>Green</Color>
+  </PaperSquare>
+</Shapes>

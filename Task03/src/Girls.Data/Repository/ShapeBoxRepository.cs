@@ -1,4 +1,5 @@
 ﻿using Girls.Data.UserException;
+using Girls.Data.Util;
 using Shapes.Domain.Interfaces;
 using Shapes.Domain.Shape.AbstractShapes;
 using System;
@@ -190,14 +191,73 @@ namespace Girls.Data.Repository
             return tmpFilmShapes;
         }
 
-        ///// <summary>
-        ///// Save all figures in XML format using Stream Writer.
-        ///// </summary>
-        ///// <param name="path">Is the path to xml file.</param>
-        //public void SaveAllFiguresInXmlUsingStreamWriter(string path)
-        //{
-        //    StreamIO.SaveXmlDocumentUsingStreamWriter(ConverterListToXmlIO.AddFiguresInXml(FigureList), path);
-        //}
+        /// <summary>
+        /// Save all figures in XML format using Stream Writer.
+        /// </summary>
+        /// <param name="path">Is the path to xml file.</param>
+        public void SaveAllFiguresInXmlUsingStreamWriter(string path)
+        {
+            StreamIO.SaveXmlDocumentUsingStreamWriter(ConverterListToXmlIO.AddFiguresInXml(BoxShapes), path);
+        }
 
+        /// <summary>
+        /// Save of all film figures in XML format using Stream Writer.
+        /// </summary>
+        /// <param name="path">Is the path to xml file.</param>
+        public void SaveAllFilmFiguresInXmlUsingStreamWriter(string path)
+        {
+            StreamIO.SaveXmlDocumentUsingStreamWriter(ConverterListToXmlIO.AddFilmFiguresInXml(BoxShapes), path);
+        }
+
+        /// <summary>
+        /// Save of all paper figures in XML format using Stream Writer.
+        /// </summary>
+        /// <param name="path">Is the path to xml file.</param>
+        public void SaveAllPaperFiguresInXmlUsingStreamWriter(string path)
+        {
+            StreamIO.SaveXmlDocumentUsingStreamWriter(ConverterListToXmlIO.AddPaperFiguresInXml(BoxShapes), path);
+        }
+
+        /// <summary>
+        /// Save of all figures in XML format using XML Writer.
+        /// </summary>
+        /// <param name="path">Is the path to xml file.</param>
+        public void SaveAllFiguresInXmlUsingXmlWriter(string path)
+        {
+            XmlIO.SaveXmlDocumentUsingXmlWriter(ConverterListToXmlIO.AddFiguresInXml(BoxShapes), path);
+        }
+
+        /// <summary>
+        /// Save of all film figures in XML format using XML Writer.
+        /// </summary>
+        /// <param name="path">Is the path to xml file.</param>
+        public void SaveAllFilmFiguresInXmlUsingXmlWriter(string path)
+        {
+            XmlIO.SaveXmlDocumentUsingXmlWriter(ConverterListToXmlIO.AddFilmFiguresInXml(BoxShapes), path);
+        }
+        /// <summary>
+        /// Save of all paper figures in XML format using XML Writer.
+        /// </summary>
+        /// <param name="path">Is the path to xml file.</param>
+        public void SaveAllPaperFiguresInXmlUsingXmlWriter(string path)
+        {
+            XmlIO.SaveXmlDocumentUsingXmlWriter(ConverterListToXmlIO.AddPaperFiguresInXml(BoxShapes), path);
+        }
+
+        /// <summary>
+        /// Load of all figures to the box using Stream Reader.
+        /// </summary>
+        public void LoadAllFiguresFromXmlUsingStreamReader(string path)
+        {
+            BoxShapes = ConverterListToXmlIO.ParsXmlDocToFigureList(StreamIO.LoadXmlDocumentUsingStreamReader(path)).ToArray();
+        }
+
+        /// <summary>
+        /// Load of all figures to the box using XML Reader.
+        /// </summary>
+        public void LoadAllFiguresFromXmlUsingXmlReader(string path)
+        {
+            BoxShapes = ConverterListToXmlIO.ParsXmlDocToFigureList(XmlIO.LoadXmlDocumentUsingXmlReader(path)).ToArray();
+        }
     }
 }

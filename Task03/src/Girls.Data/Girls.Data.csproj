@@ -44,6 +44,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ShapeBoxRepository.cs" />
     <Compile Include="UserException\BoxShapeException.cs" />
+    <Compile Include="Util\ConverterListToXmlIO.cs" />
+    <Compile Include="Util\StreamIO.cs" />
+    <Compile Include="Util\XmlIO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shapes.Domain\Shapes.Domain.csproj">
@@ -51,5 +54,6 @@
       <Name>Shapes.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

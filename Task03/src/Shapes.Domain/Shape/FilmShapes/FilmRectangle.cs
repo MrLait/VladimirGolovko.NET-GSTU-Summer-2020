@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Shapes.Domain.Shape.FilmShapes
 {
-    class FilmRectangle : AbstractRectangle, IFilm
+    public class FilmRectangle : AbstractRectangle, IFilm
     {
         public FilmRectangle(double length, double width) : base(length, width){}
 

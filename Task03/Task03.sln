@@ -7,7 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AAD36CCF-9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C58384CE-F995-4EA3-925C-A21AF731BDF3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fileData", "fileData", "{8B438FD0-749E-4B2A-BE98-6F59F65CF09C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlData", "xmlData", "{8B438FD0-749E-4B2A-BE98-6F59F65CF09C}"
+	ProjectSection(SolutionItems) = preProject
+		xmlData\saveAllFiguresInXmlUsingStreamWriter.xml = xmlData\saveAllFiguresInXmlUsingStreamWriter.xml
+		xmlData\saveAllFiguresInXmlUsingXmlWriter.xml = xmlData\saveAllFiguresInXmlUsingXmlWriter.xml
+		xmlData\saveAllFilmFiguresInXmlUsingStreamWriter.xml = xmlData\saveAllFilmFiguresInXmlUsingStreamWriter.xml
+		xmlData\saveAllFilmFiguresInXmlUsingXmlWriter.xml = xmlData\saveAllFilmFiguresInXmlUsingXmlWriter.xml
+		xmlData\saveAllPaperFiguresInXmlUsingStreamWriter.xml = xmlData\saveAllPaperFiguresInXmlUsingStreamWriter.xml
+		xmlData\saveAllPaperFiguresInXmlUsingXmlWriter.xml = xmlData\saveAllPaperFiguresInXmlUsingXmlWriter.xml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{F19AF6C3-4042-47AF-98D7-B2F86EE6F7BB}"
 EndProject
