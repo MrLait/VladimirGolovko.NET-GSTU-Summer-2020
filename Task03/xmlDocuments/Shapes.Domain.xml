@@ -1,0 +1,514 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:Shapes.Domain.Enum.ShapeEnum">
+            <summary>
+            Enum with all shapes
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.ShapeEnum.FilmCircle">
+            <summary>
+            Crircle with film material.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.ShapeEnum.FilmRectangle">
+            <summary>
+            Rectangle with film material.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.ShapeEnum.FilmSquare">
+            <summary>
+            Square with film material.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.ShapeEnum.PaperCircle">
+            <summary>
+            Crircle with paper material.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.ShapeEnum.PaperRectangle">
+            <summary>
+            Rectangle with paper material.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.ShapeEnum.PaperSquare">
+            <summary>
+            Square with paper material.
+            </summary>
+        </member>
+        <member name="T:Shapes.Domain.Enum.Color">
+            <summary>
+            Enum type with colors.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.Color.Transparent">
+            <summary>
+            Transparent color.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.Color.White">
+            <summary>
+            White color.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.Color.Red">
+            <summary>
+            Red color.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.Color.Green">
+            <summary>
+            Green color.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.Color.Blue">
+            <summary>
+            Blue color.
+            </summary>
+        </member>
+        <member name="F:Shapes.Domain.Enum.Color.Orange">
+            <summary>
+            Orange color.
+            </summary>
+        </member>
+        <member name="T:Shapes.Domain.Interfaces.IFilm">
+            <summary>
+            Film material interface.
+            </summary>
+        </member>
+        <member name="T:Shapes.Domain.Interfaces.IMaterial">
+            <summary>
+            Material interface.
+            </summary>
+        </member>
+        <member name="T:Shapes.Domain.Interfaces.IPaper">
+            <summary>
+            Paper material interface.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Interfaces.IPaper.IsReColored">
+            <summary>
+            Is recolored
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Interfaces.IPaper.Color">
+            <summary>
+            Property Colors
+            </summary>
+        </member>
+        <member name="T:Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape">
+            <summary>
+            Base abstract class for others shapes.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape.#ctor">
+            <summary>
+            Empty costructor.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape.#ctor(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)">
+            <summary>
+            Constructor to cut figure from another.
+            </summary>
+            <param name="curShape">The original shape to cut from.</param>
+            <param name="cutShape">The shape that should turn out.</param>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape.Area">
+            <summary>
+            Abstract property area.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape.Perimeter">
+            <summary>
+            Abstract property perimeter.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape.ToString">
+            <summary>
+            Ovverriden method for get name of class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Shapes.Domain.Shape.AbstractShapes.AbstractCircle">
+            <summary>
+            Abstract class with circle shape.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractCircle.#ctor(System.Double)">
+            <summary>
+            Constructor to create circle with radius.
+            </summary>
+            <param name="radius">Radius parameter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractCircle.#ctor(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,Shapes.Domain.Shape.AbstractShapes.AbstractCircle)">
+            <summary>
+            Constructor to cut figure from another.
+            </summary>
+            <param name="curShape">The original shape to cut from.</param>
+            <param name="cutShape">The shape that should turn out.</param>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.AbstractCircle.Radius">
+            <summary>
+            Property radius.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.AbstractCircle.Area">
+            <summary>
+            Property to getting Area of circle.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.AbstractCircle.Perimeter">
+            <summary>
+            Property to getting perimeter of circle.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractCircle.Equals(System.Object)">
+            <summary>
+            Comparing one circle wit another.
+            </summary>
+            <param name="obj">The compared circle.</param>
+            <returns>True if equal. False if not eqal.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractCircle.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractCircle.ToString">
+            <summary>
+            Represents class members in string format.
+            </summary>
+            <returns>Returns class members in string format.</returns>
+        </member>
+        <member name="T:Shapes.Domain.Shape.AbstractShapes.AbstractRectangle">
+            <summary>
+            Abstract class with rectangle shape.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractRectangle.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor to create rectangle with length and width.
+            </summary>
+            <param name="length">Lenth parameter.</param>
+            <param name="width">Color parameter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractRectangle.#ctor(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,Shapes.Domain.Shape.AbstractShapes.AbstractRectangle)">
+            <summary>
+            Constructor to cut figure from another.
+            </summary>
+            <param name="curShape">The original shape to cut from.</param>
+            <param name="cutShape">The shape that should turn out.</param>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.AbstractRectangle.Length">
+            <summary>
+            Property length
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.AbstractRectangle.Width">
+            <summary>
+            Property width
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.AbstractRectangle.Area">
+            <summary>
+            Property to getting area of rectangle.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.AbstractRectangle.Perimeter">
+            <summary>
+            Property to getting perimeter of rectangle.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractRectangle.Equals(System.Object)">
+            <summary>
+            Comparing one rectangle with another.
+            </summary>
+            <param name = "obj" > The compared rectangle.</param>
+            <returns>True if equal.False if not equal.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractRectangle.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractRectangle.ToString">
+            <summary>
+            Represents class members in string format.
+            </summary>
+            <returns>Returns class members in string format.</returns>
+        </member>
+        <member name="T:Shapes.Domain.Shape.AbstractShapes.AbstractSquare">
+            <summary>
+            Abstract class square shape.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractSquare.#ctor(System.Double)">
+            <summary>
+            Constructor to create square with length.
+            </summary>
+            <param name="length">Lenth parameter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractSquare.#ctor(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,Shapes.Domain.Shape.AbstractShapes.AbstractSquare)">
+            <summary>
+            Constructor to cut figure from another.
+            </summary>
+            <param name="curShape">The original shape to cut from.</param>
+            <param name="cutShape">The shape that should turn out.</param>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.AbstractSquare.Side">
+            <summary>
+            Property side
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.AbstractSquare.Area">
+            <summary>
+            Property to getting area of square.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.AbstractShapes.AbstractSquare.Perimeter">
+            <summary>
+            Property to getting perimeter of square.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractSquare.Equals(System.Object)">
+            <summary>
+            Comparing one square with another.
+            </summary>
+            <param name="obj">The compared square.</param>
+            <returns>True if equal. False if not eqal.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractSquare.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.AbstractShapes.AbstractSquare.ToString">
+            <summary>
+            Represents class members in string format.
+            </summary>
+            <returns>Returns class members in string format.</returns>
+        </member>
+        <member name="T:Shapes.Domain.Shape.FilmShapes.FilmCircle">
+            <summary>
+            A circle made of film material.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.FilmShapes.FilmCircle.#ctor(System.Double)">
+            <summary>
+            Constructor to create circle with radius.
+            </summary>
+            <param name="radius">Radius parameter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Shape.FilmShapes.FilmCircle.#ctor(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,Shapes.Domain.Shape.FilmShapes.FilmCircle)">
+            <summary>
+            Constructor to cut figure from another.
+            </summary>
+            <param name="curShape">The original shape to cut from.</param>
+            <param name="cutShape">The shape that should turn out.</param>
+        </member>
+        <member name="T:Shapes.Domain.Shape.FilmShapes.FilmRectangle">
+            <summary>
+            A rectangle made of film material.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.FilmShapes.FilmRectangle.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor to create rectangle with length and width.
+            </summary>
+            <param name="length">Lenth parameter.</param>
+            <param name="width">Width parameter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Shape.FilmShapes.FilmRectangle.#ctor(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,Shapes.Domain.Shape.FilmShapes.FilmRectangle)">
+            <summary>
+            Constructor to cut figure from another.
+            </summary>
+            <param name="curShape">The original shape to cut from.</param>
+            <param name="cutShape">The shape that should turn out.</param>
+        </member>
+        <member name="T:Shapes.Domain.Shape.FilmShapes.FilmSquare">
+            <summary>
+            A square made of film material.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.FilmShapes.FilmSquare.#ctor(System.Double)">
+            <summary>
+            Constructor to create square with length.
+            </summary>
+            <param name="length">Lenth parameter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Shape.FilmShapes.FilmSquare.#ctor(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,Shapes.Domain.Shape.FilmShapes.FilmSquare)">
+            <summary>
+            Constructor to cut figure from another.
+            </summary>
+            <param name="curShape">The original shape to cut from.</param>
+            <param name="cutShape">The shape that should turn out.</param>
+        </member>
+        <member name="T:Shapes.Domain.Shape.PaperShapes.PaperCircle">
+            <summary>
+            A circle made of paper material.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperCircle.#ctor(System.Double,Shapes.Domain.Enum.Color)">
+            <summary>
+            Constructor to create circle with radius and color.
+            </summary>
+            <param name="radius">Radius parameter.</param>
+            <param name="color">Color parameter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperCircle.#ctor(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,Shapes.Domain.Shape.PaperShapes.PaperCircle)">
+            <summary>
+            Constructor to cut figure from another.
+            </summary>
+            <param name="curShape">The original shape to cut from.</param>
+            <param name="cutShape">The shape that should turn out.</param>
+        </member>
+        <member name="P:Shapes.Domain.Shape.PaperShapes.PaperCircle.IsReColored">
+            <summary>
+            Property for controlling single recoloring of a shape.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.PaperShapes.PaperCircle.Color">
+            <summary>
+            Proporty with color.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperCircle.Equals(System.Object)">
+            <summary>
+            Comparing one circle wit another.
+            </summary>
+            <param name="obj">The compared circle.</param>
+            <returns>True if equal. False if not eqal.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperCircle.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperCircle.ToString">
+            <summary>
+            Represents class members in string format.
+            </summary>
+            <returns>Returns class members in string format.</returns>
+        </member>
+        <member name="T:Shapes.Domain.Shape.PaperShapes.PaperRectangle">
+            <summary>
+            A rectangle made of paper material.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperRectangle.#ctor(System.Double,System.Double,Shapes.Domain.Enum.Color)">
+            <summary>
+            Constructor to create rectangle with length, width and color.
+            </summary>
+            <param name="length">Lenth parameter.</param>
+            <param name="width">Width parameter.</param>
+            <param name="color">Color parameter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperRectangle.#ctor(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,Shapes.Domain.Shape.PaperShapes.PaperRectangle)">
+            <summary>
+            Constructor to cut figure from another.
+            </summary>
+            <param name="curShape">The original shape to cut from.</param>
+            <param name="cutShape">The shape that should turn out.</param>
+        </member>
+        <member name="P:Shapes.Domain.Shape.PaperShapes.PaperRectangle.IsReColored">
+            <summary>
+            Property for controlling single recoloring of a shape.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.PaperShapes.PaperRectangle.Color">
+            <summary>
+            Proporty with color.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperRectangle.Equals(System.Object)">
+            <summary>
+            Comparing one circle wit another.
+            </summary>
+            <param name="obj">The compared circle.</param>
+            <returns>True if equal. False if not eqal.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperRectangle.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperRectangle.ToString">
+            <summary>
+            Represents class members in string format.
+            </summary>
+            <returns>Returns class members in string format.</returns>
+        </member>
+        <member name="T:Shapes.Domain.Shape.PaperShapes.PaperSquare">
+            <summary>
+            A square made of paper material.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperSquare.#ctor(System.Double,Shapes.Domain.Enum.Color)">
+            <summary>
+            Constructor to create square with length and color.
+            </summary>
+            <param name="length">Lenth parameter.</param>
+            <param name="color">Color parameter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperSquare.#ctor(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,Shapes.Domain.Shape.PaperShapes.PaperSquare)">
+            <summary>
+            Constructor to cut figure from another.
+            </summary>
+            <param name="curShape">The original shape to cut from.</param>
+            <param name="cutShape">The shape that should turn out.</param>
+        </member>
+        <member name="P:Shapes.Domain.Shape.PaperShapes.PaperSquare.IsReColored">
+            <summary>
+            Property for controlling single recoloring of a shape.
+            </summary>
+        </member>
+        <member name="P:Shapes.Domain.Shape.PaperShapes.PaperSquare.Color">
+            <summary>
+            Proporty with color.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperSquare.Equals(System.Object)">
+            <summary>
+            Comparing one circle wit another.
+            </summary>
+            <param name="obj">The compared circle.</param>
+            <returns>True if equal. False if not eqal.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperSquare.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="M:Shapes.Domain.Shape.PaperShapes.PaperSquare.ToString">
+            <summary>
+            Represents class members in string format.
+            </summary>
+            <returns>Returns class members in string format.</returns>
+        </member>
+        <member name="T:Shapes.Domain.UserExceprion.ShapeException">
+            <summary>
+            Exception class for shapes.
+            </summary>
+        </member>
+        <member name="M:Shapes.Domain.UserExceprion.ShapeException.#ctor(System.String)">
+            <summary>
+            Constructor to display the box shape exception message.
+            </summary>
+            <param name="message">Exceprion message.</param>
+        </member>
+        <member name="M:Shapes.Domain.UserExceprion.ShapeException.#ctor">
+            <summary>
+            Empty consturctor.
+            </summary>
+        </member>
+    </members>
+</doc>
