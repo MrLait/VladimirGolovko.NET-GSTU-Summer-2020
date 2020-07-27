@@ -5,11 +5,21 @@ using System;
 
 namespace Shapes.Domain.UserExceprion
 {
+    /// <summary>
+    /// Exception class for shapes.
+    /// </summary>
     public class ShapeException : Exception
     {
+        /// <summary>
+        /// Constructor to display the box shape exception message.
+        /// </summary>
+        /// <param name="message">Exceprion message.</param>
         public ShapeException(string message) : base(message){}
 
-        public ShapeException():this("ShapeExceprion"){}
+        /// <summary>
+        /// Empty consturctor.
+        /// </summary>
+        public ShapeException():this("Shape exceprion"){}
 
 
         internal static void AreaEqualitysHandler(BaseAbstractShape curShape, BaseAbstractShape cutShape)
@@ -20,7 +30,10 @@ namespace Shapes.Domain.UserExceprion
 
         internal static void MaterialEqualsHandler(BaseAbstractShape curShape, BaseAbstractShape cutShape)
         {
-            if (curShape is IColor != cutShape is IColor)
+            var getMaterialCurShape = curShape.GetType().GetInterfaces()[0];
+            var getMaterialCutShape = cutShape.GetType().GetInterfaces()[0];
+
+            if (getMaterialCurShape != getMaterialCutShape)
                 throw new ShapeException($"The material of ​​the cut shape '{cutShape.ToString()}' have to equal the current shape '{curShape.ToString()}'.");
         }
 

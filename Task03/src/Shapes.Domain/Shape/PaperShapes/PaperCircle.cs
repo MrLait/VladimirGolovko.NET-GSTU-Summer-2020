@@ -6,25 +6,44 @@ using System;
 
 namespace Shapes.Domain.Shape.PaperShapes
 {
-    public class PaperCircle : AbstractCircle, IColor, IPaper
+    /// <summary>
+    /// A circle made of paper material.
+    /// </summary>
+    public class PaperCircle : AbstractCircle, IPaper
     {
         private Color _color;
 
-        public PaperCircle(double radius, Color color):base(radius)
+        /// <summary>
+        /// Constructor to create circle with radius and color.
+        /// </summary>
+        /// <param name="radius">Radius parameter.</param>
+        /// <param name="color">Color parameter.</param>
+        public PaperCircle(double radius, Color color) : base(radius)
         {
-           _color = color;
+            _color = color;
         }
 
+        /// <summary>
+        /// Constructor to cut figure from another.
+        /// </summary>
+        /// <param name="curShape">The original shape to cut from.</param>
+        /// <param name="cutShape">The shape that should turn out.</param>
         public PaperCircle(BaseAbstractShape curShape, PaperCircle cutShape) : base(curShape, cutShape)
         {
-            var coloredCurShape = (IColor)curShape;
+            var coloredCurShape = (IPaper)curShape;
             var paperPrevShapeColor = coloredCurShape.Color;
             ShapeException.ColorEqualsHandler(paperPrevShapeColor, cutShape.Color);
             _color = cutShape.Color;
         }
 
+        /// <summary>
+        /// Property for controlling single recoloring of a shape.
+        /// </summary>
         public bool IsReColored { get; private set; } = false;
 
+        /// <summary>
+        /// Proporty with color.
+        /// </summary>
         public Color Color
         {
             get => _color;
@@ -71,6 +90,5 @@ namespace Shapes.Domain.Shape.PaperShapes
         {
             return string.Format("{0};{1}", base.ToString(), Color);
         }
-
     }
 }

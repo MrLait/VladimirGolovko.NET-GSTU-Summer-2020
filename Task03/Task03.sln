@@ -8,22 +8,19 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C58384CE-F995-4EA3-925C-A21AF731BDF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlData", "xmlData", "{8B438FD0-749E-4B2A-BE98-6F59F65CF09C}"
-	ProjectSection(SolutionItems) = preProject
-		xmlData\saveAllFiguresInXmlUsingStreamWriter.xml = xmlData\saveAllFiguresInXmlUsingStreamWriter.xml
-		xmlData\saveAllFiguresInXmlUsingXmlWriter.xml = xmlData\saveAllFiguresInXmlUsingXmlWriter.xml
-		xmlData\saveAllFilmFiguresInXmlUsingStreamWriter.xml = xmlData\saveAllFilmFiguresInXmlUsingStreamWriter.xml
-		xmlData\saveAllFilmFiguresInXmlUsingXmlWriter.xml = xmlData\saveAllFilmFiguresInXmlUsingXmlWriter.xml
-		xmlData\saveAllPaperFiguresInXmlUsingStreamWriter.xml = xmlData\saveAllPaperFiguresInXmlUsingStreamWriter.xml
-		xmlData\saveAllPaperFiguresInXmlUsingXmlWriter.xml = xmlData\saveAllPaperFiguresInXmlUsingXmlWriter.xml
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{F19AF6C3-4042-47AF-98D7-B2F86EE6F7BB}"
+	ProjectSection(SolutionItems) = preProject
+		xmlDocuments\Shapes.Data.xml = xmlDocuments\Shapes.Data.xml
+		xmlDocuments\Shapes.Domain.xml = xmlDocuments\Shapes.Domain.xml
+		xmlDocuments\Shapes.DomainTests.xml = xmlDocuments\Shapes.DomainTests.xml
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes.Domain", "src\Shapes.Domain\Shapes.Domain.csproj", "{0FBC418E-0E41-42AB-B17B-AC9663D06044}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes.DomainTests", "Tests\Shapes.DomainTests\Shapes.DomainTests.csproj", "{AAE3DCAE-2E22-4793-9780-21334DA4D863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Girls.Data", "src\Girls.Data\Girls.Data.csproj", "{9D720761-92DA-4526-A63D-384D070B3C57}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes.Data", "src\Shapes.Data\Shapes.Data.csproj", "{9D720761-92DA-4526-A63D-384D070B3C57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

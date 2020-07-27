@@ -7,10 +7,18 @@ namespace Shapes.Domain.Shape.AbstractShapes
     /// </summary>
     public abstract class BaseAbstractShape
     {
+        /// <summary>
+        /// Empty costructor.
+        /// </summary>
         public BaseAbstractShape()
         {
         }
 
+        /// <summary>
+        /// Constructor to cut figure from another.
+        /// </summary>
+        /// <param name="curShape">The original shape to cut from.</param>
+        /// <param name="cutShape">The shape that should turn out.</param>
         public BaseAbstractShape(BaseAbstractShape curShape, BaseAbstractShape cutShape)
         {
             ShapeException.AreaEqualitysHandler(curShape, cutShape);

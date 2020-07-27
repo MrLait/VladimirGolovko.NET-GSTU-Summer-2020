@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace Girls.Data.Util
+namespace Shapes.Data.Util
 {
+    /// <summary>
+    /// Static class for read and write in xml format.
+    /// </summary>
     public static class XmlIO
     {
         /// <summary>

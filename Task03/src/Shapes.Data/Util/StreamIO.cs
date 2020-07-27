@@ -2,7 +2,7 @@
 using System.Xml;
 using System.Xml.Linq;
 
-namespace Girls.Data.Util
+namespace Shapes.Data.Util
 {
     /// <summary>
     /// Static type to save and load XML document using StreamWriter and StreaReader.

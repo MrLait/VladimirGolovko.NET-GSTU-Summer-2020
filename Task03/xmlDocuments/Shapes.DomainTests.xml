@@ -4,10 +4,783 @@
         <name>Shapes.DomainTests</name>
     </assembly>
     <members>
-        <member name="T:Shapes.Domain.Tests.CircleTests">
+        <member name="T:Shapes.Domain.Tests.FilmCircleTests">
             <summary>
             Test cases to testing class circle.
             </summary>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenArea_WhenRadiusIsPositive_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenArea_WhenRadiusIsNegative_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area. 
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenArea_WhenRadiusIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenPerimeter_WhenRadiusIsPositive_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenPerimeter_WhenRadiusIsNegative_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenPerimeter_WhenRadiusIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenEquals_ThenOutIsTrue(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expected">Expected True</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenEquals_ThenOutIsFalse(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expected">Expected False</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenCutConstructor_WhenAreaSquareShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from square.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenCutConstructor_WhenAreaRectangleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from rectangle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenCutConstructor_WhenAreaCircleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from circle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenCutConstructor_WhenAreaSquareShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from square.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenCutConstructor_WhenAreaRectangleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from rectangle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenCutConstructor_WhenAreaCircleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from circle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenCutConstructor_WhenSquareMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from square.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenCutConstructor_WhenRectangleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from rectangle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.Domain.Tests.FilmCircleTests.GivenCutConstructor_WhenCircleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from circle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="T:Shapes.DomainTests.PaperCircleTests">
+            <summary>
+            Test cases to testing class circle.
+            </summary>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenArea_WhenRadiusIsPositive_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenArea_WhenRadiusIsNegative_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area. 
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenArea_WhenRadiusIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenPerimeter_WhenRadiusIsPositive_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenPerimeter_WhenRadiusIsNegative_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenPerimeter_WhenRadiusIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenEquals_ThenOutIsTrue(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expected">Expected True</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenEquals_ThenOutIsFalse(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expected">Expected False</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenCutConstructor_WhenAreaSquareShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from square.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenCutConstructor_WhenAreaRectangleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from rectangle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenCutConstructor_WhenAreaCircleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from circle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenCutConstructor_WhenAreaSquareShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from square.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenCutConstructor_WhenAreaRectangleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from rectangle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenCutConstructor_WhenAreaCircleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from circle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenCutConstructor_WhenSquareMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from square.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenCutConstructor_WhenRectangleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from rectangle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenCutConstructor_WhenCircleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut circle from circle.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperCircleTests.GivenColor_WhenPressColorTwice_ThenShapeException(System.Double)">
+            <summary>
+            Test case to testing recolor figure.
+            </summary>
+            <param name="radius">Circle radius.</param>
+        </member>
+        <member name="T:Shapes.DomainTests.PaperRectangleTests">
+            <summary>
+            Test cases to testing class paper rectangle.
+            </summary>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenArea_WhenParametersIsPositive_ThenOutIsPositiveArea(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenArea_WhenParametersIsNegative_ThenOutIsPositiveArea(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenArea_WhenParametersIsZero_ThenOutIsZero(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenPerimeter_WhenParametersIsPositive_ThenOutIsPositivePerimeter(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenPerimeter_WhenParametersIsNegative_ThenOutIsPositivePerimeter(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenPerimeter_WhenParametersIsZero_ThenOutIsZero(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenEquals_ThenOutIsTrue(System.Double,System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expected">Expected equals.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenEquals_ThenOutIsFalse(System.Double,System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expected">Expected equals.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenCutConstructor_WhenAreaSquareShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from square.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenCutConstructor_WhenAreaRectangleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from rectangle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenCutConstructor_WhenAreaCircleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from circle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenCutConstructor_WhenAreaSquareShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from square.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenCutConstructor_WhenAreaRectangleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from rectangle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenCutConstructor_WhenAreaCircleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from circle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenCutConstructor_WhenSquareMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from square.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenCutConstructor_WhenRectangleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from rectangle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenCutConstructor_WhenCircleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from circle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperRectangleTests.GivenColor_WhenPressColorTwice_ThenShapeException(System.Double)">
+            <summary>
+            Test case to testing recolor figure.
+            </summary>
+            <param name="length">Square length.</param>
+        </member>
+        <member name="T:Shapes.DomainTests.PaperSquareTest">
+            <summary>
+            Test cases to testing class paper square.
+            </summary>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenArea_WhenLengthIsPositive_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="length">Square length.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenArea_WhenLengthIsNegative_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenArea_WhenLengthIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenPerimeter_WhenLengthIsPositive_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenPerimeter_WhenLengthIsNegative_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenPerimeter_WhenLengthIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.  
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenEquals_ThenOutIsTrue(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing method equals.  
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expected">Expected True</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenEquals_ThenOutIsFalse(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing method equals.  
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expected">Expected False</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenCutConstructor_WhenAreaSquareShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from square.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenCutConstructor_WhenAreaRectangleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from rectangle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenCutConstructor_WhenAreaCircleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from circle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenCutConstructor_WhenAreaSquareShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from square.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenCutConstructor_WhenAreaRectangleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from rectangle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenCutConstructor_WhenAreaCircleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from circle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenCutConstructor_WhenSquareMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from square.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenCutConstructor_WhenRectangleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from rectangle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenCutConstructor_WhenCircleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from circle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.PaperSquareTest.GivenColor_WhenPressColorTwice_ThenShapeException(System.Double)">
+            <summary>
+            Test case to testing recolor figure.
+            </summary>
+            <param name="length">Square length.</param>
+        </member>
+        <member name="T:Shapes.DomainTests.FilmRectangleTests">
+            <summary>
+            Test cases to testing class film rectangle.
+            </summary>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenArea_WhenParametersIsPositive_ThenOutIsPositiveArea(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenArea_WhenParametersIsNegative_ThenOutIsPositiveArea(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenArea_WhenParametersIsZero_ThenOutIsZero(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenPerimeter_WhenParametersIsPositive_ThenOutIsPositivePerimeter(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenPerimeter_WhenParametersIsNegative_ThenOutIsPositivePerimeter(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenPerimeter_WhenParametersIsZero_ThenOutIsZero(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenEquals_ThenOutIsTrue(System.Double,System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expected">Expected equals.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenEquals_ThenOutIsFalse(System.Double,System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="length">Rectangle length.</param>
+            <param name="width">Rectangle width.</param>
+            <param name="expected">Expected equals.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenCutConstructor_WhenAreaSquareShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from square.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenCutConstructor_WhenAreaRectangleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from rectangle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenCutConstructor_WhenAreaCircleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from circle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenCutConstructor_WhenAreaSquareShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from square.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenCutConstructor_WhenAreaRectangleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from rectangle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenCutConstructor_WhenAreaCircleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from circle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenCutConstructor_WhenSquareMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from square.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenCutConstructor_WhenRectangleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from rectangle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmRectangleTests.GivenCutConstructor_WhenCircleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut rectangle from circle.
+            </summary>
+            <param name="rectangleLength">Rectangle length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="T:Shapes.DomainTests.FilmSquareTest">
+            <summary>
+            Test cases to testing class square.
+            </summary>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenArea_WhenLengthIsPositive_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="length">Square length.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenArea_WhenLengthIsNegative_ThenOutIsPositiveArea(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenArea_WhenLengthIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenPerimeter_WhenLengthIsPositive_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenPerimeter_WhenLengthIsNegative_ThenOutIsPositivePerimeter(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenPerimeter_WhenLengthIsZero_ThenOutIsZero(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.  
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenEquals_ThenOutIsTrue(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing method equals.  
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expected">Expected True</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenEquals_ThenOutIsFalse(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing method equals.  
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expected">Expected False</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenCutConstructor_WhenAreaSquareShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from square.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenCutConstructor_WhenAreaRectangleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from rectangle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenCutConstructor_WhenAreaCircleShapeIsMore(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from circle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenCutConstructor_WhenAreaSquareShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from square.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenCutConstructor_WhenAreaRectangleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from rectangle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenCutConstructor_WhenAreaCircleShapeIsLess_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from circle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenCutConstructor_WhenSquareMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from square.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenCutConstructor_WhenRectangleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from rectangle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
+        </member>
+        <member name="M:Shapes.DomainTests.FilmSquareTest.GivenCutConstructor_WhenCircleMaterialIsnotEqual_ThenShapeException(System.Double,System.Double)">
+            <summary>
+            Test case to testing cut square from circle.
+            </summary>
+            <param name="squareLength">Square length.</param>
+            <param name="length">Length.</param>
         </member>
     </members>
 </doc>

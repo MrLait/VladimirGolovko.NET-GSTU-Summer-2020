@@ -4,17 +4,26 @@ using System;
 namespace Shapes.Domain.Shape.AbstractShapes
 {
     /// <summary>
-    ///  Class rectangle shape.
+    /// Abstract class with rectangle shape.
     /// </summary>
     public abstract class AbstractRectangle : BaseAbstractShape
     {
-
+        /// <summary>
+        /// Constructor to create rectangle with length and width.
+        /// </summary>
+        /// <param name="length">Lenth parameter.</param>
+        /// <param name="width">Color parameter.</param>
         public AbstractRectangle(double length, double width)
         {
             Length = length;
             Width = width;
         }
 
+        /// <summary>
+        /// Constructor to cut figure from another.
+        /// </summary>
+        /// <param name="curShape">The original shape to cut from.</param>
+        /// <param name="cutShape">The shape that should turn out.</param>
         public AbstractRectangle(BaseAbstractShape curShape, AbstractRectangle cutShape) : base(curShape, cutShape)
         {
             ShapeException.MaterialEqualsHandler(curShape, cutShape);
@@ -41,9 +50,6 @@ namespace Shapes.Domain.Shape.AbstractShapes
         /// Property to getting perimeter of rectangle.
         /// </summary>
         public override double Perimeter => GetPerimeter();
-
-        private double GetArea() => Length * Width;
-        private double GetPerimeter() => 2 * Length + 2 * Width;
 
         /// <summary>
         /// Comparing one rectangle with another.
@@ -75,5 +81,8 @@ namespace Shapes.Domain.Shape.AbstractShapes
         {
             return string.Format("{0};{1};{2}", base.ToString(), Length, Width);
         }
+
+        private double GetArea() => Length * Width;
+        private double GetPerimeter() => 2 * Length + 2 * Width;
     }
 }

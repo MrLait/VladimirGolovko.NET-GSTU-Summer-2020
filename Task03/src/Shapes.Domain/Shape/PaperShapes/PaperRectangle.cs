@@ -6,25 +6,45 @@ using System;
 
 namespace Shapes.Domain.Shape.PaperShapes
 {
-    public class PaperRectangle : AbstractRectangle, IColor, IPaper
+    /// <summary>
+    /// A rectangle made of paper material.
+    /// </summary>
+    public class PaperRectangle : AbstractRectangle, IPaper
     {
         private Color _color;
 
+        /// <summary>
+        /// Constructor to create rectangle with length, width and color.
+        /// </summary>
+        /// <param name="length">Lenth parameter.</param>
+        /// <param name="width">Width parameter.</param>
+        /// <param name="color">Color parameter.</param>
         public PaperRectangle(double length, double width, Color color) : base(length, width)
         {
             _color = color;
         }
 
+        /// <summary>
+        /// Constructor to cut figure from another.
+        /// </summary>
+        /// <param name="curShape">The original shape to cut from.</param>
+        /// <param name="cutShape">The shape that should turn out.</param>
         public PaperRectangle(BaseAbstractShape curShape, PaperRectangle cutShape) : base(curShape, cutShape)
         {
-            var coloredCurShape = (IColor)curShape;
+            var coloredCurShape = (IPaper)curShape;
             var paperPrevShapeColor = coloredCurShape.Color;
             ShapeException.ColorEqualsHandler(paperPrevShapeColor, cutShape.Color);
             _color = cutShape.Color;
         }
 
+        /// <summary>
+        /// Property for controlling single recoloring of a shape.
+        /// </summary>
         public bool IsReColored { get; private set; } = false;
 
+        /// <summary>
+        /// Proporty with color.
+        /// </summary>
         public Color Color
         {
             get => _color;

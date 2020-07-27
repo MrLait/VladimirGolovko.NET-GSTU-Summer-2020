@@ -1,28 +1,35 @@
-﻿using Girls.Data.UserException;
-using Girls.Data.Util;
+﻿using Shapes.Data.UserException;
+using Shapes.Data.Util;
 using Shapes.Domain.Interfaces;
 using Shapes.Domain.Shape.AbstractShapes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Girls.Data.Repository
+namespace Shapes.Data.Repository
 {
+    /// <summary>
+    /// Shape box class.
+    /// </summary>
     public class ShapeBoxRepository
     {
+        /// <summary>
+        /// Property with BoxShapes array.
+        /// </summary>
         public BaseAbstractShape[] BoxShapes { get; set; }
 
+        /// <summary>
+        /// Constructor for init shape box array.
+        /// </summary>
         public ShapeBoxRepository()
         {
             BoxShapes = new BaseAbstractShape[20];
         }
 
         /// <summary>
-        /// Add a figure, you cannot add the same figure twice.
+        /// Add a shape, you cannot add the same shape twice.
         /// </summary>
-        /// <param name="shape">Geometric figure.</param>
+        /// <param name="shape">Geometric shape.</param>
         public void AddShapeToBox(BaseAbstractShape shape)
         {
             if (shape == null)
@@ -41,9 +48,9 @@ namespace Girls.Data.Repository
         }
 
         /// <summary>
-        /// View by number. The figure remains in the box.
+        /// View by number. The shape remains in the box.
         /// </summary>
-        /// <param name="id">The id of the figure in the box.</param>
+        /// <param name="id">The id of the shape in the box.</param>
         /// <returns>Shape that is found by id.</returns>
         public BaseAbstractShape FindShapeById(int id)
         {
@@ -59,9 +66,9 @@ namespace Girls.Data.Repository
         }
 
         /// <summary>
-        /// Extract by number. The figure is removed from the box.
+        /// Extract by number. The shape is removed from the box.
         /// </summary>
-        /// <param name="id">The id of the figure in the box.</param>
+        /// <param name="id">The id of the shape in the box.</param>
         /// <returns>Shape that is found by id.</returns>
         public BaseAbstractShape ExecuteShapeById(int id)
         {
@@ -77,28 +84,28 @@ namespace Girls.Data.Repository
         }
 
         /// <summary>
-        /// Replce figure in the box by id.
+        /// Replce shape in the box by id.
         /// </summary>
-        /// <param name="id">The id figure in the box/</param>
-        /// <param name="figure">The figure you want to place in the box.</param>
-        public void ReplaceById(int id, BaseAbstractShape figure)
+        /// <param name="id">The id shape in the box/</param>
+        /// <param name="shape">The shape you want to place in the box.</param>
+        public void ReplaceById(int id, BaseAbstractShape shape)
         {
             if (id < 0)
                 throw new BoxShapeException("Id can't be less then zero");
             if (id > BoxShapes.Length - 1)
                 throw new BoxShapeException($"Id can't be more then '{BoxShapes.Length - 1 }'.");
 
-            BoxShapes[id] = figure;
+            BoxShapes[id] = shape;
         }
 
         /// <summary>
-        ///Find a figure according to the pattern equivalent in its characteristics.
+        ///Find a shape according to the pattern equivalent in its characteristics.
         /// </summary>
-        /// <param name="figurePattern">Shape pattern.</param>
-        /// <returns>Found figure according to the pattern.</returns>
-        public BaseAbstractShape FindShapeByPattern(BaseAbstractShape figurePattern)
+        /// <param name="shapePattern">Shape pattern.</param>
+        /// <returns>Found shape according to the pattern.</returns>
+        public BaseAbstractShape FindShapeByPattern(BaseAbstractShape shapePattern)
         {
-            int index = BoxShapes.ToList<BaseAbstractShape>().IndexOf(figurePattern);
+            int index = BoxShapes.ToList<BaseAbstractShape>().IndexOf(shapePattern);
             
             if (index == -1)
                 throw new BoxShapeException("There is not such shape.");
@@ -107,20 +114,20 @@ namespace Girls.Data.Repository
         }
 
         /// <summary>
-        ///Show available number of figures.
+        ///Show available number of shapes.
         /// </summary>
-        /// <returns>Number of figures.</returns>
+        /// <returns>Number of shapes.</returns>
         public int GetNumOfShapesInBox()
         {
-            int figureCounter = 0;
+            int shapeCounter = 0;
 
             foreach (var item in BoxShapes)
             {
                 if (item != null)
-                    figureCounter++;
+                    shapeCounter++;
             }
 
-            return figureCounter;
+            return shapeCounter;
         }
 
         /// <summary>
@@ -175,7 +182,7 @@ namespace Girls.Data.Repository
         }
 
         /// <summary>
-        /// Get all film figures from the box.
+        /// Get all film shapes from the box.
         /// </summary>
         /// <returns>List of all film gigures from the box.</returns>
         public IEnumerable<BaseAbstractShape> GetAllFilmShapes()
@@ -192,72 +199,72 @@ namespace Girls.Data.Repository
         }
 
         /// <summary>
-        /// Save all figures in XML format using Stream Writer.
+        /// Save all shapes in XML format using Stream Writer.
         /// </summary>
         /// <param name="path">Is the path to xml file.</param>
-        public void SaveAllFiguresInXmlUsingStreamWriter(string path)
+        public void SaveAllShapesInXmlUsingStreamWriter(string path)
         {
-            StreamIO.SaveXmlDocumentUsingStreamWriter(ConverterListToXmlIO.AddFiguresInXml(BoxShapes), path);
+            StreamIO.SaveXmlDocumentUsingStreamWriter(ConverterArrayToXmlIO.AddShapesInXml(BoxShapes), path);
         }
 
         /// <summary>
-        /// Save of all film figures in XML format using Stream Writer.
+        /// Save of all film shapes in XML format using Stream Writer.
         /// </summary>
         /// <param name="path">Is the path to xml file.</param>
-        public void SaveAllFilmFiguresInXmlUsingStreamWriter(string path)
+        public void SaveAllFilmShapesInXmlUsingStreamWriter(string path)
         {
-            StreamIO.SaveXmlDocumentUsingStreamWriter(ConverterListToXmlIO.AddFilmFiguresInXml(BoxShapes), path);
+            StreamIO.SaveXmlDocumentUsingStreamWriter(ConverterArrayToXmlIO.AddFilmShapesInXml(BoxShapes), path);
         }
 
         /// <summary>
-        /// Save of all paper figures in XML format using Stream Writer.
+        /// Save of all paper shapes in XML format using Stream Writer.
         /// </summary>
         /// <param name="path">Is the path to xml file.</param>
-        public void SaveAllPaperFiguresInXmlUsingStreamWriter(string path)
+        public void SaveAllPaperShapesInXmlUsingStreamWriter(string path)
         {
-            StreamIO.SaveXmlDocumentUsingStreamWriter(ConverterListToXmlIO.AddPaperFiguresInXml(BoxShapes), path);
+            StreamIO.SaveXmlDocumentUsingStreamWriter(ConverterArrayToXmlIO.AddPaperShapesInXml(BoxShapes), path);
         }
 
         /// <summary>
-        /// Save of all figures in XML format using XML Writer.
+        /// Save of all shapes in XML format using XML Writer.
         /// </summary>
         /// <param name="path">Is the path to xml file.</param>
-        public void SaveAllFiguresInXmlUsingXmlWriter(string path)
+        public void SaveAllShapesInXmlUsingXmlWriter(string path)
         {
-            XmlIO.SaveXmlDocumentUsingXmlWriter(ConverterListToXmlIO.AddFiguresInXml(BoxShapes), path);
+            XmlIO.SaveXmlDocumentUsingXmlWriter(ConverterArrayToXmlIO.AddShapesInXml(BoxShapes), path);
         }
 
         /// <summary>
-        /// Save of all film figures in XML format using XML Writer.
+        /// Save of all film shapes in XML format using XML Writer.
         /// </summary>
         /// <param name="path">Is the path to xml file.</param>
-        public void SaveAllFilmFiguresInXmlUsingXmlWriter(string path)
+        public void SaveAllFilmShapesInXmlUsingXmlWriter(string path)
         {
-            XmlIO.SaveXmlDocumentUsingXmlWriter(ConverterListToXmlIO.AddFilmFiguresInXml(BoxShapes), path);
+            XmlIO.SaveXmlDocumentUsingXmlWriter(ConverterArrayToXmlIO.AddFilmShapesInXml(BoxShapes), path);
         }
         /// <summary>
-        /// Save of all paper figures in XML format using XML Writer.
+        /// Save of all paper shapes in XML format using XML Writer.
         /// </summary>
         /// <param name="path">Is the path to xml file.</param>
-        public void SaveAllPaperFiguresInXmlUsingXmlWriter(string path)
+        public void SaveAllPaperShapesInXmlUsingXmlWriter(string path)
         {
-            XmlIO.SaveXmlDocumentUsingXmlWriter(ConverterListToXmlIO.AddPaperFiguresInXml(BoxShapes), path);
+            XmlIO.SaveXmlDocumentUsingXmlWriter(ConverterArrayToXmlIO.AddPaperShapesInXml(BoxShapes), path);
         }
 
         /// <summary>
-        /// Load of all figures to the box using Stream Reader.
+        /// Load of all shapes to the box using Stream Reader.
         /// </summary>
-        public void LoadAllFiguresFromXmlUsingStreamReader(string path)
+        public void LoadAllShapesFromXmlUsingStreamReader(string path)
         {
-            BoxShapes = ConverterListToXmlIO.ParsXmlDocToFigureList(StreamIO.LoadXmlDocumentUsingStreamReader(path)).ToArray();
+            BoxShapes = ConverterArrayToXmlIO.ParsXmlDocToShapeList(StreamIO.LoadXmlDocumentUsingStreamReader(path)).ToArray();
         }
 
         /// <summary>
-        /// Load of all figures to the box using XML Reader.
+        /// Load of all shapes to the box using XML Reader.
         /// </summary>
-        public void LoadAllFiguresFromXmlUsingXmlReader(string path)
+        public void LoadAllShapesFromXmlUsingXmlReader(string path)
         {
-            BoxShapes = ConverterListToXmlIO.ParsXmlDocToFigureList(XmlIO.LoadXmlDocumentUsingXmlReader(path)).ToArray();
+            BoxShapes = ConverterArrayToXmlIO.ParsXmlDocToShapeList(XmlIO.LoadXmlDocumentUsingXmlReader(path)).ToArray();
         }
     }
 }

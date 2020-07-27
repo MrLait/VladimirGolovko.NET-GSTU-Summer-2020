@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\xmlDocuments\Shapes.Domain.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum\ShapeEnum.cs" />
-    <Compile Include="Interfaces\IColor.cs" />
     <Compile Include="Interfaces\IFilm.cs" />
     <Compile Include="Interfaces\IPaper.cs" />
     <Compile Include="Shape\AbstractShapes\BaseAbstractShape.cs" />
