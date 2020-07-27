@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Enum\ShapeEnum.cs" />
     <Compile Include="Interfaces\IFilm.cs" />
+    <Compile Include="Interfaces\IMaterial.cs" />
     <Compile Include="Interfaces\IPaper.cs" />
     <Compile Include="Shape\AbstractShapes\BaseAbstractShape.cs" />
     <Compile Include="Shape\AbstractShapes\AbstractCircle.cs" />

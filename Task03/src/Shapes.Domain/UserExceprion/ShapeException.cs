@@ -2,6 +2,7 @@
 using Shapes.Domain.Interfaces;
 using Shapes.Domain.Shape.AbstractShapes;
 using System;
+using System.Linq;
 
 namespace Shapes.Domain.UserExceprion
 {
@@ -30,10 +31,14 @@ namespace Shapes.Domain.UserExceprion
 
         internal static void MaterialEqualsHandler(BaseAbstractShape curShape, BaseAbstractShape cutShape)
         {
-            var getMaterialCurShape = curShape.GetType().GetInterfaces()[0];
-            var getMaterialCutShape = cutShape.GetType().GetInterfaces()[0];
+            var materialCurShape = curShape.GetType().GetInterfaces()
+                .Where(i => i.GetInterfaces().Contains(typeof(IMaterial)))
+                .ToList();
+            var materialCutShape = cutShape.GetType().GetInterfaces()
+                .Where(i => i.GetInterfaces().Contains(typeof(IMaterial)))
+                .ToList();
 
-            if (getMaterialCurShape != getMaterialCutShape)
+            if (!Enumerable.SequenceEqual(materialCurShape, materialCutShape))
                 throw new ShapeException($"The material of ​​the cut shape '{cutShape.ToString()}' have to equal the current shape '{curShape.ToString()}'.");
         }
 

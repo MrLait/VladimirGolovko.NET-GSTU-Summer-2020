@@ -11,7 +11,7 @@ namespace Shapes.Data.Repository
     /// <summary>
     /// Shape box class.
     /// </summary>
-    public class ShapeBoxRepository
+    public class ShapeBoxRepository : IShapeBoxRepository
     {
         /// <summary>
         /// Box size.
@@ -64,7 +64,7 @@ namespace Shapes.Data.Repository
         {
             if (id < 0)
                 throw new BoxShapeException("Id can't be less then zero");
-            if (id > BoxShapes.Length-1)
+            if (id > BoxShapes.Length - 1)
                 throw new BoxShapeException($"Id can't be more then '{BoxShapes.Length - 1 }'.");
 
             if (BoxShapes.ElementAt(id) == null)
@@ -114,7 +114,7 @@ namespace Shapes.Data.Repository
         public BaseAbstractShape FindShapeByPattern(BaseAbstractShape shapePattern)
         {
             int index = BoxShapes.ToList().IndexOf(shapePattern);
-            
+
             if (index == -1)
                 throw new BoxShapeException("There is not such shape.");
 
@@ -250,6 +250,7 @@ namespace Shapes.Data.Repository
         {
             XmlIO.SaveXmlDocumentUsingXmlWriter(ConverterArrayToXmlIO.AddFilmShapesInXml(BoxShapes), path);
         }
+
         /// <summary>
         /// Save of all paper shapes in XML format using XML Writer.
         /// </summary>

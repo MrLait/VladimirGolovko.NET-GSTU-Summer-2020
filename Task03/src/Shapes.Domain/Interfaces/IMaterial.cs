@@ -1,9 +1,9 @@
 ﻿namespace Shapes.Domain.Interfaces
 {
     /// <summary>
-    /// Film material interface.
+    /// Material interface.
     /// </summary>
-    public interface IFilm : IMaterial
+    public interface IMaterial
     {
     }
 }

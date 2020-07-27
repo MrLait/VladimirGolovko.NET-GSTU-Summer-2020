@@ -5,7 +5,7 @@ namespace Shapes.Domain.Interfaces
     /// <summary>
     /// Paper material interface.
     /// </summary>
-    public interface IPaper
+    public interface IPaper : IMaterial
     {
         /// <summary>
         /// Is recolored

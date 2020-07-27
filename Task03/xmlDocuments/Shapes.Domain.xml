@@ -79,6 +79,11 @@
             Film material interface.
             </summary>
         </member>
+        <member name="T:Shapes.Domain.Interfaces.IMaterial">
+            <summary>
+            Material interface.
+            </summary>
+        </member>
         <member name="T:Shapes.Domain.Interfaces.IPaper">
             <summary>
             Paper material interface.
