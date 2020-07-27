@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Shapes>
-  <FilmRectangle Name="FilmRectangle">
-    <Name>Rectangle</Name>
-    <Material>Film</Material>
-    <Length>27</Length>
-    <Width>15</Width>
-  </FilmRectangle>
   <FilmSquare Name="FilmSquare">
     <Name>Square</Name>
     <Material>Film</Material>
-    <Side>21</Side>
+    <Side>10</Side>
   </FilmSquare>
+  <FilmSquare Name="FilmSquare">
+    <Name>Square</Name>
+    <Material>Film</Material>
+    <Side>100</Side>
+  </FilmSquare>
+  <FilmRectangle Name="FilmRectangle">
+    <Name>Rectangle</Name>
+    <Material>Film</Material>
+    <Length>123</Length>
+    <Width>124</Width>
+  </FilmRectangle>
   <FilmCircle Name="FilmCircle">
     <Name>Circle</Name>
     <Material>Film</Material>

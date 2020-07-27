@@ -9,6 +9,11 @@
             Shape box class.
             </summary>
         </member>
+        <member name="F:Shapes.Data.Repository.ShapeBoxRepository.MaxBoxSizeIsTwenty">
+            <summary>
+            Box size.
+            </summary>
+        </member>
         <member name="P:Shapes.Data.Repository.ShapeBoxRepository.BoxShapes">
             <summary>
             Property with BoxShapes array.

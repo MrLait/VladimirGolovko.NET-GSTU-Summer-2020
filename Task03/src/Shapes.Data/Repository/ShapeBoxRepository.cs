@@ -14,6 +14,10 @@ namespace Shapes.Data.Repository
     public class ShapeBoxRepository
     {
         /// <summary>
+        /// Box size.
+        /// </summary>
+        public const int MaxBoxSizeIsTwenty = 20;
+        /// <summary>
         /// Property with BoxShapes array.
         /// </summary>
         public BaseAbstractShape[] BoxShapes { get; set; }
@@ -23,7 +27,7 @@ namespace Shapes.Data.Repository
         /// </summary>
         public ShapeBoxRepository()
         {
-            BoxShapes = new BaseAbstractShape[20];
+            BoxShapes = new BaseAbstractShape[MaxBoxSizeIsTwenty];
         }
 
         /// <summary>
@@ -36,15 +40,19 @@ namespace Shapes.Data.Repository
                 throw new ArgumentNullException("Shape is null");
             if (BoxShapes.Contains(shape))
                 throw new BoxShapeException("The shape box already contains this shape");
+            var boxShapeIsFull = true;
 
             for (int i = 0; i < BoxShapes.Length; i++)
             {
                 if (BoxShapes[i] == null)
                 {
                     BoxShapes[i] = shape;
+                    boxShapeIsFull = false;
                     break;
                 }
             }
+            if (boxShapeIsFull)
+                throw new BoxShapeException($"The box can't contain more then '{MaxBoxSizeIsTwenty}' shapes.");
         }
 
         /// <summary>
@@ -105,7 +113,7 @@ namespace Shapes.Data.Repository
         /// <returns>Found shape according to the pattern.</returns>
         public BaseAbstractShape FindShapeByPattern(BaseAbstractShape shapePattern)
         {
-            int index = BoxShapes.ToList<BaseAbstractShape>().IndexOf(shapePattern);
+            int index = BoxShapes.ToList().IndexOf(shapePattern);
             
             if (index == -1)
                 throw new BoxShapeException("There is not such shape.");
