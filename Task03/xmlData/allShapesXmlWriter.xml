@@ -1,0 +1,55 @@
+﻿<Shapes>
+  <FilmSquare Name="FilmSquare">
+    <Name>Square</Name>
+    <Material>Film</Material>
+    <Side>10</Side>
+  </FilmSquare>
+  <FilmSquare Name="FilmSquare">
+    <Name>Square</Name>
+    <Material>Film</Material>
+    <Side>100</Side>
+  </FilmSquare>
+  <PaperRectangle Name="PaperRectangle">
+    <Name>Rectangle</Name>
+    <Material>Paper</Material>
+    <Length>11</Length>
+    <Width>11</Width>
+    <Color>White</Color>
+  </PaperRectangle>
+  <PaperSquare Name="PaperSquare">
+    <Name>Square</Name>
+    <Material>Paper</Material>
+    <Side>1000000000000</Side>
+    <Color>White</Color>
+  </PaperSquare>
+  <PaperRectangle Name="PaperRectangle">
+    <Name>Rectangle</Name>
+    <Material>Paper</Material>
+    <Length>1000000000000</Length>
+    <Width>20</Width>
+    <Color>White</Color>
+  </PaperRectangle>
+  <FilmRectangle Name="FilmRectangle">
+    <Name>Rectangle</Name>
+    <Material>Film</Material>
+    <Length>123</Length>
+    <Width>124</Width>
+  </FilmRectangle>
+  <PaperCircle Name="PaperCircle">
+    <Name>Circle</Name>
+    <Material>Paper</Material>
+    <Radius>10</Radius>
+    <Color>White</Color>
+  </PaperCircle>
+  <FilmCircle Name="FilmCircle">
+    <Name>Circle</Name>
+    <Material>Film</Material>
+    <Radius>11</Radius>
+  </FilmCircle>
+  <PaperCircle Name="PaperCircle">
+    <Name>Circle</Name>
+    <Material>Paper</Material>
+    <Radius>12</Radius>
+    <Color>White</Color>
+  </PaperCircle>
+</Shapes>

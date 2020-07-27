@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.DataTests</name>
+    </assembly>
+    <members>
+        <member name="T:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests">
+            <summary>
+            Factory test cases for Type <see cref="T:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesFindShapeById">
+            <summary>
+            Test cases for method <see cref="T:Shapes.Data.Repository.ShapeBoxRepository"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesExecuteShapeById">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.ExecuteShapeById(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesExecuteShapeByIdThennOutputListLessByOne">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.ExecuteShapeById(System.Int32)"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesReplaceById">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.ReplaceById(System.Int32,Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesFindShapeAccordingToThePattern">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.FindShapeByPattern(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesGetNumberOfShapesInTheBox">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetNumOfShapesInBox"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesGetSumAreaShapes">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetTotalArea"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesGetSumAreaShapesOutIsInfinity">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetTotalArea"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesGetSumPerimetersShapes">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetTotalPerimeter"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesGetSumPerimetersShapesOutIsBigValue">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetTotalPerimeter"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesGetAllCirclesThenOutIsEmpty">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetAllCircles"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.TestCasesGetAllCirclesThenOutIsCircleList">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetAllCircles"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.GetAllFilmShapesThenOutIsEmpty">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetAllFilmShapes"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.GetAllFilmShapesThenOutIsFilmShapesList">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetAllFilmShapes"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.GetSaveAllShapesInXmlUsingStreamWriter">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllShapesInXmlUsingStreamWriter(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.GetSaveFilmShapesInXmlUsingStreamWriter">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllFilmShapesInXmlUsingStreamWriter(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.GetSavePaperShapesInXmlUsingStreamWriter">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllPaperShapesInXmlUsingStreamWriter(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:Shapes.DataTests.Repository.MyFactoryShapeBoxRepositoryTests.GetSaveAllShapesInXmlUsingXmlWriter">
+            <summary>
+            Test cases for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllShapesInXmlUsingXmlWriter(System.String)"/>
+            </summary>
+        </member>
+        <member name="T:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests">
+            <summary>
+            Tests for <see cref="T:Shapes.Data.Repository.ShapeBoxRepository"/>
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.InitialShapeBoxRepository(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Initial box for for shapes instance.
+            </summary>
+            <param name="actualShape">List with actual shapes.</param>
+            <returns>Return box for shapes instance.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GivenSquareList_WhenShapeIsSquare_ThenOutContainList(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape},System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for test <see cref="P:Shapes.Data.Repository.ShapeBoxRepository.BoxShapes"/>
+            </summary>
+            <param name="actualSquareBoxShapes">Sourece list with Square.</param>
+            <param name="expectedSquareBoxShapes">Expected list with square</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GivenRectangleList_WhenShapeIsRectangle_ThenOutContainList(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape},System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case fir test <see cref="P:Shapes.Data.Repository.ShapeBoxRepository.BoxShapes"/>
+            </summary>
+            <param name="actualRectangleBoxShapes">Source list with rectangle.</param>
+            <param name="expectedRectangleBoxShapes">Expected list with rectangle.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GivenAddShapeToBox_WhenShapeIsDifferent_ThenOutIsBoxShapes(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape[],System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="!:ShapeBoxRepository.AddShapeToBox(Shape)"/>
+            </summary>
+            <param name="actualShape">Input data with different shapes.</param>
+            <param name="expectedRectangleBoxShapes">Expected shapes list.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GivenAddShapeToBox_WhenShapesMoreThen20_BoxShapeException(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape[],System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="!:ShapeBoxRepository.AddShapeToBox(Shape)"/>
+            When shapes in the box more then 20. Then out is IndexOutOfRangeException.
+            </summary>
+            <param name="actualShape">Input data with different shapes.</param>
+            <param name="expectedRectangleBoxShapes">Expected shape list.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GivenFindShapeById_WhenByIdThenOutIsShape(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape[],System.Int32)">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.FindShapeById(System.Int32)"/>
+            </summary>
+            <param name="actualShape">Actual shape list.</param>
+            <param name="shapeId">Shape id.</param>
+            <returns>Returns shape which was found by id.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GivenExecuteShapeById_WhenByIdThenOutIsShape(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape[],System.Int32)">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.ExecuteShapeById(System.Int32)"/>
+            </summary>
+            <param name="actualShape">Actual shape list.</param>
+            <param name="shapeId">Shape id.</param>
+            <returns>Returns shape which was found by id.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GivenExecuteShapeById_WhenExecuteOneShapeThenOutputListLessByOne(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape},System.Int32)">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.ExecuteShapeById(System.Int32)"/>
+            </summary>
+            <param name="actualShape">Actual shape list.</param>
+            <param name="shapeId">Shape id.</param>
+            <returns>Returns count shapes ramaining on the list.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GivenReplaceById_WhenByIdThenOutNewBoxShapes(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape},System.Int32,Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.ReplaceById(System.Int32,Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <param name="shapeId">Shape id which you want replace.</param>
+            <param name="shape">The shape you want to put in the box.</param>
+            <returns>The shape you want to put in the box.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveFindShapeByPattern_WhenPatternIsValidThenOutShapeId(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape},Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.FindShapeByPattern(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <param name="shapePattern">Shape pattern.</param>
+            <returns>Found shape by pattern</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveGetNumOfShapesInBox_WhenInputIsListShapesThenOutNumberOfShapes(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetNumOfShapesInBox"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <returns>Returns count of shape in the box.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveGetTotalArea_WhenInputIsListShapesThenOutIsValidSumOfArea(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetTotalArea"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <returns>Return the total area.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveGetTotalArea_WhenInputIsListWithBigValuesShapesThenOutIsInfinity(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetTotalArea"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <returns>Return the total area.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveGetTotalPerimeter_WhenInputIsListShapesThenOutIsValidSumOfArea(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetTotalPerimeter"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <returns>Return the total perimeter.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveGetTotalPerimeter_WhenInputIsListWithBigValuesShapesThenOutIsInfinity(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetTotalPerimeter"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <returns>Return the total perimeter.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveGetAllCircles_WhenInputIsListWithoutCircleThenOutIsEmpty(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetAllCircles"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <returns>Return list of all circles.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveGetAllCircles_WhenInputIsListWithCircleThenOutIsCircleList(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetAllCircles"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <returns>Return list of all circles.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveGetAllFilmShapes_WhenInputListFithoutFilmShapesThenOutIsEmpty(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetAllFilmShapes"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <returns>Return list of all film shapes.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveGetAllFilmShapes_WhenInputIsListShapesThenOutIsListFilmShapes(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.GetAllFilmShapes"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+            <returns>Return list of all film shapes.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveSaveAllShapesInXmlUsingStreamWriter_WhenThenOut(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllShapesInXmlUsingStreamWriter(System.String)"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveSaveFilmShapesInXmlUsingStreamWriter_WhenThenOut(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="!:ShapeBoxRepository.SaveFilmShapesInXmlUsingStreamWriter(string)"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveSavePaperShapesInXmlUsingStreamWriter_WhenThenOut(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="!:ShapeBoxRepository.SavePaperShapesInXmlUsingStreamWriter(string)"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveSaveAllShapesInXmlUsingXmlWriterr_WhenThenOut(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllShapesInXmlUsingXmlWriter(System.String)"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveSaveFilmShapesInXmlUsingXmlWriter(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="!:ShapeBoxRepository.SaveFilmShapesInXmlUsingXmlWriter(string)"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveSavePaperShapesInXmlUsingXmlWriter(System.Collections.Generic.List{Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape})">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllPaperShapesInXmlUsingXmlWriter(System.String)"/>
+            </summary>
+            <param name="actualShape">The source of the list of shapes.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveLoadAllShapesFromXmlUsingStreamReader_WhenThenOut">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.LoadAllShapesFromXmlUsingStreamReader(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Repository.Tests.ShapeBoxRepositoryTests.GiveLoadAllShapesFromXmlUsingXmlReader_WhenThenOut">
+            <summary>
+            Test case for method <see cref="M:Shapes.Data.Repository.ShapeBoxRepository.LoadAllShapesFromXmlUsingXmlReader(System.String)"/>
+            </summary>
+        </member>
+    </members>
+</doc>

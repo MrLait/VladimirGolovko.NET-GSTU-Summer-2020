@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Shapes.Data.Repository.IShapeBoxRepository">
+            <summary>
+            interface Shape box class.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.AddShapeToBox(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)">
+            <summary>
+            Add a shape, you cannot add the same shape twice.
+            </summary>
+            <param name="shape">Geometric shape.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.ExecuteShapeById(System.Int32)">
+            <summary>
+            View by number. The shape remains in the box.
+            </summary>
+            <param name="id">The id of the shape in the box.</param>
+            <returns>Shape that is found by id.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.FindShapeById(System.Int32)">
+            <summary>
+            View by number. The shape remains in the box.
+            </summary>
+            <param name="id">The id of the shape in the box.</param>
+            <returns>Shape that is found by id.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.FindShapeByPattern(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)">
+             <summary>
+            Find a shape according to the pattern equivalent in its characteristics.
+             </summary>
+             <param name="shapePattern">Shape pattern.</param>
+             <returns>Found shape according to the pattern.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.GetAllCircles">
+            <summary>
+            Get all circles from the box.
+            </summary>
+            <returns>List of all circles from the box.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.GetAllFilmShapes">
+            <summary>
+            Get all film shapes from the box.
+            </summary>
+            <returns>List of all film gigures from the box.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.GetNumOfShapesInBox">
+             <summary>
+            Show available number of shapes.
+             </summary>
+             <returns>Number of shapes.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.GetTotalArea">
+            <summary>
+            Calculate the total area.
+            </summary>
+            <returns>The total area.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.GetTotalPerimeter">
+            <summary>
+            Calculate the total perimeter.
+            </summary>
+            <returns>The total perimeter.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.LoadAllShapesFromXmlUsingStreamReader(System.String)">
+            <summary>
+            Load of all shapes to the box using Stream Reader.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.LoadAllShapesFromXmlUsingXmlReader(System.String)">
+            <summary>
+            Load of all shapes to the box using XML Reader.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.ReplaceById(System.Int32,Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)">
+            <summary>
+            Replce shape in the box by id.
+            </summary>
+            <param name="id">The id shape in the box/</param>
+            <param name="shape">The shape you want to place in the box.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.SaveAllFilmShapesInXmlUsingStreamWriter(System.String)">
+            <summary>
+            Save of all film shapes in XML format using Stream Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.SaveAllFilmShapesInXmlUsingXmlWriter(System.String)">
+            <summary>
+            Save of all film shapes in XML format using XML Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.SaveAllPaperShapesInXmlUsingStreamWriter(System.String)">
+            <summary>
+            Save of all paper shapes in XML format using Stream Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.SaveAllPaperShapesInXmlUsingXmlWriter(System.String)">
+            <summary>
+            Save of all paper shapes in XML format using XML Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.SaveAllShapesInXmlUsingStreamWriter(System.String)">
+            <summary>
+            Save all shapes in XML format using Stream Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.IShapeBoxRepository.SaveAllShapesInXmlUsingXmlWriter(System.String)">
+            <summary>
+            Save of all shapes in XML format using XML Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="T:Shapes.Data.Repository.ShapeBoxRepository">
+            <summary>
+            Shape box class.
+            </summary>
+        </member>
+        <member name="F:Shapes.Data.Repository.ShapeBoxRepository.MaxBoxSizeIsTwenty">
+            <summary>
+            Box size.
+            </summary>
+        </member>
+        <member name="P:Shapes.Data.Repository.ShapeBoxRepository.BoxShapes">
+            <summary>
+            Property with BoxShapes array.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.#ctor">
+            <summary>
+            Constructor for init shape box array.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.AddShapeToBox(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)">
+            <summary>
+            Add a shape, you cannot add the same shape twice.
+            </summary>
+            <param name="shape">Geometric shape.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.FindShapeById(System.Int32)">
+            <summary>
+            View by number. The shape remains in the box.
+            </summary>
+            <param name="id">The id of the shape in the box.</param>
+            <returns>Shape that is found by id.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.ExecuteShapeById(System.Int32)">
+            <summary>
+            Extract by number. The shape is removed from the box.
+            </summary>
+            <param name="id">The id of the shape in the box.</param>
+            <returns>Shape that is found by id.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.ReplaceById(System.Int32,Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)">
+            <summary>
+            Replce shape in the box by id.
+            </summary>
+            <param name="id">The id shape in the box/</param>
+            <param name="shape">The shape you want to place in the box.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.FindShapeByPattern(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape)">
+             <summary>
+            Find a shape according to the pattern equivalent in its characteristics.
+             </summary>
+             <param name="shapePattern">Shape pattern.</param>
+             <returns>Found shape according to the pattern.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.GetNumOfShapesInBox">
+             <summary>
+            Show available number of shapes.
+             </summary>
+             <returns>Number of shapes.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.GetTotalArea">
+            <summary>
+            Calculate the total area.
+            </summary>
+            <returns>The total area.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.GetTotalPerimeter">
+            <summary>
+            Calculate the total perimeter.
+            </summary>
+            <returns>The total perimeter.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.GetAllCircles">
+            <summary>
+            Get all circles from the box.
+            </summary>
+            <returns>List of all circles from the box.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.GetAllFilmShapes">
+            <summary>
+            Get all film shapes from the box.
+            </summary>
+            <returns>List of all film gigures from the box.</returns>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllShapesInXmlUsingStreamWriter(System.String)">
+            <summary>
+            Save all shapes in XML format using Stream Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllFilmShapesInXmlUsingStreamWriter(System.String)">
+            <summary>
+            Save of all film shapes in XML format using Stream Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllPaperShapesInXmlUsingStreamWriter(System.String)">
+            <summary>
+            Save of all paper shapes in XML format using Stream Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllShapesInXmlUsingXmlWriter(System.String)">
+            <summary>
+            Save of all shapes in XML format using XML Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllFilmShapesInXmlUsingXmlWriter(System.String)">
+            <summary>
+            Save of all film shapes in XML format using XML Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.SaveAllPaperShapesInXmlUsingXmlWriter(System.String)">
+            <summary>
+            Save of all paper shapes in XML format using XML Writer.
+            </summary>
+            <param name="path">Is the path to xml file.</param>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.LoadAllShapesFromXmlUsingStreamReader(System.String)">
+            <summary>
+            Load of all shapes to the box using Stream Reader.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Repository.ShapeBoxRepository.LoadAllShapesFromXmlUsingXmlReader(System.String)">
+            <summary>
+            Load of all shapes to the box using XML Reader.
+            </summary>
+        </member>
+        <member name="T:Shapes.Data.UserException.BoxShapeException">
+            <summary>
+            Exception class for shapes.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.UserException.BoxShapeException.#ctor(System.String)">
+            <summary>
+            Constructor to display the shape exception message.
+            </summary>
+            <param name="message">Exceprion message.</param>
+        </member>
+        <member name="M:Shapes.Data.UserException.BoxShapeException.#ctor">
+            <summary>
+            Empty consturctor.
+            </summary>
+        </member>
+        <member name="T:Shapes.Data.Util.ConverterArrayToXmlIO">
+            <summary>
+            Class for converting boxshape array in xml format.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Util.ConverterArrayToXmlIO.AddShapesInXml(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape[])">
+            <summary>
+            Converting all shapes to Xml format.
+            </summary>
+            <param name="_shapeList">Array with shapes.</param>
+            <returns>Returns xml.</returns>
+        </member>
+        <member name="M:Shapes.Data.Util.ConverterArrayToXmlIO.AddFilmShapesInXml(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape[])">
+            <summary>
+            Converting all film shapes to Xml format.
+            </summary>
+            <param name="_shapeList">Array with shapes.</param>
+            <returns>Returns xml.</returns>
+        </member>
+        <member name="M:Shapes.Data.Util.ConverterArrayToXmlIO.AddPaperShapesInXml(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape[])">
+            <summary>
+            Converting all paper shapes to Xml format.
+            </summary>
+            <param name="_shapeList">Array with shapes.</param>
+            <returns>Returns xml.</returns>
+        </member>
+        <member name="M:Shapes.Data.Util.ConverterArrayToXmlIO.ParsXmlDocToShapeList(System.Xml.XmlDocument)">
+            <summary>
+            Converting xml to shapes array.
+            </summary>
+            <param name="xmlDocument">Xml.</param>
+            <returns>Returns shapes array.</returns>
+        </member>
+        <member name="M:Shapes.Data.Util.ConverterArrayToXmlIO.PrepareShapeToXml(Shapes.Domain.Shape.AbstractShapes.BaseAbstractShape,System.Collections.Generic.List{System.Xml.Linq.XElement},System.Int32)">
+            <summary>
+            Prepear shape to xElement.
+            </summary>
+            <param name="shape">Shape object.</param>
+            <param name="xElementsShapes">XElement with shepes</param>
+            <param name="indexXElement">Index xElement</param>
+            <returns>Reruns array shapes in array xml format.</returns>
+        </member>
+        <member name="M:Shapes.Data.Util.ConverterArrayToXmlIO.ConvStrToColorEnum(System.String)">
+            <summary>
+            Converting string to enum color.
+            </summary>
+            <param name="shapeColor">Color ins string format.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Shapes.Data.Util.ConverterArrayToXmlIO.ConvertXElementsToXDocument(System.Collections.Generic.List{System.Xml.Linq.XElement},System.String)">
+            <summary>
+            Convert xElement array to xml document.
+            </summary>
+            <param name="xElements">Array xElement.</param>
+            <param name="xElementName">Name of xElement.</param>
+            <returns>Returns xDocement.</returns>
+        </member>
+        <member name="T:Shapes.Data.Util.StreamIO">
+            <summary>
+            Static type to save and load XML document using StreamWriter and StreaReader.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Util.StreamIO.SaveXmlDocumentUsingStreamWriter(System.Xml.Linq.XDocument,System.String)">
+            <summary>
+            Static method to save xDocument with StreamWriter.
+            </summary>
+            <param name="document">Input xDocument.</param>
+            <param name="path">Path to file to save xDocument.</param>
+        </member>
+        <member name="M:Shapes.Data.Util.StreamIO.LoadXmlDocumentUsingStreamReader(System.String)">
+            <summary>
+            Static method to load xml using StreamReader.
+            </summary>
+            <param name="path">Path to file to load xml document using StramReader.</param>
+            <returns>Returns xmlDocuments.</returns>
+        </member>
+        <member name="T:Shapes.Data.Util.XmlIO">
+            <summary>
+            Static class for read and write in xml format.
+            </summary>
+        </member>
+        <member name="M:Shapes.Data.Util.XmlIO.SaveXmlDocumentUsingXmlWriter(System.Xml.Linq.XDocument,System.String)">
+            <summary>
+            Static method to save xDocument using XmlWriter.
+            </summary>
+            <param name="document">Input xDocument.</param>
+            <param name="path">Path to file to save xDocument.</param>
+        </member>
+        <member name="M:Shapes.Data.Util.XmlIO.LoadXmlDocumentUsingXmlReader(System.String)">
+            <summary>
+            Static method to load xml using XmlReader.
+            </summary>
+            <param name="path">Path to file to load xml document using XmlReader.</param>
+            <returns>Returns xmlDocuments.</returns>
+        </member>
+    </members>
+</doc>
