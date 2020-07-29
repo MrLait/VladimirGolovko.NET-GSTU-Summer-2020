@@ -6,19 +6,14 @@ using System.Threading;
 
 namespace ClientServer.Domain.Model
 {
-    public class Server
+    public class Server : BaseClientServer
     {
         private static TcpListener _tcpListener;
 
-        public Server(IPAddress iPAddress , int port)
+        public Server(IPAddress ipAddress , int port) : base(ipAddress, port)
         {
-            Port = port;
-            IPAddress = iPAddress;
             _tcpListener = new TcpListener(IPAddress, Port);
         }
-
-        public int Port { get; }
-        public IPAddress IPAddress { get; }
 
         public void Start()
         {
@@ -30,8 +25,10 @@ namespace ClientServer.Domain.Model
 
                 while (true)
                 {
-                    AcceptedTcpClient acceptedTcpClient = new AcceptedTcpClient(_tcpListener.AcceptTcpClient(), acceptedClientId);
-                    Debug.WriteLine(String.Format("Client with id: {0} connected.", acceptedClientId));
+                    TcpClient = _tcpListener.AcceptTcpClient();
+
+                    AcceptedTcpClient acceptedTcpClient = new AcceptedTcpClient(TcpClient, acceptedClientId);
+                    Debug.WriteLine(string.Format("Client with id: {0} connected.", acceptedClientId));
                     Thread thread = new Thread(new ThreadStart(acceptedTcpClient.OpenStreamConnection));
                     thread.Start();
                     acceptedClientId++;

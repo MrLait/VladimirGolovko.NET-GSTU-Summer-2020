@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\AcceptedTcpClient.cs" />
+    <Compile Include="Model\BaseClientServer.cs" />
+    <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
