@@ -22,7 +22,11 @@ namespace ClientServer.Domain.Model.Tests
             Client client = new Client("vova", ipAddress, 8888);
             Thread clientThreadOne = new Thread(new ThreadStart(client.OpenStream));
             clientThreadOne.Start();
-            //client.OpenStream();
+
+
+            Client clientTwo = new Client("Dima", ipAddress, 8888);
+            Thread clientThreadTwo = new Thread(new ThreadStart(clientTwo.OpenStream));
+            clientThreadTwo.Start();
         }
     }
 }
