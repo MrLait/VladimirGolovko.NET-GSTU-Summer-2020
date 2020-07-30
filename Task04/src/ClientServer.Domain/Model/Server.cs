@@ -10,7 +10,7 @@ namespace ClientServer.Domain.Model
     {
         private static TcpListener _tcpListener;
 
-        public Server(IPAddress ipAddress , int port) : base(ipAddress, port)
+        public Server(string name, IPAddress ipAddress , int port) : base(name, ipAddress, port)
         {
             _tcpListener = new TcpListener(IPAddress, Port);
         }
@@ -27,7 +27,7 @@ namespace ClientServer.Domain.Model
                 {
                     TcpClient = _tcpListener.AcceptTcpClient();
 
-                    AcceptedTcpClient acceptedTcpClient = new AcceptedTcpClient(TcpClient, acceptedClientId);
+                    AcceptedTcpClient acceptedTcpClient = new AcceptedTcpClient(TcpClient, acceptedClientId, this);
                     Debug.WriteLine(string.Format("Client with id: {0} connected.", acceptedClientId));
                     Thread thread = new Thread(new ThreadStart(acceptedTcpClient.OpenStreamConnection));
                     thread.Start();
