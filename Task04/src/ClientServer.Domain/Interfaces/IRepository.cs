@@ -5,6 +5,6 @@ namespace ClientServer.Domain.Interfaces
 {
     public interface IRepository<T>
     {
-        IEnumerable<T> Messages { get; private set; }
+        List<T> Messages { get; set; }
     }
 }

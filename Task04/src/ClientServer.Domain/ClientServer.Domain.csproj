@@ -41,13 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventsArgs\NewMessageEventArgs.cs" />
+    <Compile Include="EventsArgs\NewMessagaToClientEventArgs.cs" />
+    <Compile Include="EventsArgs\BaseNewMessageEventArgs.cs" />
+    <Compile Include="EventsArgs\NewMessageToServerEventArgs.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Model\AcceptedTcpClient.cs" />
     <Compile Include="Model\BaseClientServer.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Server.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ClientMessageRepository.cs" />
+    <Compile Include="Repositories\ServerMessageRepository.cs" />
     <Compile Include="Util\NetworkStreamIO.cs" />
+    <Compile Include="Util\StringExtension.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

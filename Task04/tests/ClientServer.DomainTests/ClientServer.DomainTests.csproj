@@ -46,8 +46,11 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Model\ClientTests.cs" />
     <Compile Include="Model\ServerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ClientMessageRepositoryTests.cs" />
+    <Compile Include="Repositories\ServerMessageRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NUnit">

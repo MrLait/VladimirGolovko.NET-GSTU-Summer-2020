@@ -1,6 +1,8 @@
 ﻿using ClientServer.Domain.EventsArgs;
+using ClientServer.Domain.Repositories;
 using ClientServer.Domain.Util;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
@@ -34,6 +36,9 @@ namespace ClientServer.Domain.Model
                     NetworkStreamIO.SendMessage(NetworkStream, Name);
 
                     //Send message to server
+                    if (Message == null)
+                        throw new ArgumentNullException("Messsage is null");
+
                     NetworkStreamIO.SendMessage(NetworkStream, Message);
                     Debug.WriteLine($"Client with name '{Name}' send message '{Message}'.");
 
@@ -44,10 +49,14 @@ namespace ClientServer.Domain.Model
                     if (serverName != string.Empty & getMessage != string.Empty)
                         GetNewMessage(serverName, getMessage);
                     else
-                        GetNewMessage(serverName, "Message not receive");
+                        GetNewMessage(serverName, "Message not received");
 
                     break;
                 }
+            }
+            catch (ArgumentNullException)
+            {
+                Debug.WriteLine($"Client name: '{Name}' - Message is null");
             }
             catch (Exception e)
             {

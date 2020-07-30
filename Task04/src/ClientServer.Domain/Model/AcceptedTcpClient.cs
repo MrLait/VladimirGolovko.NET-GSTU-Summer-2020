@@ -48,12 +48,11 @@ namespace ClientServer.Domain.Model
 
                         //Sending a message to the client with all received information.
                         NetworkStreamIO.SendMessage(NetworkStream, 
-                            $"Сообщение получено от сервера(Имя сервера): '{Server.Name}')), " +
-                            $"кому (Имя и id пользователя): '{getName}', '{AcceptedClientID}';" +
-                            $"Сообщение сервера: '{Server.Message}';" +
-                            $"Полученное сообщение пользовалетя: '{getMessage}'");
+                            $"Сообщение получено от сервера: '{Server.Name}'; " +
+                            $"Получатель: '{getName}', '{AcceptedClientID}'; " +
+                            $"Сообщение сервера: '{Server.Message}'; " +
+                            $"Полученное сообщение клиента: '{getMessage}'");
                         }
-
                     }
                     catch (Exception)
                     {
@@ -74,7 +73,6 @@ namespace ClientServer.Domain.Model
                     TcpClient.Close();
             }
         }
-
 
         protected virtual void OnNewMessage(NewMessageToServerEventArgs e)
         {
