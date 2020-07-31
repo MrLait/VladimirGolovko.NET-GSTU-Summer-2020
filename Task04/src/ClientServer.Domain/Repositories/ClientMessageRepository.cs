@@ -6,14 +6,25 @@ using System.Linq;
 
 namespace ClientServer.Domain.Repositories
 {
+    /// <summary>
+    /// Client message repository class which is subscribed to the event of a message arriving at the client.
+    /// </summary>
     public class ClientMessageRepository : IRepository<string>
     {
+        /// <summary>
+        /// Property with arrived messages.
+        /// </summary>
         public List<string> Messages { get; set; }
 
-        public ClientMessageRepository()
-        {
-        }
+        /// <summary>
+        /// Empty constructor.
+        /// </summary>
+        public ClientMessageRepository(){}
 
+        /// <summary>
+        /// Constructor with anonymous event handler.
+        /// </summary>
+        /// <param name="client">Client.</param>
         public ClientMessageRepository(Client client)
         {
             Messages = new List<string>();
@@ -25,6 +36,11 @@ namespace ClientServer.Domain.Repositories
                 );
         }
 
+        /// <summary>
+        /// Comparing one message with another.
+        /// </summary>
+        /// <param name="obj">The compared rectangle.</param>
+        /// <returns>True if equal. False if not equal.</returns>
         public override bool Equals(object obj)
         {
             if (obj == null || GetType() != obj.GetType())

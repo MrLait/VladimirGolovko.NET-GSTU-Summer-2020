@@ -1,19 +1,25 @@
 ﻿using NUnit.Framework;
-using ClientServer.Domain.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using ClientServer.Domain.Model;
 using System.Threading;
 
 namespace ClientServer.Domain.Repositories.Tests
 {
+    /// <summary>
+    /// ServerMessageRepository class tests.
+    /// </summary>
     [TestFixture()]
     public class ServerMessageRepositoryTests
     {
+        /// <summary>
+        /// Test case ServerMessageRepository with a client connection on the server.
+        /// </summary>
+        /// <param name="serverName">Server name.</param>
+        /// <param name="serverMessage">Server message.</param>
+        /// <param name="clientOneId">Client one id.</param>
+        /// <param name="clientOneName">Client one name.</param>
+        /// <param name="clientOneMessage">Client one message.</param>
         [TestCase(
             "BasaOne", "ServerMessage",
             0, "Vova", "FirstVovaMessage")]
@@ -36,17 +42,16 @@ namespace ClientServer.Domain.Repositories.Tests
             Thread thread = new Thread(new ThreadStart(server.Start));
             thread.Start();
 
+            List<ServerMessageRepository> actualServerMessageRepositoryOne = server.ServerMessageRepositories;
+
             //Initial client one
             Client clientOne = new Client(clientOneName, ipAddress, 8801) { Message = clientOneMessage };
             Thread clientThreadOne = new Thread(new ThreadStart(clientOne.OpenStream));
             clientThreadOne.Start();
-
-            List<ServerMessageRepository> ServerMessageRepositoryOne = server.ServerMessageRepositories;
+            clientThreadOne.Join(100);
 
             //Assert
-            clientThreadOne.Join();
-
-            Assert.AreEqual(ServerMessageRepositoryOne, expectedServerMessageRepositories);
+            Assert.AreEqual(expectedServerMessageRepositories, actualServerMessageRepositoryOne);
         }
     }
 }

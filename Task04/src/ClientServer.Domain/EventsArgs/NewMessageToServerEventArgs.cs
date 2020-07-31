@@ -1,22 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClientServer.Domain.EventsArgs
+﻿namespace ClientServer.Domain.EventsArgs
 {
+    /// <summary>
+    /// Type contains additional information about the new message to server event.
+    /// </summary>
     public class NewMessageToServerEventArgs : BaseNewMessageEventArgs
     {
-        public int ClientId { get;}
+        /// <summary>
+        /// Client id property.
+        /// </summary>
+        public int ClientId { get; }
 
-        public NewMessageToServerEventArgs(int clientId, string name, string message) : this(name, message)
+        /// <summary>
+        /// Constructor for init property.
+        /// </summary>
+        /// <param name="clientId">Client id.</param>
+        /// <param name="name">Client name.</param>
+        /// <param name="message">Client message.</param>
+        public NewMessageToServerEventArgs(int clientId, string name, string message) : base(name, message)
         {
             ClientId = clientId;
-        }
-
-        private NewMessageToServerEventArgs(string name, string message) : base(name, message)
-        {
         }
     }
 }

@@ -2,14 +2,27 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Net;
-using System.Text;
 using System.Threading;
 
 namespace ClientServer.Domain.Model.Tests
 {
+    /// <summary>
+    /// Server class tests.
+    /// </summary>
     [TestFixture()]
     public class ServerTests
     {
+        /// <summary>
+        /// Test case with two clients connection on the server.
+        /// </summary>
+        /// <param name="serverName">Server name.</param>
+        /// <param name="serverMessage">Server message.</param>
+        /// <param name="clientOneId">Client one id.</param>
+        /// <param name="clientOneName">Client one name.</param>
+        /// <param name="clientOneMessage">Client one message.</param>
+        /// <param name="clientTwoId">Client two id.</param>
+        /// <param name="clientTwoName">Client two name.</param>
+        /// <param name="clientTwoMessage">Client two message.</param>
         [TestCase(
             "BasaOne", "ServerMessage",  
             0, "Vova", "FirstVovaMessage",
@@ -36,7 +49,9 @@ namespace ClientServer.Domain.Model.Tests
             Thread thread = new Thread(new ThreadStart(server.Start));
             thread.Start();
 
-                //Initial client one
+            List<ServerMessageRepository> actualServerMessageRepository = server.ServerMessageRepositories;
+
+            //Initial client one
             Client clientOne = new Client(clientOneName, ipAddress, 8880) { Message = clientOneMessage };
             Thread clientThreadOne = new Thread(new ThreadStart(clientOne.OpenStream));
             clientThreadOne.Start();
@@ -46,15 +61,30 @@ namespace ClientServer.Domain.Model.Tests
             Thread clientThreadTwo = new Thread(new ThreadStart(clientTwo.OpenStream));
             clientThreadTwo.Start();
 
-            List<ServerMessageRepository> ServerMessageRepositoryOne = server.ServerMessageRepositories;
+            clientThreadOne.Join();
+            clientThreadTwo.Join(100);
 
             //Assert
-            clientThreadOne.Join();
-            clientThreadTwo.Join();
-
-            Assert.AreEqual(ServerMessageRepositoryOne, expectedServerMessageRepositories);
+            Assert.AreEqual(expectedServerMessageRepositories, actualServerMessageRepository);
         }
 
+        /// <summary>
+        /// Test case with four clients connection on the server.
+        /// </summary>
+        /// <param name="serverName">Server name.</param>
+        /// <param name="serverMessage">Server message.</param>
+        /// <param name="clientOneId">Client one id.</param>
+        /// <param name="clientOneName">Client one name.</param>
+        /// <param name="clientOneMessage">Client one message.</param>
+        /// <param name="clientTwoId">Client two id.</param>
+        /// <param name="clientTwoName">Client two name.</param>
+        /// <param name="clientTwoMessage">Client two message.</param>
+        /// <param name="clientThreeId">Client three id.</param>
+        /// <param name="clientThreeName">Client three name.</param>
+        /// <param name="clientThreeMessage">Client three message.</param>
+        /// <param name="clientFourId">Client four id.</param>
+        /// <param name="clientFourName">Client four name.</param>
+        /// <param name="clientFourMessage">Client four message.</param>
         [TestCase(
             "BasaOne", "ServerMessage",
             0, "Vova", "FirstVovaMessage",
@@ -89,6 +119,7 @@ namespace ClientServer.Domain.Model.Tests
 
             //Initial server
             Server server = new Server(serverName, IPAddress.Any, 8888) { Message = serverMessage };
+            List<ServerMessageRepository> actualServerMessageRepository = server.ServerMessageRepositories;
             Thread thread = new Thread(new ThreadStart(server.Start));
             thread.Start();
 
@@ -96,31 +127,30 @@ namespace ClientServer.Domain.Model.Tests
             Client clientOne = new Client(clientOneName, ipAddress, 8888) { Message = clientOneMessage };
             Thread clientThreadOne = new Thread(new ThreadStart(clientOne.OpenStream));
             clientThreadOne.Start();
+            clientThreadOne.Join(100);
+
 
             //Initial client two
             Client clientTwo = new Client(clientTwoName, ipAddress, 8888) { Message = clientTwoMessage };
             Thread clientThreadTwo = new Thread(new ThreadStart(clientTwo.OpenStream));
             clientThreadTwo.Start();
+            clientThreadTwo.Join(100);
+
 
             //Initial client three
             Client clientThree = new Client(clientThreeName, ipAddress, 8888) { Message = clientThreeMessage };
             Thread clientThreadThree = new Thread(new ThreadStart(clientThree.OpenStream));
             clientThreadThree.Start();
+            clientThreadThree.Join(100);
 
             //Initial client four
             Client clientFour = new Client(clientFourName, ipAddress, 8888) { Message = clientFourMessage };
             Thread clientThreadFour = new Thread(new ThreadStart(clientFour.OpenStream));
             clientThreadFour.Start();
-
-            List<ServerMessageRepository> ServerMessageRepositoryOne = server.ServerMessageRepositories;
+            clientThreadFour.Join(100);
 
             //Assert
-            clientThreadOne.Join();
-            clientThreadTwo.Join();
-            clientThreadThree.Join();
-            clientThreadFour.Join();
-
-            Assert.AreEqual(ServerMessageRepositoryOne, expectedServerMessageRepositories);
+            Assert.AreEqual(expectedServerMessageRepositories, actualServerMessageRepository);
         }
     }
 }

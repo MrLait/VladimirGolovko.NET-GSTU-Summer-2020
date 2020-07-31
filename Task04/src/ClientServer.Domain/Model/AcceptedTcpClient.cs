@@ -6,23 +6,60 @@ using System.Net.Sockets;
 
 namespace ClientServer.Domain.Model
 {
+    /// <summary>
+    /// Incoming client to the server.
+    /// </summary>
     public class AcceptedTcpClient
     {
+        /// <summary>
+        /// Event to track new messages.
+        /// </summary>
         public event EventHandler<NewMessageToServerEventArgs> NewMessage;
 
+        /// <summary>
+        /// Property tcpClient.
+        /// </summary>
         public TcpClient TcpClient { get;}
-        public int AcceptedClientID { get;}
-        public NetworkStream NetworkStream { get; private set; }
-        public Server Server { get; }
 
-        public AcceptedTcpClient(TcpClient tcpClient, int acceptedClientId, Server server)
+        /// <summary>
+        /// Property clientId.
+        /// </summary>
+        public int AcceptedClientID { get;}
+
+        /// <summary>
+        /// Through this object, you can send messages to the server or, conversely, receive data from the server.
+        /// </summary>
+        public NetworkStream NetworkStream { get; private set; }
+
+        /// <summary>
+        /// Property server name.
+        /// </summary>
+        public string ServerName { get; }
+
+        /// <summary>
+        /// Property server message.
+        /// </summary>
+        public string ServerMessage { get; }
+
+        /// <summary>
+        /// Constructor for initialize input poperty.
+        /// </summary>
+        /// <param name="tcpClient">Tcp client.</param>
+        /// <param name="acceptedClientId">Accepted client id.</param>
+        /// <param name="serverName">Server name.</param>
+        /// <param name="serverMessage">Server message.</param>
+        public AcceptedTcpClient(TcpClient tcpClient, int acceptedClientId, string serverName, string serverMessage)
         {
             TcpClient = tcpClient;
             AcceptedClientID = acceptedClientId;
-            Server = server;
+            ServerName = serverName;
+            ServerMessage = serverMessage;
         }
 
-        internal void OpenStreamConnection()
+        /// <summary>
+        /// Server open stream witn client.
+        /// </summary>
+        internal void OpenStream()
         {
             try
             {
@@ -33,7 +70,7 @@ namespace ClientServer.Domain.Model
                     try
                     {
                         //Send server name to client
-                        NetworkStreamIO.SendMessage(NetworkStream, Server.Name);
+                        NetworkStreamIO.SendMessage(NetworkStream, ServerName);
 
                         //Get client name
                         var getName = NetworkStreamIO.GetMessage(NetworkStream);
@@ -48,10 +85,10 @@ namespace ClientServer.Domain.Model
 
                         //Sending a message to the client with all received information.
                         NetworkStreamIO.SendMessage(NetworkStream, 
-                            $"Сообщение получено от сервера: '{Server.Name}'; " +
+                            $"Сообщение получено от сервера: '{ServerName}'; " +
                             $"Получатель: '{getName}', '{AcceptedClientID}'; " +
-                            $"Сообщение сервера: '{Server.Message}'; " +
-                            $"Полученное сообщение клиента: '{getMessage}'");
+                            $"Сообщение сервера: '{ServerMessage}'; " +
+                            $"Полученное сообщение клиента: '{getMessage}'.");
                         }
                     }
                     catch (Exception)
@@ -74,15 +111,25 @@ namespace ClientServer.Domain.Model
             }
         }
 
+        /// <summary>
+        /// Used to synchronously call the methods supported by the delegate object.
+        /// </summary>
+        /// <param name="e"> Type to receive a message when an event occurs. </param>
         protected virtual void OnNewMessage(NewMessageToServerEventArgs e)
         {
             NewMessage?.Invoke(this, e);
         }
 
+        /// <summary>
+        /// Method for notifying receipt of a new message.
+        /// </summary>
+        /// <param name="clientId">Client id.</param>
+        /// <param name="name">Client name.</param>
+        /// <param name="message">Client message.</param>
         public void GetNewMessage(int clientId, string name, string message)
         {
-            NewMessageToServerEventArgs newMessageToServer = new NewMessageToServerEventArgs(clientId, name, message);
-            OnNewMessage(newMessageToServer);
+            NewMessageToServerEventArgs e = new NewMessageToServerEventArgs(clientId, name, message);
+            OnNewMessage(e);
         }
 
 

@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClientServer.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:ClientServer.Domain.EventsArgs.NewMessagaToClientEventArgs">
+            <summary>
+            Type contains additional information about the new message to client event.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.EventsArgs.NewMessagaToClientEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for init property.
+            </summary>
+            <param name="name">Server name.</param>
+            <param name="message">Server message.</param>
+        </member>
+        <member name="T:ClientServer.Domain.EventsArgs.BaseNewMessageEventArgs">
+            <summary>
+            Base type contains additional information about the new message.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.EventsArgs.BaseNewMessageEventArgs.Name">
+            <summary>
+            Name property.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.EventsArgs.BaseNewMessageEventArgs.Message">
+            <summary>
+            Message property.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.EventsArgs.BaseNewMessageEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for init property.
+            </summary>
+            <param name="name">Name.</param>
+            <param name="message">Message.</param>
+        </member>
+        <member name="T:ClientServer.Domain.EventsArgs.NewMessageToServerEventArgs">
+            <summary>
+            Type contains additional information about the new message to server event.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.EventsArgs.NewMessageToServerEventArgs.ClientId">
+            <summary>
+            Client id property.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.EventsArgs.NewMessageToServerEventArgs.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Constructor for init property.
+            </summary>
+            <param name="clientId">Client id.</param>
+            <param name="name">Client name.</param>
+            <param name="message">Client message.</param>
+        </member>
+        <member name="T:ClientServer.Domain.Interfaces.IRepository`1">
+            <summary>
+            Interface repository.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ClientServer.Domain.Interfaces.IRepository`1.Messages">
+            <summary>
+            List with messages.
+            </summary>
+        </member>
+        <member name="T:ClientServer.Domain.Model.AcceptedTcpClient">
+            <summary>
+            Incoming client to the server.
+            </summary>
+        </member>
+        <member name="E:ClientServer.Domain.Model.AcceptedTcpClient.NewMessage">
+            <summary>
+            Event to track new messages.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.AcceptedTcpClient.TcpClient">
+            <summary>
+            Property tcpClient.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.AcceptedTcpClient.AcceptedClientID">
+            <summary>
+            Property clientId.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.AcceptedTcpClient.NetworkStream">
+            <summary>
+            Through this object, you can send messages to the server or, conversely, receive data from the server.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.AcceptedTcpClient.ServerName">
+            <summary>
+            Property server name.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.AcceptedTcpClient.ServerMessage">
+            <summary>
+            Property server message.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Model.AcceptedTcpClient.#ctor(System.Net.Sockets.TcpClient,System.Int32,System.String,System.String)">
+            <summary>
+            Constructor for initialize input poperty.
+            </summary>
+            <param name="tcpClient">Tcp client.</param>
+            <param name="acceptedClientId">Accepted client id.</param>
+            <param name="serverName">Server name.</param>
+        </member>
+        <member name="M:ClientServer.Domain.Model.AcceptedTcpClient.OpenStream">
+            <summary>
+            Server open stream witn client.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Model.AcceptedTcpClient.OnNewMessage(ClientServer.Domain.EventsArgs.NewMessageToServerEventArgs)">
+            <summary>
+            Used to synchronously call the methods supported by the delegate object.
+            </summary>
+            <param name="e"> Type to receive a message when an event occurs. </param>
+        </member>
+        <member name="M:ClientServer.Domain.Model.AcceptedTcpClient.GetNewMessage(System.Int32,System.String,System.String)">
+            <summary>
+            Method for notifying receipt of a new message.
+            </summary>
+            <param name="clientId">Client id.</param>
+            <param name="name">Client name.</param>
+            <param name="message">Client message.</param>
+        </member>
+        <member name="T:ClientServer.Domain.Model.BaseClientServer">
+            <summary>
+            Base abstract type for client and server.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Model.BaseClientServer.#ctor(System.String,System.Net.IPAddress,System.Int32)">
+            <summary>
+            Constructor for initialize input poperty.
+            </summary>
+            <param name="name">Name.</param>
+            <param name="ipAddress">Ip address.</param>
+            <param name="port">Port.</param>
+        </member>
+        <member name="P:ClientServer.Domain.Model.BaseClientServer.Name">
+            <summary>
+            Property name.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.BaseClientServer.Port">
+            <summary>
+            Property port.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.BaseClientServer.IPAddress">
+            <summary>
+            Property IPAddress.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.BaseClientServer.TcpClient">
+            <summary>
+            Property tcpClient.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.BaseClientServer.Message">
+            <summary>
+            Property mMessage.
+            </summary>
+        </member>
+        <member name="T:ClientServer.Domain.Model.Client">
+            <summary>
+            Client class that describes a client connections.
+            </summary>
+        </member>
+        <member name="E:ClientServer.Domain.Model.Client.NewMessage">
+            <summary>
+            Event to track new messages.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.Client.NetworkStream">
+            <summary>
+            Through this object, you can send messages to the server or, conversely, receive data from the server.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Client.#ctor(System.String,System.Net.IPAddress,System.Int32)">
+            <summary>
+            Constructor for initialize input poperty.
+            </summary>
+            <param name="name">Client name.</param>
+            <param name="ipAddress">Client ip address.</param>
+            <param name="port">Client port.</param>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Client.OpenStream">
+            <summary>
+            Client open stream.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Client.ConnectionToServer">
+            <summary>
+            Connection to server.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Client.OnNewMessage(ClientServer.Domain.EventsArgs.NewMessagaToClientEventArgs)">
+            <summary>
+            Used to synchronously call the methods supported by the delegate object.
+            </summary>
+            <param name="e"> Type to receive a message when an event occurs. </param>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Client.GetNewMessage(System.String,System.String)">
+            <summary>
+            Method for notifying receipt of a new message.
+            </summary>
+            <param name="name">Server name.</param>
+            <param name="message">New message.</param>
+        </member>
+        <member name="T:ClientServer.Domain.Model.Server">
+            <summary>
+            Server class that describes a server connections with client.
+            </summary>
+        </member>
+        <member name="F:ClientServer.Domain.Model.Server._tcpListener">
+            <summary>
+            Field with tcp listener.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.Server.ServerMessageRepositories">
+            <summary>
+            A list to store each client’s messages.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Server.#ctor(System.String,System.Net.IPAddress,System.Int32)">
+            <summary>
+            Constructor for initialize TcpListener, ServerMessageRepositories and input poperty.
+            </summary>
+            <param name="name">Server name.</param>
+            <param name="ipAddress">Server ip address.</param>
+            <param name="port">Server port.</param>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Server.Start">
+            <summary>
+            Server launch.
+            </summary>
+        </member>
+        <member name="T:ClientServer.Domain.Repositories.ClientMessageRepository">
+            <summary>
+            Client message repository class which is subscribed to the event of a message arriving at the client.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Repositories.ClientMessageRepository.Messages">
+            <summary>
+            Property with arrived messages.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Repositories.ClientMessageRepository.#ctor">
+            <summary>
+            Empty constructor.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Repositories.ClientMessageRepository.#ctor(ClientServer.Domain.Model.Client)">
+            <summary>
+            Constructor with anonymous event handler.
+            </summary>
+            <param name="client">Client.</param>
+        </member>
+        <member name="M:ClientServer.Domain.Repositories.ClientMessageRepository.Equals(System.Object)">
+            <summary>
+            Comparing one message with another.
+            </summary>
+            <param name="obj">The compared rectangle.</param>
+            <returns>True if equal. False if not equal.</returns>
+        </member>
+        <member name="M:ClientServer.Domain.Repositories.ClientMessageRepository.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="T:ClientServer.Domain.Repositories.ServerMessageRepository">
+            <summary>
+            Server message repository class which is subscribed to the event of a message arriving at the server.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Repositories.ServerMessageRepository.Messages">
+            <summary>
+            Property with arrived messages.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Repositories.ServerMessageRepository.#ctor">
+            <summary>
+            Constructor for initialize property messages.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Repositories.ServerMessageRepository.#ctor(ClientServer.Domain.Model.AcceptedTcpClient)">
+            <summary>
+            Constructor with anonymous event handler.
+            </summary>
+            <param name="acceptedTcpClient">Accepted tcp client.</param>
+        </member>
+        <member name="M:ClientServer.Domain.Repositories.ServerMessageRepository.Equals(System.Object)">
+            <summary>
+            Comparing one message with another.
+            </summary>
+            <param name="obj">The compared rectangle.</param>
+            <returns>True if equal. False if not equal.</returns>
+        </member>
+        <member name="M:ClientServer.Domain.Repositories.ServerMessageRepository.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="T:ClientServer.Domain.Util.NetworkStreamIO">
+            <summary>
+            Type for network messaging.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Util.NetworkStreamIO.SendMessage(System.Net.Sockets.NetworkStream,System.String)">
+            <summary>
+            Send messages.
+            </summary>
+            <param name="networkStream"> Network stream to send messages. </param>
+            <param name="message"> Output messages. </param>
+        </member>
+        <member name="M:ClientServer.Domain.Util.NetworkStreamIO.GetMessage(System.Net.Sockets.NetworkStream)">
+            <summary>
+            Get messages.
+            </summary>
+            <param name="networkStream"> Network stream to get messages. </param>
+            <returns>Input messages.</returns>
+        </member>
+        <member name="T:ClientServer.Domain.Util.StringExtension">
+            <summary>
+            Class with string extension
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Util.StringExtension.MakeTransliterationFromRusIntoEnglish(System.String)">
+            <summary>
+            Method for transliteration from Russian into English.
+            </summary>
+            <param name="message">Input messege.</param>
+            <returns> Returns a string after transliteration.</returns>
+        </member>
+    </members>
+</doc>

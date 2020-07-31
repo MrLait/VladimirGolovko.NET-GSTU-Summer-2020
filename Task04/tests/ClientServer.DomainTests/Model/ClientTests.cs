@@ -1,19 +1,22 @@
 ﻿using NUnit.Framework;
-using ClientServer.Domain.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net;
-using ClientServer.Domain.Repositories;
 using System.Threading;
 
 namespace ClientServer.Domain.Model.Tests
 {
+    /// <summary>
+    /// Server class tests.
+    /// </summary>
     [TestFixture()]
     public class ClientTests
     {
+        /// <summary>
+        /// Test case with a client connection on the server.
+        /// </summary>
+        /// <param name="serverName">Server name.</param>
+        /// <param name="serverMessage">Server message.</param>
+        /// <param name="clientOneName">Client one name.</param>
+        /// <param name="clientOneMessage">Client one message.</param>
         [TestCase("BasaOne", "ServerMessage","Vova", "FirstVovaMessage")]
         public void GivenOpenStreamWhenServerIsStartedTheOutIsConnectedTrue(string serverName, string serverMessage,
         string clientOneName, string clientOneMessage)
@@ -36,6 +39,13 @@ namespace ClientServer.Domain.Model.Tests
             Assert.AreEqual(true, clientOne.TcpClient.Connected);
         }
 
+        /// <summary>
+        /// Test case with a client connection on the server OutIsSocketException.
+        /// </summary>
+        /// <param name="serverName">Server name.</param>
+        /// <param name="serverMessage">Server message.</param>
+        /// <param name="clientOneName">Client one name.</param>
+        /// <param name="clientOneMessage">Client one message.</param>
         [TestCase("BasaOne", "ServerMessage","Vova", "FirstVovaMessage")]
         public void GivenOpenStreamWhenServerIsStarted_ThenOutIsSocketException(string serverName, string serverMessage,
         string clientOneName, string clientOneMessage)

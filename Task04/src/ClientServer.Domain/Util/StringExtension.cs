@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClientServer.Domain.Util
+﻿namespace ClientServer.Domain.Util
 {
+    /// <summary>
+    /// Class with string extension
+    /// </summary>
     public static class StringExtension
     {
         /// <summary>
