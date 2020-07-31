@@ -7,9 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AAD36CCF-9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C58384CE-F995-4EA3-925C-A21AF731BDF3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlData", "xmlData", "{8B438FD0-749E-4B2A-BE98-6F59F65CF09C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{F19AF6C3-4042-47AF-98D7-B2F86EE6F7BB}"
+	ProjectSection(SolutionItems) = preProject
+		xmlDocuments\ClientServer.Domain.xml = xmlDocuments\ClientServer.Domain.xml
+		xmlDocuments\ClientServer.DomainTests.xml = xmlDocuments\ClientServer.DomainTests.xml
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientServer.Domain", "src\ClientServer.Domain\ClientServer.Domain.csproj", "{18AA48D6-3B0A-4D4E-A81F-96DE52478D17}"
 EndProject
