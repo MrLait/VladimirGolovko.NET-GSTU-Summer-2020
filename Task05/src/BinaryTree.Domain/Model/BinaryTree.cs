@@ -15,6 +15,8 @@ namespace BinaryTree.Domain.Model
         /// </summary>
         public int Count { get; set; }
 
+        public int Height => GetHeight(Root);
+
         public BinaryTree()
         {
             Count = 0;
@@ -33,9 +35,10 @@ namespace BinaryTree.Domain.Model
             var newNode = new Node<T>(item);
             
             Insert(newNode);
+
         }
 
-        protected void Insert(Node<T> newNode)
+        void Insert(Node<T> newNode)
         {
             if (Root == null)
             {
@@ -76,62 +79,15 @@ namespace BinaryTree.Domain.Model
             }
         }
 
+       int GetHeight(Node<T> node)
+        {
+            if (node == null)
+                return 0;
+            if (node.IsLeaf)
+                return 1;
 
-        ///// <summary>
-        ///// Inserts a new node to the tree.
-        ///// </summary>
-        ///// <param name="currentNode">Current node to insert afters.</param>
-        ///// <param name="newNode">New node to be inserted.</param>
-        //protected virtual bool _insertNode(BSTNode<T> newNode)
-        //{
-        //    // Handle empty trees
-        //    if (this.Root == null)
-        //    {
-        //        Root = newNode;
-        //        _count++;
-        //        return true;
-        //    }
-
-        //    if (newNode.Parent == null)
-        //        newNode.Parent = this.Root;
-
-        //    // Check for value equality and whether inserting duplicates is allowed
-        //    if (_allowDuplicates == false && newNode.Parent.Value.IsEqualTo(newNode.Value))
-        //    {
-        //        return false;
-        //    }
-
-        //    // Go Left
-        //    if (newNode.Parent.Value.IsGreaterThan(newNode.Value)) // newNode < parent
-        //    {
-        //        if (newNode.Parent.HasLeftChild == false)
-        //        {
-        //            newNode.Parent.LeftChild = newNode;
-
-        //            // Increment count.
-        //            _count++;
-
-        //            return true;
-        //        }
-
-        //        newNode.Parent = newNode.Parent.LeftChild;
-        //        return _insertNode(newNode);
-        //    }
-        //    // Go Right
-
-        //    if (newNode.Parent.HasRightChild == false)
-        //    {
-        //        newNode.Parent.RightChild = newNode;
-
-        //        // Increment count.
-        //        _count++;
-
-        //        return true;
-        //    }
-
-        //    newNode.Parent = newNode.Parent.RightChild;
-        //    return _insertNode(newNode);
-        //}
+            return (1 + Math.Max(GetHeight(node.Left), GetHeight(node.Right)));
+        }
 
     }
 }

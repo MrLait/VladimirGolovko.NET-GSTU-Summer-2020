@@ -20,6 +20,7 @@ namespace BinaryTree.Domain.Model
         /// </summary>
         public Node<T> Right { get;  set; }
 
+        public bool IsLeaf => childrenCount ==  0;
 
         public Node() : this(default(T), 0, null, null, null) { }
         public Node(T value) : this(value, 0, null, null, null) { }
@@ -29,6 +30,20 @@ namespace BinaryTree.Domain.Model
             Parent = parent;
             Left = left;
             Right = right;
+        }
+
+        private int childrenCount
+        {
+            get
+            {
+                int cnt = 0;
+
+                if (Left != null)
+                    cnt++;
+                if (Right != null)
+                    cnt++;
+                return cnt;
+            }
         }
 
     }

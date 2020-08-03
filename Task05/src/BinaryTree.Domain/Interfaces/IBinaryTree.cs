@@ -16,6 +16,7 @@ namespace BinaryTree.Domain.Interfaces
         int Count { get; set; }
 
         // Inserts an element to the tree
-        void Insert(T item);
+        void Insert(T item);        
+
     }
 }
