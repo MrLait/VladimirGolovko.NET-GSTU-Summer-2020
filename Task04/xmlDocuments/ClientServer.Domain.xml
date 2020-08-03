@@ -72,6 +72,11 @@
             Incoming client to the server.
             </summary>
         </member>
+        <member name="P:ClientServer.Domain.Model.AcceptedTcpClient._log">
+            <summary>
+            Debug logger.
+            </summary>
+        </member>
         <member name="E:ClientServer.Domain.Model.AcceptedTcpClient.NewMessage">
             <summary>
             Event to track new messages.
@@ -173,6 +178,11 @@
             Client class that describes a client connections.
             </summary>
         </member>
+        <member name="P:ClientServer.Domain.Model.Client._log">
+            <summary>
+            Debug logger.
+            </summary>
+        </member>
         <member name="E:ClientServer.Domain.Model.Client.NewMessage">
             <summary>
             Event to track new messages.
@@ -217,6 +227,11 @@
         <member name="T:ClientServer.Domain.Model.Server">
             <summary>
             Server class that describes a server connections with client.
+            </summary>
+        </member>
+        <member name="P:ClientServer.Domain.Model.Server._log">
+            <summary>
+            Debug logger.
             </summary>
         </member>
         <member name="F:ClientServer.Domain.Model.Server._tcpListener">

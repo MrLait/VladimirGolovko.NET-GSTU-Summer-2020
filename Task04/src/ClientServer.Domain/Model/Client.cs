@@ -1,7 +1,8 @@
 ﻿using ClientServer.Domain.EventsArgs;
 using ClientServer.Domain.Util;
+using Infrastructure;
+using Infrastructure.Interfaces;
 using System;
-using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 
@@ -12,6 +13,11 @@ namespace ClientServer.Domain.Model
     /// </summary>
     public class Client : BaseClientServer
     {
+        /// <summary>
+        /// Debug logger.
+        /// </summary>
+        private ILogger _log { get; set; }
+
         /// <summary>
         /// Event to track new messages.
         /// </summary>
@@ -30,6 +36,7 @@ namespace ClientServer.Domain.Model
         /// <param name="port">Client port.</param>
         public Client(string name, IPAddress ipAddress, int port) : base(name, ipAddress, port)
         {
+            _log = new DebugLogger();
             ConnectionToServer();
         }
 
@@ -43,8 +50,7 @@ namespace ClientServer.Domain.Model
                 NetworkStream = TcpClient.GetStream();
                 while (true)
                 {
-                    Debug.WriteLine($"Client with name '{Name}' OpenStream.");
-                    
+                    _log.Info($"Client with name '{Name}' OpenStream.");
                     //Get server name
                     var serverName = NetworkStreamIO.GetMessage(NetworkStream);
 
@@ -56,7 +62,7 @@ namespace ClientServer.Domain.Model
                         throw new ArgumentNullException("Messsage is null");
 
                     NetworkStreamIO.SendMessage(NetworkStream, Message);
-                    Debug.WriteLine($"Client with name '{Name}' send message '{Message}'.");
+                    _log.Info($"Client with name '{Name}' send message '{Message}'.");
 
                     //Geting a message from client with all sending information
                     var serverMessage = NetworkStreamIO.GetMessage(NetworkStream);
@@ -71,11 +77,11 @@ namespace ClientServer.Domain.Model
             }
             catch (ArgumentNullException)
             {
-                Debug.WriteLine($"Client name: '{Name}' - Message is null");
+                _log.Error($"Client name: '{Name}' - Message is null");
             }
             catch (Exception e)
             {
-                Debug.WriteLine($"Client with name '{Name}' get exception '{e.Message}'.");
+                _log.Error($"Client with name '{Name}' get exception '{e.Message}'.");
                 throw;
             }
             finally
@@ -95,11 +101,11 @@ namespace ClientServer.Domain.Model
             try
             {
                 TcpClient = new TcpClient(IPAddress.ToString(), Port);
-                Debug.WriteLine($"Client with name '{Name}' connected to server");
+                _log.Info($"Client with name '{Name}' connected to server");
             }
             catch (SocketException)
             {
-                Debug.WriteLine($"Client with name '{Name}' can't connected to server. Exception: SocketException");
+                _log.Error($"Client with name '{Name}' can't connected to server. Exception: SocketException");
                 throw new SocketException();
             }
             catch (Exception e)

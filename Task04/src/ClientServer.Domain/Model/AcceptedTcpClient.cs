@@ -1,7 +1,8 @@
 ﻿using ClientServer.Domain.EventsArgs;
 using ClientServer.Domain.Util;
+using Infrastructure;
+using Infrastructure.Interfaces;
 using System;
-using System.Diagnostics;
 using System.Net.Sockets;
 
 namespace ClientServer.Domain.Model
@@ -11,6 +12,11 @@ namespace ClientServer.Domain.Model
     /// </summary>
     public class AcceptedTcpClient
     {
+        /// <summary>
+        /// Debug logger.
+        /// </summary>
+        private ILogger _log { get; set; }
+
         /// <summary>
         /// Event to track new messages.
         /// </summary>
@@ -50,6 +56,7 @@ namespace ClientServer.Domain.Model
         /// <param name="serverMessage">Server message.</param>
         public AcceptedTcpClient(TcpClient tcpClient, int acceptedClientId, string serverName, string serverMessage)
         {
+            _log = new DebugLogger();
             TcpClient = tcpClient;
             AcceptedClientID = acceptedClientId;
             ServerName = serverName;
@@ -93,14 +100,14 @@ namespace ClientServer.Domain.Model
                     }
                     catch (Exception)
                     {
-                        Debug.WriteLine($"'{GetType().Name}' with id '{AcceptedClientID}' disconected.");
+                        _log.Error($"'{GetType().Name}' with id '{AcceptedClientID}' disconected.");
                         break;
                     }
                 }
             }
             catch (Exception e)
             {
-                Debug.WriteLine($"'{GetType().Name}' with id '{AcceptedClientID}' get exception '{e.Message}'.");
+                _log.Error($"'{GetType().Name}' with id '{AcceptedClientID}' get exception '{e.Message}'.");
             }
             finally
             {

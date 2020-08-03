@@ -1,7 +1,8 @@
 ﻿using ClientServer.Domain.Repositories;
+using Infrastructure;
+using Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
@@ -13,6 +14,11 @@ namespace ClientServer.Domain.Model
     /// </summary>
     public class Server : BaseClientServer
     {
+        /// <summary>
+        /// Debug logger.
+        /// </summary>
+        private ILogger _log { get; set; }
+
         /// <summary>
         /// Field with tcp listener.
         /// </summary>
@@ -31,6 +37,7 @@ namespace ClientServer.Domain.Model
         /// <param name="port">Server port.</param>
         public Server(string name, IPAddress ipAddress , int port) : base(name, ipAddress, port)
         {
+            _log = new DebugLogger();
             _tcpListener = new TcpListener(IPAddress, Port);
             ServerMessageRepositories = new List<ServerMessageRepository>();
         }
@@ -44,14 +51,14 @@ namespace ClientServer.Domain.Model
             {
                 int acceptedClientId = 0;
                 _tcpListener.Start();
-                Debug.WriteLine("Waiting for connection... ");
+                _log.Info("Waiting for connection... ");
 
                 while (true)
                 {
                     TcpClient = _tcpListener.AcceptTcpClient();
 
                     AcceptedTcpClient acceptedTcpClient = new AcceptedTcpClient(TcpClient, acceptedClientId, Name, Message);
-                    Debug.WriteLine(string.Format("Client with id: {0} connected.", acceptedClientId));
+                    _log.Info(string.Format("Client with id: {0} connected.", acceptedClientId));
                     Thread thread = new Thread(new ThreadStart(acceptedTcpClient.OpenStream));
                     thread.Start();
                     acceptedClientId++;
@@ -60,13 +67,13 @@ namespace ClientServer.Domain.Model
             }
             catch (Exception e)
             {
-                Debug.WriteLine($"'{e.Message}'");
+                _log.Error($"'{e.Message}'");
             }
             finally
             {
                 if (_tcpListener != null)
                 {
-                    Debug.WriteLine("Server stop");
+                    _log.Info("Server stop");
                     _tcpListener.Stop();
                 }
             }
