@@ -11,9 +11,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlData", "xmlData", "{8B43
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{F19AF6C3-4042-47AF-98D7-B2F86EE6F7BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree.Domain", "src\BinaryTree.Domain\BinaryTree.Domain.csproj", "{64C87236-4749-46F6-84D2-69052E9CC5C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree.DomainTests", "tests\BinaryTree.DomainTests\BinaryTree.DomainTests.csproj", "{D5B888CA-3906-4CA8-95ED-6CD03011EF86}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64C87236-4749-46F6-84D2-69052E9CC5C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C87236-4749-46F6-84D2-69052E9CC5C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C87236-4749-46F6-84D2-69052E9CC5C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C87236-4749-46F6-84D2-69052E9CC5C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5B888CA-3906-4CA8-95ED-6CD03011EF86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B888CA-3906-4CA8-95ED-6CD03011EF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B888CA-3906-4CA8-95ED-6CD03011EF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B888CA-3906-4CA8-95ED-6CD03011EF86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64C87236-4749-46F6-84D2-69052E9CC5C2} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
+		{D5B888CA-3906-4CA8-95ED-6CD03011EF86} = {AAD36CCF-9FD1-45EB-8C18-9F7D6707272E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E83C1FB-42FB-4EB0-9899-758624C42C31}
