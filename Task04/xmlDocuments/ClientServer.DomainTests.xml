@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClientServer.DomainTests</name>
+    </assembly>
+    <members>
+        <member name="T:ClientServer.Domain.Model.Tests.ClientTests">
+            <summary>
+            Server class tests.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Tests.ClientTests.GivenOpenStreamWhenServerIsStartedTheOutIsConnectedTrue(System.String,System.String,System.String,System.String)">
+            <summary>
+            Test case with a client connection on the server.
+            </summary>
+            <param name="serverName">Server name.</param>
+            <param name="serverMessage">Server message.</param>
+            <param name="clientOneName">Client one name.</param>
+            <param name="clientOneMessage">Client one message.</param>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Tests.ClientTests.GivenOpenStreamWhenServerIsStarted_ThenOutIsSocketException(System.String,System.String,System.String,System.String)">
+            <summary>
+            Test case with a client connection on the server OutIsSocketException.
+            </summary>
+            <param name="serverName">Server name.</param>
+            <param name="serverMessage">Server message.</param>
+            <param name="clientOneName">Client one name.</param>
+            <param name="clientOneMessage">Client one message.</param>
+        </member>
+        <member name="T:ClientServer.Domain.Model.Tests.ServerTests">
+            <summary>
+            Server class tests.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Tests.ServerTests.GetServerMessageRepository_WhenTwoClientConnection(System.String,System.String,System.Int32,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Test case with two clients connection on the server.
+            </summary>
+            <param name="serverName">Server name.</param>
+            <param name="serverMessage">Server message.</param>
+            <param name="clientOneId">Client one id.</param>
+            <param name="clientOneName">Client one name.</param>
+            <param name="clientOneMessage">Client one message.</param>
+            <param name="clientTwoId">Client two id.</param>
+            <param name="clientTwoName">Client two name.</param>
+            <param name="clientTwoMessage">Client two message.</param>
+        </member>
+        <member name="M:ClientServer.Domain.Model.Tests.ServerTests.GetServerMessageRepository_WhenFourClientConnection(System.String,System.String,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Test case with four clients connection on the server.
+            </summary>
+            <param name="serverName">Server name.</param>
+            <param name="serverMessage">Server message.</param>
+            <param name="clientOneId">Client one id.</param>
+            <param name="clientOneName">Client one name.</param>
+            <param name="clientOneMessage">Client one message.</param>
+            <param name="clientTwoId">Client two id.</param>
+            <param name="clientTwoName">Client two name.</param>
+            <param name="clientTwoMessage">Client two message.</param>
+            <param name="clientThreeId">Client three id.</param>
+            <param name="clientThreeName">Client three name.</param>
+            <param name="clientThreeMessage">Client three message.</param>
+            <param name="clientFourId">Client four id.</param>
+            <param name="clientFourName">Client four name.</param>
+            <param name="clientFourMessage">Client four message.</param>
+        </member>
+        <member name="T:ClientServer.Domain.Repositories.Tests.ClientMessageRepositoryTests">
+            <summary>
+            ClientMessageRepository class tests.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Repositories.Tests.ClientMessageRepositoryTests.GetClientMessageRepository_WhenOneClientConnection(System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Test case ClientMessageRepository with a client connection on the server.
+            </summary>
+            <param name="serverName">Server name.</param>
+            <param name="serverMessage">Server message.</param>
+            <param name="clientOneId">Client one id.</param>
+            <param name="clientOneName">Client one name.</param>
+            <param name="clientOneMessage">Client one message.</param>
+        </member>
+        <member name="T:ClientServer.Domain.Repositories.Tests.ServerMessageRepositoryTests">
+            <summary>
+            ServerMessageRepository class tests.
+            </summary>
+        </member>
+        <member name="M:ClientServer.Domain.Repositories.Tests.ServerMessageRepositoryTests.GetServerMessageRepository_WhenOneClientConnection(System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Test case ServerMessageRepository with a client connection on the server.
+            </summary>
+            <param name="serverName">Server name.</param>
+            <param name="serverMessage">Server message.</param>
+            <param name="clientOneId">Client one id.</param>
+            <param name="clientOneName">Client one name.</param>
+            <param name="clientOneMessage">Client one message.</param>
+        </member>
+    </members>
+</doc>
