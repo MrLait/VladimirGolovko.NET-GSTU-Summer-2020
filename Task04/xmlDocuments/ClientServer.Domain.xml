@@ -109,6 +109,7 @@
             <param name="tcpClient">Tcp client.</param>
             <param name="acceptedClientId">Accepted client id.</param>
             <param name="serverName">Server name.</param>
+            <param name="serverMessage">Server message.</param>
         </member>
         <member name="M:ClientServer.Domain.Model.AcceptedTcpClient.OpenStream">
             <summary>

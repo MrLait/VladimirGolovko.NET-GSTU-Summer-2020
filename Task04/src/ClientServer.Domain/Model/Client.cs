@@ -59,14 +59,13 @@ namespace ClientServer.Domain.Model
                     Debug.WriteLine($"Client with name '{Name}' send message '{Message}'.");
 
                     //Geting a message from client with all sending information
-                    var getMessage = NetworkStreamIO.GetMessage(NetworkStream);
+                    var serverMessage = NetworkStreamIO.GetMessage(NetworkStream);
 
                     //Register messsage from server
-                    if (serverName != string.Empty & getMessage != string.Empty)
-                        GetNewMessage(serverName, getMessage);
+                    if (!string.IsNullOrEmpty(serverName) & !string.IsNullOrEmpty(serverMessage))
+                        GetNewMessage(serverName, serverMessage);
                     else
                         GetNewMessage(serverName, "Message not received");
-
                     break;
                 }
             }

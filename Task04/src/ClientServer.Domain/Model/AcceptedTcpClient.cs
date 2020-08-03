@@ -73,22 +73,22 @@ namespace ClientServer.Domain.Model
                         NetworkStreamIO.SendMessage(NetworkStream, ServerName);
 
                         //Get client name
-                        var getName = NetworkStreamIO.GetMessage(NetworkStream);
+                        var clientName = NetworkStreamIO.GetMessage(NetworkStream);
 
                         //Get message from server
-                        var getMessage = NetworkStreamIO.GetMessage(NetworkStream);
+                        var clientMessage = NetworkStreamIO.GetMessage(NetworkStream);
 
                         //Register message from client
-                        if (getName != string.Empty & getMessage != string.Empty)
+                        if (clientName != string.Empty & clientMessage != string.Empty)
                         { 
-                            GetNewMessage(AcceptedClientID, getName, getMessage);
+                            GetNewMessage(AcceptedClientID, clientName, clientMessage);
 
                         //Sending a message to the client with all received information.
                         NetworkStreamIO.SendMessage(NetworkStream, 
                             $"Сообщение получено от сервера: '{ServerName}'; " +
-                            $"Получатель: '{getName}', '{AcceptedClientID}'; " +
+                            $"Получатель: '{clientName}', '{AcceptedClientID}'; " +
                             $"Сообщение сервера: '{ServerMessage}'; " +
-                            $"Полученное сообщение клиента: '{getMessage}'.");
+                            $"Полученное сообщение клиента: '{clientMessage}'.");
                         }
                     }
                     catch (Exception)
