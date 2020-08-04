@@ -63,7 +63,6 @@ namespace BinaryTree.Domain.Model
 
         public void Insert(Node<T> node)
         {
-
             if (node.Value.CompareTo(Value) == -1)
             {
                 if (Left == null)
@@ -109,10 +108,8 @@ namespace BinaryTree.Domain.Model
         /// </summary>
         /// <param name="node">Current node.</param>
         /// <returns>The difference in the heights of the right and left node.</returns>
-        private int GetBalanceFactor(Node<T> node)
-        {
-            return GetHeight(node.Right) - GetHeight(node.Left);
-        }
+        private int GetBalanceFactor(Node<T> node) =>
+            GetHeight(node.Right) - GetHeight(node.Left);
 
         private int GetHeight(Node<T> node)
         {
