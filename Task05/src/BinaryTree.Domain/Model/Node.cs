@@ -4,6 +4,9 @@ namespace BinaryTree.Domain.Model
 {
     public class Node<T> where T : IComparable<T>
     {
+        private const int LeftBalanceFactor = 2;
+        private const int RightBalanceFactor = -2;
+
         public T Value { get; set; }
         /// <summary>
         /// The data that is stored in the node.
@@ -22,6 +25,9 @@ namespace BinaryTree.Domain.Model
 
         public bool IsLeaf => childrenCount ==  0;
 
+        public int Height => GetHeight(this);
+        public int BalanceFactor => GetBalanceFactor(this);
+
         public Node() : this(default(T), 0, null, null, null) { }
         public Node(T value) : this(value, 0, null, null, null) { }
         public Node(T value, int subTreeSize, Node<T> parent, Node<T> left, Node<T> right)
@@ -31,6 +37,127 @@ namespace BinaryTree.Domain.Model
             Left = left;
             Right = right;
         }
+
+
+
+        public void Insert(Node<T> node)
+        {
+
+            if (node.Value.CompareTo(Value) == -1)
+            {
+                if (Left == null)
+                { 
+                    Left = node;
+                    Left.Parent = this;
+                }
+                else
+                    Left.Insert(node);
+
+                Left = Balance(Left);
+            }
+            else
+            {
+                if (Right == null)
+                { 
+                    Right = node;
+                    Right.Parent = this;
+                }
+                else
+                    Right.Insert(node);
+
+                Right = Balance(Right);
+            }
+        }
+
+        /// <summary>
+        /// The difference in the heights of the right and left subtrees
+        /// </summary>
+        /// <param name="node">Current node.</param>
+        /// <returns>The difference in the heights of the right and left node.</returns>
+        private int GetBalanceFactor(Node<T> node)
+        {
+            return GetHeight(node.Right) - GetHeight(node.Left);
+        }
+
+        private int GetHeight(Node<T> node)
+        {
+            if (node == null)
+                return 0;
+            if (node.IsLeaf)
+                return 1;
+
+            return (1 + Math.Max(GetHeight(node.Left), GetHeight(node.Right)));
+        }
+
+        /// <summary>
+        /// Balancing nodes.
+        /// </summary>
+        /// <param name="node">Current node/</param>
+        /// <returns>Returns a balanced node.</returns>
+        public Node<T> Balance(Node<T> node)
+        {
+            if (GetBalanceFactor(node) == LeftBalanceFactor)
+            {
+                if (GetBalanceFactor(node.Right) < 0)
+                    node.Right = RotateRight(node.Right);
+                return RotateLeft(node);
+            }
+
+            if (GetBalanceFactor(node) == RightBalanceFactor)
+            {
+                if (GetBalanceFactor(node.Left) > 0)
+                    node.Left = RotateLeft(node.Left);
+                return RotateRight(node);
+            }
+            return node;
+        }
+
+        /// <summary>
+        /// Left turn around node.
+        /// </summary>
+        /// <param name="node">Current node.</param>
+        /// <returns>Returns the new rotated node.</returns>
+        public Node<T> RotateLeft(Node<T> node)
+        {
+            var newNode = node.Right;
+            var parent = node.Parent;
+            
+            node.Right = newNode.Left;
+            newNode.Left = node;
+
+            // Update parents references
+            node.Parent = newNode;
+            newNode.Parent = parent;
+
+            if (node.Right != null)
+                node.Right.Parent = node;
+
+            return newNode;
+        }
+
+        /// <summary>
+        /// Right turn around node.
+        /// </summary>
+        /// <param name="node">Current node.</param>
+        /// <returns>Returns the new rotated node.</returns>
+        public Node<T> RotateRight(Node<T> node)
+        {
+            var newNode = node.Left;
+            var parent = node.Parent;
+
+            node.Left = newNode.Right;
+            newNode.Right = node;
+
+            // Update parents references
+            node.Parent = newNode;
+            newNode.Parent = parent;
+
+            if (node.Left != null)
+                node.Left.Parent = node;
+
+            return newNode;
+        }
+
 
         private int childrenCount
         {

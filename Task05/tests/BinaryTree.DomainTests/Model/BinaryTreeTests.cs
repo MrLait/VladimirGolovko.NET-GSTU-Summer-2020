@@ -22,10 +22,6 @@ namespace BinaryTree.Domain.Model.Tests
             binaryTreeIntOne.Insert(10);
             binaryTreeIntOne.Insert(11);
             binaryTreeIntOne.Insert(12);
-            binaryTreeIntOne.Insert(13);
-
-
-            var test = binaryTreeIntOne.Height;
         }
     }
 }
