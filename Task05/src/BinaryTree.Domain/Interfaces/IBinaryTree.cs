@@ -1,5 +1,6 @@
 ﻿using BinaryTree.Domain.Model;
 using System;
+using System.Collections.Generic;
 
 namespace BinaryTree.Domain.Interfaces
 {
@@ -13,7 +14,13 @@ namespace BinaryTree.Domain.Interfaces
         /// <summary>
         /// Gets the number of elements contained in the BinaryTree
         /// </summary>
-        int Count { get; set; }
+        int Count { get; }
+
+        IEnumerable<T> PreOrder();
+
+        IEnumerable<T> PostOrder();
+
+        IEnumerable<T> InOrder();
 
         // Inserts an element to the tree
         void Insert(T item);        

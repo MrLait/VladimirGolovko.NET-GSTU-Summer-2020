@@ -22,6 +22,12 @@ namespace BinaryTree.Domain.Model.Tests
             binaryTreeIntOne.Insert(10);
             binaryTreeIntOne.Insert(11);
             binaryTreeIntOne.Insert(12);
+
+
+
+            var test1 = binaryTreeIntOne.PreOrder();
+            var test2 = binaryTreeIntOne.PostOrder();
+            var test3 = binaryTreeIntOne.InOrder();
         }
     }
 }

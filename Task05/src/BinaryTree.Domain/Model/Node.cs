@@ -28,9 +28,9 @@ namespace BinaryTree.Domain.Model
         public int Height => GetHeight(this);
         public int BalanceFactor => GetBalanceFactor(this);
 
-        public Node() : this(default(T), 0, null, null, null) { }
-        public Node(T value) : this(value, 0, null, null, null) { }
-        public Node(T value, int subTreeSize, Node<T> parent, Node<T> left, Node<T> right)
+        public Node() : this(default(T), null, null, null) { }
+        public Node(T value) : this(value, null, null, null) { }
+        public Node(T value, Node<T> parent, Node<T> left, Node<T> right)
         {
             Value = value;
             Parent = parent;
@@ -38,7 +38,28 @@ namespace BinaryTree.Domain.Model
             Right = right;
         }
 
+        /// <summary>
+        /// Balancing nodes.
+        /// </summary>
+        /// <param name="node">Current node/</param>
+        /// <returns>Returns a balanced node.</returns>
+        public Node<T> Balance(Node<T> node)
+        {
+            if (GetBalanceFactor(node) == LeftBalanceFactor)
+            {
+                if (GetBalanceFactor(node.Right) < 0)
+                    node.Right = RotateRight(node.Right);
+                return RotateLeft(node);
+            }
 
+            if (GetBalanceFactor(node) == RightBalanceFactor)
+            {
+                if (GetBalanceFactor(node.Left) > 0)
+                    node.Left = RotateLeft(node.Left);
+                return RotateRight(node);
+            }
+            return node;
+        }
 
         public void Insert(Node<T> node)
         {
@@ -69,6 +90,20 @@ namespace BinaryTree.Domain.Model
             }
         }
 
+        private int childrenCount
+        {
+            get
+            {
+                int cnt = 0;
+
+                if (Left != null)
+                    cnt++;
+                if (Right != null)
+                    cnt++;
+                return cnt;
+            }
+        }
+
         /// <summary>
         /// The difference in the heights of the right and left subtrees
         /// </summary>
@@ -90,34 +125,11 @@ namespace BinaryTree.Domain.Model
         }
 
         /// <summary>
-        /// Balancing nodes.
-        /// </summary>
-        /// <param name="node">Current node/</param>
-        /// <returns>Returns a balanced node.</returns>
-        public Node<T> Balance(Node<T> node)
-        {
-            if (GetBalanceFactor(node) == LeftBalanceFactor)
-            {
-                if (GetBalanceFactor(node.Right) < 0)
-                    node.Right = RotateRight(node.Right);
-                return RotateLeft(node);
-            }
-
-            if (GetBalanceFactor(node) == RightBalanceFactor)
-            {
-                if (GetBalanceFactor(node.Left) > 0)
-                    node.Left = RotateLeft(node.Left);
-                return RotateRight(node);
-            }
-            return node;
-        }
-
-        /// <summary>
         /// Left turn around node.
         /// </summary>
         /// <param name="node">Current node.</param>
         /// <returns>Returns the new rotated node.</returns>
-        public Node<T> RotateLeft(Node<T> node)
+        private Node<T> RotateLeft(Node<T> node)
         {
             var newNode = node.Right;
             var parent = node.Parent;
@@ -140,7 +152,7 @@ namespace BinaryTree.Domain.Model
         /// </summary>
         /// <param name="node">Current node.</param>
         /// <returns>Returns the new rotated node.</returns>
-        public Node<T> RotateRight(Node<T> node)
+        private Node<T> RotateRight(Node<T> node)
         {
             var newNode = node.Left;
             var parent = node.Parent;
@@ -157,21 +169,5 @@ namespace BinaryTree.Domain.Model
 
             return newNode;
         }
-
-
-        private int childrenCount
-        {
-            get
-            {
-                int cnt = 0;
-
-                if (Left != null)
-                    cnt++;
-                if (Right != null)
-                    cnt++;
-                return cnt;
-            }
-        }
-
     }
 }
