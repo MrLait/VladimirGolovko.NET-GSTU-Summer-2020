@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree.Domain", "src\Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree.DomainTests", "tests\BinaryTree.DomainTests\BinaryTree.DomainTests.csproj", "{D5B888CA-3906-4CA8-95ED-6CD03011EF86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInformation.Domain", "src\StudentInformation.Domain\StudentInformation.Domain.csproj", "{D2EA6F08-6BF9-4CF3-A366-925C3BD66E33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{D5B888CA-3906-4CA8-95ED-6CD03011EF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5B888CA-3906-4CA8-95ED-6CD03011EF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5B888CA-3906-4CA8-95ED-6CD03011EF86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2EA6F08-6BF9-4CF3-A366-925C3BD66E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2EA6F08-6BF9-4CF3-A366-925C3BD66E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2EA6F08-6BF9-4CF3-A366-925C3BD66E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2EA6F08-6BF9-4CF3-A366-925C3BD66E33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{64C87236-4749-46F6-84D2-69052E9CC5C2} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
 		{D5B888CA-3906-4CA8-95ED-6CD03011EF86} = {AAD36CCF-9FD1-45EB-8C18-9F7D6707272E}
+		{D2EA6F08-6BF9-4CF3-A366-925C3BD66E33} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E83C1FB-42FB-4EB0-9899-758624C42C31}

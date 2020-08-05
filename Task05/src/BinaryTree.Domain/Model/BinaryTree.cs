@@ -24,6 +24,14 @@ namespace BinaryTree.Domain.Model
 
         public IEnumerable<T> PreOrder() => PreOrder(Root);
 
+
+        //public IEnumerator<T> PreOrder()
+        //{
+        //    return PreOrder(Root).GetEnumerator();
+        //}
+
+
+
         public IEnumerable<T> PostOrder() => PostOrder(Root);
 
         public IEnumerable<T> InOrder() => InOrder(Root);

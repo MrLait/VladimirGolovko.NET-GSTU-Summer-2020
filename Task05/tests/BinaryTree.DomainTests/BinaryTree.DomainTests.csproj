@@ -63,6 +63,10 @@
       <Project>{64C87236-4749-46F6-84D2-69052E9CC5C2}</Project>
       <Name>BinaryTree.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\StudentInformation.Domain\StudentInformation.Domain.csproj">
+      <Project>{D2EA6F08-6BF9-4CF3-A366-925C3BD66E33}</Project>
+      <Name>StudentInformation.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

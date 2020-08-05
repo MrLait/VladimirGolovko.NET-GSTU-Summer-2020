@@ -3,7 +3,7 @@ using System;
 
 namespace StudentInformation.Domain.Model
 {
-    public class Student : IEntity
+    public class Student : IEntity, IComparable<Student>
     {
         public int ID { get; set; }
 
@@ -16,5 +16,15 @@ namespace StudentInformation.Domain.Model
         public string Gender { get; set; }
 
         public DateTime DateOfBirth { get; set; }
+
+        public int CompareTo(Student obj)
+        {
+            return ID.CompareTo(obj.ID);
+        }
+
+        //public int CompareTo(object obj)
+        //{
+        //    return ID.CompareTo(obj);
+        //}
     }
 }

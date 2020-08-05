@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StudentInformation.Domain.Model;
+using StudentInformation.Domain.Repository;
+using System.Diagnostics;
 
 namespace BinaryTree.Domain.Model.Tests
 {
@@ -28,6 +31,28 @@ namespace BinaryTree.Domain.Model.Tests
             var test1 = binaryTreeIntOne.PreOrder();
             var test2 = binaryTreeIntOne.PostOrder();
             var test3 = binaryTreeIntOne.InOrder();
+
+
+            Student studentOne = new Student() { ID = 0, DateOfBirth = DateTime.Now, FirstName = "A", Gender = "Male", MiddleName = "vov2", SurName = "vov3" };
+            Student studentTwo = new Student() { ID = 1, DateOfBirth = DateTime.Now, FirstName = "C", Gender = "Male", MiddleName = "vov2", SurName = "vov3" };
+            Student studentThree = new Student() { ID = 2, DateOfBirth = DateTime.Now, FirstName = "B", Gender = "Male", MiddleName = "vov2", SurName = "vov3" };
+
+            StudentRepository studentRepository = new StudentRepository(x => x.FirstName, true);
+            studentRepository.Insert(studentOne);
+            studentRepository.Insert(studentTwo);
+            studentRepository.Insert(studentThree);
+
+            List<Student> students = new List<Student>();
+
+            foreach (var item in studentRepository)
+            {
+                Debug.WriteLine(item);
+            }
+            studentRepository.Descending = false;
+            foreach (var item in studentRepository)
+            {
+                Debug.WriteLine(item);
+            }
         }
     }
 }
