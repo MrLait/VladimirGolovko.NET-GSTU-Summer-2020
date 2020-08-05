@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using StudentInformation.Domain.Model;
 using StudentInformation.Domain.Repository;
 using System.Diagnostics;
+using Serializer.Services;
 
 namespace BinaryTree.Domain.Model.Tests
 {
@@ -53,6 +54,20 @@ namespace BinaryTree.Domain.Model.Tests
             {
                 Debug.WriteLine(item);
             }
+
+            JsonSerialaizer jsonSerialaizerasdasds = new JsonSerialaizer();
+            XmlSerialaizer xmlSerialaizer = new XmlSerialaizer();
+            BinarySerialaizer binarySerialaizer = new BinarySerialaizer();
+            xmlSerialaizer.Serialize(studentOne);
+            jsonSerialaizerasdasds.Serialize(studentOne);
+            binarySerialaizer.Serialize(studentOne);
+
+            var binaryDeserialize = binarySerialaizer.Deserialize<Student>("Student.dat");
+
+            var jsonDeserialize = jsonSerialaizerasdasds.Deserialize<Student>("Student.json");
+
+            var xmlDeserialize = xmlSerialaizer.Deserialize<Student>("Student.xml");
+
         }
     }
 }

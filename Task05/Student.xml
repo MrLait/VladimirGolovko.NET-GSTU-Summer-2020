@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>
+    <Major>1</Major>
+    <Minor>2</Minor>
+    <Build>3</Build>
+    <Revision>0</Revision>
+  </Version>
+  <ID>0</ID>
+  <SurName>vov3</SurName>
+  <FirstName>A</FirstName>
+  <MiddleName>vov2</MiddleName>
+  <Gender>Male</Gender>
+  <DateOfBirth>2020-08-05T18:43:32.802+03:00</DateOfBirth>
+</Student>
