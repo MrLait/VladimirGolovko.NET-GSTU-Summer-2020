@@ -23,15 +23,7 @@ namespace BinaryTree.Domain.Model
         }
 
         public IEnumerable<T> PreOrder() => PreOrder(Root);
-
-
-        //public IEnumerator<T> PreOrder()
-        //{
-        //    return PreOrder(Root).GetEnumerator();
-        //}
-
-
-
+        
         public IEnumerable<T> PostOrder() => PostOrder(Root);
 
         public IEnumerable<T> InOrder() => InOrder(Root);
@@ -57,10 +49,7 @@ namespace BinaryTree.Domain.Model
             Count++;
             Root = Root.Balance(Root);
         }
-
-
-
-        
+ 
         private IEnumerable<T> PreOrder(Node<T> node)
         {
             var list = new List<T>();
@@ -111,8 +100,5 @@ namespace BinaryTree.Domain.Model
             }
             return list;
         }
-
-
-
     }
 }

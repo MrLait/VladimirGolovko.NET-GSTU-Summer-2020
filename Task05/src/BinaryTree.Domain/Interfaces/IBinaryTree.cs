@@ -16,11 +16,11 @@ namespace BinaryTree.Domain.Interfaces
         /// </summary>
         int Count { get; }
 
-        //IEnumerable<T> PreOrder();
+        IEnumerable<T> PreOrder();
 
-        //IEnumerable<T> PostOrder();
+        IEnumerable<T> PostOrder();
 
-        //IEnumerable<T> InOrder();
+        IEnumerable<T> InOrder();
 
         // Inserts an element to the tree
         void Insert(T item);        
