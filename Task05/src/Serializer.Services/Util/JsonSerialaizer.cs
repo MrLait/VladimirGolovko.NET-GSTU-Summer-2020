@@ -1,17 +1,17 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Serializer.Services.Interfaces;
-using Serilog.Formatting.Json;
+using Serializers.Services.Interfaces;
 using System.IO;
 using System.Text;
 
-namespace Serializer.Services
+namespace Serializers.Services.Util
 {
     public class JsonSerialaizer : ISerialize, IDeserialize
     {
         public void Serialize<T>(T obj)
         {
             var objTypeName = obj.GetType().Name;
+            if (File.Exists(objTypeName + ".json"))
+                File.Delete(objTypeName + ".json");
 
             using (FileStream fs = new FileStream(objTypeName +".json", FileMode.OpenOrCreate))
             {

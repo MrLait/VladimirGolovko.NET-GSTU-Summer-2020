@@ -1,14 +1,10 @@
 ﻿using NUnit.Framework;
-using BinaryTree.Domain.Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using StudentInformation.Domain.Model;
 using StudentInformation.Domain.Repository;
-using System.Diagnostics;
-using Serializer.Services;
+using Serializers.Services;
+using Serializers.Services.Util;
 
 namespace BinaryTree.Domain.Model.Tests
 {
@@ -47,18 +43,25 @@ namespace BinaryTree.Domain.Model.Tests
             var testObj = studentRepository.GetAll(x => x.FirstName, true);
             var testObj2 = studentRepository.GetAll(x => x.FirstName, false);
 
-            JsonSerialaizer jsonSerialaizerasdasds = new JsonSerialaizer();
-            XmlSerialaizer xmlSerialaizer = new XmlSerialaizer();
-            BinarySerialaizer binarySerialaizer = new BinarySerialaizer();
-            xmlSerialaizer.Serialize(studentOne);
-            jsonSerialaizerasdasds.Serialize(studentOne);
-            binarySerialaizer.Serialize(studentOne);
+            Serialize serialize = new Serialize(new JsonSerialaizer());
+            serialize.GetSerialize(studentOne);
+            var jsonDeserialize = serialize.GetDeserialize<Student>("Student.json");
 
-            var binaryDeserialize = binarySerialaizer.Deserialize<Student>("Student.dat");
+            //JsonSerialaizer jsonSerialaizerasdasds = new JsonSerialaizer();
+            //XmlSerialaizer xmlSerialaizer = new XmlSerialaizer();
+            //BinarySerialaizer binarySerialaizer = new BinarySerialaizer();
 
-            var jsonDeserialize = jsonSerialaizerasdasds.Deserialize<Student>("Student.json");
 
-            var xmlDeserialize = xmlSerialaizer.Deserialize<Student>("Student.xml");
+
+            //xmlSerialaizer.Serialize(studentOne);
+            //jsonSerialaizerasdasds.Serialize(studentOne);
+            //binarySerialaizer.Serialize(studentOne);
+
+            //var binaryDeserialize = binarySerialaizer.Deserialize<Student>("Student.dat");
+
+            //var jsonDeserialize = jsonSerialaizerasdasds.Deserialize<Student>("Student.json");
+
+            //var xmlDeserialize = xmlSerialaizer.Deserialize<Student>("Student.xml");
 
         }
     }

@@ -1,17 +1,11 @@
-﻿using Serializer.Services.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using Serializers.Services.Interfaces;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Serializer.Services
+namespace Serializer.Services.Util
 {
     public class BinarySerialaizer : ISerialize, IDeserialize
     {
-
         public void Serialize<T>(T obj)
         {
             var objTypeName = obj.GetType().Name;

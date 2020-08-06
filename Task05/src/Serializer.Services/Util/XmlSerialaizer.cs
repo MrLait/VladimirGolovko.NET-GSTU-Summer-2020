@@ -1,8 +1,8 @@
-﻿using Serializer.Services.Interfaces;
+﻿using Serializers.Services.Interfaces;
 using System.IO;
 using System.Xml.Serialization;
 
-namespace Serializer.Services
+namespace Serializers.Services.Util
 {
     public class XmlSerialaizer : ISerialize, IDeserialize
     {

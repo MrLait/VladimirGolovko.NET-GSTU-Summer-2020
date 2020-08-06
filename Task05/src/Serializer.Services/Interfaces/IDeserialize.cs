@@ -1,6 +1,6 @@
-﻿namespace Serializer.Services.Interfaces
+﻿namespace Serializers.Services.Interfaces
 {
-    public interface IDeserialize
+    public interface IDeserialize : ISerializer
     {
         T Deserialize<T>(string path);
     }

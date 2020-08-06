@@ -1,6 +1,6 @@
-﻿namespace Serializer.Services.Interfaces
+﻿namespace Serializers.Services.Interfaces
 {
-    public interface ISerialize
+    public interface ISerialize : ISerializer
     {
         void Serialize<T>(T obj);
     }
