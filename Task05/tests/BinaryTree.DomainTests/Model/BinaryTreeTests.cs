@@ -47,6 +47,18 @@ namespace BinaryTree.Domain.Model.Tests
             serialize.GetSerialize(studentOne);
             var jsonDeserialize = serialize.GetDeserialize<Student>("Student.json");
 
+
+            Serialize serializeWithCeck = new Serialize(new JsonSerialaizer(), false, true, new Version.Domain.ModuleVersion(1, 2, 3, 0));
+            serializeWithCeck.GetSerialize(studentOne);
+            var jsonDeserializeeWithCeck = serializeWithCeck.GetDeserialize<Student>("Student.json");
+
+
+            Serialize serializeXmlOne = new Serialize(new XmlSerialaizer());
+            serializeXmlOne.GetSerialize(studentOne);
+            var xmlOneDeserialize = serializeXmlOne.GetDeserialize<Student>("Student.xml");
+
+
+
             //JsonSerialaizer jsonSerialaizerasdasds = new JsonSerialaizer();
             //XmlSerialaizer xmlSerialaizer = new XmlSerialaizer();
             //BinarySerialaizer binarySerialaizer = new BinarySerialaizer();

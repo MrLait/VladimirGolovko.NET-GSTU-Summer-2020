@@ -8,7 +8,7 @@ namespace StudentInformation.Domain.Model
     [Serializable]
     public class Student : Entity
     {
-        public ModuleVersion Version = new ModuleVersion(1, 2, 3, 0);
+        public ModuleVersion Version { get; set; } = new ModuleVersion(1, 2, 3, 0);
 
         public string SurName { get; set; }
 

@@ -71,6 +71,10 @@
       <Project>{D2EA6F08-6BF9-4CF3-A366-925C3BD66E33}</Project>
       <Name>StudentInformation.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\Version.Domain\ModuleVersion.Domain.csproj">
+      <Project>{5aec3c87-5467-459c-a16c-b17364f7afe9}</Project>
+      <Name>ModuleVersion.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

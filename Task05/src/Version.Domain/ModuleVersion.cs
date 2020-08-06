@@ -266,7 +266,7 @@ namespace Version.Domain
         /// <param name="v1">V1.</param>
         /// <param name="v2">V2.</param>
         /// <returns></returns>
-        public static bool operator !=(ModuleVersion v1, ModuleVersion v2) => (v1 != v2);
+        public static bool operator != (ModuleVersion v1, ModuleVersion v2) => (v1 != v2);
 
         /// <summary>
         /// Operator &lt;s the specified v1.
