@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInformation.Domain",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serializer.Services", "src\Serializer.Services\Serializer.Services.csproj", "{628F93B7-A2DE-41CE-BEFD-C524F7BEEA58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Version.Domain", "src\Version.Domain\Version.Domain.csproj", "{5AEC3C87-5467-459C-A16C-B17364F7AFE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleVersion.Domain", "src\Version.Domain\ModuleVersion.Domain.csproj", "{5AEC3C87-5467-459C-A16C-B17364F7AFE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

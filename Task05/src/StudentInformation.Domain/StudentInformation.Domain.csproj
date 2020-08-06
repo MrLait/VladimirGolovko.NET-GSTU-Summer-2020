@@ -41,12 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="Model\Entity.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Model\Student.cs" />
     <Compile Include="Model\Test.cs" />
     <Compile Include="Model\TestResults.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AbstractRepository.cs" />
     <Compile Include="Repository\StudentRepository.cs" />
+    <Compile Include="Repository\TestRepository.cs" />
     <Compile Include="Repository\TestResultsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -54,9 +57,9 @@
       <Project>{64C87236-4749-46F6-84D2-69052E9CC5C2}</Project>
       <Name>BinaryTree.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Version.Domain\Version.Domain.csproj">
+    <ProjectReference Include="..\Version.Domain\ModuleVersion.Domain.csproj">
       <Project>{5aec3c87-5467-459c-a16c-b17364f7afe9}</Project>
-      <Name>Version.Domain</Name>
+      <Name>ModuleVersion.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -30,12 +30,12 @@ namespace Serializer.Services
             {
                 byte[] array = new byte[fs.Length];
                 fs.Read(array, 0, array.Length);
-                var test = Encoding.Default.GetString(array);
-                newDeserialaize = JsonConvert.DeserializeObject<T>(Encoding.Default.GetString(array));
+                var str = Encoding.Default.GetString(array);
+
+                newDeserialaize = JsonConvert.DeserializeObject<T>(str);
             }
 
             return newDeserialaize;
         }
-
     }
 }

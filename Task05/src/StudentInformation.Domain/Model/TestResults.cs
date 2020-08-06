@@ -3,9 +3,8 @@ using System;
 
 namespace StudentInformation.Domain.Model
 {
-    public class TestResults : IEntity
+    public class TestResults : Entity
     {
-        public int ID { get; set; }
         public int StudentID { get; set; }
         public int TestID { get; set; }
         public DateTime TestData { get; set; }

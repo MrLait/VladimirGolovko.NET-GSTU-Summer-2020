@@ -6,10 +6,17 @@
     <Build>3</Build>
     <Revision>0</Revision>
   </Version>
+  <IntCol>
+    <int>1</int>
+    <int>2</int>
+    <int>3</int>
+    <int>4</int>
+    <int>5</int>
+  </IntCol>
   <ID>0</ID>
   <SurName>vov3</SurName>
   <FirstName>A</FirstName>
   <MiddleName>vov2</MiddleName>
   <Gender>Male</Gender>
-  <DateOfBirth>2020-08-05T18:43:32.802+03:00</DateOfBirth>
+  <DateOfBirth>2020-08-06T11:52:03.659+03:00</DateOfBirth>
 </Student>

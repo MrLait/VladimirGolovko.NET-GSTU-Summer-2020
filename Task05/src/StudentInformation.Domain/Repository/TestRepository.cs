@@ -2,7 +2,7 @@
 
 namespace StudentInformation.Domain.Repository
 {
-    public class TestResultsRepository : AbstractRepository<TestResults>
+    public class TestRepository : AbstractRepository<Test>
     {
     }
 }

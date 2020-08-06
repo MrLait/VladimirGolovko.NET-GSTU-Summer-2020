@@ -38,22 +38,14 @@ namespace BinaryTree.Domain.Model.Tests
             Student studentTwo = new Student() { ID = 1, DateOfBirth = DateTime.Now, FirstName = "C", Gender = "Male", MiddleName = "vov2", SurName = "vov3" };
             Student studentThree = new Student() { ID = 2, DateOfBirth = DateTime.Now, FirstName = "B", Gender = "Male", MiddleName = "vov2", SurName = "vov3" };
 
-            StudentRepository studentRepository = new StudentRepository(x => x.FirstName, true);
+            StudentRepository studentRepository = new StudentRepository();
             studentRepository.Insert(studentOne);
             studentRepository.Insert(studentTwo);
             studentRepository.Insert(studentThree);
 
             List<Student> students = new List<Student>();
-
-            foreach (var item in studentRepository)
-            {
-                Debug.WriteLine(item);
-            }
-            studentRepository.Descending = false;
-            foreach (var item in studentRepository)
-            {
-                Debug.WriteLine(item);
-            }
+            var testObj = studentRepository.GetAll(x => x.FirstName, true);
+            var testObj2 = studentRepository.GetAll(x => x.FirstName, false);
 
             JsonSerialaizer jsonSerialaizerasdasds = new JsonSerialaizer();
             XmlSerialaizer xmlSerialaizer = new XmlSerialaizer();
