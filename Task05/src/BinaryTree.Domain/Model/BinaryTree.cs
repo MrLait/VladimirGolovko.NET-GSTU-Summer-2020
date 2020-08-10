@@ -14,7 +14,7 @@ namespace BinaryTree.Domain.Model
         /// <summary>
         /// Gets the number of elements contained in the BinaryTree
         /// </summary>
-        public int Count { get; private set; }
+        public int Count { get; set; }
 
         public BinaryTree()
         {
@@ -22,11 +22,15 @@ namespace BinaryTree.Domain.Model
             Root = null;
         }
 
-        public IEnumerable<T> PreOrder() => PreOrder(Root);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<T> PreOrder() => GetPreOrder(Root);
         
-        public IEnumerable<T> PostOrder() => PostOrder(Root);
+        public IEnumerable<T> PostOrder() => GetPostOrder(Root);
 
-        public IEnumerable<T> InOrder() => InOrder(Root);
+        public IEnumerable<T> InOrder() => GetInOrder(Root);
 
         /// <summary>
         /// Inserts an element to the tree
@@ -49,8 +53,28 @@ namespace BinaryTree.Domain.Model
             Count++;
             Root = Root.Balance(Root);
         }
- 
-        private IEnumerable<T> PreOrder(Node<T> node)
+
+        /// <summary>
+        /// Comparing one binary tree with another.
+        /// </summary>
+        /// <param name="obj">The compared binary tree.</param>
+        /// <returns>True if equal. False if not equal.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            
+            BinaryTree<T> binaryTree = (BinaryTree<T>)obj;
+            return Root.Equals(binaryTree.Root);
+        }
+
+        /// <summary>
+        /// Calculate hash code.
+        /// </summary>
+        /// <returns>The total hash code.</returns>
+        public override int GetHashCode() => Root.GetHashCode();
+
+        private IEnumerable<T> GetPreOrder(Node<T> node)
         {
             var list = new List<T>();
 
@@ -59,44 +83,43 @@ namespace BinaryTree.Domain.Model
                 list.Add(node.Value);
 
                 if (node.Left != null)
-                    list.AddRange(PreOrder(node.Left));
+                    list.AddRange(GetPreOrder(node.Left));
                 if (node.Right != null)
-                    list.AddRange(PreOrder(node.Right));
+                    list.AddRange(GetPreOrder(node.Right));
+            }
+            return list;
+        }
+
+        private IEnumerable<T> GetPostOrder(Node<T> node)
+        {
+            var list = new List<T>();
+
+            if (node != null)
+            {
+                if (node.Left != null)
+                    list.AddRange(GetPostOrder(node.Left));
+                if (node.Right != null)
+                    list.AddRange(GetPostOrder(node.Right));
+
+                list.Add(node.Value);
             }
 
             return list;
         }
 
-        private IEnumerable<T> PostOrder(Node<T> node)
+        private IEnumerable<T> GetInOrder(Node<T> node)
         {
             var list = new List<T>();
 
             if (node != null)
             {
                 if (node.Left != null)
-                    list.AddRange(PostOrder(node.Left));
-                if (node.Right != null)
-                    list.AddRange(PostOrder(node.Right));
-
-                list.Add(node.Value);
-            }
-
-            return list;
-        }
-
-        private IEnumerable<T> InOrder(Node<T> node)
-        {
-            var list = new List<T>();
-
-            if (node != null)
-            {
-                if (node.Left != null)
-                    list.AddRange(InOrder(node.Left));
+                    list.AddRange(GetInOrder(node.Left));
 
                 list.Add(node.Value);
 
                 if (node.Right != null)
-                    list.AddRange(InOrder(node.Right));
+                    list.AddRange(GetInOrder(node.Right));
             }
             return list;
         }

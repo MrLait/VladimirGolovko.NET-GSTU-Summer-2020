@@ -4,10 +4,21 @@ namespace BinaryTree.Domain.Model
 {
     public class Node<T> where T : IComparable<T>
     {
+        /// <summary>
+        /// Left balance factor.
+        /// </summary>
         private const int LeftBalanceFactor = 2;
+
+        /// <summary>
+        /// Right balance factor.
+        /// </summary>
         private const int RightBalanceFactor = -2;
 
+        /// <summary>
+        /// Node value.
+        /// </summary>
         public T Value { get; set; }
+
         /// <summary>
         /// The data that is stored in the node.
         /// </summary>
@@ -23,13 +34,39 @@ namespace BinaryTree.Domain.Model
         /// </summary>
         public Node<T> Right { get;  set; }
 
-        public bool IsLeaf => childrenCount ==  0;
+        /// <summary>
+        ///C heck if it's a leaf or not.
+        /// </summary>
+        public bool IsLeaf => GetChildrenCount() ==  0;
 
+        /// <summary>
+        /// Property height.
+        /// </summary>
         public int Height => GetHeight(this);
+
+        /// <summary>
+        /// Property balance factor.
+        /// </summary>
         public int BalanceFactor => GetBalanceFactor(this);
 
+        /// <summary>
+        /// Constructor with out parameters.
+        /// </summary>
         public Node() : this(default(T), null, null, null) { }
+
+        /// <summary>
+        /// Constructor for init value.
+        /// </summary>
+        /// <param name="value">Value</param>
         public Node(T value) : this(value, null, null, null) { }
+
+        /// <summary>
+        /// Constructor for init value, parent node, left node, right node.
+        /// </summary>
+        /// <param name="value">Valeu.</param>
+        /// <param name="parent">Parent node.</param>
+        /// <param name="left">Left node.</param>
+        /// <param name="right">Right node.</param>
         public Node(T value, Node<T> parent, Node<T> left, Node<T> right)
         {
             Value = value;
@@ -61,6 +98,10 @@ namespace BinaryTree.Domain.Model
             return node;
         }
 
+        /// <summary>
+        /// Insert node in left or right node.
+        /// </summary>
+        /// <param name="node">Node.</param>
         public void Insert(Node<T> node)
         {
             if (node.Value.CompareTo(Value) == -1)
@@ -89,19 +130,24 @@ namespace BinaryTree.Domain.Model
             }
         }
 
-        private int childrenCount
+        /// <summary>
+        /// Comparing one node with another.
+        /// </summary>
+        /// <param name="obj">The compared node.</param>
+        /// <returns>True if equal. False if not equal.</returns>
+        public override bool Equals(object obj)
         {
-            get
-            {
-                int cnt = 0;
-
-                if (Left != null)
-                    cnt++;
-                if (Right != null)
-                    cnt++;
-                return cnt;
-            }
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            Node<T> node = (Node<T>)obj;
+            return Value.Equals(node.Value);
         }
+
+        /// <summary>
+        /// Calculate hash code.
+        /// </summary>
+        /// <returns>The total hash code.</returns>
+        public override int GetHashCode() => Value.GetHashCode();
 
         /// <summary>
         /// The difference in the heights of the right and left subtrees
@@ -111,6 +157,25 @@ namespace BinaryTree.Domain.Model
         private int GetBalanceFactor(Node<T> node) =>
             GetHeight(node.Right) - GetHeight(node.Left);
 
+        /// <summary>
+        /// Counter left and right node.
+        /// </summary>
+        private int GetChildrenCount()
+        {
+            int cnt = 0;
+
+            if (Left != null)
+                cnt++;
+            if (Right != null)
+                cnt++;
+            return cnt;
+        }
+
+        /// <summary>
+        /// Count height node.
+        /// </summary>
+        /// <param name="node">Node.</param>
+        /// <returns></returns>
         private int GetHeight(Node<T> node)
         {
             if (node == null)

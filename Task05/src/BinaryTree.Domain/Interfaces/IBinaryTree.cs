@@ -16,6 +16,10 @@ namespace BinaryTree.Domain.Interfaces
         /// </summary>
         int Count { get; }
 
+        /// <summary>
+        /// <see cref="BinaryTree{T}.PreOrder"/>
+        /// </summary>
+        /// <returns></returns>
         IEnumerable<T> PreOrder();
 
         IEnumerable<T> PostOrder();

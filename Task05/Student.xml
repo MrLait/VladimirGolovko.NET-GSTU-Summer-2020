@@ -1,15 +1,22 @@
 <?xml version="1.0"?>
 <Student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ID>0</ID>
+  <integers>
+    <int>1</int>
+    <int>2</int>
+    <int>3</int>
+    <int>4</int>
+    <int>5</int>
+  </integers>
   <Version>
     <Major>1</Major>
-    <Minor>2</Minor>
-    <Build>3</Build>
+    <Minor>0</Minor>
+    <Build>0</Build>
     <Revision>0</Revision>
   </Version>
   <SurName>vov3</SurName>
   <FirstName>A</FirstName>
   <MiddleName>vov2</MiddleName>
   <Gender>Male</Gender>
-  <DateOfBirth>2020-08-06T18:42:21.652+03:00</DateOfBirth>
+  <DateOfBirth>2020-08-07T12:18:32.437+03:00</DateOfBirth>
 </Student>

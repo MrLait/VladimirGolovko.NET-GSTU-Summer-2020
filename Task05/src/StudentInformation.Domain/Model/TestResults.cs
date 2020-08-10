@@ -1,5 +1,4 @@
-﻿using StudentInformation.Domain.Interfaces;
-using System;
+﻿using System;
 
 namespace StudentInformation.Domain.Model
 {
@@ -9,5 +8,9 @@ namespace StudentInformation.Domain.Model
         public int TestID { get; set; }
         public DateTime TestData { get; set; }
         public decimal Value { get; set; }
+
+        public TestResults() : base() { }
+
+        public TestResults(Version.Domain.ModuleVersion version) : base(version) { }
     }
 }
