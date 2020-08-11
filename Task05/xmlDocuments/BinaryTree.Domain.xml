@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BinaryTree.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:BinaryTree.Domain.Interfaces.IBinaryTree`1">
+            <summary>
+            Interface for BinaryTree.
+            </summary>
+            <typeparam name="T">Object.</typeparam>
+        </member>
+        <member name="P:BinaryTree.Domain.Interfaces.IBinaryTree`1.Root">
+            <summary>
+            The root node of the binary tree.
+            </summary>
+        </member>
+        <member name="P:BinaryTree.Domain.Interfaces.IBinaryTree`1.Count">
+            <summary>
+            Gets the number of elements contained in the BinaryTree
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Interfaces.IBinaryTree`1.PreOrder">
+            <summary>
+            <see cref="M:BinaryTree.Domain.Model.BinaryTree`1.PreOrder"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Interfaces.IBinaryTree`1.PostOrder">
+            <summary>
+            <see cref="M:BinaryTree.Domain.Model.BinaryTree`1.PostOrder"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Interfaces.IBinaryTree`1.InOrder">
+            <summary>
+            <see cref="M:BinaryTree.Domain.Model.BinaryTree`1.InOrder"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Interfaces.IBinaryTree`1.Insert(`0)">
+            <summary>
+            Inserts an element to the tree
+            </summary>
+            <param name="item">Element.</param>
+        </member>
+        <member name="T:BinaryTree.Domain.Model.BinaryTree`1">
+            <summary>
+            Binary tree class.
+            </summary>
+            <typeparam name="T">Object.</typeparam>
+        </member>
+        <member name="P:BinaryTree.Domain.Model.BinaryTree`1.Root">
+            <summary>
+            The root node of the binary tree.
+            </summary>
+        </member>
+        <member name="P:BinaryTree.Domain.Model.BinaryTree`1.Count">
+            <summary>
+            Gets the number of elements contained in the BinaryTree
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.BinaryTree`1.#ctor">
+            <summary>
+            Constructor withaut parameters.
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.BinaryTree`1.PreOrder">
+            <summary>
+            Tree traversal preOrder.
+            </summary>
+            <returns>Returns an ordered tree.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.BinaryTree`1.PostOrder">
+            <summary>
+            Tree traversal postOrder.
+            </summary>
+            <returns>Returns an ordered tree.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.BinaryTree`1.InOrder">
+            <summary>
+            Tree traversal inOrder.
+            </summary>
+            <returns>Returns an ordered tree.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.BinaryTree`1.Insert(`0)">
+            <summary>
+            Inserts an element to the tree
+            </summary>
+            <param name="data">Item to insert</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.BinaryTree`1.Equals(System.Object)">
+            <summary>
+            Comparing one binary tree with another.
+            </summary>
+            <param name="obj">The compared binary tree.</param>
+            <returns>True if equal. False if not equal.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.BinaryTree`1.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hash code.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.BinaryTree`1.GetPreOrder(BinaryTree.Domain.Model.Node{`0})">
+            <summary>
+            Tree traversal preOrder.
+            </summary>
+            <param name="node">Node parameter.</param>
+            <returns>Returns an ordered tree</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.BinaryTree`1.GetPostOrder(BinaryTree.Domain.Model.Node{`0})">
+            <summary>
+            Tree traversal preOrder.
+            </summary>
+            <param name="node">Node parameter.</param>
+            <returns>Returns an ordered tree</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.BinaryTree`1.GetInOrder(BinaryTree.Domain.Model.Node{`0})">
+            <summary>
+            Tree traversal inOrder.
+            </summary>
+            <param name="node">Node parameter.</param>
+            <returns>Returns an ordered tree</returns>
+        </member>
+        <member name="T:BinaryTree.Domain.Model.Node`1">
+            <summary>
+            Node class.
+            </summary>
+            <typeparam name="T">Object.</typeparam>
+        </member>
+        <member name="F:BinaryTree.Domain.Model.Node`1.LeftBalanceFactor">
+            <summary>
+            Left balance factor.
+            </summary>
+        </member>
+        <member name="F:BinaryTree.Domain.Model.Node`1.RightBalanceFactor">
+            <summary>
+            Right balance factor.
+            </summary>
+        </member>
+        <member name="P:BinaryTree.Domain.Model.Node`1.Value">
+            <summary>
+            Node value.
+            </summary>
+        </member>
+        <member name="P:BinaryTree.Domain.Model.Node`1.Left">
+            <summary>
+            Left node.
+            </summary>
+        </member>
+        <member name="P:BinaryTree.Domain.Model.Node`1.Right">
+            <summary>
+            Right node.
+            </summary>
+        </member>
+        <member name="P:BinaryTree.Domain.Model.Node`1.IsLeaf">
+             <summary>
+            C heck if it's a leaf or not.
+             </summary>
+        </member>
+        <member name="P:BinaryTree.Domain.Model.Node`1.Height">
+            <summary>
+            Property height.
+            </summary>
+        </member>
+        <member name="P:BinaryTree.Domain.Model.Node`1.BalanceFactor">
+            <summary>
+            Property balance factor.
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.#ctor">
+            <summary>
+            Constructor with out parameters.
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.#ctor(`0)">
+            <summary>
+            Constructor for init value.
+            </summary>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.#ctor(`0,BinaryTree.Domain.Model.Node{`0},BinaryTree.Domain.Model.Node{`0})">
+            <summary>
+            Constructor for init value, parent node, left node, right node.
+            </summary>
+            <param name="value">Valeu.</param>
+            <param name="left">Left node.</param>
+            <param name="right">Right node.</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.Balance(BinaryTree.Domain.Model.Node{`0})">
+            <summary>
+            Balancing nodes.
+            </summary>
+            <param name="node">Current node/</param>
+            <returns>Returns a balanced node.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.Insert(BinaryTree.Domain.Model.Node{`0})">
+            <summary>
+            Insert node in left or right node.
+            </summary>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.Equals(System.Object)">
+            <summary>
+            Comparing one node with another.
+            </summary>
+            <param name="obj">The compared node.</param>
+            <returns>True if equal. False if not equal.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hash code.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.GetBalanceFactor(BinaryTree.Domain.Model.Node{`0})">
+            <summary>
+            The difference in the heights of the right and left subtrees
+            </summary>
+            <param name="node">Current node.</param>
+            <returns>The difference in the heights of the right and left node.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.GetChildrenCount">
+            <summary>
+            Counter left and right node.
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.GetHeight(BinaryTree.Domain.Model.Node{`0})">
+            <summary>
+            Count height node.
+            </summary>
+            <param name="node">Node.</param>
+            <returns></returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.RotateLeft(BinaryTree.Domain.Model.Node{`0})">
+            <summary>
+            Left turn around node.
+            </summary>
+            <param name="node">Current node.</param>
+            <returns>Returns the new rotated node.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Node`1.RotateRight(BinaryTree.Domain.Model.Node{`0})">
+            <summary>
+            Right turn around node.
+            </summary>
+            <param name="node">Current node.</param>
+            <returns>Returns the new rotated node.</returns>
+        </member>
+    </members>
+</doc>

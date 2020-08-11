@@ -1,19 +1,48 @@
-﻿using System;
+﻿using InterfaceMarkers;
+using System;
 using Version.Domain;
 
 namespace StudentInformation.Domain.Model
 {
-    public abstract class Entity : IComparable<Entity>
+    /// <summary>
+    /// 
+    /// </summary>
+    [Serializable]
+    public abstract class Entity : IComparable, ISerialize
     {
+        /// <summary>
+        /// Property ID.
+        /// </summary>
         public int ID { get; set; }
-      
+
+        /// <summary>
+        /// Property Version.
+        /// </summary>
         public ModuleVersion Version { get; set; }
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         public Entity() => Version = new ModuleVersion(1, 0, 0, 0);
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="version"></param>
         public Entity(ModuleVersion version) : this() => Version = version;
 
-        public int CompareTo(Entity obj) => ID.CompareTo(obj.ID);
+        /// <summary>
+        /// CompareTo
+        /// </summary>
+        /// <param name="obj">obj</param>
+        /// <returns>int</returns>
+        public int CompareTo(object obj)
+        {
+            if (obj is Entity item)
+                return ID.CompareTo(item.ID);
+            else
+                throw new ArgumentNullException("Types do not match");
+        }
 
         /// <summary>
         /// Comparing one StudentTestResultRepository with another.
@@ -33,7 +62,5 @@ namespace StudentInformation.Domain.Model
         /// </summary>
         /// <returns>The total hash code.</returns>
         public override int GetHashCode() => ID.GetHashCode();
-
-
     }
 }

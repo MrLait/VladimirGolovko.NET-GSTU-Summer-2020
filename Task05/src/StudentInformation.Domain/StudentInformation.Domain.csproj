@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\xmlDocuments\StudentInformation.Domain.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -53,6 +54,10 @@
     <ProjectReference Include="..\BinaryTree.Domain\BinaryTree.Domain.csproj">
       <Project>{64C87236-4749-46F6-84D2-69052E9CC5C2}</Project>
       <Name>BinaryTree.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InterfaceMarker\InterfaceMarkers.csproj">
+      <Project>{C5F073AD-87D9-4E69-B161-286AA697374A}</Project>
+      <Name>InterfaceMarkers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Version.Domain\ModuleVersion.Domain.csproj">
       <Project>{5aec3c87-5467-459c-a16c-b17364f7afe9}</Project>

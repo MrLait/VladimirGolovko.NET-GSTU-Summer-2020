@@ -2,7 +2,12 @@
 
 namespace BinaryTree.Domain.Model
 {
-    public class Node<T> where T : IComparable<T>
+    /// <summary>
+    /// Node class.
+    /// </summary>
+    /// <typeparam name="T">Object.</typeparam>
+    [Serializable]
+    public class Node<T> where T : IComparable
     {
         /// <summary>
         /// Left balance factor.
@@ -18,11 +23,6 @@ namespace BinaryTree.Domain.Model
         /// Node value.
         /// </summary>
         public T Value { get; set; }
-
-        /// <summary>
-        /// The data that is stored in the node.
-        /// </summary>
-        public Node<T> Parent { get;  set; }
 
         /// <summary>
         /// Left node.
@@ -52,25 +52,27 @@ namespace BinaryTree.Domain.Model
         /// <summary>
         /// Constructor with out parameters.
         /// </summary>
-        public Node() : this(default(T), null, null, null) { }
+        public Node() {}
 
         /// <summary>
         /// Constructor for init value.
         /// </summary>
         /// <param name="value">Value</param>
-        public Node(T value) : this(value, null, null, null) { }
+        public Node(T value) 
+        { 
+            Value = value; 
+        }
 
         /// <summary>
         /// Constructor for init value, parent node, left node, right node.
         /// </summary>
         /// <param name="value">Valeu.</param>
-        /// <param name="parent">Parent node.</param>
         /// <param name="left">Left node.</param>
         /// <param name="right">Right node.</param>
-        public Node(T value, Node<T> parent, Node<T> left, Node<T> right)
+        public Node(T value, Node<T> left, Node<T> right)
         {
             Value = value;
-            Parent = parent;
+            //Parent = parent;
             Left = left;
             Right = right;
         }
@@ -109,7 +111,6 @@ namespace BinaryTree.Domain.Model
                 if (Left == null)
                 { 
                     Left = node;
-                    Left.Parent = this;
                 }
                 else
                     Left.Insert(node);
@@ -121,7 +122,6 @@ namespace BinaryTree.Domain.Model
                 if (Right == null)
                 { 
                     Right = node;
-                    Right.Parent = this;
                 }
                 else
                     Right.Insert(node);
@@ -194,18 +194,8 @@ namespace BinaryTree.Domain.Model
         private Node<T> RotateLeft(Node<T> node)
         {
             var newNode = node.Right;
-            var parent = node.Parent;
-            
             node.Right = newNode.Left;
             newNode.Left = node;
-
-            // Update parents references
-            node.Parent = newNode;
-            newNode.Parent = parent;
-
-            if (node.Right != null)
-                node.Right.Parent = node;
-
             return newNode;
         }
 
@@ -217,18 +207,8 @@ namespace BinaryTree.Domain.Model
         private Node<T> RotateRight(Node<T> node)
         {
             var newNode = node.Left;
-            var parent = node.Parent;
-
             node.Left = newNode.Right;
             newNode.Right = node;
-
-            // Update parents references
-            node.Parent = newNode;
-            newNode.Parent = parent;
-
-            if (node.Left != null)
-                node.Left.Parent = node;
-
             return newNode;
         }
     }

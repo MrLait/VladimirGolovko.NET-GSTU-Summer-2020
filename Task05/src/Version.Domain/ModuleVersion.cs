@@ -157,24 +157,26 @@ namespace Version.Domain
         /// <summary>
         /// Clones this instance.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Version.</returns>
         public object Clone()
         {
-            ModuleVersion version1 = new ModuleVersion();
-            version1.Major = Major;
-            version1.Minor = Minor;
-            version1.Build = Build;
-            version1.Revision = Revision;
+            ModuleVersion version1 = new ModuleVersion
+            {
+                Major = Major,
+                Minor = Minor,
+                Build = Build,
+                Revision = Revision
+            };
             return version1;
         }
         #endregion
-        
+
         #region IComparable Members
         /// <summary>
         /// Compares to.
         /// </summary>
-        /// <param name="obj">Obj.</param>
-        /// <returns></returns>
+        /// <param name="version">Version.</param>
+        /// <returns>Comporator</returns>
         public int CompareTo(object version)
         {
             if (version == null)
@@ -212,7 +214,7 @@ namespace Version.Domain
         /// Equalss the specified obj.
         /// </summary>
         /// <param name="obj">Obj.</param>
-        /// <returns></returns>
+        /// <returns>Eqials.</returns>
         public override bool Equals(object obj)
         {
             if ((obj == null) || !(obj is ModuleVersion))
@@ -226,7 +228,7 @@ namespace Version.Domain
         /// <summary>
         /// Gets the hash code.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Hash code.</returns>
         public override int GetHashCode()
         {
             int num1 = 0;

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Serializers.ServicesTests</name>
+    </assembly>
+    <members>
+        <member name="T:Serializers.Services.Tests.SerializeTests">
+            <summary>
+            Serialize test.
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Tests.SerializeTests.GivenXmlSerializeStudentsRepository_ThenOutXmlSerialize">
+            <summary>
+            GivenXmlSerializeStudentsRepository_ThenOutXmlSerialize
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Tests.SerializeTests.GivenJsonSerializeStudentsRepository_ThenOutJsonSerialize">
+            <summary>
+            GivenJsonSerializeStudentsRepository_ThenOutJsonSerialize
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Tests.SerializeTests.GivenBinarySerializeStudentsRepository_ThenOutBinarySerialize">
+            <summary>
+            GivenBinarySerializeStudentsRepository_ThenOutBinarySerialize
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Tests.SerializeTests.GivenJsonSerialize_WhenStudentWitnISerialize_ThenOutJsonSerialize">
+            <summary>
+            GivenJsonSerialize_WhenStudentWitnISerialize_ThenOutJsonSerialize
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Tests.SerializeTests.GivenXmlSerialize_WhenStudentWitnISerialize_ThenOutXmlSerialize">
+            <summary>
+            GivenXmlSerialize_WhenStudentWitnISerialize_ThenOutXmlSerialize
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Tests.SerializeTests.GivenBinarySerialize_WhenStudentWitnISerialize_ThenOutBinarySerialize">
+            <summary>
+            GivenBinarySerialize_WhenStudentWitnISerialize_ThenOutBinarySerialize
+            </summary>
+        </member>
+    </members>
+</doc>

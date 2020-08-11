@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\xmlDocuments\BinaryTree.DomainTests.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -59,10 +60,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\AVLTreeLib\AVLTreeLib.csproj">
-      <Project>{D4A4967D-551A-4EA6-8F31-60C942C0477B}</Project>
-      <Name>AVLTreeLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\src\BinaryTree.Domain\BinaryTree.Domain.csproj">
       <Project>{64C87236-4749-46F6-84D2-69052E9CC5C2}</Project>
       <Name>BinaryTree.Domain</Name>

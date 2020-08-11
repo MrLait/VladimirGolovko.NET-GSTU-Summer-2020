@@ -7,18 +7,39 @@ using System.Linq;
 
 namespace StudentInformation.Domain.Repository
 {
+    /// <summary>
+    /// Repository class.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    [Serializable]
     public class Repository<T> : IRepository<T> where T : Entity
     {
+        /// <summary>
+        /// Property BinaryTree.
+        /// </summary>
         public BinaryTree<T> BinaryTree { get; set; }
 
-        public Repository() =>  BinaryTree = new BinaryTree<T>(); 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public Repository() =>  BinaryTree = new BinaryTree<T>();
 
+        /// <summary>
+        /// Insert data.
+        /// </summary>
+        /// <param name="obj">Oobject.</param>
         public void Insert(T obj)
         {
             if (obj != null)
                 BinaryTree.Insert(obj);
         }
 
+        /// <summary>
+        /// Get all ddata.
+        /// </summary>
+        /// <param name="orderBySelector">orderBySelector</param>
+        /// <param name="descending">descending</param>
+        /// <returns>Returns Enumerable</returns>
         public IEnumerable<T> GetAll(Func<T, string> orderBySelector, bool descending)
         {
             if (descending)

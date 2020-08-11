@@ -1,18 +1,22 @@
 ﻿using BinaryTree.Domain.Model;
 using NUnit.Framework;
 using StudentInformation.Domain.Model;
-using StudentInformation.Domain.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentInformation.Domain.Repository.Tests
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [TestFixture()]
     public class RepositoryTests
     {
+        /// <summary>
+        /// InitialStudentBinaryTree
+        /// </summary>
+        /// <returns></returns>
         public static BinaryTree<Student> InitialStudentBinaryTree()
         {
             BinaryTree<Student> actualBinaryTree = new BinaryTree<Student>();
@@ -26,7 +30,23 @@ namespace StudentInformation.Domain.Repository.Tests
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// InitialTestResultsBinaryTree
+        /// </summary>
+        /// <returns></returns>
+        public static BinaryTree<TestResults> InitialTestResultsBinaryTree()
+        {
+            BinaryTree<TestResults> actualBinaryTree = new BinaryTree<TestResults>();
+            actualBinaryTree.Insert(new TestResults() { ID = 0, StudentID = 0, TestID = 0, Value = 10, TestData = DateTime.Today });
+            actualBinaryTree.Insert(new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 58, TestData = DateTime.Today });
+            actualBinaryTree.Insert(new TestResults() { ID = 2, StudentID = 0, TestID = 2, Value = 99, TestData = DateTime.Today });
+            actualBinaryTree.Insert(new TestResults() { ID = 3, StudentID = 1, TestID = 0, Value = 98, TestData = DateTime.Today });
+            actualBinaryTree.Insert(new TestResults() { ID = 4, StudentID = 1, TestID = 1, Value = 1, TestData = DateTime.Today });
+            actualBinaryTree.Insert(new TestResults() { ID = 5, StudentID = 1, TestID = 2, Value = 20, TestData = DateTime.Today });
+            return actualBinaryTree;
+        }
+
+        /// <summary>
+        /// GivenAddStudentToBinaryTreeThenOutIsStudentBinaryTree
         /// </summary>
         [TestCase()]
         public void GivenAddStudentToBinaryTreeThenOutIsStudentBinaryTree()
@@ -36,8 +56,10 @@ namespace StudentInformation.Domain.Repository.Tests
             Student studentC = new Student() { ID = 1, DateOfBirth = DateTime.Now, FirstName = "FirstNameC", Gender = "Male", MiddleName = "MiddleNameC", SurName = "SurNameC" };
             Student studentB = new Student() { ID = 2, DateOfBirth = DateTime.Now, FirstName = "FirstNameB", Gender = "Male", MiddleName = "MiddleNameB", SurName = "SurNameB" };
             Repository<Student> studentRepository = new Repository<Student>();
-            BinaryTree<Student> expectedBinaryTree = new BinaryTree<Student>();
-            expectedBinaryTree.Root = new Node<Student>(studentC, null, new Node<Student>(studentA), new Node<Student>(studentB));
+            BinaryTree<Student> expectedBinaryTree = new BinaryTree<Student>
+            {
+                Root = new Node<Student>(studentC, new Node<Student>(studentA), new Node<Student>(studentB))
+            };
             //Act
             studentRepository.Insert(studentA);
             studentRepository.Insert(studentC);
@@ -48,7 +70,7 @@ namespace StudentInformation.Domain.Repository.Tests
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// GivenAddTestToBinaryTreeThenOutIsTestBinaryTree
         /// </summary>
         [TestCase()]
         public void GivenAddTestToBinaryTreeThenOutIsTestBinaryTree()
@@ -58,8 +80,10 @@ namespace StudentInformation.Domain.Repository.Tests
             Test testC = new Test() { ID = 1, TestName = "TestNameC" };
             Test testB = new Test() { ID = 2, TestName = "TestNameB" };
             Repository<Test> testRepository = new Repository<Test>();
-            BinaryTree<Test> expectedBinaryTree = new BinaryTree<Test>();
-            expectedBinaryTree.Root = new Node<Test>(testC, null, new Node<Test>(testA), new Node<Test>(testB));
+            BinaryTree<Test> expectedBinaryTree = new BinaryTree<Test>
+            {
+                Root = new Node<Test>(testC, new Node<Test>(testA), new Node<Test>(testB))
+            };
             //Act
             testRepository.Insert(testA);
             testRepository.Insert(testC);
@@ -70,18 +94,21 @@ namespace StudentInformation.Domain.Repository.Tests
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// GivenAddTestResultsToBinaryTreeThenOutIsTestResultsBinaryTree
         /// </summary>
         [TestCase()]
         public void GivenAddTestResultsToBinaryTreeThenOutIsTestResultsBinaryTree()
         {
             //Arrange
             TestResults testResultsA = new TestResults() { ID = 0, StudentID = 0, TestID = 0, Value = 10, TestData = DateTime.Now};
-            TestResults testResultsC = new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 99, TestData = DateTime.Now };
+            TestResults testResultsC = new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 98, TestData = DateTime.Now };
             TestResults testResultsB = new TestResults() { ID = 2, StudentID = 1, TestID = 0, Value = 60, TestData = DateTime.Now };
             Repository<TestResults> testResultsRepository = new Repository<TestResults>();
-            BinaryTree<TestResults> expectedBinaryTree = new BinaryTree<TestResults>();
-            expectedBinaryTree.Root = new Node<TestResults>(testResultsC, null, new Node<TestResults>(testResultsA), new Node<TestResults>(testResultsB));
+            BinaryTree<TestResults> expectedBinaryTree = new BinaryTree<TestResults>
+            {
+                Root = new Node<TestResults>(testResultsC, new Node<TestResults>(testResultsA), new Node<TestResults>(testResultsB))
+            };
+
             //Act
             testResultsRepository.Insert(testResultsA);
             testResultsRepository.Insert(testResultsC);
@@ -92,14 +119,18 @@ namespace StudentInformation.Domain.Repository.Tests
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// GivenGetAll_WhenStudentsDescendingByIdFalse
         /// </summary>
-        [TestCase()]
-        public void GivenGetAll_WhenStudentsDescendingByIdFalse()
+        /// <param name="descending">descending</param>
+        [TestCase(false)]
+        public void GivenGetAll_WhenStudentsDescendingByIdFalse(bool descending)
         {
             //Arrange
-            Repository<Student> actualRepository = new Repository<Student>();
-            actualRepository.BinaryTree = InitialStudentBinaryTree();
+            Repository<Student> actualRepository = new Repository<Student>
+            {
+                BinaryTree = InitialStudentBinaryTree()
+            };
+
             List<Student> expectedGetAll = new List<Student>()
             {
                 new Student() { ID = 0, DateOfBirth = DateTime.Today, FirstName = "FirstNameA", Gender = "Male", MiddleName = "MiddleNameA", SurName = "SurNameA" },
@@ -110,20 +141,23 @@ namespace StudentInformation.Domain.Repository.Tests
                 new Student() { ID = 5, DateOfBirth = DateTime.Today, FirstName = "FirstNameF", Gender = "Male", MiddleName = "MiddleNameF", SurName = "SurNameF" }
             };
             //Act
-            List<Student> actualGetAll =  actualRepository.GetAll(x => x.ID.ToString(), false).ToList();
+            List<Student> actualGetAll =  actualRepository.GetAll(x => x.ID.ToString(), descending).ToList();
             //Assert
             Assert.AreEqual(expectedGetAll, actualGetAll);
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// GivenGetAll_WhenStudentsDescendingByIdTrue
         /// </summary>
-        [TestCase()]
-        public void GivenGetAll_WhenStudentsDescendingByIdTrue()
+        /// <param name="descending">descending</param>
+        [TestCase(true)]
+        public void GivenGetAll_WhenStudentsDescendingByIdTrue(bool descending)
         {
             //Arrange
-            Repository<Student> actualRepository = new Repository<Student>();
-            actualRepository.BinaryTree = InitialStudentBinaryTree();
+            Repository<Student> actualRepository = new Repository<Student>
+            {
+                BinaryTree = InitialStudentBinaryTree()
+            };
             List<Student> expectedGetAll = new List<Student>()
             {
                 new Student() { ID = 5, DateOfBirth = DateTime.Today, FirstName = "FirstNameF", Gender = "Male", MiddleName = "MiddleNameF", SurName = "SurNameF" },
@@ -134,20 +168,23 @@ namespace StudentInformation.Domain.Repository.Tests
                 new Student() { ID = 0, DateOfBirth = DateTime.Today, FirstName = "FirstNameA", Gender = "Male", MiddleName = "MiddleNameA", SurName = "SurNameA" }
             };
             //Act
-            List<Student> actualGetAll = actualRepository.GetAll(x => x.ID.ToString(), true).ToList();
+            List<Student> actualGetAll = actualRepository.GetAll(x => x.ID.ToString(), descending).ToList();
             //Assert
             Assert.AreEqual(expectedGetAll, actualGetAll);
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// GivenGetAll_WhenStudentsDescendingByFirstNameFalse
         /// </summary>
-        [TestCase()]
-        public void GivenGetAll_WhenStudentsDescendingByFirstNameFalse()
+        /// <param name="descending">descending</param>
+        [TestCase(false)]
+        public void GivenGetAll_WhenStudentsDescendingByFirstNameFalse(bool descending)
         {
             //Arrange
-            Repository<Student> actualRepository = new Repository<Student>();
-            actualRepository.BinaryTree = InitialStudentBinaryTree();
+            Repository<Student> actualRepository = new Repository<Student>
+            {
+                BinaryTree = InitialStudentBinaryTree()
+            };
             List<Student> expectedGetAll = new List<Student>()
             {
                 new Student() { ID = 0, DateOfBirth = DateTime.Today, FirstName = "FirstNameA", Gender = "Male", MiddleName = "MiddleNameA", SurName = "SurNameA" },
@@ -158,20 +195,23 @@ namespace StudentInformation.Domain.Repository.Tests
                 new Student() { ID = 5, DateOfBirth = DateTime.Today, FirstName = "FirstNameF", Gender = "Male", MiddleName = "MiddleNameF", SurName = "SurNameF" }
             };
             //Act
-            List<Student> actualGetAll = actualRepository.GetAll(x => x.FirstName.ToString(), false).ToList();
+            List<Student> actualGetAll = actualRepository.GetAll(x => x.FirstName.ToString(), descending).ToList();
             //Assert
             Assert.AreEqual(expectedGetAll, actualGetAll);
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// GivenGetAll_WhenStudentsDescendingByFirstNameTrue
         /// </summary>
-        [TestCase()]
-        public void GivenGetAll_WhenStudentsDescendingByFirstNameTrue()
+        /// <param name="descending">descending</param>
+        [TestCase(true)]
+        public void GivenGetAll_WhenStudentsDescendingByFirstNameTrue(bool descending)
         {
             //Arrange
-            Repository<Student> actualRepository = new Repository<Student>();
-            actualRepository.BinaryTree = InitialStudentBinaryTree();
+            Repository<Student> actualRepository = new Repository<Student>
+            {
+                BinaryTree = InitialStudentBinaryTree()
+            };
             List<Student> expectedGetAll = new List<Student>()
             {
                 new Student() { ID = 5, DateOfBirth = DateTime.Today, FirstName = "FirstNameF", Gender = "Male", MiddleName = "MiddleNameF", SurName = "SurNameF" },
@@ -182,20 +222,23 @@ namespace StudentInformation.Domain.Repository.Tests
                 new Student() { ID = 0, DateOfBirth = DateTime.Today, FirstName = "FirstNameA", Gender = "Male", MiddleName = "MiddleNameA", SurName = "SurNameA" }
             };
             //Act
-            List<Student> actualGetAll = actualRepository.GetAll(x => x.FirstName.ToString(), true).ToList();
+            List<Student> actualGetAll = actualRepository.GetAll(x => x.FirstName.ToString(), descending).ToList();
             //Assert
             Assert.AreEqual(expectedGetAll, actualGetAll);
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// GivenGetAll_WhenStudentsDescendingByMiddleNameFalse
         /// </summary>
-        [TestCase()]
-        public void GivenGetAll_WhenStudentsDescendingByMiddleNameFalse()
+        /// <param name="descending">descending</param>
+        [TestCase(false)]
+        public void GivenGetAll_WhenStudentsDescendingByMiddleNameFalse(bool descending)
         {
             //Arrange
-            Repository<Student> actualRepository = new Repository<Student>();
-            actualRepository.BinaryTree = InitialStudentBinaryTree();
+            Repository<Student> actualRepository = new Repository<Student>
+            {
+                BinaryTree = InitialStudentBinaryTree()
+            };
             List<Student> expectedGetAll = new List<Student>()
             {
                 new Student() { ID = 0, DateOfBirth = DateTime.Today, FirstName = "FirstNameA", Gender = "Male", MiddleName = "MiddleNameA", SurName = "SurNameA" },
@@ -206,20 +249,24 @@ namespace StudentInformation.Domain.Repository.Tests
                 new Student() { ID = 5, DateOfBirth = DateTime.Today, FirstName = "FirstNameF", Gender = "Male", MiddleName = "MiddleNameF", SurName = "SurNameF" }
             };
             //Act
-            List<Student> actualGetAll = actualRepository.GetAll(x => x.ID.ToString(), false).ToList();
+            List<Student> actualGetAll = actualRepository.GetAll(x => x.MiddleName, descending).ToList();
             //Assert
             Assert.AreEqual(expectedGetAll, actualGetAll);
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// GivenGetAll_WhenStudentsDescendingByMiddleNameTrue
         /// </summary>
-        [TestCase()]
-        public void GivenGetAll_WhenStudentsDescendingByMiddleNameTrue()
+        /// <param name="descending">descending</param>
+        [TestCase(true)]
+        public void GivenGetAll_WhenStudentsDescendingByMiddleNameTrue(bool descending)
         {
             //Arrange
-            Repository<Student> actualRepository = new Repository<Student>();
-            actualRepository.BinaryTree = InitialStudentBinaryTree();
+            Repository<Student> actualRepository = new Repository<Student>
+            {
+                BinaryTree = InitialStudentBinaryTree()
+            };
+
             List<Student> expectedGetAll = new List<Student>()
             {
                 new Student() { ID = 5, DateOfBirth = DateTime.Today, FirstName = "FirstNameF", Gender = "Male", MiddleName = "MiddleNameF", SurName = "SurNameF" },
@@ -230,20 +277,24 @@ namespace StudentInformation.Domain.Repository.Tests
                 new Student() { ID = 0, DateOfBirth = DateTime.Today, FirstName = "FirstNameA", Gender = "Male", MiddleName = "MiddleNameA", SurName = "SurNameA" }
             };
             //Act
-            List<Student> actualGetAll = actualRepository.GetAll(x => x.MiddleName, true).ToList();
+            List<Student> actualGetAll = actualRepository.GetAll(x => x.MiddleName, descending).ToList();
             //Assert
             Assert.AreEqual(expectedGetAll, actualGetAll);
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// GivenGetAll_WhenStudentsDescendingBySurNameFalse
         /// </summary>
-        [TestCase()]
-        public void GivenGetAll_WhenStudentsDescendingBySurNameFalse()
+        /// <param name="descending">descending</param>
+        [TestCase(false)]
+        public void GivenGetAll_WhenStudentsDescendingBySurNameFalse(bool descending)
         {
             //Arrange
-            Repository<Student> actualRepository = new Repository<Student>();
-            actualRepository.BinaryTree = InitialStudentBinaryTree();
+            Repository<Student> actualRepository = new Repository<Student>
+            {
+                BinaryTree = InitialStudentBinaryTree()
+            };
+
             List<Student> expectedGetAll = new List<Student>()
             {
                 new Student() { ID = 0, DateOfBirth = DateTime.Today, FirstName = "FirstNameA", Gender = "Male", MiddleName = "MiddleNameA", SurName = "SurNameA" },
@@ -254,20 +305,24 @@ namespace StudentInformation.Domain.Repository.Tests
                 new Student() { ID = 5, DateOfBirth = DateTime.Today, FirstName = "FirstNameF", Gender = "Male", MiddleName = "MiddleNameF", SurName = "SurNameF" }
             };
             //Act
-            List<Student> actualGetAll = actualRepository.GetAll(x => x.SurName, false).ToList();
+            List<Student> actualGetAll = actualRepository.GetAll(x => x.SurName, descending).ToList();
             //Assert
             Assert.AreEqual(expectedGetAll, actualGetAll);
         }
 
         /// <summary>
-        /// Testing <see cref="Repository{T}.BinaryTree)"/>
+        /// GivenGetAll_WhenStudentsDescendingBySurNameTrue
         /// </summary>
-        [TestCase()]
-        public void GivenGetAll_WhenStudentsDescendingBySurNameTrue()
+        /// <param name="descending">descending</param>
+        [TestCase(true)]
+        public void GivenGetAll_WhenStudentsDescendingBySurNameTrue(bool descending)
         {
             //Arrange
-            Repository<Student> actualRepository = new Repository<Student>();
-            actualRepository.BinaryTree = InitialStudentBinaryTree();
+            Repository<Student> actualRepository = new Repository<Student>
+            {
+                BinaryTree = InitialStudentBinaryTree()
+            };
+
             List<Student> expectedGetAll = new List<Student>()
             {
                 new Student() { ID = 5, DateOfBirth = DateTime.Today, FirstName = "FirstNameF", Gender = "Male", MiddleName = "MiddleNameF", SurName = "SurNameF" },
@@ -278,7 +333,232 @@ namespace StudentInformation.Domain.Repository.Tests
                 new Student() { ID = 0, DateOfBirth = DateTime.Today, FirstName = "FirstNameA", Gender = "Male", MiddleName = "MiddleNameA", SurName = "SurNameA" }
             };
             //Act
-            List<Student> actualGetAll = actualRepository.GetAll(x => x.SurName, true).ToList();
+            List<Student> actualGetAll = actualRepository.GetAll(x => x.SurName, descending).ToList();
+            //Assert
+            Assert.AreEqual(expectedGetAll, actualGetAll);
+        }
+
+        /// <summary>
+        /// GivenGetAll_WhenTestResultssDescendingByIdFalse
+        /// </summary>
+        /// <param name="descending">descending</param>
+        [TestCase(false)]
+        public void GivenGetAll_WhenTestResultssDescendingByIdFalse(bool descending)
+        {
+            //Arrange
+            Repository<TestResults> actualRepository = new Repository<TestResults>
+            {
+                BinaryTree = InitialTestResultsBinaryTree()
+            };
+
+            List<TestResults> expectedGetAll = new List<TestResults>()
+            {
+                new TestResults() { ID = 0, StudentID = 0, TestID = 0, Value = 10, TestData = DateTime.Today},
+                new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 58, TestData = DateTime.Today},
+                new TestResults() { ID = 2, StudentID = 0, TestID = 2, Value = 99, TestData = DateTime.Today},
+                new TestResults() { ID = 3, StudentID = 1, TestID = 0, Value = 98, TestData = DateTime.Today},
+                new TestResults() { ID = 4, StudentID = 1, TestID = 1, Value = 1, TestData = DateTime.Today},
+                new TestResults() { ID = 5, StudentID = 1, TestID = 2, Value = 20, TestData = DateTime.Today}
+            };
+            //Act
+            List<TestResults> actualGetAll = actualRepository.GetAll(x => x.ID.ToString(), descending).ToList();
+            //Assert
+            Assert.AreEqual(expectedGetAll, actualGetAll);
+        }
+
+        /// <summary>
+        /// GivenGetAll_WhenTestResultssDescendingByIdTrue
+        /// </summary>
+        /// <param name="descending">descending</param>
+        [TestCase(true)]
+        public void GivenGetAll_WhenTestResultssDescendingByIdTrue(bool descending)
+        {
+            //Arrange
+            Repository<TestResults> actualRepository = new Repository<TestResults>
+            {
+                BinaryTree = InitialTestResultsBinaryTree()
+            };
+
+            List<TestResults> expectedGetAll = new List<TestResults>()
+            {
+                new TestResults() { ID = 5, StudentID = 1, TestID = 2, Value = 20, TestData = DateTime.Today},
+                new TestResults() { ID = 4, StudentID = 1, TestID = 1, Value = 1, TestData = DateTime.Today},
+                new TestResults() { ID = 3, StudentID = 1, TestID = 0, Value = 98, TestData = DateTime.Today},
+                new TestResults() { ID = 2, StudentID = 0, TestID = 2, Value = 99, TestData = DateTime.Today},
+                new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 58, TestData = DateTime.Today},
+                new TestResults() { ID = 0, StudentID = 0, TestID = 0, Value = 10, TestData = DateTime.Today}
+
+            };
+            //Act
+            List<TestResults> actualGetAll = actualRepository.GetAll(x => x.ID.ToString(), descending).ToList();
+            //Assert
+            Assert.AreEqual(expectedGetAll, actualGetAll);
+        }
+
+        /// <summary>
+        /// GivenGetAll_WhenTestResultssDescendingByStudentIDFalse
+        /// </summary>
+        /// <param name="descending">descending</param>
+        [TestCase(false)]
+        public void GivenGetAll_WhenTestResultssDescendingByStudentIDFalse(bool descending)
+        {
+            //Arrange
+            Repository<TestResults> actualRepository = new Repository<TestResults>
+            {
+                BinaryTree = InitialTestResultsBinaryTree()
+            };
+
+            List<TestResults> expectedGetAll = new List<TestResults>()
+            {
+                new TestResults() { ID = 0, StudentID = 0, TestID = 0, Value = 10, TestData = DateTime.Today},
+                new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 58, TestData = DateTime.Today},
+                new TestResults() { ID = 2, StudentID = 0, TestID = 2, Value = 99, TestData = DateTime.Today},
+                new TestResults() { ID = 3, StudentID = 1, TestID = 0, Value = 98, TestData = DateTime.Today},
+                new TestResults() { ID = 4, StudentID = 1, TestID = 1, Value = 1, TestData = DateTime.Today},
+                new TestResults() { ID = 5, StudentID = 1, TestID = 2, Value = 20, TestData = DateTime.Today}
+            };
+            //Act
+            List<TestResults> actualGetAll = actualRepository.GetAll(x => x.StudentID.ToString(), descending).ToList();
+            //Assert
+            Assert.AreEqual(expectedGetAll, actualGetAll);
+        }
+
+        /// <summary>
+        /// GivenGetAll_WhenTestResultssDescendingByStudentIDTrue
+        /// </summary>
+        /// <param name="descending">descending</param>
+        [TestCase(true)]
+        public void GivenGetAll_WhenTestResultssDescendingByStudentIDTrue(bool descending)
+        {
+            //Arrange
+            Repository<TestResults> actualRepository = new Repository<TestResults>
+            {
+                BinaryTree = InitialTestResultsBinaryTree()
+            };
+
+            List<TestResults> expectedGetAll = new List<TestResults>()
+            {
+                new TestResults() { ID = 3, StudentID = 1, TestID = 0, Value = 98, TestData = DateTime.Today},
+                new TestResults() { ID = 4, StudentID = 1, TestID = 1, Value = 1, TestData = DateTime.Today},
+                new TestResults() { ID = 5, StudentID = 1, TestID = 2, Value = 20, TestData = DateTime.Today},
+                new TestResults() { ID = 0, StudentID = 0, TestID = 0, Value = 10, TestData = DateTime.Today},
+                new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 58, TestData = DateTime.Today},
+                new TestResults() { ID = 2, StudentID = 0, TestID = 2, Value = 99, TestData = DateTime.Today}
+            };
+            //Act
+            List<TestResults> actualGetAll = actualRepository.GetAll(x => x.StudentID.ToString(), descending).ToList();
+            //Assert
+            Assert.AreEqual(expectedGetAll, actualGetAll);
+        }
+
+        /// <summary>
+        /// GivenGetAll_WhenTestResultssDescendingByTestIDFalse
+        /// </summary>
+        /// <param name="descending">descending</param>
+        [TestCase(false)]
+        public void GivenGetAll_WhenTestResultssDescendingByTestIDFalse(bool descending)
+        {
+            //Arrange
+            Repository<TestResults> actualRepository = new Repository<TestResults>
+            {
+                BinaryTree = InitialTestResultsBinaryTree()
+            };
+
+            List<TestResults> expectedGetAll = new List<TestResults>()
+            {
+                new TestResults() { ID = 0, StudentID = 0, TestID = 0, Value = 10, TestData = DateTime.Today},
+                new TestResults() { ID = 3, StudentID = 1, TestID = 0, Value = 98, TestData = DateTime.Today},
+                new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 58, TestData = DateTime.Today},
+                new TestResults() { ID = 4, StudentID = 1, TestID = 1, Value = 1, TestData = DateTime.Today},
+                new TestResults() { ID = 2, StudentID = 0, TestID = 2, Value = 99, TestData = DateTime.Today},
+                new TestResults() { ID = 5, StudentID = 1, TestID = 2, Value = 20, TestData = DateTime.Today}
+            };
+            //Act
+            List<TestResults> actualGetAll = actualRepository.GetAll(x => x.TestID.ToString(), descending).ToList();
+            //Assert
+            Assert.AreEqual(expectedGetAll, actualGetAll);
+        }
+
+        /// <summary>
+        /// GivenGetAll_WhenTestResultssDescendingByTestIDTrue
+        /// </summary>
+        /// <param name="descending">descending</param>
+        [TestCase(true)]
+        public void GivenGetAll_WhenTestResultssDescendingByTestIDTrue(bool descending)
+        {
+            //Arrange
+            Repository<TestResults> actualRepository = new Repository<TestResults>
+            {
+                BinaryTree = InitialTestResultsBinaryTree()
+            };
+
+            List<TestResults> expectedGetAll = new List<TestResults>()
+            {
+                new TestResults() { ID = 2, StudentID = 0, TestID = 2, Value = 99, TestData = DateTime.Today},
+                new TestResults() { ID = 5, StudentID = 1, TestID = 2, Value = 20, TestData = DateTime.Today},
+                new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 58, TestData = DateTime.Today},
+                new TestResults() { ID = 4, StudentID = 1, TestID = 1, Value = 1, TestData = DateTime.Today},
+                new TestResults() { ID = 0, StudentID = 0, TestID = 0, Value = 10, TestData = DateTime.Today},
+                new TestResults() { ID = 3, StudentID = 1, TestID = 0, Value = 98, TestData = DateTime.Today}
+            };
+            //Act
+            List<TestResults> actualGetAll = actualRepository.GetAll(x => x.TestID.ToString(), descending).ToList();
+            //Assert
+            Assert.AreEqual(expectedGetAll, actualGetAll);
+        }
+
+        /// <summary>
+        /// GivenGetAll_WhenTestResultssDescendingByValueFalse
+        /// </summary>
+        /// <param name="descending">descending</param>
+        [TestCase(false)]
+        public void GivenGetAll_WhenTestResultssDescendingByValueFalse(bool descending)
+        {
+            //Arrange
+            Repository<TestResults> actualRepository = new Repository<TestResults>
+            {
+                BinaryTree = InitialTestResultsBinaryTree()
+            };
+
+            List<TestResults> expectedGetAll = new List<TestResults>()
+            {
+                new TestResults() { ID = 4, StudentID = 1, TestID = 1, Value = 1, TestData = DateTime.Today},
+                new TestResults() { ID = 0, StudentID = 0, TestID = 0, Value = 10, TestData = DateTime.Today},
+                new TestResults() { ID = 5, StudentID = 1, TestID = 2, Value = 20, TestData = DateTime.Today},
+                new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 58, TestData = DateTime.Today},
+                new TestResults() { ID = 3, StudentID = 1, TestID = 0, Value = 98, TestData = DateTime.Today},
+                new TestResults() { ID = 2, StudentID = 0, TestID = 2, Value = 99, TestData = DateTime.Today}
+            };
+            //Act
+            List<TestResults> actualGetAll = actualRepository.GetAll(x => x.Value.ToString(), descending).ToList();
+            //Assert
+            Assert.AreEqual(expectedGetAll, actualGetAll);
+        }
+
+        /// <summary>
+        /// GivenGetAll_WhenTestResultssDescendingByValueTrue
+        /// </summary>
+        /// <param name="descending">descending</param>
+        [TestCase(true)]
+        public void GivenGetAll_WhenTestResultssDescendingByValueTrue(bool descending)
+        {
+            //Arrange
+            Repository<TestResults> actualRepository = new Repository<TestResults>
+            {
+                BinaryTree = InitialTestResultsBinaryTree()
+            };
+
+            List<TestResults> expectedGetAll = new List<TestResults>()
+            {
+                new TestResults() { ID = 2, StudentID = 0, TestID = 2, Value = 99, TestData = DateTime.Today},
+                new TestResults() { ID = 3, StudentID = 1, TestID = 0, Value = 98, TestData = DateTime.Today},
+                new TestResults() { ID = 1, StudentID = 0, TestID = 1, Value = 58, TestData = DateTime.Today},
+                new TestResults() { ID = 5, StudentID = 1, TestID = 2, Value = 20, TestData = DateTime.Today},
+                new TestResults() { ID = 0, StudentID = 0, TestID = 0, Value = 10, TestData = DateTime.Today},
+                new TestResults() { ID = 4, StudentID = 1, TestID = 1, Value = 1, TestData = DateTime.Today}
+            };
+            //Act
+            List<TestResults> actualGetAll = actualRepository.GetAll(x => x.Value.ToString(), descending).ToList();
             //Assert
             Assert.AreEqual(expectedGetAll, actualGetAll);
         }

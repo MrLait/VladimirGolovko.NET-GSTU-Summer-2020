@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D933BAB-165F-42C4-874C-707135DD2873}</ProjectGuid>
+    <ProjectGuid>{98972C28-D0B9-4C0F-81D3-17967DB72622}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StudentInformation.DomainTests</RootNamespace>
-    <AssemblyName>StudentInformation.DomainTests</AssemblyName>
+    <RootNamespace>Serializers.ServicesTests</RootNamespace>
+    <AssemblyName>Serializers.ServicesTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -25,7 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\xmlDocuments\StudentInformation.DomainTests.xml</DocumentationFile>
+    <DocumentationFile>..\..\xmlDocuments\Serializers.ServicesTests.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -48,7 +48,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\RepositoryTests.cs" />
+    <Compile Include="SerializeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NUnit">
@@ -63,13 +63,17 @@
       <Project>{64C87236-4749-46F6-84D2-69052E9CC5C2}</Project>
       <Name>BinaryTree.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\InterfaceMarker\InterfaceMarkers.csproj">
-      <Project>{C5F073AD-87D9-4E69-B161-286AA697374A}</Project>
-      <Name>InterfaceMarkers</Name>
+    <ProjectReference Include="..\..\src\Serializer.Services\Serializers.Services.csproj">
+      <Project>{628F93B7-A2DE-41CE-BEFD-C524F7BEEA58}</Project>
+      <Name>Serializers.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\src\StudentInformation.Domain\StudentInformation.Domain.csproj">
       <Project>{D2EA6F08-6BF9-4CF3-A366-925C3BD66E33}</Project>
       <Name>StudentInformation.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Version.Domain\ModuleVersion.Domain.csproj">
+      <Project>{5AEC3C87-5467-459C-A16C-B17364F7AFE9}</Project>
+      <Name>ModuleVersion.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

@@ -2,6 +2,9 @@
 
 namespace BinaryTree.Domain.Model.Tests
 {
+    /// <summary>
+    /// Node tests.
+    /// </summary>
     [TestFixture()]
     public class NodeTests
     {
@@ -20,7 +23,7 @@ namespace BinaryTree.Domain.Model.Tests
             int expectedData, int expectedLeft, int expectedRight)
         {
             //Arrange
-            Node<int> actualNode = new Node<int>(actualData, null, new Node<int>(actualLeft), new Node<int>(actualRight));
+            Node<int> actualNode = new Node<int>(actualData, new Node<int>(actualLeft), new Node<int>(actualRight));
             Node<int> expectedNode = new Node<int>(expectedData);
             //Act
             expectedNode.Insert(new Node<int>(expectedLeft));
@@ -30,7 +33,7 @@ namespace BinaryTree.Domain.Model.Tests
         }
 
         /// <summary>
-        /// Testing <see cref="Node{T}.Insert(Node{T})(T)"/> where T is String.
+        /// GivenAddWhenTSingThenOutIsStringNode
         /// </summary>
         /// <param name="actualData">The data that is stored in the node.</param>
         /// <param name="actualLeft">Left node.</param>
@@ -44,7 +47,7 @@ namespace BinaryTree.Domain.Model.Tests
     string expectedData, string expectedLeft, string expectedRight)
         {
             //Arrange
-            Node<string> actualNode = new Node<string>(actualData, null, new Node<string>(actualLeft), new Node<string>(actualRight));
+            Node<string> actualNode = new Node<string>(actualData, new Node<string>(actualLeft), new Node<string>(actualRight));
             Node<string> expectedNode = new Node<string>(expectedData);
             //Act
             expectedNode.Insert(new Node<string>(expectedLeft));
@@ -54,7 +57,7 @@ namespace BinaryTree.Domain.Model.Tests
         }
 
         /// <summary>
-        /// Testing <see cref="Node{T}.BalanceFactor(Node{T})"/> where T is Int32.
+        /// GivenBalanceRRWhenTIsIntThenOutIsIntNode
         /// </summary>
         /// <param name="actualData">The data that is stored in the node.</param>
         /// <param name="actualRight">Right node.</param>
@@ -68,7 +71,7 @@ namespace BinaryTree.Domain.Model.Tests
             int expectedData, int expectedLeft, int expectedRight)
         {
             //Arrange
-            Node<int> actualNotBalancedNode = new Node<int>(actualData, null, null, new Node<int>(actualRight, null, null, new Node<int>(actualNextRight)));
+            Node<int> actualNotBalancedNode = new Node<int>(actualData, null, new Node<int>(actualRight, null, new Node<int>(actualNextRight)));
             Node<int> expectedBalancedNode = new Node<int>(expectedData);
             //Act
             var actualBalancedNode = actualNotBalancedNode.Balance(actualNotBalancedNode);
@@ -79,7 +82,7 @@ namespace BinaryTree.Domain.Model.Tests
         }
 
         /// <summary>
-        /// Testing <see cref="Node{T}.BalanceFactor(Node{T})"/> where T is Int32.
+        /// Testing <see cref="Node{T}.Balance(Node{T})"/> where T is Int32.
         /// </summary>
         /// <param name="actualData">The data that is stored in the node.</param>
         /// <param name="actualLeft">Left node.</param>
@@ -93,7 +96,7 @@ namespace BinaryTree.Domain.Model.Tests
     int expectedData, int expectedLeft, int expectedRight)
         {
             //Arrange
-            Node<int> actualNotBalancedNode = new Node<int>(actualData,null, new Node<int>(actualLeft, null, new Node<int>(actualNextLeft), null), null);
+            Node<int> actualNotBalancedNode = new Node<int>(actualData, new Node<int>(actualLeft, new Node<int>(actualNextLeft), null), null);
             Node<int> expectedBalancedNode = new Node<int>(expectedData);
             //Act
             var actualBalancedNode = actualNotBalancedNode.Balance(actualNotBalancedNode);
@@ -104,7 +107,7 @@ namespace BinaryTree.Domain.Model.Tests
         }
 
         /// <summary>
-        /// Testing <see cref="Node{T}.BalanceFactor(Node{T})"/> where T is Int32.
+        /// Testing <see cref="Node{T}.BalanceFactor"/> where T is Int32.
         /// </summary>
         /// <param name="actualData">The data that is stored in the node.</param>
         /// <param name="actualLeft">Left node.</param>
@@ -118,7 +121,7 @@ namespace BinaryTree.Domain.Model.Tests
             int expectedData, int expectedLeft, int expectedRight)
         {
             //Arrange
-            Node<int> actualNotBalancedNode = new Node<int>(actualData, null, new Node<int>(actualLeft, null, null, new Node<int>(actualNextRight)), null);
+            Node<int> actualNotBalancedNode = new Node<int>(actualData, new Node<int>(actualLeft, null, new Node<int>(actualNextRight)), null);
             Node<int> expectedBalancedNode = new Node<int>(expectedData);
             //Act
             var actualBalancedNode = actualNotBalancedNode.Balance(actualNotBalancedNode);
@@ -129,7 +132,7 @@ namespace BinaryTree.Domain.Model.Tests
         }
 
         /// <summary>
-        /// Testing <see cref="Node{T}.BalanceFactor(Node{T})"/> where T is Int32.
+        /// Testing <see cref="Node{T}.BalanceFactor"/> where T is Int32.
         /// </summary>
         /// <param name="actualData">The data that is stored in the node.</param>
         /// <param name="actualRight">Right node.</param>
@@ -143,7 +146,7 @@ namespace BinaryTree.Domain.Model.Tests
     int expectedData, int expectedLeft, int expectedRight)
         {
             //Arrange
-            Node<int> actualNotBalancedNode = new Node<int>(actualData, null, null, new Node<int>(actualRight, null, new Node<int>(actualNextLeft), null));
+            Node<int> actualNotBalancedNode = new Node<int>(actualData, null, new Node<int>(actualRight, new Node<int>(actualNextLeft), null));
             Node<int> expectedBalancedNode = new Node<int>(expectedData);
             //Act
             var actualBalancedNode = actualNotBalancedNode.Balance(actualNotBalancedNode);

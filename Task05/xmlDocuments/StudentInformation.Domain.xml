@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StudentInformation.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:StudentInformation.Domain.Model.Entity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.Entity.ID">
+            <summary>
+            Property ID.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.Entity.Version">
+            <summary>
+            Property Version.
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.Entity.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.Entity.#ctor(Version.Domain.ModuleVersion)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="version"></param>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.Entity.CompareTo(System.Object)">
+            <summary>
+            CompareTo
+            </summary>
+            <param name="obj">obj</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.Entity.Equals(System.Object)">
+            <summary>
+            Comparing one StudentTestResultRepository with another.
+            </summary>
+            <param name="obj">The compared StudentTestResultRepository.</param>
+            <returns>True if equal. False if not equal.</returns>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.Entity.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hash code.</returns>
+        </member>
+        <member name="T:StudentInformation.Domain.Model.Student">
+            <summary>
+            Student model.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.Student.SurName">
+            <summary>
+            Property SurName.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.Student.FirstName">
+            <summary>
+            Property FirstName.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.Student.MiddleName">
+            <summary>
+            Property MiddleName.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.Student.Gender">
+            <summary>
+            Property Gender.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.Student.DateOfBirth">
+            <summary>
+            Property DateOfBirth.
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.Student.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.Student.#ctor(Version.Domain.ModuleVersion)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="version"></param>
+        </member>
+        <member name="T:StudentInformation.Domain.Model.Test">
+            <summary>
+            Test model.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.Test.TestName">
+            <summary>
+            Property test name.
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.Test.#ctor">
+            <summary>
+            Constructor wothout parameters.
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.Test.#ctor(Version.Domain.ModuleVersion)">
+            <summary>
+            Constructor with version.
+            </summary>
+            <param name="version"></param>
+        </member>
+        <member name="T:StudentInformation.Domain.Model.TestResults">
+            <summary>
+            Test resilt model.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.TestResults.StudentID">
+            <summary>
+            Property student id.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.TestResults.TestID">
+            <summary>
+            Property test id.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.TestResults.TestData">
+            <summary>
+            Property test data.
+            </summary>
+        </member>
+        <member name="P:StudentInformation.Domain.Model.TestResults.Value">
+            <summary>
+            Property value.
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.TestResults.#ctor">
+            <summary>
+            Constructor without parameters.
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Model.TestResults.#ctor(Version.Domain.ModuleVersion)">
+            <summary>
+            Constructor for init version
+            </summary>
+            <param name="version">Version parameter.</param>
+        </member>
+        <member name="T:StudentInformation.Domain.Interfaces.IRepository`1">
+            <summary>
+            IRepository interface.
+            </summary>
+            <typeparam name="T">object</typeparam>
+        </member>
+        <member name="M:StudentInformation.Domain.Interfaces.IRepository`1.Insert(`0)">
+            <summary>
+            Insert data.
+            </summary>
+            <param name="obj">Object.</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Interfaces.IRepository`1.GetAll(System.Func{`0,System.String},System.Boolean)">
+            <summary>
+            Get all data.
+            </summary>
+            <param name="orderBySelector">orderBySelector</param>
+            <param name="descending">descending</param>
+            <returns></returns>
+        </member>
+        <member name="T:StudentInformation.Domain.Repository.Repository`1">
+            <summary>
+            Repository class.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:StudentInformation.Domain.Repository.Repository`1.BinaryTree">
+            <summary>
+            Property BinaryTree.
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Repository`1.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Repository`1.Insert(`0)">
+            <summary>
+            Insert data.
+            </summary>
+            <param name="obj">Oobject.</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Repository`1.GetAll(System.Func{`0,System.String},System.Boolean)">
+            <summary>
+            Get all ddata.
+            </summary>
+            <param name="orderBySelector">orderBySelector</param>
+            <param name="descending">descending</param>
+            <returns>Returns Enumerable</returns>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Repository`1.Equals(System.Object)">
+            <summary>
+            Comparing one StudentTestResultRepository with another.
+            </summary>
+            <param name="obj">The compared StudentTestResultRepository.</param>
+            <returns>True if equal. False if not equal.</returns>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Repository`1.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hash code.</returns>
+        </member>
+    </members>
+</doc>

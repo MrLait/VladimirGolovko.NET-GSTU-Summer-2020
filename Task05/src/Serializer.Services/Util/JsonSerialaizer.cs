@@ -5,21 +5,36 @@ using System.Text;
 
 namespace Serializers.Services.Util
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class JsonSerialaizer : ISerialize, IDeserialize
     {
-        public void Serialize<T>(T obj)
+        /// <summary>
+        /// Serialize classes.
+        /// </summary>
+        /// <typeparam name="T"> T</typeparam>
+        /// <param name="obj">object</param>
+        /// <param name="path">path</param>
+        public void Serialize<T>(T obj, string path)
         {
             var objTypeName = obj.GetType().Name;
             if (File.Exists(objTypeName + ".json"))
                 File.Delete(objTypeName + ".json");
 
-            using (FileStream fs = new FileStream(objTypeName +".json", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(path + "/" + objTypeName +".json", FileMode.OpenOrCreate))
             {
                 byte[] array = Encoding.Default.GetBytes(JsonConvert.SerializeObject(obj));
                 fs.Write(array, 0, array.Length);
             }
         }
 
+        /// <summary>
+        /// Deserialize classes.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public T Deserialize<T>(string path)
         {
             if (!new FileInfo(path).Exists)
