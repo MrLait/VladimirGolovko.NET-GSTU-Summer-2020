@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ModuleVersion.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:Version.Domain.ModuleVersion">
+            <summary>
+            Serializable version of the System.Version class.
+            </summary>
+        </member>
+        <member name="P:Version.Domain.ModuleVersion.Major">
+            <summary>
+            Gets the major.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Version.Domain.ModuleVersion.Minor">
+            <summary>
+            Gets the minor.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Version.Domain.ModuleVersion.Build">
+            <summary>
+            Gets the build.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Version.Domain.ModuleVersion.Revision">
+            <summary>
+            Gets the revision.
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.#ctor">
+            <summary>
+            Creates a new <see cref="T:Version.Domain.ModuleVersion"/> instance.
+            </summary>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:Version.Domain.ModuleVersion"/> instance.
+            </summary>
+            <param name="version">Version.</param>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:Version.Domain.ModuleVersion"/> instance.
+            </summary>
+            <param name="major">Major.</param>
+            <param name="minor">Minor.</param>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:Version.Domain.ModuleVersion"/> instance.
+            </summary>
+            <param name="major">Major.</param>
+            <param name="minor">Minor.</param>
+            <param name="build">Build.</param>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:Version.Domain.ModuleVersion"/> instance.
+            </summary>
+            <param name="major">Major.</param>
+            <param name="minor">Minor.</param>
+            <param name="build">Build.</param>
+            <param name="revision">Revision.</param>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.Clone">
+            <summary>
+            Clones this instance.
+            </summary>
+            <returns>Version.</returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.CompareTo(System.Object)">
+            <summary>
+            Compares to.
+            </summary>
+            <param name="version">Version.</param>
+            <returns>Comporator</returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.Equals(System.Object)">
+            <summary>
+            Equalss the specified obj.
+            </summary>
+            <param name="obj">Obj.</param>
+            <returns>Eqials.</returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.GetHashCode">
+            <summary>
+            Gets the hash code.
+            </summary>
+            <returns>Hash code.</returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.op_Equality(Version.Domain.ModuleVersion,Version.Domain.ModuleVersion)">
+            <summary>
+            Operator ==s the specified v1.
+            </summary>
+            <param name="v1">V1.</param>
+            <param name="v2">V2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.op_GreaterThan(Version.Domain.ModuleVersion,Version.Domain.ModuleVersion)">
+            <summary>
+            Operator &gt;s the specified v1.
+            </summary>
+            <param name="v1">V1.</param>
+            <param name="v2">V2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.op_GreaterThanOrEqual(Version.Domain.ModuleVersion,Version.Domain.ModuleVersion)">
+            <summary>
+            Operator &gt;=s the specified v1.
+            </summary>
+            <param name="v1">V1.</param>
+            <param name="v2">V2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.op_Inequality(Version.Domain.ModuleVersion,Version.Domain.ModuleVersion)">
+            <summary>
+            Operator !=s the specified v1.
+            </summary>
+            <param name="v1">V1.</param>
+            <param name="v2">V2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.op_LessThan(Version.Domain.ModuleVersion,Version.Domain.ModuleVersion)">
+            <summary>
+            Operator &lt;s the specified v1.
+            </summary>
+            <param name="v1">V1.</param>
+            <param name="v2">V2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.op_LessThanOrEqual(Version.Domain.ModuleVersion,Version.Domain.ModuleVersion)">
+            <summary>
+            Operator &lt;=s the specified v1.
+            </summary>
+            <param name="v1">V1.</param>
+            <param name="v2">V2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.ToString">
+            <summary>
+            Toes the string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Version.Domain.ModuleVersion.ToString(System.Int32)">
+            <summary>
+            Toes the string.
+            </summary>
+            <param name="fieldCount">Field count.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
