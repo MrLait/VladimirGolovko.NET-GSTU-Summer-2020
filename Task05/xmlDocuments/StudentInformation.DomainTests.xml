@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StudentInformation.DomainTests</name>
+    </assembly>
+    <members>
+        <member name="T:StudentInformation.Domain.Repository.Tests.RepositoryTests">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.InitialStudentBinaryTree">
+            <summary>
+            InitialStudentBinaryTree
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.InitialTestResultsBinaryTree">
+            <summary>
+            InitialTestResultsBinaryTree
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenAddStudentToBinaryTreeThenOutIsStudentBinaryTree">
+            <summary>
+            GivenAddStudentToBinaryTreeThenOutIsStudentBinaryTree
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenAddTestToBinaryTreeThenOutIsTestBinaryTree">
+            <summary>
+            GivenAddTestToBinaryTreeThenOutIsTestBinaryTree
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenAddTestResultsToBinaryTreeThenOutIsTestResultsBinaryTree">
+            <summary>
+            GivenAddTestResultsToBinaryTreeThenOutIsTestResultsBinaryTree
+            </summary>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenStudentsDescendingByIdFalse(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenStudentsDescendingByIdFalse
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenStudentsDescendingByIdTrue(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenStudentsDescendingByIdTrue
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenStudentsDescendingByFirstNameFalse(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenStudentsDescendingByFirstNameFalse
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenStudentsDescendingByFirstNameTrue(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenStudentsDescendingByFirstNameTrue
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenStudentsDescendingByMiddleNameFalse(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenStudentsDescendingByMiddleNameFalse
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenStudentsDescendingByMiddleNameTrue(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenStudentsDescendingByMiddleNameTrue
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenStudentsDescendingBySurNameFalse(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenStudentsDescendingBySurNameFalse
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenStudentsDescendingBySurNameTrue(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenStudentsDescendingBySurNameTrue
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenTestResultssDescendingByIdFalse(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenTestResultssDescendingByIdFalse
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenTestResultssDescendingByIdTrue(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenTestResultssDescendingByIdTrue
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenTestResultssDescendingByStudentIDFalse(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenTestResultssDescendingByStudentIDFalse
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenTestResultssDescendingByStudentIDTrue(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenTestResultssDescendingByStudentIDTrue
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenTestResultssDescendingByTestIDFalse(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenTestResultssDescendingByTestIDFalse
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenTestResultssDescendingByTestIDTrue(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenTestResultssDescendingByTestIDTrue
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenTestResultssDescendingByValueFalse(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenTestResultssDescendingByValueFalse
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+        <member name="M:StudentInformation.Domain.Repository.Tests.RepositoryTests.GivenGetAll_WhenTestResultssDescendingByValueTrue(System.Boolean)">
+            <summary>
+            GivenGetAll_WhenTestResultssDescendingByValueTrue
+            </summary>
+            <param name="descending">descending</param>
+        </member>
+    </members>
+</doc>

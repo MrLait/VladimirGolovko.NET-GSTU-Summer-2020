@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BinaryTree.DomainTests</name>
+    </assembly>
+    <members>
+        <member name="T:BinaryTree.Domain.Model.Tests.BinaryTreeTests">
+            <summary>
+            Binary tree tests
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.BinaryTreeTests.InitialIntBinaryTree">
+            <summary>
+            Initialization of a int binary tree.
+            </summary>
+            <returns>Returns a new int binary tree.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.BinaryTreeTests.InitialStringBinaryTree">
+            <summary>
+            Initialization of a string binary tree.
+            </summary>
+            <returns>Returns a new string binary tree.</returns>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.BinaryTreeTests.GivenAddWhenTIsIntThenOutIsIntBinaryTree">
+            <summary>
+            GivenAddWhenTIsIntThenOutIsIntBinaryTree
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.BinaryTreeTests.GivenAddWhenTIsStringThenOutIsStringBinaryTree">
+            <summary>
+            GivenAddWhenTIsStringThenOutIsStringBinaryTree
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.BinaryTreeTests.GivenAddWhenActualTIntExpectedTStringThenOutIsNotEquel">
+            <summary>
+            GivenAddWhenActualTIntExpectedTStringThenOutIsNotEquel
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.BinaryTreeTests.GivenAddWhenArgumentIsNullThenOutIsArgumentNullException">
+            <summary>
+            GivenAddWhenArgumentIsNullThenOutIsArgumentNullException
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.BinaryTreeTests.GivenPreOrderWhenTIsIntThenOutIsString(System.String,System.Boolean)">
+            <summary>
+            Testing GivenPreOrderWhenTIsIntThenOutIsString
+            </summary>
+            <param name="expectedBinaryTreeToPreOrderStr">A string containing all the elements that were found in the binary tree.</param>
+            <param name="initEmpty">BinaryTree is null?</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.BinaryTreeTests.GivenPostOrderWhenTIsIntThenOutIsString(System.String,System.Boolean)">
+            <summary>
+            Testing GivenPostOrderWhenTIsIntThenOutIsString
+            </summary>
+            <param name="expectedBinaryTreeToPostOrderStr">A string containing all the elements that were found in the binary tree.</param>
+            <param name="initEmpty">BinaryTree is null?</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.BinaryTreeTests.GivenInOrderWhenTIsIntThenOutIsString(System.String,System.Boolean)">
+            <summary>
+            Testing GivenInOrderWhenTIsIntThenOutIsString
+            </summary>
+            <param name="expectedBinaryTreeToInOrderStr">A string containing all the elements that were found in the binary tree.</param>
+            <param name="initEmpty">BinaryTree is null?</param>
+        </member>
+        <member name="T:BinaryTree.Domain.Model.Tests.NodeTests">
+            <summary>
+            Node tests.
+            </summary>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.NodeTests.GivenIsertWhenTIsIntThenOutIsIntNode(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Testing <see cref="M:BinaryTree.Domain.Model.Node`1.Insert(BinaryTree.Domain.Model.Node{`0})"/> where T is Int32.
+            </summary>
+            <param name="actualData">The data that is stored in the node.</param>
+            <param name="actualLeft">Left node.</param>
+            <param name="actualRight">Right node.</param>
+            <param name="expectedData">The data that is stored in the node.</param>
+            <param name="expectedLeft">Left node.</param>
+            <param name="expectedRight">Right node.</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.NodeTests.GivenAddWhenTSingThenOutIsStringNode(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            GivenAddWhenTSingThenOutIsStringNode
+            </summary>
+            <param name="actualData">The data that is stored in the node.</param>
+            <param name="actualLeft">Left node.</param>
+            <param name="actualRight">Right node.</param>
+            <param name="expectedData">The data that is stored in the node.</param>
+            <param name="expectedLeft">Left node.</param>
+            <param name="expectedRight">Right node.</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.NodeTests.GivenBalanceRRWhenTIsIntThenOutIsIntNode(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            GivenBalanceRRWhenTIsIntThenOutIsIntNode
+            </summary>
+            <param name="actualData">The data that is stored in the node.</param>
+            <param name="actualRight">Right node.</param>
+            <param name="actualNextRight">Right node.</param>
+            <param name="expectedData">The data that is stored in the node.</param>
+            <param name="expectedLeft">Left node.</param>
+            <param name="expectedRight">Right node.</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.NodeTests.GivenBalanceLLWhenTIsIntThenOutIsIntNode(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Testing <see cref="M:BinaryTree.Domain.Model.Node`1.Balance(BinaryTree.Domain.Model.Node{`0})"/> where T is Int32.
+            </summary>
+            <param name="actualData">The data that is stored in the node.</param>
+            <param name="actualLeft">Left node.</param>
+            <param name="actualNextLeft">Right node.</param>
+            <param name="expectedData">The data that is stored in the node.</param>
+            <param name="expectedLeft">Left node.</param>
+            <param name="expectedRight">Right node.</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.NodeTests.GivenBalanceLRWhenTIsIntThenOutIsIntNode(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Testing <see cref="P:BinaryTree.Domain.Model.Node`1.BalanceFactor"/> where T is Int32.
+            </summary>
+            <param name="actualData">The data that is stored in the node.</param>
+            <param name="actualLeft">Left node.</param>
+            <param name="actualNextRight">Right node.</param>
+            <param name="expectedData">The data that is stored in the node.</param>
+            <param name="expectedLeft">Left node.</param>
+            <param name="expectedRight">Right node.</param>
+        </member>
+        <member name="M:BinaryTree.Domain.Model.Tests.NodeTests.GivenBalanceRLWhenTIsIntThenOutIsIntNode(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Testing <see cref="P:BinaryTree.Domain.Model.Node`1.BalanceFactor"/> where T is Int32.
+            </summary>
+            <param name="actualData">The data that is stored in the node.</param>
+            <param name="actualRight">Right node.</param>
+            <param name="actualNextLeft">Lefth node.</param>
+            <param name="expectedData">The data that is stored in the node.</param>
+            <param name="expectedLeft">Left node.</param>
+            <param name="expectedRight">Right node.</param>
+        </member>
+    </members>
+</doc>

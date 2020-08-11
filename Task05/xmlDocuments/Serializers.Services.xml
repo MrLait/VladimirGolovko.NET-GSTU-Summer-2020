@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Serializers.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Serializers.Services.Interfaces.ISerializer">
+            <summary>
+            ISerialize interface.
+            </summary>
+        </member>
+        <member name="T:Serializers.Services.Interfaces.IDeserialize">
+            <summary>
+            IDeserialize interface
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Interfaces.IDeserialize.Deserialize``1(System.String)">
+            <summary>
+            Deserialize object
+            </summary>
+            <typeparam name="T">T</typeparam>
+            <param name="path">path</param>
+            <returns>Rerrurns object.</returns>
+        </member>
+        <member name="T:Serializers.Services.Interfaces.ISerialize">
+            <summary>
+            ISerialize interface.
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Interfaces.ISerialize.Serialize``1(``0,System.String)">
+            <summary>
+            Serialize
+            </summary>
+            <typeparam name="T">T</typeparam>
+            <param name="obj">Objct</param>
+            <param name="path">path</param>
+        </member>
+        <member name="T:Serializers.Services.Serialize">
+            <summary>
+            Serialize.
+            </summary>
+        </member>
+        <member name="P:Serializers.Services.Serialize.Serializer">
+            <summary>
+            Property Serializer.
+            </summary>
+        </member>
+        <member name="P:Serializers.Services.Serialize.CheckISerialize">
+            <summary>
+            Property CheckISerialize.
+            </summary>
+        </member>
+        <member name="P:Serializers.Services.Serialize.CheckVersion">
+            <summary>
+            Property CheckVersion.
+            </summary>
+        </member>
+        <member name="P:Serializers.Services.Serialize.Version">
+            <summary>
+            Property Version.
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Serialize.#ctor(Serializers.Services.Interfaces.ISerializer)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="serializer"></param>
+        </member>
+        <member name="M:Serializers.Services.Serialize.#ctor(Serializers.Services.Interfaces.ISerializer,System.Boolean,System.Boolean,Version.Domain.ModuleVersion)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="serializer">serializer.</param>
+            <param name="checkISerialize">checkISerialize.</param>
+            <param name="checkVersion">checkVersion.</param>
+            <param name="version">version.</param>
+        </member>
+        <member name="M:Serializers.Services.Serialize.GetSerialize``1(``0,System.String)">
+            <summary>
+            Get serialize.
+            </summary>
+            <typeparam name="T">T</typeparam>
+            <param name="obj">obj</param>
+            <param name="path">path</param>
+        </member>
+        <member name="M:Serializers.Services.Serialize.GetDeserialize``1(System.String)">
+            <summary>
+            Get deserialize.
+            </summary>
+            <typeparam name="T">T</typeparam>
+            <param name="path">path</param>
+            <returns></returns>
+        </member>
+        <member name="T:Serializers.Services.Util.JsonSerialaizer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Util.JsonSerialaizer.Serialize``1(``0,System.String)">
+            <summary>
+            Serialize classes.
+            </summary>
+            <typeparam name="T"> T</typeparam>
+            <param name="obj">object</param>
+            <param name="path">path</param>
+        </member>
+        <member name="M:Serializers.Services.Util.JsonSerialaizer.Deserialize``1(System.String)">
+            <summary>
+            Deserialize classes.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Serializers.Services.Util.XmlSerialaizer">
+            <summary>
+            Xml serializers.
+            </summary>
+        </member>
+        <member name="M:Serializers.Services.Util.XmlSerialaizer.Serialize``1(``0,System.String)">
+            <summary>
+            Serialize object.
+            </summary>
+            <typeparam name="T">Object type.</typeparam>
+            <param name="obj">Object.</param>
+            <param name="path">Path to file.</param>
+        </member>
+        <member name="M:Serializers.Services.Util.XmlSerialaizer.Deserialize``1(System.String)">
+            <summary>
+            Deserialize object.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path"></param>
+            <returns>Desirializer</returns>
+        </member>
+        <member name="T:Serializer.Services.Util.BinarySerialaizer">
+            <summary>
+            BinarySerialaizer class.
+            </summary>
+        </member>
+        <member name="M:Serializer.Services.Util.BinarySerialaizer.Serialize``1(``0,System.String)">
+            <summary>
+            Serialize object.
+            </summary>
+            <typeparam name="T">T</typeparam>
+            <param name="obj">obj</param>
+            <param name="path">path</param>
+        </member>
+        <member name="M:Serializer.Services.Util.BinarySerialaizer.Deserialize``1(System.String)">
+            <summary>
+            Deserialize object.
+            </summary>
+            <typeparam name="T">T</typeparam>
+            <param name="path">path</param>
+            <returns>object</returns>
+        </member>
+    </members>
+</doc>
