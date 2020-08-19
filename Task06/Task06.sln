@@ -9,9 +9,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C58384CE-F99
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{F19AF6C3-4042-47AF-98D7-B2F86EE6F7BB}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLServer.Task6.Database", "src\SQLServer.Task6.Database\SQLServer.Task6.Database.sqlproj", "{7635105C-7870-43AF-96ED-F0AC723BBF6A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7635105C-7870-43AF-96ED-F0AC723BBF6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7635105C-7870-43AF-96ED-F0AC723BBF6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7635105C-7870-43AF-96ED-F0AC723BBF6A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7635105C-7870-43AF-96ED-F0AC723BBF6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7635105C-7870-43AF-96ED-F0AC723BBF6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7635105C-7870-43AF-96ED-F0AC723BBF6A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7635105C-7870-43AF-96ED-F0AC723BBF6A} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E83C1FB-42FB-4EB0-9899-758624C42C31}
