@@ -58,6 +58,14 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
+    <Folder Include="PublishLocation" />
+    <Folder Include="dbo\StoredProcedure" />
+    <Folder Include="dbo\StoredProcedure\spStudents" />
+    <Folder Include="dbo\StoredProcedure\spGroups" />
+    <Folder Include="dbo\StoredProcedure\spExamSchedules" />
+    <Folder Include="dbo\StoredProcedure\spSessions" />
+    <Folder Include="dbo\StoredProcedure\spSessionsResults" />
+    <Folder Include="dbo\StoredProcedure\spSubjects" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Students.sql" />
@@ -66,5 +74,14 @@
     <Build Include="dbo\Tables\Sessions.sql" />
     <Build Include="dbo\Tables\Subjects.sql" />
     <Build Include="dbo\Tables\SessionsResults.sql" />
+    <Build Include="dbo\StoredProcedure\spStudents\AddStudents.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\AddSubjects.sql" />
+    <Build Include="dbo\StoredProcedure\spSessionsResults\AddSessionsResults.sql" />
+    <Build Include="dbo\StoredProcedure\spSessions\AddSessions.sql" />
+    <Build Include="dbo\StoredProcedure\spExamSchedules\AddExamSchedules.sql" />
+    <Build Include="dbo\StoredProcedure\spGroups\AddGroups.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocation\SQLServer.Task6.Database.publish.xml" />
   </ItemGroup>
 </Project>
