@@ -39,7 +39,7 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
                 {
                     sqlCommand.Parameters.AddRange(GetAddParameter(entity).ToArray());
                     sqlConnection.Open();
-                    //return sqlCommand.ExecuteScalar();
+                    var test = sqlCommand.ExecuteScalar();
                 }
                 catch (SqlException sqlEx)
                 {

@@ -6,6 +6,6 @@
     [MiddleName]        NVARCHAR (50)       NOT NULL,
     [Gender]            NVARCHAR (50)       NOT NULL,
     [DateOfBirthday]    DATETIME            NOT NULL,
-    [GroupsID]          INT                 NOT NULL, 
-    CONSTRAINT [FK_Students_Groups_Id] FOREIGN KEY ([GroupsId]) REFERENCES [Groups]([Id])
+    [GroupsId]          INT                 NOT NULL, 
+    CONSTRAINT [FK_Students_Groups_Id] FOREIGN KEY ([GroupsId]) REFERENCES [Groups]([Id]),
 )

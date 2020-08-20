@@ -4,10 +4,10 @@
 @MiddleName varchar(max),
 @Gender     varchar(max),
 @DateOfBirthday DATETIME,
-@GroupsID   int
+@GroupsId   int
 AS 
-    INSERT INTO Students( FirstName, LastName, MiddleName, Gender, DateOfBirthday, GroupsID)
-    VALUES (@FirstName, @LastName, @MiddleName, @Gender, @DateOfBirthday, @GroupsID)
+    INSERT INTO Students( FirstName, LastName, MiddleName, Gender, DateOfBirthday, GroupsId)
+    VALUES (@FirstName, @LastName, @MiddleName, @Gender, @DateOfBirthday, @GroupsId)
     
     SELECT SCOPE_IDENTITY()
 Go
