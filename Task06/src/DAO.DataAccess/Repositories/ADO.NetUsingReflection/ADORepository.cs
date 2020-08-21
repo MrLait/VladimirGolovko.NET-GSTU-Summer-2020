@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Reflection;
 
 namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
@@ -85,9 +86,39 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
             }
         }
 
-        public T GetByID(int byID)
+        /// <summary>
+        /// Get object by ID from table in database.
+        /// </summary>
+        /// <param name="byID"></param>
+        /// <returns>Returns object.</returns>
+        public T GetByID(int byId)
         {
-            throw new NotImplementedException();
+            if (byId == 0)
+                throw new NullReferenceException("byId should not be 0");
+
+            string tableName = new T().GetType().Name;
+            string storedProcedure = "Get" + tableName + "ById";
+
+            using (SqlConnection sqlConnection = new SqlConnection(DbConString))
+            {
+                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection, new SqlParameter[] { new SqlParameter("Id", byId) });
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                try
+                {
+                    DataSet ds = new DataSet();
+                    sqlDataAdapter.Fill(ds);
+                    return ds.Tables[0].ToEnumerable<T>().ToList().SingleOrDefault(); 
+                }
+                catch (SqlException sqlEx)
+                {
+                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
         }
 
         public T Update(T entity)

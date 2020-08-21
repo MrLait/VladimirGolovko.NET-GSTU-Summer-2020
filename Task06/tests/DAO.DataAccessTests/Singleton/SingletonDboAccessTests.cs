@@ -30,6 +30,8 @@ namespace DAO.DataAccess.Singleton.Tests
             var testGetAllStudents = test.AbstractFactory.CreateStudents().GetAll();
             var testGetAllSessionResults = test.AbstractFactory.CreateSessionsResults().GetAll();
 
+            var testGetByIdGroup = test.AbstractFactory.CreateGroups().GetByID(5);
+
         }
     }
 }
