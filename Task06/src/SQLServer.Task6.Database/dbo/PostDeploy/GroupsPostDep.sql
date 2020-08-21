@@ -7,6 +7,7 @@ DECLARE @GroupNum INT;
 SET @number = 1;
 SET @GroupPrefix = 'PM-';
 SET @GroupNum = 4
+
 IF NOT EXISTS(SELECT * FROM Groups WHERE Id = @GroupNum)
 BEGIN
 	WHILE @number < @GroupNum + 1

@@ -1,2 +1,3 @@
 ﻿EXEC GroupsPostDep; 
-EXEC StudentsPostDep
+EXEC StudentsPostDep;
+EXEC SessionsPostDep;
