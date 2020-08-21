@@ -43,11 +43,11 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
                 }
                 catch (SqlException sqlEx)
                 {
-                    throw new ArgumentException("Some Error occured at database, if error in stored procedure. See inner exception for more detail exception." + storedProcedure, sqlEx);
+                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    throw new Exception(ex.Message);
                 }
             }
         }

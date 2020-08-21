@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[AddSubjects]
+﻿CREATE PROCEDURE AddSubjects
     @Name          varchar(50),
     @IsAssessment  varchar(50)
 AS

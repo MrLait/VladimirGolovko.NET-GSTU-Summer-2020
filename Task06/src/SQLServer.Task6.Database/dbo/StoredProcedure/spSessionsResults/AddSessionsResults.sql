@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[AddSessionsResults]
+﻿CREATE PROCEDURE AddSessionsResults
     @StudentsId         INT,
     @ExamSchedulesId    INT,
     @Value              varchar(50)

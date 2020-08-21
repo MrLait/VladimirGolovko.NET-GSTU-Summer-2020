@@ -14,9 +14,9 @@ namespace DAO.DataAccess.Singleton.Tests
             var dbConnString = @"Data Source=LAIT-PC\SQLEXPRESS;Initial Catalog=SQLServer.Task6.Database;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             SingletonDboAccess test = SingletonDboAccess.GetInstance(new ADORepositoryFactory(dbConnString));
 
-            test.AbstractFactory.CreateGroups().Add(
-                new Groups()
-                { Name = "1" });
+            //test.AbstractFactory.CreateGroups().Add(
+            //    new Groups()
+            //    { Name = "1" });
 
             test.AbstractFactory.CreateStudents().Add(
                 new Students() 
