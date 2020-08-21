@@ -32,6 +32,8 @@ namespace DAO.DataAccess.Singleton.Tests
 
             var testGetByIdGroup = test.AbstractFactory.CreateGroups().GetByID(5);
 
+            test.AbstractFactory.CreateGroups().Update(new Groups() { Id = 2, Name = "LOL" });
+
         }
     }
 }
