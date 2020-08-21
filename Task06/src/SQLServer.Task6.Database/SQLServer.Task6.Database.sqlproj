@@ -110,6 +110,7 @@
     <Build Include="dbo\PostDeploy\SessionsPostDep.sql" />
     <Build Include="dbo\PostDeploy\ExamSchedulesPostDep.sql" />
     <Build Include="dbo\PostDeploy\SubjectsPostDep.sql" />
+    <Build Include="dbo\PostDeploy\SessionsResultsPostDep.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="dbo\PostDeploy\Script.Main.PostDeploy.sql" />
