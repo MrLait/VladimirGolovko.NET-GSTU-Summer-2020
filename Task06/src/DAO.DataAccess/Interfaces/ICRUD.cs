@@ -9,11 +9,11 @@ namespace DAO.DataAccess.Interfaces
     public interface ICRUD<T>
     {
         /// <summary>
-        /// Get object by ID from table in database.
+        /// Get object by Id from table in database.
         /// </summary>
-        /// <param name="byID">Object id.</param>
+        /// <param name="byId">Object id.</param>
         /// <returns>Returns object by id.</returns>
-        T GetByID(int byID);
+        T GetByID(int byId);
 
         /// <summary>
         /// Add object to database.
@@ -22,10 +22,10 @@ namespace DAO.DataAccess.Interfaces
         void Add(T entity);
 
         /// <summary>
-        /// Delete object from table by ID.
+        /// Delete object from table by Id.
         /// </summary>
-        /// <param name="byID">ID oject.</param>
-        void Delete(int byID);
+        /// <param name="byId">Id oject.</param>
+        void Delete(int byId);
 
         /// <summary>
         /// Modify an existing object. 

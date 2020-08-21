@@ -54,9 +54,32 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
             }
         }
 
-        public void Delete(int byID)
+        public void Delete(int byId)
         {
-            throw new NotImplementedException();
+            if (byId == 0)
+                throw new ArgumentNullException("byId should not be 0");
+
+            string tableName = new T().GetType().Name;
+            string storedProcedure = "Delete" + tableName + "ById";
+
+            using (SqlConnection sqlConnection = new SqlConnection(DbConString))
+            {
+                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection, new SqlParameter[] { new SqlParameter("Id", byId) });
+
+                try
+                {
+                    sqlConnection.Open();
+                    sqlCommand.ExecuteNonQuery();
+                }
+                catch (SqlException sqlEx)
+                {
+                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
         }
 
         public IEnumerable<T> GetAll()
