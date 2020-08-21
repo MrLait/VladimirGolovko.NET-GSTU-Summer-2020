@@ -66,6 +66,7 @@
     <Folder Include="dbo\StoredProcedure\spSessions" />
     <Folder Include="dbo\StoredProcedure\spSessionsResults" />
     <Folder Include="dbo\StoredProcedure\spSubjects" />
+    <Folder Include="dbo\PostDeploy" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Students.sql" />
@@ -104,8 +105,13 @@
     <Build Include="dbo\StoredProcedure\spSessionsResults\UpdateSessionsResults.sql" />
     <Build Include="dbo\StoredProcedure\spStudents\UpdateStudents.sql" />
     <Build Include="dbo\StoredProcedure\spSubjects\UpdateSubjects.sql" />
+    <Build Include="dbo\PostDeploy\GroupsPostDep.sql" />
+    <Build Include="dbo\PostDeploy\StudentsPostDep.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PublishLocation\SQLServer.Task6.Database.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="dbo\PostDeploy\Script.Main.PostDeploy.sql" />
   </ItemGroup>
 </Project>

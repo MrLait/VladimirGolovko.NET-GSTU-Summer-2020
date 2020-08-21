@@ -112,7 +112,7 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
         /// <summary>
         /// Get object by ID from table in database.
         /// </summary>
-        /// <param name="byID"></param>
+        /// <param name="byId"></param>
         /// <returns>Returns object.</returns>
         public T GetByID(int byId)
         {
