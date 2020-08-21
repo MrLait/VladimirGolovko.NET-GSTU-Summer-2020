@@ -108,9 +108,8 @@
     <Build Include="dbo\PostDeploy\GroupsPostDep.sql" />
     <Build Include="dbo\PostDeploy\StudentsPostDep.sql" />
     <Build Include="dbo\PostDeploy\SessionsPostDep.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="PublishLocation\SQLServer.Task6.Database.publish.xml" />
+    <Build Include="dbo\PostDeploy\ExamSchedulesPostDep.sql" />
+    <Build Include="dbo\PostDeploy\SubjectsPostDep.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="dbo\PostDeploy\Script.Main.PostDeploy.sql" />

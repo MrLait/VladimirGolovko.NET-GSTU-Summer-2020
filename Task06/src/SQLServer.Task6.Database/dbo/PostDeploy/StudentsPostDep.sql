@@ -17,7 +17,6 @@ BEGIN
 	WHILE @number < @StudentsNum + 1
 		BEGIN
 	
-			--SET @Random = (FLOOR(RAND()*(@QuantitySpecialties-1)+1));
 			IF (FLOOR(RAND()*(10-1)+1) < 5)
 				SET @Gender = 'Male';
 			ELSE
@@ -25,7 +24,7 @@ BEGIN
 			
 			SET @Random = (FLOOR(RAND()*(@QuantityGroups-1)+1));
 	
-			INSERT INTO Students(FirstName, LastName, MiddleName,Gender, DateOfBirthday, GroupsID)
+			INSERT INTO Students(FirstName, LastName, MiddleName,Gender, DateOfBirthday, GroupsId)
 			VALUES (@FirstNamePrefix + CONVERT(NVARCHAR, @number),
 					@LastNamePrefix + CONVERT(NVARCHAR, @number),
 					@MiddleNamePrefix + CONVERT(NVARCHAR, @number),
