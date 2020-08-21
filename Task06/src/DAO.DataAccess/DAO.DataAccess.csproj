@@ -46,6 +46,7 @@
     <Compile Include="Interfaces\ICRUD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ADO.NetUsingReflection\ADORepository.cs" />
+    <Compile Include="Repositories\Exstension\ExtencionHelpers.cs" />
     <Compile Include="Singleton\SingletonDboAccess.cs" />
   </ItemGroup>
   <ItemGroup>

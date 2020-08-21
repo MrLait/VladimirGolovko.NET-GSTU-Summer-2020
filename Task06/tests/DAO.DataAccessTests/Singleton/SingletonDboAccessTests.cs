@@ -18,12 +18,17 @@ namespace DAO.DataAccess.Singleton.Tests
             //    new Groups()
             //    { Name = "1" });
 
-            test.AbstractFactory.CreateStudents().Add(
-                new Students() 
-                { 
-                    LastName = "asda", DateOfBirthday =DateTime.Now, FirstName ="firs",
-                    Gender = "ASd", GroupsID = 1, MiddleName = "asd", Id = 0
-                });
+            //test.AbstractFactory.CreateStudents().Add(
+            //    new Students() 
+            //    { 
+            //        LastName = "asda", DateOfBirthday =DateTime.Now, FirstName ="firs",
+            //        Gender = "ASd", GroupsID = 1, MiddleName = "asd", Id = 0
+            //    });
+
+
+            var testGetAllGroups = test.AbstractFactory.CreateGroups().GetAll();
+            var testGetAllStudents = test.AbstractFactory.CreateStudents().GetAll();
+            var testGetAllSessionResults = test.AbstractFactory.CreateSessionsResults().GetAll();
 
         }
     }
