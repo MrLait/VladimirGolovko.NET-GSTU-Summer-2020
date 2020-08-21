@@ -114,4 +114,7 @@
   <ItemGroup>
     <PostDeploy Include="dbo\PostDeploy\Script.Main.PostDeploy.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocation\SQLServer.Task6.Database.publish.xml" />
+  </ItemGroup>
 </Project>
