@@ -35,12 +35,19 @@ BEGIN
 		
 				IF (@IsAssessment = 'True')
 					begin
-						SET @ExamValueVarChar = (FLOOR(RAND()*(100-1)+1))
+						IF (@ExamValueVarChar = 'False')
+							begin
+								SET @ExamValueVarChar = 0;
+							end;
+						else
+							begin
+								SET @ExamValueVarChar = (FLOOR(RAND()*(100-1)+1))
+							end;
 					end;
 				else
 					begin
 						SET	@Boolean = CAST(ROUND(RAND(), 0) AS BIT);
-						SET @ExamValueVarChar =  Cast(Case When @Boolean=1 Then 'True' ELse 'False' END AS Varchar(max));
+						SET @ExamValueVarChar =  Cast(Case When @Boolean=1 Then 'True' ELSE 'False' END AS VARCHAR(max));
 					end;
 
 				INSERT INTO SessionsResults(StudentsId, ExamSchedulesId, Value)
