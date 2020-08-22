@@ -67,6 +67,7 @@
     <Folder Include="dbo\StoredProcedure\spSessionsResults" />
     <Folder Include="dbo\StoredProcedure\spSubjects" />
     <Folder Include="dbo\PostDeploy" />
+    <Folder Include="dbo\Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Students.sql" />
@@ -111,6 +112,7 @@
     <Build Include="dbo\PostDeploy\ExamSchedulesPostDep.sql" />
     <Build Include="dbo\PostDeploy\SubjectsPostDep.sql" />
     <Build Include="dbo\PostDeploy\SessionsResultsPostDep.sql" />
+    <Build Include="dbo\Views\FullStudents.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="dbo\PostDeploy\Script.Main.PostDeploy.sql" />

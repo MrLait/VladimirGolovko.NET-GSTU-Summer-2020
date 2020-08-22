@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using DAO.DataAccess.Factory;
-using SQLServer.Task6.Domain.Models;
-using System;
+using SQLServer.Task6.ReportManager.Presentation.Reports;
 
 namespace DAO.DataAccess.Singleton.Tests
 {
@@ -26,14 +25,18 @@ namespace DAO.DataAccess.Singleton.Tests
             //    });
 
 
-            var testGetAllGroups = test.AbstractFactory.CreateGroups().GetAll();
-            var testGetAllStudents = test.AbstractFactory.CreateStudents().GetAll();
-            var testGetAllSessionResults = test.AbstractFactory.CreateSessionsResults().GetAll();
+            //var testGetAllGroups = test.RepositoryFactory.CreateGroups().GetAll();
+            //var testGetAllStudents = test.RepositoryFactory.CreateStudents().GetAll();
+            //var testGetAllSessionResults = test.RepositoryFactory.CreateSessionsResults().GetAll();
 
-            var testGetByIdGroup = test.AbstractFactory.CreateGroups().GetByID(5);
+            //var testGetByIdGroup = test.RepositoryFactory.CreateGroups().GetByID(5);
 
-            test.AbstractFactory.CreateGroups().Update(new Groups() { Id = 2, Name = "LOL" });
-            test.AbstractFactory.CreateGroups().Delete(4);
+            //test.RepositoryFactory.CreateGroups().Update(new Groups() { Id = 2, Name = "LOL" });
+            //test.RepositoryFactory.CreateGroups().Delete(4);
+
+            SessionSummaryReports sessionSummaryReports = new SessionSummaryReports(test);
+            sessionSummaryReports.GetReport();
+
 
         }
     }

@@ -12,11 +12,11 @@ namespace DAO.DataAccess.Singleton
         private static SingletonDboAccess _instance = null;
         //private static string _dbConnectionString = null;
 
-        public AbstractFactory AbstractFactory { get; set; } = null;
+        public AbstractFactory RepositoryFactory { get; set; } = null;
 
         private SingletonDboAccess(AbstractFactory factory)
         {
-            AbstractFactory = factory;
+            RepositoryFactory = factory;
         }
 
         public static SingletonDboAccess GetInstance(AbstractFactory factory)

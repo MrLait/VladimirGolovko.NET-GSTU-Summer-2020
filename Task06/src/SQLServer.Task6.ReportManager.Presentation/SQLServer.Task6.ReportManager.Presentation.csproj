@@ -41,7 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\SessionSummary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\SessionSummaryReports.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO.DataAccess\DAO.DataAccess.csproj">
+      <Project>{406E5C30-E0C2-457F-AEE9-0057D1D13A64}</Project>
+      <Name>DAO.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLServer.Task6.Domain\SQLServer.Task6.Domain.csproj">
+      <Project>{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}</Project>
+      <Name>SQLServer.Task6.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

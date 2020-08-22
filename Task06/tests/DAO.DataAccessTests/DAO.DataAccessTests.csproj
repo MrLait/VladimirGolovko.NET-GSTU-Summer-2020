@@ -66,6 +66,10 @@
       <Project>{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}</Project>
       <Name>SQLServer.Task6.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\SQLServer.Task6.ReportManager.Presentation\SQLServer.Task6.ReportManager.Presentation.csproj">
+      <Project>{71F5E4D0-5BC0-4DD6-9B5A-3C045C349401}</Project>
+      <Name>SQLServer.Task6.ReportManager.Presentation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
