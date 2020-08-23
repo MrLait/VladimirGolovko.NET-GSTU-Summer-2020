@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{71F5E4D0-5BC0-4DD6-9B5A-3C045C349401}</ProjectGuid>
+    <ProjectGuid>{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SQLServer.Task6.ReportManager.Presentation</RootNamespace>
-    <AssemblyName>SQLServer.Task6.ReportManager.Presentation</AssemblyName>
+    <RootNamespace>SQLServer.Task6.ReportManager.Services</RootNamespace>
+    <AssemblyName>SQLServer.Task6.ReportManager.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,19 +41,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\SessionSummary.cs" />
+    <Compile Include="Utils\ConsolePrinter.cs" />
+    <Compile Include="Utils\Excel.cs" />
+    <Compile Include="Interfaces\IPrint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\SessionSummaryReports.cs" />
+    <Compile Include="ReportManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAO.DataAccess\DAO.DataAccess.csproj">
-      <Project>{406E5C30-E0C2-457F-AEE9-0057D1D13A64}</Project>
-      <Name>DAO.DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SQLServer.Task6.Domain\SQLServer.Task6.Domain.csproj">
-      <Project>{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}</Project>
-      <Name>SQLServer.Task6.Domain</Name>
-    </ProjectReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

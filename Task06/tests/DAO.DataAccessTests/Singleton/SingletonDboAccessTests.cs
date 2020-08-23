@@ -1,6 +1,10 @@
 ﻿using NUnit.Framework;
 using DAO.DataAccess.Factory;
-using SQLServer.Task6.ReportManager.Presentation.Reports;
+using System.Linq;
+using System.IO;
+using SQLServer.Task6.Presentation.Views;
+using SQLServer.Task6.ReportManager.Services;
+using SQLServer.Task6.ReportManager.Services.Utils;
 
 namespace DAO.DataAccess.Singleton.Tests
 {
@@ -34,10 +38,19 @@ namespace DAO.DataAccess.Singleton.Tests
             //test.RepositoryFactory.CreateGroups().Update(new Groups() { Id = 2, Name = "LOL" });
             //test.RepositoryFactory.CreateGroups().Delete(4);
 
-            SessionSummaryReports sessionSummaryReports = new SessionSummaryReports(test);
-            sessionSummaryReports.GetReport();
+            SessionsResultsView sessionsResultsView = new SessionsResultsView(test);
+            IOrderedEnumerable<SessionsResultsView> sessionResultView = sessionsResultsView.GetView("1", "PM-2").ToList().OrderBy(x => x.SessionName).ThenBy(x => x.GroupName);
+
+            //sessionsResultsView.order
+
+            string testStr = sessionsResultsView.ToString(sessionResultView);
+
+            var location = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var path = Path.GetDirectoryName(location);
 
 
+            ReportManager excelReportManager = new ReportManager(new Excel(path, "Test"), testStr);
+            excelReportManager.Print();
         }
     }
 }

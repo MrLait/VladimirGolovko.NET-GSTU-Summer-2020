@@ -66,9 +66,13 @@
       <Project>{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}</Project>
       <Name>SQLServer.Task6.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\SQLServer.Task6.ReportManager.Presentation\SQLServer.Task6.ReportManager.Presentation.csproj">
-      <Project>{71F5E4D0-5BC0-4DD6-9B5A-3C045C349401}</Project>
-      <Name>SQLServer.Task6.ReportManager.Presentation</Name>
+    <ProjectReference Include="..\..\src\SQLServer.Task6.Presentation\SQLServer.Task6.Presentation.csproj">
+      <Project>{14226881-2B56-4E2B-85A9-75B1A12F7454}</Project>
+      <Name>SQLServer.Task6.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\SQLServer.Task6.ReportManager.Services\SQLServer.Task6.ReportManager.Services.csproj">
+      <Project>{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}</Project>
+      <Name>SQLServer.Task6.ReportManager.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

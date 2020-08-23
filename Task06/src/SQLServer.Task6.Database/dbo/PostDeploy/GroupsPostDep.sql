@@ -6,7 +6,7 @@ DECLARE @Random INT;
 DECLARE @GroupNum INT;
 SET @number = 1;
 SET @GroupPrefix = 'PM-';
-SET @GroupNum = 4
+SET @GroupNum = 2
 
 IF NOT EXISTS(SELECT * FROM Groups WHERE Id = @GroupNum)
 BEGIN

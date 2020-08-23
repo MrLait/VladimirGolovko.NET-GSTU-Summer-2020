@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SQLServer.Task6.ReportManager.Presentation")]
+[assembly: AssemblyTitle("SQLServer.Task6.Presentation")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SQLServer.Task6.ReportManager.Presentation")]
+[assembly: AssemblyProduct("SQLServer.Task6.Presentation")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("71f5e4d0-5bc0-4dd6-9b5a-3c045c349401")]
+[assembly: Guid("14226881-2b56-4e2b-85a9-75b1a12f7454")]
 
 // Version information for an assembly consists of the following four values:
 //

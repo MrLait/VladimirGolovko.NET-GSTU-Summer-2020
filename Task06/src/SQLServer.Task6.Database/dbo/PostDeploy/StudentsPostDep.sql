@@ -7,7 +7,7 @@ DECLARE @StudentsNum INT;
 DECLARE @FirstNamePrefix NVARCHAR(40), @LastNamePrefix NVARCHAR(40), @MiddleNamePrefix NVARCHAR(40), @Gender NVARCHAR(40);
 SET @QuantityGroups = (SELECT COUNT(*) FROM Groups) + 1;
 SET @number = 1;
-SET @StudentsNum = 12
+SET @StudentsNum = 10
 SET @FirstNamePrefix = 'FirstName';
 SET @LastNamePrefix = 'LastName';
 SET @MiddleNamePrefix = 'Middlename';
