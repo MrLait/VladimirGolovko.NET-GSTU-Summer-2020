@@ -1,10 +1,10 @@
 ﻿using Microsoft.Office.Interop.Excel;
-using SQLServer.Task6.ReportManager.Services.Interfaces;
+using SQLServer.Task6.CvsReportManager.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace SQLServer.Task6.ReportManager.Services.Utils
+namespace SQLServer.Task6.CvsReportManager.Services.Utils
 {
     public class Excel : IPrint
     {
@@ -34,7 +34,7 @@ namespace SQLServer.Task6.ReportManager.Services.Utils
         /// Save to excel format.
         /// </summary>
         /// <param name="report">Input data for save to excel file.</param>
-        public void Print(string cvsString)
+        public void Print(string cvsString, char separator)
         {
             string outputPath = _path + _fileName;
 
@@ -55,7 +55,7 @@ namespace SQLServer.Task6.ReportManager.Services.Utils
                     cells = 1;
                     row++;
 
-                    foreach (var cellValue in item.Split(','))
+                    foreach (var cellValue in item.Split(separator))
                     {
                         _excelWorksheet.Cells[row, cells] = cellValue;
                         cells++;

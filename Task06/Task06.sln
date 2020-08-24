@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.DataAccessTests", "test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task6.Presentation", "src\SQLServer.Task6.Presentation\SQLServer.Task6.Presentation.csproj", "{14226881-2B56-4E2B-85A9-75B1A12F7454}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task6.ReportManager.Services", "src\SQLServer.Task6.ReportManager.Services\SQLServer.Task6.ReportManager.Services.csproj", "{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task6.CvsReportManager.Services", "src\SQLServer.Task6.CvsReportManager.Services\SQLServer.Task6.CvsReportManager.Services.csproj", "{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

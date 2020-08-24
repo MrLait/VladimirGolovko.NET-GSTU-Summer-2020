@@ -3,8 +3,8 @@ using DAO.DataAccess.Factory;
 using System.Linq;
 using System.IO;
 using SQLServer.Task6.Presentation.Views;
-using SQLServer.Task6.ReportManager.Services;
-using SQLServer.Task6.ReportManager.Services.Utils;
+using SQLServer.Task6.CvsReportManager.Services;
+using SQLServer.Task6.CvsReportManager.Services.Utils;
 
 namespace DAO.DataAccess.Singleton.Tests
 {
@@ -39,7 +39,11 @@ namespace DAO.DataAccess.Singleton.Tests
             //test.RepositoryFactory.CreateGroups().Delete(4);
 
             SessionsResultsView sessionsResultsView = new SessionsResultsView(test);
-            IOrderedEnumerable<SessionsResultsView> sessionResultView = sessionsResultsView.GetView("1", "PM-2").ToList().OrderBy(x => x.SessionName).ThenBy(x => x.GroupName);
+            IOrderedEnumerable<SessionsResultsView> sessionResultView = sessionsResultsView.GetView("1", "PM-1").ToList().OrderBy(x => x.SessionName).ThenBy(x => x.GroupName);
+
+            AggregateOperationsView aggregateOperationsView = new AggregateOperationsView(test);
+            var aggragateValue =  aggregateOperationsView.GetView("1", "PM-1");
+
 
             //sessionsResultsView.order
 
@@ -49,7 +53,11 @@ namespace DAO.DataAccess.Singleton.Tests
             var path = Path.GetDirectoryName(location);
 
 
-            ReportManager excelReportManager = new ReportManager(new Excel(path, "Test"), testStr);
+            CvsReportManager excelReportManager = new CvsReportManager(new Excel(path, "Test"), testStr, ';');
+            excelReportManager.Print();
+
+            excelReportManager.CvsText = aggregateOperationsView.ToString(aggragateValue);
+            excelReportManager.Printer = new Excel(path, "Test2");
             excelReportManager.Print();
         }
     }

@@ -70,9 +70,9 @@
       <Project>{14226881-2B56-4E2B-85A9-75B1A12F7454}</Project>
       <Name>SQLServer.Task6.Presentation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\SQLServer.Task6.ReportManager.Services\SQLServer.Task6.ReportManager.Services.csproj">
+    <ProjectReference Include="..\..\src\SQLServer.Task6.ReportManager.Services\SQLServer.Task6.CvsReportManager.Services.csproj">
       <Project>{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}</Project>
-      <Name>SQLServer.Task6.ReportManager.Services</Name>
+      <Name>SQLServer.Task6.CvsReportManager.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

@@ -1,5 +1,4 @@
 ﻿using DAO.DataAccess.Singleton;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -33,7 +32,7 @@ namespace SQLServer.Task6.Presentation.Views
                     on itemExamShedules.SessionsId equals itemSessions.Id
                 join itemSubjects in Subjects
                     on itemExamShedules.SubjectsId equals itemSubjects.Id
-                //where itemSessions.Name == sessionName & itemGroups.Name == groupName
+                where itemSessions.Name == sessionName & itemGroups.Name == groupName
                 select new SessionsResultsView
                 {
                     SessionName = itemSessions.Name,
@@ -44,13 +43,14 @@ namespace SQLServer.Task6.Presentation.Views
                     SubjectName = itemSubjects.Name,
                     Value = itemSessionsResult.Value
                 };
+
             return sessionsResultsView;
         }
 
         public string ToString(IOrderedEnumerable<SessionsResultsView> sessionResultView)
         {
-            string[] header = { "SessionName, GroupName, FirstName, LastName, MiddleName, SubjectName, Value" };
-            string[] data = sessionResultView.Select(p => string.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}", p.SessionName, p.GroupName, p.FirstName, p.LastName, p.MiddleName, p.SubjectName, p.Value)).ToArray();
+            string[] header = { "SessionName; GroupName; FirstName; LastName; MiddleName; SubjectName; Value" };
+            string[] data = sessionResultView.Select(p => string.Format("{0}; {1}; {2}; {3}; {4}; {5}; {6}", p.SessionName, p.GroupName, p.FirstName, p.LastName, p.MiddleName, p.SubjectName, p.Value)).ToArray();
 
             return string.Join(System.Environment.NewLine, header.Concat(data));
             

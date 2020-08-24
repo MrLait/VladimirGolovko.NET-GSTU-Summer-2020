@@ -35,9 +35,9 @@ BEGIN
 		
 				IF (@IsAssessment = 'True')
 					begin
-						IF (@ExamValueVarChar = 'False')
+						IF (@ExamValueVarChar = 'NotOffset')
 							begin
-								SET @ExamValueVarChar = 0;
+								SET @ExamValueVarChar = null;
 							end;
 						else
 							begin
@@ -47,7 +47,7 @@ BEGIN
 				else
 					begin
 						SET	@Boolean = CAST(ROUND(RAND(), 0) AS BIT);
-						SET @ExamValueVarChar =  Cast(Case When @Boolean=1 Then 'True' ELSE 'False' END AS VARCHAR(max));
+						SET @ExamValueVarChar =  Cast(Case When @Boolean=1 Then 'Offset' ELSE 'NotOffset' END AS VARCHAR(max));
 					end;
 
 				INSERT INTO SessionsResults(StudentsId, ExamSchedulesId, Value)
