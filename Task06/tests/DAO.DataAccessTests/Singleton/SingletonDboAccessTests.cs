@@ -5,6 +5,7 @@ using System.IO;
 using SQLServer.Task6.Presentation.Views;
 using SQLServer.Task6.CvsReportManager.Services;
 using SQLServer.Task6.CvsReportManager.Services.Utils;
+using System.Collections.Generic;
 
 namespace DAO.DataAccess.Singleton.Tests
 {
@@ -39,11 +40,15 @@ namespace DAO.DataAccess.Singleton.Tests
             //test.RepositoryFactory.CreateGroups().Delete(4);
 
             SessionsResultsView sessionsResultsView = new SessionsResultsView(test);
-            IOrderedEnumerable<SessionsResultsView> sessionResultView = sessionsResultsView.GetView("1", "PM-1").ToList().OrderBy(x => x.SessionName).ThenBy(x => x.GroupName);
+            IOrderedEnumerable<SessionsResultsView> sessionResultView = sessionsResultsView.GetView("1", "PM-2").ToList().OrderBy(x => x.SessionName).ThenBy(x => x.GroupName);
 
             AggregateOperationsView aggregateOperationsView = new AggregateOperationsView(test);
-            var aggragateValue =  aggregateOperationsView.GetView("1", "PM-1");
+            var aggragateValue = aggregateOperationsView.GetView("1", "PM-1");
 
+            StudentsToBeExpelledView studentsToBeExpelled = new StudentsToBeExpelledView(test);
+            IEnumerable<IOrderedEnumerable<StudentsToBeExpelledView>> studentsToBeExpelledGrouped = studentsToBeExpelled.GetView("1", 50).OrderBy(x => x.Key).Select(y => y.OrderBy(t => t.StudentId));
+
+            string testStrExpelled = studentsToBeExpelled.ToString(studentsToBeExpelledGrouped);
 
             //sessionsResultsView.order
 
@@ -60,5 +65,6 @@ namespace DAO.DataAccess.Singleton.Tests
             excelReportManager.Printer = new Excel(path, "Test2");
             excelReportManager.Print();
         }
+
     }
 }
