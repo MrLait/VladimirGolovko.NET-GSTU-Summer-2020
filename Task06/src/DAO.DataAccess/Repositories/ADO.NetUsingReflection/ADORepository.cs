@@ -15,7 +15,7 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
         /// <summary>
         /// Connection string to database
         /// </summary>
-        public string DbConString { get; private set; }
+        protected string DbConString { get; private set; }
 
         /// <summary>
         /// Constructor <see cref="AbstractRepository{T}"/>

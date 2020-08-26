@@ -20,7 +20,7 @@ BEGIN
 	
 							SET @Random = (FLOOR(RAND()*(100-1)+1));
 	
-							INSERT INTO ExamSchedules (SessionsID, GroupsID, SubjectsID, ExamDate)
+							INSERT INTO ExamSchedules (SessionsId, GroupsId, SubjectsId, ExamDate)
 							VALUES (@SessionsNum,
 							@GroupsNum,
 							@SubjectsNum,

@@ -6,12 +6,12 @@ namespace DAO.DataAccess.Factory
 {
     public class ADORepositoryFactory : AbstractFactory
     {
-        public ADORepository<ExamSchedules> ExamSchedules { get; private set; }
-        public ADORepository<Groups> Groups { get; private set; }
-        public ADORepository<Sessions> Sessions { get; private set; }
-        public ADORepository<SessionsResults> SessionsResults { get; private set; }
-        public ADORepository<Students> Students { get; private set; }
-        public ADORepository<Subjects> Subjects { get; private set; }
+        protected internal ADORepository<ExamSchedules> ExamSchedules { get;  set; }
+        protected internal ADORepository<Groups> Groups { get;  set; }
+        protected internal ADORepository<Sessions> Sessions { get;  set; }
+        protected internal ADORepository<SessionsResults> SessionsResults { get;  set; }
+        protected internal ADORepository<Students> Students { get;  set; }
+        protected internal ADORepository<Subjects> Subjects { get;  set; }
 
         public ADORepositoryFactory(string dbConnectionStrig)
         {

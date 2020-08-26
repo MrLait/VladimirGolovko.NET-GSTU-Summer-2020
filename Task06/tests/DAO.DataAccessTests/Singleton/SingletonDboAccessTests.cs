@@ -1,70 +1,27 @@
 ﻿using NUnit.Framework;
 using DAO.DataAccess.Factory;
-using System.Linq;
-using System.IO;
-using SQLServer.Task6.Presentation.Views;
-using SQLServer.Task6.CvsReportManager.Services;
-using SQLServer.Task6.CvsReportManager.Services.Utils;
-using System.Collections.Generic;
+using DAO.DataAccessTests;
 
 namespace DAO.DataAccess.Singleton.Tests
 {
     [TestFixture()]
-    public class SingletonDboAccessTests
+    public class SingletonDboAccessTests : DatabaseConnectionBase
     {
-        [Test()]
-        public void GetInstanceTest()
+        /// <summary>
+        /// Checkin to create instance.
+        /// </summary>
+        /// <param name="expectedIsInstanceCreate">Is instance created?</param>
+        [TestCase(true)]
+        public void GivenGetInstance_ThenOutIsNotNullInstance(bool expectedIsInstanceCreate)
         {
-            var dbConnString = @"Data Source=LAIT-PC\SQLEXPRESS;Initial Catalog=SQLServer.Task6.Database;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SingletonDboAccess test = SingletonDboAccess.GetInstance(new ADORepositoryFactory(dbConnString));
-
-            //test.AbstractFactory.CreateGroups().Add(
-            //    new Groups()
-            //    { Name = "1" });
-
-            //test.AbstractFactory.CreateStudents().Add(
-            //    new Students() 
-            //    { 
-            //        LastName = "asda", DateOfBirthday =DateTime.Now, FirstName ="firs",
-            //        Gender = "ASd", GroupsID = 1, MiddleName = "asd", Id = 0
-            //    });
-
-
-            //var testGetAllGroups = test.RepositoryFactory.CreateGroups().GetAll();
-            //var testGetAllStudents = test.RepositoryFactory.CreateStudents().GetAll();
-            //var testGetAllSessionResults = test.RepositoryFactory.CreateSessionsResults().GetAll();
-
-            //var testGetByIdGroup = test.RepositoryFactory.CreateGroups().GetByID(5);
-
-            //test.RepositoryFactory.CreateGroups().Update(new Groups() { Id = 2, Name = "LOL" });
-            //test.RepositoryFactory.CreateGroups().Delete(4);
-
-            SessionsResultsView sessionsResultsView = new SessionsResultsView(test);
-            IOrderedEnumerable<SessionsResultsView> sessionResultView = sessionsResultsView.GetView("1", "PM-2").ToList().OrderBy(x => x.SessionName).ThenBy(x => x.GroupName);
-
-            AggregateOperationsView aggregateOperationsView = new AggregateOperationsView(test);
-            var aggragateValue = aggregateOperationsView.GetView("1", "PM-1");
-
-            StudentsToBeExpelledView studentsToBeExpelled = new StudentsToBeExpelledView(test);
-            IEnumerable<IOrderedEnumerable<StudentsToBeExpelledView>> studentsToBeExpelledGrouped = studentsToBeExpelled.GetView("1", 50).OrderBy(x => x.Key).Select(y => y.OrderBy(t => t.StudentId));
-
-            string testStrExpelled = studentsToBeExpelled.ToString(studentsToBeExpelledGrouped);
-
-            //sessionsResultsView.order
-
-            string testStr = sessionsResultsView.ToString(sessionResultView);
-
-            var location = System.Reflection.Assembly.GetExecutingAssembly().Location;
-            var path = Path.GetDirectoryName(location);
-
-
-            CvsReportManager excelReportManager = new CvsReportManager(new Excel(path, "Test"), testStr, ';');
-            excelReportManager.Print();
-
-            excelReportManager.CvsText = aggregateOperationsView.ToString(aggragateValue);
-            excelReportManager.Printer = new Excel(path, "Test2");
-            excelReportManager.Print();
+            //Arrange
+            SingletonDboAccess singleton = SingletonDboAccess.GetInstance(new ADORepositoryFactory(DbConnString));
+            var actualIsInstanceCreate = false;
+            //Act
+            if (singleton.RepositoryFactory != null)
+                actualIsInstanceCreate = true;
+            //Assert
+            Assert.AreEqual(expectedIsInstanceCreate, actualIsInstanceCreate);
         }
-
     }
 }

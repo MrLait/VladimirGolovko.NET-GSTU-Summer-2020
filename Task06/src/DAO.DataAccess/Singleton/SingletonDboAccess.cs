@@ -1,33 +1,37 @@
 ﻿using DAO.DataAccess.Factory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAO.DataAccess.Singleton
 {
+    /// <summary>
+    /// Access to database with singleton pattern.
+    /// </summary>
     public sealed class SingletonDboAccess
     {
+        /// <summary>
+        /// Static field with singleton instance.
+        /// </summary>
         private static SingletonDboAccess _instance = null;
-        //private static string _dbConnectionString = null;
 
+        /// <summary>
+        /// RepositoryFactory property witch represent access to table models.
+        /// </summary>
         public AbstractFactory RepositoryFactory { get; set; } = null;
 
-        private SingletonDboAccess(AbstractFactory factory)
-        {
-            RepositoryFactory = factory;
-        }
+        /// <summary>
+        /// Private constructor with AbstractFactory parameter.
+        /// </summary>
+        /// <param name="factory">AbstractFactory parameter.</param>
+        private SingletonDboAccess(AbstractFactory factory) =>  RepositoryFactory = factory;
 
+        /// <summary>
+        /// Method to create singleton instance.
+        /// </summary>
+        /// <param name="factory">Input database factory.</param>
+        /// <returns>Singleton instance.</returns>
         public static SingletonDboAccess GetInstance(AbstractFactory factory)
         {
-            //if (AbstractFactory == null)
-            //{
-            //    //_dbConnectionString = dbConnectionStrig;
-
             if (_instance == null)
                 _instance = new SingletonDboAccess(factory);
-            //}
             return _instance;
         }
     }

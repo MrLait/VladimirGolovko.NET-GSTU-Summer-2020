@@ -46,7 +46,10 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="DatabaseConnectionBase.cs" />
+    <Compile Include="Factory\ADORepositoryFactoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ADO.NetUsingReflection\ADORepositoryTests.cs" />
     <Compile Include="Singleton\SingletonDboAccessTests.cs" />
   </ItemGroup>
   <ItemGroup>

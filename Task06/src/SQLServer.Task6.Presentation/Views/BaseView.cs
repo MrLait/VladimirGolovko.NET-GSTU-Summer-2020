@@ -1,6 +1,5 @@
 ﻿using DAO.DataAccess.Singleton;
 using SQLServer.Task6.Domain.Models;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace SQLServer.Task6.Presentation.Views

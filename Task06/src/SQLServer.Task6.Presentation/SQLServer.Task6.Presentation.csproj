@@ -45,7 +45,7 @@
     <Compile Include="Views\AggregateOperationsView.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Views\SessionsResultsView.cs" />
-    <Compile Include="Views\StudentsToBeExpelled.cs" />
+    <Compile Include="Views\StudentsToBeExpelledView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO.DataAccess\DAO.DataAccess.csproj">
