@@ -6,7 +6,10 @@ using System.Text;
 
 namespace SQLServer.Task6.CvsReportManager.Services.Utils
 {
-    public class Excel : IPrint
+    /// <summary>
+    /// Excel reader and writer.
+    /// </summary>
+    public class Excel : IPrint, IRead
     {
         private string _xlslExtension = ".xlsx";
         private readonly string _directoryPath;
@@ -34,7 +37,8 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
         /// <summary>
         /// Save to excel format.
         /// </summary>
-        /// <param name="report">Input data for save to excel file.</param>
+        /// <param name="cvsString">Input string in CVS format.</param>
+        /// <param name="separator">CVS separator.</param>
         public void Print(string cvsString, char separator)
         {
             string outputPath = _directoryPath + _fileName + _xlslExtension;
@@ -78,6 +82,11 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
             }
         }
 
+        /// <summary>
+        /// Implemented Read from excel file.
+        /// </summary>
+        /// <param name="separator">Separator.</param>
+        /// <returns>Returns file in string format.</returns>
         public string Read(char separator)
         {
             Range range;

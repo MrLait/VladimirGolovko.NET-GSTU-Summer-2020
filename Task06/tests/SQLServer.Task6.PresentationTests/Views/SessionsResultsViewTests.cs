@@ -6,9 +6,18 @@ using System.Linq;
 
 namespace SQLServer.Task6.Presentation.Views.Tests
 {
+    /// <summary>
+    /// Test cases for sessions results view class.
+    /// </summary>
     [TestFixture()]
     public class SessionsResultsViewTests : MockBaseView
     {
+        /// <summary>
+        /// Test for sessions results view no ordered.
+        /// </summary>
+        /// <param name="sessionName">Session name parameter.</param>
+        /// <param name="groupName">Group name parameter.</param>
+        /// <returns>Returns string.</returns>
         [Test, TestCaseSource(typeof(MyFactorySessionsResultsViewTests), "GiveToString_WhenNoOrdered_ThenOutIsToString")]
         public string GiveToString_WhenNoOrdered_ThenOutIsToString(string sessionName, string groupName)
         {
@@ -20,6 +29,12 @@ namespace SQLServer.Task6.Presentation.Views.Tests
             return actualString;
         }
 
+        /// <summary>
+        /// Test for sessions results view ordered by descending first name and value.
+        /// </summary>
+        /// <param name="sessionName">Session name parameter.</param>
+        /// <param name="groupName">Group name parameter.</param>
+        /// <returns>Returns string.</returns>
         [Test, TestCaseSource(typeof(MyFactorySessionsResultsViewTests), "GiveToString_WhenOrderByDescendingFirstNameAndValue_ThenOutIsToStringOrderBy")]
         public string GiveToString_WhenOrderByDescendingFirstNameAndValue_ThenOutIsToStringOrderBy(string sessionName, string groupName)
         {

@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DAO.DataAccessTests</name>
+    </assembly>
+    <members>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateExamSchedules_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateExamSchedules_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateGroups_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateGroups_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateSessions_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateSessions_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateSessionsResults_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateSessionsResults_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateStudents_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateStudents_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateSubjects_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateSubjects_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="T:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests">
+            <summary>
+            Test cases for CRUD method.
+            </summary>
+        </member>
+        <member name="F:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.repository">
+            <summary>
+            Field with group repository.
+            </summary>
+        </member>
+        <member name="F:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.groups">
+            <summary>
+            Field with groups.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.Init">
+            <summary>
+            Initialize repository.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenAdd_ThenOutIsActualName(System.String)">
+            <summary>
+            Test cases for Add.
+            </summary>
+            <param name="actualName">Name parameter.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenGetAll_WhenAddedGroups_ThenOutGetThisGroups(System.String)">
+            <summary>
+            Test cases for GetAll method.
+            </summary>
+            <param name="actualName"> Name parameter.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenGetByID_WhenAdded_ThenOutGetThisGroupsById(System.String)">
+            <summary>
+            Test cases for GetById method.
+            </summary>
+            <param name="expectedName"> Expected name.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenUpdate_WhenAdded_ThenOutUpdateThisGroups(System.String,System.String)">
+            <summary>
+            Test cases Update method.
+            </summary>
+            <param name="name">Name parameter.</param>
+            <param name="actualUpdateName">Actual update name.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenDelete_WhenAddedOneGroups_ThenOutIsDelete(System.String)">
+            <summary>
+            Test cases for Delete method.
+            </summary>
+            <param name="name">Name.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenGetByID_WhenArgumentIsNotFound_ThenOutIsNull">
+            <summary>
+            Given GetById for checkin on null.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenUpdate_WhenArgumentIsNotFound_ThenOutIsNull">
+            <summary>
+            Given Update for checkin on null.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenAdd_WhenArgumentIsNull_ThenOutIsArgumentNullException">
+            <summary>
+            Given add for checkin on ArgumentNullException. 
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenAdd_WhenObjectIsEmpty_ThenOutIsArgumentException">
+            <summary>
+            Given add for checkin on ArgumentException. 
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenDelete_WhenArgumentIsZero_ThenOutIsArgumentNullException">
+            <summary>
+            Give Delete for checkin on ArgumentNullException.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenGetByID_WhenArgumentIsZero_ThenOutIsArgumentNullException">
+            <summary>
+            Given GetById for checkin on ArgumentNullException.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.Tests.ADORepositoryTests.GivenUpdate_WhenArgumentIsNull_ThenOutIsArgumentNullException">
+            <summary>
+            Given Update for checkin on ArgumentNullException. 
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Singleton.Tests.SingletonDboAccessTests.GivenGetInstance_ThenOutIsNotNullInstance(System.Boolean)">
+            <summary>
+            Checkin to create instance.
+            </summary>
+            <param name="expectedIsInstanceCreate">Is instance created?</param>
+        </member>
+    </members>
+</doc>

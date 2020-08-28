@@ -10,6 +10,10 @@ using System.Reflection;
 
 namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
 {
+    /// <summary>
+    /// Abstract repository with implemented CRUD methods.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class ADORepository<T> : ICRUD<T> where T : IEntity, new()
     {
         /// <summary>
@@ -18,7 +22,7 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
         protected string DbConString { get; private set; }
 
         /// <summary>
-        /// Constructor <see cref="AbstractRepository{T}"/>
+        /// Constructor <see cref="ADORepository{T}"/>
         /// </summary>
         /// <param name="dbConString"><see cref="DbConString"/></param>
         public ADORepository(string dbConString)
@@ -26,6 +30,10 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
             DbConString = dbConString;
         }
 
+        /// <summary>
+        /// Implementation Add <see cref="ICRUD{T}.Add(T)"/>
+        /// </summary>
+        /// <param name="entity">Models.</param>
         public void Add(T entity)
         {
             if (entity == null)
@@ -54,6 +62,10 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
             }
         }
 
+        /// <summary>
+        /// Implementation Delete <see cref="ICRUD{T}.Delete(int)"/>
+        /// </summary>
+        /// <param name="byId">Id.</param>
         public void Delete(int byId)
         {
             if (byId == 0)
@@ -82,6 +94,10 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
             }
         }
 
+        /// <summary>
+        /// Implementation GetAll <see cref="ICRUD{T}.GetAll"/>
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<T> GetAll()
         {
             string tableName = new T().GetType().Name;
@@ -112,7 +128,7 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
         /// <summary>
         /// Get object by ID from table in database.
         /// </summary>
-        /// <param name="byId"></param>
+        /// <param name="byId">Id.</param>
         /// <returns>Returns object.</returns>
         public T GetByID(int byId)
         {
@@ -144,6 +160,11 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
             }
         }
 
+        /// <summary>
+        /// Implementation Update <see cref="ICRUD{T}.Update(T)"/>
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns>Returns updated elements.</returns>
         public T Update(T entity)
         {
             if (entity == null)

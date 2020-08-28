@@ -12,11 +12,11 @@ namespace DAO.DataAccess.Repositories.Exstension
     public static class ExtensionHelpers
     {
         /// <summary>
-        /// Method to convert table to IEnumerable<T>
+        /// Method to convert table to IEnumerable
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
-        /// <param name="table">input table</param>
-        /// <returns>Returns IEnumerable<T> of table</returns>
+        /// <param name="table">Input table</param>
+        /// <returns>Returns IEnumerable of table</returns>
         public static IEnumerable<T> ToEnumerable<T>(this DataTable table) where T : new()
         {
             List<T> list = new List<T>();

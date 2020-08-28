@@ -5,20 +5,70 @@ using System.Linq;
 
 namespace SQLServer.Task6.Presentation.Views
 {
+    /// <summary>
+    /// Sessions results view.
+    /// </summary>
     public class SessionsResultsView : BaseView
     {
+        /// <summary>
+        /// SessionName column.
+        /// </summary>
         public string SessionName { get; private set; }
+
+        /// <summary>
+        /// GroupName column.
+        /// </summary>
         public string GroupName { get; private set; }
+
+        /// <summary>
+        /// FirstName column.
+        /// </summary>
         public string FirstName { get; private set; }
+
+        /// <summary>
+        /// LastName column.
+        /// </summary>
         public string LastName { get; private set; }
+
+        /// <summary>
+        /// MiddleName column.
+        /// </summary>
         public string MiddleName { get; private set; }
+
+        /// <summary>
+        /// SubjectName column.
+        /// </summary>
         public string SubjectName { get; private set; }
+
+        /// <summary>
+        /// Value column.
+        /// </summary>
         public string Value { get; private set; }
 
+        /// <summary>
+        /// Constructur without parameters.
+        /// </summary>
         public SessionsResultsView() { }
+
+        /// <summary>
+        /// Constructor for initialazing view.
+        /// </summary>
+        /// <param name="view">View parameter.</param>
         public SessionsResultsView(IView view) : base(view) { }
+
+        /// <summary>
+        /// Constructor for initialazing view and singletonDboAccess.
+        /// </summary>
+        /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
+        /// <param name="view">View parameter.</param>
         public SessionsResultsView(SingletonDboAccess singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
 
+        /// <summary>
+        /// Method for get view.
+        /// </summary>
+        /// <param name="sessionName">Session name parameter.</param>
+        /// <param name="groupName">Group name parameter.</param>
+        /// <returns>Returns new view.</returns>
         public IEnumerable<SessionsResultsView> GetView(string sessionName, string groupName)
         {
             IEnumerable<SessionsResultsView> sessionsResultsView =
@@ -48,6 +98,11 @@ namespace SQLServer.Task6.Presentation.Views
             return sessionsResultsView;
         }
 
+        /// <summary>
+        /// Conver view to string.
+        /// </summary>
+        /// <param name="sessionResultView">Session result view parameter.</param>
+        /// <returns>Returns string.</returns>
         public string ToString(IEnumerable<SessionsResultsView> sessionResultView)
         {
             string[] header = { "SessionName; GroupName; FirstName; LastName; MiddleName; SubjectName; Value" };

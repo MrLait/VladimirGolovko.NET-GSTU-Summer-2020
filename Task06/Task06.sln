@@ -25,7 +25,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task6.Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xlsxData", "xlsxData", "{44506C9B-DF7C-40B1-A407-DF16DC283D56}"
 	ProjectSection(SolutionItems) = preProject
+		xlsxData\AggregateOperationsSesOnePM_1.xlsx = xlsxData\AggregateOperationsSesOnePM_1.xlsx
+		xlsxData\AggregateOperationsSesOnePM_2.xlsx = xlsxData\AggregateOperationsSesOnePM_2.xlsx
+		xlsxData\AggregateOperationsSesTwoPM_1.xlsx = xlsxData\AggregateOperationsSesTwoPM_1.xlsx
+		xlsxData\AggregateOperationsSesTwoPM_2.xlsx = xlsxData\AggregateOperationsSesTwoPM_2.xlsx
 		xlsxData\ExcelTestsOne.xlsx = xlsxData\ExcelTestsOne.xlsx
+		xlsxData\SessionsResultsSesOnePM_1.xlsx = xlsxData\SessionsResultsSesOnePM_1.xlsx
+		xlsxData\SessionsResultsSesOnePM_2.xlsx = xlsxData\SessionsResultsSesOnePM_2.xlsx
+		xlsxData\SessionsResultsSesTwoPM_1.xlsx = xlsxData\SessionsResultsSesTwoPM_1.xlsx
+		xlsxData\SessionsResultsSesTwoPM_2.xlsx = xlsxData\SessionsResultsSesTwoPM_2.xlsx
+		xlsxData\StudentsExpelledSesOne20Ordered.xlsx = xlsxData\StudentsExpelledSesOne20Ordered.xlsx
+		xlsxData\StudentsExpelledSesOne30.xlsx = xlsxData\StudentsExpelledSesOne30.xlsx
+		xlsxData\StudentsExpelledSesOne40Ordered.xlsx = xlsxData\StudentsExpelledSesOne40Ordered.xlsx
+		xlsxData\StudentsExpelledSesOne50.xlsx = xlsxData\StudentsExpelledSesOne50.xlsx
 	EndProjectSection
 EndProject
 Global

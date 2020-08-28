@@ -6,9 +6,18 @@ using System.Linq;
 
 namespace SQLServer.Task6.Presentation.Views.Tests
 {
+    /// <summary>
+    /// Test cases for students to be expelled view.
+    /// </summary>
     [TestFixture()]
     public class StudentsToBeExpelledViewTests : MockBaseView
     {
+        /// <summary>
+        /// Test for students to be expelled view no ordered.
+        /// </summary>
+        /// <param name="sessionName">Session name parameter.</param>
+        /// <param name="minPassingGrade">Minimum passing grade parameter.</param>
+        /// <returns>Returns string.</returns>
         [Test, TestCaseSource(typeof(MyFactoryStudentsToBeExpelledViewTests), "GiveToString_WhenNoOrdered_ThenOutIsToString")]
         public string GiveToString_WhenNoOrdered_ThenOutIsToString(string sessionName, int minPassingGrade)
         {
@@ -20,6 +29,12 @@ namespace SQLServer.Task6.Presentation.Views.Tests
             return actualString;
         }
 
+        /// <summary>
+        /// Test for students to be expelled view no ordered.
+        /// </summary>
+        /// <param name="sessionName">Session name parameter.</param>
+        /// <param name="minPassingGrade">Minimum passing grade parameter.</param>
+        /// <returns>Returns string.</returns>
         [Test, TestCaseSource(typeof(MyFactoryStudentsToBeExpelledViewTests), "GiveToString_WhenOrderByGroupNameAndStudentId_ThenOutIsToStringOrderByGroupNameAndStudentId")]
         public string GiveToString_WhenOrderByGroupNameAndStudentId_ThenOutIsToStringOrderByGroupNameAndStudentId(string sessionName, int minPassingGrade)
         {

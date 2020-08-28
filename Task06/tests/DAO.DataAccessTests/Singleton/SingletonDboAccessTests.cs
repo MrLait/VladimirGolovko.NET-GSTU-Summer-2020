@@ -4,6 +4,9 @@ using DAO.DataAccessTests;
 
 namespace DAO.DataAccess.Singleton.Tests
 {
+    /// <summary>
+    /// Test cases for singleton dbo access class.
+    /// </summary>
     [TestFixture()]
     public class SingletonDboAccessTests : DatabaseConnectionBase
     {

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SQLServer.Task6.CvsReportManager.Services</name>
+    </assembly>
+    <members>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Utils.Excel.#ctor(System.String,System.String)">
+            <summary>
+            Constructor <see cref="T:SQLServer.Task6.CvsReportManager.Services.Utils.Excel"/>
+            </summary>
+            <param name="path">Path to save file.</param>
+            <param name="fileName">Set file name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Utils.Excel.Print(System.String,System.Char)">
+            <summary>
+            Save to excel format.
+            </summary>
+            <param name="report">Input data for save to excel file.</param>
+        </member>
+    </members>
+</doc>
