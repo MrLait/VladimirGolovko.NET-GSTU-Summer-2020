@@ -29,7 +29,7 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
         public void Add(T entity)
         {
             if (entity == null)
-                throw new ArgumentException(typeof(T).Name + "object Should not be Null when Saving to database");
+                throw new ArgumentNullException(typeof(T).Name + "object Should not be Null when Saving to database");
 
             var storedProcedure = "Add" + entity.GetType().Name;
 
@@ -117,7 +117,7 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
         public T GetByID(int byId)
         {
             if (byId == 0)
-                throw new NullReferenceException("byId should not be 0");
+                throw new ArgumentNullException("byId should not be 0");
 
             string tableName = new T().GetType().Name;
             string storedProcedure = "Get" + tableName + "ById";
@@ -175,7 +175,6 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
                 }
             }
         }
-
 
         /// <summary>
         /// Creating sqlCommand.

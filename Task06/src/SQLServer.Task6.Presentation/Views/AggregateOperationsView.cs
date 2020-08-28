@@ -1,4 +1,5 @@
 ﻿using DAO.DataAccess.Singleton;
+using SQLServer.Task6.Presentation.Interfaces;
 using System;
 using System.Linq;
 
@@ -14,25 +15,25 @@ namespace SQLServer.Task6.Presentation.Views
         public double AverageValue { get; set; }
 
         public AggregateOperationsView() { }
-
-        public AggregateOperationsView(SingletonDboAccess singletonDboAccess) : base(singletonDboAccess) { }
+        public AggregateOperationsView(IView view) : base(view){}
+        public AggregateOperationsView(SingletonDboAccess singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
 
         public AggregateOperationsView GetView(string sessionName, string groupName)
         {
             var aggregateValue =
-                from itemSessionsResult in SessionsResults
-                join itemStudents in Students
+                from itemSessionsResult in View.SessionsResults
+                join itemStudents in View.Students
                     on itemSessionsResult.StudentsId equals itemStudents.Id
-                join itemExamShedules in ExamSchedules
+                join itemExamShedules in View.ExamSchedules
                     on itemSessionsResult.ExamSchedulesId equals itemExamShedules.Id
-                join itemGroups in Groups
-                    on itemStudents.GroupsID equals itemGroups.Id
-                join itemSessions in Sessions
+                join itemGroups in View.Groups
+                    on itemStudents.GroupsId equals itemGroups.Id
+                join itemSessions in View.Sessions
                     on itemExamShedules.SessionsId equals itemSessions.Id
-                join itemSubjects in Subjects
+                join itemSubjects in View.Subjects
                     on itemExamShedules.SubjectsId equals itemSubjects.Id
                 where itemSessions.Name == sessionName & itemGroups.Name == groupName & itemSubjects.IsAssessment == "True"
-                    & itemSessionsResult.Value != string.Empty
+                    & string.IsNullOrEmpty(itemSessionsResult.Value) != true
                 select new 
                 {
                     SessionName = itemSessions.Name,
@@ -43,8 +44,8 @@ namespace SQLServer.Task6.Presentation.Views
             return new AggregateOperationsView() 
             { 
                 SessionName = sessionName, 
-                GroupName = groupName, 
-                AverageValue = aggregateValue.Average(x => Convert.ToDouble(x.Value)), 
+                GroupName = groupName,
+                AverageValue = aggregateValue.Average(x => Convert.ToDouble(x.Value)),
                 MaxValue = aggregateValue.Max(x => Convert.ToInt32(x.Value)), 
                 MinValue = aggregateValue.Min(x => Convert.ToInt32(x.Value))
             };

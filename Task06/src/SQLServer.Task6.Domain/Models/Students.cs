@@ -21,7 +21,7 @@ namespace SQLServer.Task6.Domain.Models
 
         public DateTime DateOfBirthday { get; set; }
 
-        [ForeignKey("GroupsID")]
-        public int GroupsID { get; set; }
+        [ForeignKey("GroupsId")]
+        public int GroupsId { get; set; }
     }
 }

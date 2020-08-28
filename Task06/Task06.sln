@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AAD36CCF-9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C58384CE-F995-4EA3-925C-A21AF731BDF3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{F19AF6C3-4042-47AF-98D7-B2F86EE6F7BB}"
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLServer.Task6.Database", "src\SQLServer.Task6.Database\SQLServer.Task6.Database.sqlproj", "{7635105C-7870-43AF-96ED-F0AC723BBF6A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task6.Domain", "src\SQLServer.Task6.Domain\SQLServer.Task6.Domain.csproj", "{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}"
@@ -20,6 +18,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task6.Presentation", "src\SQLServer.Task6.Presentation\SQLServer.Task6.Presentation.csproj", "{14226881-2B56-4E2B-85A9-75B1A12F7454}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task6.CvsReportManager.Services", "src\SQLServer.Task6.CvsReportManager.Services\SQLServer.Task6.CvsReportManager.Services.csproj", "{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task6.CvsReportManager.ServicesTests", "tests\SQLServer.Task6.CvsReportManager.ServicesTests\SQLServer.Task6.CvsReportManager.ServicesTests.csproj", "{4D176DE4-90F0-403C-BEA7-1BBB55AAE8A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task6.PresentationTests", "tests\SQLServer.Task6.PresentationTests\SQLServer.Task6.PresentationTests.csproj", "{903F5258-5782-42A5-A8ED-322F52AFEF7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xlsxData", "xlsxData", "{44506C9B-DF7C-40B1-A407-DF16DC283D56}"
+	ProjectSection(SolutionItems) = preProject
+		xlsxData\ExcelTestsOne.xlsx = xlsxData\ExcelTestsOne.xlsx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +60,14 @@ Global
 		{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D176DE4-90F0-403C-BEA7-1BBB55AAE8A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D176DE4-90F0-403C-BEA7-1BBB55AAE8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D176DE4-90F0-403C-BEA7-1BBB55AAE8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D176DE4-90F0-403C-BEA7-1BBB55AAE8A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{903F5258-5782-42A5-A8ED-322F52AFEF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903F5258-5782-42A5-A8ED-322F52AFEF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903F5258-5782-42A5-A8ED-322F52AFEF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903F5258-5782-42A5-A8ED-322F52AFEF7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +79,8 @@ Global
 		{0A652C27-51C8-4763-8DED-5E1E663E035E} = {AAD36CCF-9FD1-45EB-8C18-9F7D6707272E}
 		{14226881-2B56-4E2B-85A9-75B1A12F7454} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
 		{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
+		{4D176DE4-90F0-403C-BEA7-1BBB55AAE8A1} = {AAD36CCF-9FD1-45EB-8C18-9F7D6707272E}
+		{903F5258-5782-42A5-A8ED-322F52AFEF7D} = {AAD36CCF-9FD1-45EB-8C18-9F7D6707272E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E83C1FB-42FB-4EB0-9899-758624C42C31}

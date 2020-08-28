@@ -118,7 +118,4 @@
   <ItemGroup>
     <None Include="PublishLocation\SQLServer.Task6.Database.publish.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="SQLServer.Task6.Database.refactorlog" />
-  </ItemGroup>
 </Project>

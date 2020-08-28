@@ -1,4 +1,5 @@
 ﻿using DAO.DataAccess.Singleton;
+using SQLServer.Task6.Presentation.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,24 +16,24 @@ namespace SQLServer.Task6.Presentation.Views
         public string Value { get; private set; }
 
         public SessionsResultsView() { }
-
-        public SessionsResultsView(SingletonDboAccess singletonDboAccess) : base(singletonDboAccess) { }
+        public SessionsResultsView(IView view) : base(view) { }
+        public SessionsResultsView(SingletonDboAccess singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
 
         public IEnumerable<SessionsResultsView> GetView(string sessionName, string groupName)
         {
             IEnumerable<SessionsResultsView> sessionsResultsView =
-                from itemSessionsResult in SessionsResults
-                join itemStudents in Students
+                from itemSessionsResult in View.SessionsResults
+                join itemStudents in View.Students
                     on itemSessionsResult.StudentsId equals itemStudents.Id
-                join itemExamShedules in ExamSchedules
+                join itemExamShedules in View.ExamSchedules
                     on itemSessionsResult.ExamSchedulesId equals itemExamShedules.Id
-                join itemGroups in Groups
-                    on itemStudents.GroupsID equals itemGroups.Id
-                join itemSessions in Sessions
+                join itemGroups in View.Groups
+                    on itemStudents.GroupsId equals itemGroups.Id
+                join itemSessions in View.Sessions
                     on itemExamShedules.SessionsId equals itemSessions.Id
-                join itemSubjects in Subjects
+                join itemSubjects in View.Subjects
                     on itemExamShedules.SubjectsId equals itemSubjects.Id
-                where itemSessions.Name == sessionName & itemGroups.Name == groupName
+                where itemSessions.Name == sessionName & itemGroups.Name == groupName & string.IsNullOrEmpty(itemSessionsResult.Value) != true
                 select new SessionsResultsView
                 {
                     SessionName = itemSessions.Name,
@@ -47,7 +48,7 @@ namespace SQLServer.Task6.Presentation.Views
             return sessionsResultsView;
         }
 
-        public string ToString(IOrderedEnumerable<SessionsResultsView> sessionResultView)
+        public string ToString(IEnumerable<SessionsResultsView> sessionResultView)
         {
             string[] header = { "SessionName; GroupName; FirstName; LastName; MiddleName; SubjectName; Value" };
             string[] data = sessionResultView.Select(p => string.Format("{0}; {1}; {2}; {3}; {4}; {5}; {6}", p.SessionName, p.GroupName, p.FirstName, p.LastName, p.MiddleName, p.SubjectName, p.Value)).ToArray();

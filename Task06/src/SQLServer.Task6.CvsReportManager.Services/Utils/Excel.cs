@@ -1,14 +1,15 @@
 ﻿using Microsoft.Office.Interop.Excel;
 using SQLServer.Task6.CvsReportManager.Services.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace SQLServer.Task6.CvsReportManager.Services.Utils
 {
     public class Excel : IPrint
     {
-        private readonly string _path;
+        private string _xlslExtension = ".xlsx";
+        private readonly string _directoryPath;
         private readonly string _fileName;
         private readonly Application _excelApplication;
         private Workbook _excelWorkbook;
@@ -21,7 +22,7 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
         /// <param name="fileName">Set file name.</param>
         public Excel(string path, string fileName = "outputName")
         {
-            _path = path;
+            _directoryPath = path;
             _fileName = fileName;
             _excelApplication = new Application
             {
@@ -36,10 +37,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
         /// <param name="report">Input data for save to excel file.</param>
         public void Print(string cvsString, char separator)
         {
-            string outputPath = _path + _fileName;
+            string outputPath = _directoryPath + _fileName + _xlslExtension;
 
-            if (!Directory.Exists(_path))
-                Directory.CreateDirectory(_path);
+            if (!Directory.Exists(_directoryPath))
+                Directory.CreateDirectory(_directoryPath);
 
             _excelWorkbook = _excelApplication.Workbooks.Add();
             _excelWorksheet = (Worksheet)_excelWorkbook.Sheets[1];
@@ -47,7 +48,7 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
 
             try
             {
-                int row = 1;
+                int row = 0;
                 int cells = 1;
 
                 foreach (var item in cvsString.Split(new[] { Environment.NewLine }, StringSplitOptions.None))
@@ -75,6 +76,52 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
                 _excelWorkbook.Close(true);
                 _excelApplication.Quit();
             }
+        }
+
+        public string Read(char separator)
+        {
+            Range range;
+            int rCnt;
+            int cCnt;
+            string str = string.Empty;
+            var appendedLine = new StringBuilder();
+
+            try
+            {
+                _excelWorkbook = _excelApplication.Workbooks.Open(_directoryPath + _fileName +_xlslExtension, 0, true, 5, "", "", true, XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+                _excelWorksheet = (Worksheet)_excelWorkbook.Worksheets.get_Item(1);
+                range = _excelWorksheet.UsedRange;
+
+                int rw = range.Rows.Count;
+                int cl = range.Columns.Count;
+
+                for (rCnt = 1; rCnt <= rw; rCnt++)
+                {
+                    for (cCnt = 1; cCnt <= cl; cCnt++)
+                    {
+                        str = Convert.ToString((range.Cells[rCnt, cCnt] as Range).Value2);
+                        appendedLine.Append(str);
+
+                        if (cCnt != cl)
+                            appendedLine.Append(separator);
+                    }
+
+                    if (rCnt != rw)
+                        appendedLine.Append(Environment.NewLine);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                _excelWorkbook.Close(true, null, null);
+                _excelApplication.Quit();
+            }
+
+            return appendedLine.ToString();
+
         }
     }
 }
