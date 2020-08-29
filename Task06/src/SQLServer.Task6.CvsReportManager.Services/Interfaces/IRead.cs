@@ -1,15 +1,12 @@
 ﻿namespace SQLServer.Task6.CvsReportManager.Services.Interfaces
 {
-    /// <summary>
-    /// Interface with read method.
-    /// </summary>
-    public interface IRead
+    internal interface IRead
     {
         /// <summary>
-        /// Read method.
+        /// Implemented Read from excel file.
         /// </summary>
         /// <param name="separator">Separator.</param>
-        /// <returns>Returns string.</returns>
+        /// <returns>Returns file in string format.</returns>
         string Read(char separator);
     }
 }

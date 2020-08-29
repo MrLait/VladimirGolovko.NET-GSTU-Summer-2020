@@ -46,6 +46,7 @@
     <Compile Include="Interfaces\IPrint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CvsReportManager.cs" />
+    <Compile Include="Interfaces\IRead.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

@@ -5,11 +5,21 @@ using System.IO;
 
 namespace SQLServer.Task6.CvsReportManager.Services.Tests
 {
+    /// <summary>
+    /// Test cases to CvsReportManager.
+    /// </summary>
     [TestFixture()]
     public class CvsReportManagerTests
     {
+        /// <summary>
+        /// Full name to directory path.
+        /// </summary>
         private string directoryInfoFullName = new DirectoryInfo(@"xlsxData\\").FullName;
 
+        /// <summary>
+        /// Print SessionsResultsView.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("SessionsResultsSesOnePM_1")]
         public void GivenPrint_WhenSessionsResultsView_ThenOutIsSessionOneGroupPM_1_Ordered(string fileName)
         {
@@ -23,6 +33,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print SessionsResultsView.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("SessionsResultsSesOnePM_2")]
         public void GivenPrint_WhenSessionsResultsView_ThenOutIsSessionOneGroupPM_2_Ordered(string fileName)
         {
@@ -36,6 +50,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print SessionsResultsView.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("SessionsResultsSesTwoPM_1")]
         public void GivenPrint_WhenSessionsResultsView_ThenOutIsSessionTwoGroupPM_1_Ordered(string fileName)
         {
@@ -49,6 +67,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print SessionsResultsView.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("SessionsResultsSesTwoPM_2")]
         public void GivenPrint_WhenSessionsResultsView_ThenOutIsSessionTwoGroupPM_2_Ordered(string fileName)
         {
@@ -62,6 +84,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print AggregateOperations.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("AggregateOperationsSesOnePM_1")]
         public void GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionOneGroupPM_1(string fileName)
         {
@@ -75,6 +101,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print AggregateOperations.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("AggregateOperationsSesOnePM_2")]
         public void GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionOneGroupPM_2(string fileName)
         {
@@ -88,6 +118,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print AggregateOperations.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("AggregateOperationsSesTwoPM_1")]
         public void GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionTwoGroupPM_1(string fileName)
         {
@@ -101,6 +135,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print AggregateOperations.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("AggregateOperationsSesTwoPM_2")]
         public void GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionTwoGroupPM_2(string fileName)
         {
@@ -114,6 +152,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print StudentsToBeExpelled.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("StudentsExpelledSesOne30")]
         public void GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade30(string fileName)
         {
@@ -127,6 +169,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print StudentsToBeExpelled.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("StudentsExpelledSesOne50")]
         public void GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade50(string fileName)
         {
@@ -140,6 +186,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print StudentsToBeExpelled.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("StudentsExpelledSesOne20Ordered")]
         public void GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade20Ordered(string fileName)
         {
@@ -153,6 +203,10 @@ namespace SQLServer.Task6.CvsReportManager.Services.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        /// <summary>
+        /// Print StudentsToBeExpelled.
+        /// </summary>
+        /// <param name="fileName">File name.</param>
         [TestCase("StudentsExpelledSesOne40Ordered")]
         public void GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade40Ordered(string fileName)
         {

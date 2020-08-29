@@ -4,5 +4,105 @@
         <name>SQLServer.Task6.Domain</name>
     </assembly>
     <members>
+        <member name="T:SQLServer.Task6.Domain.Models.Sessions">
+            <summary>
+            Sessions table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Sessions.Id">
+            <summary>
+            Id column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Sessions.Name">
+            <summary>
+            Name column.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task6.Domain.Models.SessionsResults">
+            <summary>
+            SessionsResults table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.SessionsResults.Id">
+            <summary>
+            Id column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.SessionsResults.StudentsId">
+            <summary>
+            StudentsId column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.SessionsResults.ExamSchedulesId">
+            <summary>
+            ExamSchedulesId column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.SessionsResults.Value">
+            <summary>
+            Value column.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task6.Domain.Models.Students">
+            <summary>
+            Students table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Students.Id">
+            <summary>
+            Id column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Students.FirstName">
+            <summary>
+            FirstName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Students.LastName">
+            <summary>
+            LastName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Students.MiddleName">
+            <summary>
+            MiddleName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Students.Gender">
+            <summary>
+            Gender column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Students.DateOfBirthday">
+            <summary>
+            DateOfBirthday column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Students.GroupsId">
+            <summary>
+            GroupsId column.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task6.Domain.Models.Subjects">
+            <summary>
+            Subject table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Subjects.Id">
+            <summary>
+            Id collumn.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Subjects.Name">
+            <summary>
+            Name collumn.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Domain.Models.Subjects.IsAssessment">
+            <summary>
+            IsAssessment collumn.
+            </summary>
+        </member>
     </members>
 </doc>

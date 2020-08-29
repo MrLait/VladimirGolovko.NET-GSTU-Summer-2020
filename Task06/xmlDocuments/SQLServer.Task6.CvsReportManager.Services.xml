@@ -4,6 +4,11 @@
         <name>SQLServer.Task6.CvsReportManager.Services</name>
     </assembly>
     <members>
+        <member name="T:SQLServer.Task6.CvsReportManager.Services.Utils.Excel">
+            <summary>
+            Excel reader and writer.
+            </summary>
+        </member>
         <member name="M:SQLServer.Task6.CvsReportManager.Services.Utils.Excel.#ctor(System.String,System.String)">
             <summary>
             Constructor <see cref="T:SQLServer.Task6.CvsReportManager.Services.Utils.Excel"/>
@@ -15,7 +20,22 @@
             <summary>
             Save to excel format.
             </summary>
-            <param name="report">Input data for save to excel file.</param>
+            <param name="cvsString">Input string in CVS format.</param>
+            <param name="separator">CVS separator.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Utils.Excel.Read(System.Char)">
+            <summary>
+            Implemented Read from excel file.
+            </summary>
+            <param name="separator">Separator.</param>
+            <returns>Returns file in string format.</returns>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Interfaces.IRead.Read(System.Char)">
+            <summary>
+            Implemented Read from excel file.
+            </summary>
+            <param name="separator">Separator.</param>
+            <returns>Returns file in string format.</returns>
         </member>
     </members>
 </doc>

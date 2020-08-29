@@ -7,17 +7,49 @@ using System.Collections.Generic;
 
 namespace SQLServer.Task6.PresentationTests
 {
+    /// <summary>
+    /// Mock base class to simulete data from tables.
+    /// </summary>
     public class MockBaseView
     {
+        /// <summary>
+        /// Exam schedules table.
+        /// </summary>
         public IEnumerable<ExamSchedules> ExamSchedules { get; set; }
+
+        /// <summary>
+        /// Groups table.
+        /// </summary>
         public IEnumerable<Groups> Groups { get; set; }
+
+        /// <summary>
+        /// Sessions table.
+        /// </summary>
         public IEnumerable<Sessions> Sessions { get; set; }
+
+        /// <summary>
+        /// Sessions results table.
+        /// </summary>
         public IEnumerable<SessionsResults> SessionsResults { get; set; }
+
+        /// <summary>
+        /// Students table.
+        /// </summary>
         public IEnumerable<Students> Students { get; set; }
+
+        /// <summary>
+        /// Subjects table.
+        /// </summary>
         public IEnumerable<Subjects> Subjects { get; set; }
 
+        /// <summary>
+        /// Mock property.
+        /// </summary>
         public Mock<IView> Mock { get; set; }
 
+        /// <summary>
+        /// Initialize property tables.
+        /// </summary>
         [SetUp]
         public void InitialMock()
         {

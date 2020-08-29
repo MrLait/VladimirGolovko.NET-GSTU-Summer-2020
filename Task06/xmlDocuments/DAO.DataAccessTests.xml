@@ -162,6 +162,11 @@
             Given Update for checkin on ArgumentNullException. 
             </summary>
         </member>
+        <member name="T:DAO.DataAccess.Singleton.Tests.SingletonDboAccessTests">
+            <summary>
+            Test cases for singleton dbo access class.
+            </summary>
+        </member>
         <member name="M:DAO.DataAccess.Singleton.Tests.SingletonDboAccessTests.GivenGetInstance_ThenOutIsNotNullInstance(System.Boolean)">
             <summary>
             Checkin to create instance.

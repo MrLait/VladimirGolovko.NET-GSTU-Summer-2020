@@ -5,6 +5,9 @@ using DAO.DataAccess.Interfaces;
 
 namespace DAO.DataAccess.Factory.Tests
 {
+    /// <summary>
+    /// Test cases for ADORepositoryFactory.
+    /// </summary>
     [TestFixture()]
     public class ADORepositoryFactoryTests : DatabaseConnectionBase
     {
