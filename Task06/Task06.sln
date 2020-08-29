@@ -40,6 +40,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xlsxData", "xlsxData", "{44
 		xlsxData\StudentsExpelledSesOne50.xlsx = xlsxData\StudentsExpelledSesOne50.xlsx
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{A5C523E4-3941-49BA-9C35-B6ACA12DE810}"
+	ProjectSection(SolutionItems) = preProject
+		xmlDocuments\DAO.DataAccess.xml = xmlDocuments\DAO.DataAccess.xml
+		xmlDocuments\DAO.DataAccessTests.xml = xmlDocuments\DAO.DataAccessTests.xml
+		xmlDocuments\SQLServer.Task6.CvsReportManager.Services.xml = xmlDocuments\SQLServer.Task6.CvsReportManager.Services.xml
+		xmlDocuments\SQLServer.Task6.CvsReportManager.ServicesTests.xml = xmlDocuments\SQLServer.Task6.CvsReportManager.ServicesTests.xml
+		xmlDocuments\SQLServer.Task6.Domain.xml = xmlDocuments\SQLServer.Task6.Domain.xml
+		xmlDocuments\SQLServer.Task6.Presentation.xml = xmlDocuments\SQLServer.Task6.Presentation.xml
+		xmlDocuments\SQLServer.Task6.PresentationTests.xml = xmlDocuments\SQLServer.Task6.PresentationTests.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

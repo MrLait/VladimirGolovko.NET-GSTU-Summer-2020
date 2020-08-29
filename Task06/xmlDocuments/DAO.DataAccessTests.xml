@@ -4,6 +4,21 @@
         <name>DAO.DataAccessTests</name>
     </assembly>
     <members>
+        <member name="T:DAO.DataAccessTests.DatabaseConnectionBase">
+            <summary>
+            Class with database connection string.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccessTests.DatabaseConnectionBase.DbConnString">
+            <summary>
+            Connection string to database.
+            </summary>
+        </member>
+        <member name="T:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests">
+            <summary>
+            Test cases for ADORepositoryFactory.
+            </summary>
+        </member>
         <member name="M:DAO.DataAccess.Factory.Tests.ADORepositoryFactoryTests.GivenCreateExamSchedules_ThenOutIsCheckTypeIsTrue(System.Boolean)">
             <summary>
             Checking the creation of the expected factory method type.

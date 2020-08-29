@@ -4,6 +4,83 @@
         <name>DAO.DataAccess</name>
     </assembly>
     <members>
+        <member name="T:DAO.DataAccess.Factory.ADORepositoryFactory">
+            <summary>
+            ADO repository factory class.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.ExamSchedules">
+            <summary>
+            Represent access to ExamSchedules table.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.Groups">
+            <summary>
+            Represent access to Groups.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.Sessions">
+            <summary>
+            Represent access to Sessions.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.SessionsResults">
+            <summary>
+            Represent access to SessionsResults.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.Students">
+            <summary>
+            Represent access to Students.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.Subjects">
+            <summary>
+            Represent access to Subjects.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.#ctor(System.String)">
+            <summary>
+            Constructor to initializing access with tables and get connection string to database.
+            </summary>
+            <param name="dbConnectionStrig"></param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateExamSchedules">
+            <summary>
+            Factory method to create ExamSchedules table.
+            </summary>
+            <returns>Returns ExamSchedules.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateGroups">
+            <summary>
+            Factory method to create Groups table.
+            </summary>
+            <returns>Returns Groups.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateSessions">
+            <summary>
+            Factory method to create Sessions table.
+            </summary>
+            <returns>Returns Sessions.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateSessionsResults">
+            <summary>
+            Factory method to create SessionsResults table.
+            </summary>
+            <returns>Returns SessionsResults.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateStudents">
+            <summary>
+            Factory method to create Students table.
+            </summary>
+            <returns>Returns Students.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateSubjects">
+            <summary>
+            Factory method to create Subjects table.
+            </summary>
+            <returns>Returns Subjects.</returns>
+        </member>
         <member name="T:DAO.DataAccess.Factory.AbstractFactory">
             <summary>
             Abstract factory to get access to database tables.

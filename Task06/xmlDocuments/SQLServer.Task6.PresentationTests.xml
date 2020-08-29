@@ -4,6 +4,51 @@
         <name>SQLServer.Task6.PresentationTests</name>
     </assembly>
     <members>
+        <member name="T:SQLServer.Task6.PresentationTests.MockBaseView">
+            <summary>
+            Mock base class to simulete data from tables.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.PresentationTests.MockBaseView.ExamSchedules">
+            <summary>
+            Exam schedules table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.PresentationTests.MockBaseView.Groups">
+            <summary>
+            Groups table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.PresentationTests.MockBaseView.Sessions">
+            <summary>
+            Sessions table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.PresentationTests.MockBaseView.SessionsResults">
+            <summary>
+            Sessions results table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.PresentationTests.MockBaseView.Students">
+            <summary>
+            Students table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.PresentationTests.MockBaseView.Subjects">
+            <summary>
+            Subjects table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.PresentationTests.MockBaseView.Mock">
+            <summary>
+            Mock property.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.PresentationTests.MockBaseView.InitialMock">
+            <summary>
+            Initialize property tables.
+            </summary>
+        </member>
         <member name="T:SQLServer.Task6.PresentationTests.TestCaseSources.MyFactoryAggregateOperationsViewTests">
             <summary>
             Factory aggregate operations view.
@@ -123,6 +168,58 @@
             <summary>
             Parameters for tests StudentsToBeExpelledView and ordered.
             </summary>
+        </member>
+        <member name="T:SQLServer.Task6.Presentation.Views.Tests.AggregateOperationsViewTests">
+            <summary>
+            Test cases for aggregate operations view class.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.Tests.AggregateOperationsViewTests.GiveGetView_WhenMaxValue_ThenOutIsMaxValue(System.String,System.String,System.Int32)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.Tests.AggregateOperationsViewTests.GiveGetView_WhenMinValue_ThenOutIsMinValue(System.String,System.String,System.Int32)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.Tests.AggregateOperationsViewTests.GiveGetView_WhenAverageValue_ThenOutIsAverageValue(System.String,System.String,System.Double)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.Tests.AggregateOperationsViewTests.GiveGetView_WhenSessionName_ThenOutIsSessionName(System.String,System.String,System.String)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.Tests.AggregateOperationsViewTests.GiveGetView_WhenGroupName_ThenOutIsGroupName(System.String,System.String,System.String)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.Tests.AggregateOperationsViewTests.GiveToString_ThenOutIsToString(System.String,System.String)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
         </member>
         <member name="T:SQLServer.Task6.Presentation.Views.Tests.SessionsResultsViewTests">
             <summary>

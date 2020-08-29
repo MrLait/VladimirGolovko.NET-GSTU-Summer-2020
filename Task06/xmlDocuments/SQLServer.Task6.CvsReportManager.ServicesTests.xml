@@ -4,5 +4,113 @@
         <name>SQLServer.Task6.CvsReportManager.ServicesTests</name>
     </assembly>
     <members>
+        <member name="T:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests">
+            <summary>
+            Test cases to CvsReportManager.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.directoryInfoFullName">
+            <summary>
+            Full name to directory path.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenSessionsResultsView_ThenOutIsSessionOneGroupPM_1_Ordered(System.String)">
+            <summary>
+            Print SessionsResultsView.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenSessionsResultsView_ThenOutIsSessionOneGroupPM_2_Ordered(System.String)">
+            <summary>
+            Print SessionsResultsView.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenSessionsResultsView_ThenOutIsSessionTwoGroupPM_1_Ordered(System.String)">
+            <summary>
+            Print SessionsResultsView.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenSessionsResultsView_ThenOutIsSessionTwoGroupPM_2_Ordered(System.String)">
+            <summary>
+            Print SessionsResultsView.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionOneGroupPM_1(System.String)">
+            <summary>
+            Print AggregateOperations.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionOneGroupPM_2(System.String)">
+            <summary>
+            Print AggregateOperations.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionTwoGroupPM_1(System.String)">
+            <summary>
+            Print AggregateOperations.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionTwoGroupPM_2(System.String)">
+            <summary>
+            Print AggregateOperations.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade30(System.String)">
+            <summary>
+            Print StudentsToBeExpelled.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade50(System.String)">
+            <summary>
+            Print StudentsToBeExpelled.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade20Ordered(System.String)">
+            <summary>
+            Print StudentsToBeExpelled.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade40Ordered(System.String)">
+            <summary>
+            Print StudentsToBeExpelled.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="T:SQLServer.Task6.CvsReportManager.Services.Utils.Tests.ExcelTests">
+            <summary>
+            Test cases for Excel class.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task6.CvsReportManager.Services.Utils.Tests.ExcelTests.directoryInfoFullName">
+            <summary>
+            Full name to directory path.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Utils.Tests.ExcelTests.GivenRead_WhenInXlsxFile_ThenOutIsInputXlsxFile(System.String,System.String,System.Char)">
+            <summary>
+            Test case to tests Read method.
+            </summary>
+            <param name="actual">Actrual string.</param>
+            <param name="fileName">File name.</param>
+            <param name="seporator">Seporator between word.</param>
+        </member>
+        <member name="M:SQLServer.Task6.CvsReportManager.Services.Utils.Tests.ExcelTests.GivenPrint_WhenInXlsxFile_ThenOutIsXlsxFile(System.String,System.String,System.Char)">
+            <summary>
+            Test case to tests Print method.
+            </summary>
+            <param name="actual">Actrual string.</param>
+            <param name="fileName">File name.</param>
+            <param name="seporator">Seporator between words.</param>
+        </member>
     </members>
 </doc>
