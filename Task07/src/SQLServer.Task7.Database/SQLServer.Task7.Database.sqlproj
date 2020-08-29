@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SQLServer.Task7.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{0e8cbe6d-5d5c-43ef-867a-8b627402b862}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SQLServer.Task7.Database</RootNamespace>
+    <AssemblyName>SQLServer.Task7.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\PostDeploy" />
+    <Folder Include="dbo\StoredProcedure" />
+    <Folder Include="dbo\StoredProcedure\spExamSchedules" />
+    <Folder Include="dbo\StoredProcedure\spGroups" />
+    <Folder Include="dbo\StoredProcedure\spSessions" />
+    <Folder Include="dbo\StoredProcedure\spSessionsResults" />
+    <Folder Include="dbo\StoredProcedure\spStudents" />
+    <Folder Include="dbo\StoredProcedure\spSubjects" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="PublishLocation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\PostDeploy\ExamSchedulesPostDep.sql" />
+    <Build Include="dbo\PostDeploy\GroupsPostDep.sql" />
+    <PostDeploy Include="dbo\PostDeploy\Script.Main.PostDeploy.sql" />
+    <Build Include="dbo\PostDeploy\SessionsPostDep.sql" />
+    <Build Include="dbo\PostDeploy\SessionsResultsPostDep.sql" />
+    <Build Include="dbo\PostDeploy\StudentsPostDep.sql" />
+    <Build Include="dbo\PostDeploy\SubjectsPostDep.sql" />
+    <Build Include="dbo\StoredProcedure\spExamSchedules\AddExamSchedules.sql" />
+    <Build Include="dbo\StoredProcedure\spExamSchedules\DeleteExamSchedulesById.sql" />
+    <Build Include="dbo\StoredProcedure\spExamSchedules\GetAllExamSchedules.sql" />
+    <Build Include="dbo\StoredProcedure\spExamSchedules\GetExamSchedulesById.sql" />
+    <Build Include="dbo\StoredProcedure\spExamSchedules\UpdateExamSchedules.sql" />
+    <Build Include="dbo\StoredProcedure\spGroups\AddGroups.sql" />
+    <Build Include="dbo\StoredProcedure\spGroups\DeleteGroupsById.sql" />
+    <Build Include="dbo\StoredProcedure\spGroups\GetAllGroups.sql" />
+    <Build Include="dbo\StoredProcedure\spGroups\GetGroupsById.sql" />
+    <Build Include="dbo\StoredProcedure\spGroups\UpdateGroups.sql" />
+    <Build Include="dbo\StoredProcedure\spSessions\AddSessions.sql" />
+    <Build Include="dbo\StoredProcedure\spSessions\DeleteSessionsById.sql" />
+    <Build Include="dbo\StoredProcedure\spSessions\GetAllSessions.sql" />
+    <Build Include="dbo\StoredProcedure\spSessions\GetSessionsById.sql" />
+    <Build Include="dbo\StoredProcedure\spSessions\UpdateSessions.sql" />
+    <Build Include="dbo\StoredProcedure\spSessionsResults\AddSessionsResults.sql" />
+    <Build Include="dbo\StoredProcedure\spSessionsResults\DeleteSessionsResultsById.sql" />
+    <Build Include="dbo\StoredProcedure\spSessionsResults\GetAllSessionsResults.sql" />
+    <Build Include="dbo\StoredProcedure\spSessionsResults\GetSessionsResultsById.sql" />
+    <Build Include="dbo\StoredProcedure\spSessionsResults\UpdateSessionsResults.sql" />
+    <Build Include="dbo\StoredProcedure\spStudents\AddStudents.sql" />
+    <Build Include="dbo\StoredProcedure\spStudents\DeleteStudentsById.sql" />
+    <Build Include="dbo\StoredProcedure\spStudents\GetAllStudents.sql" />
+    <Build Include="dbo\StoredProcedure\spStudents\GetStudentsById.sql" />
+    <Build Include="dbo\StoredProcedure\spStudents\UpdateStudents.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\AddSubjects.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\DeleteSubjectsById.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\GetAllSubjects.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\GetSubjectsById.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\UpdateSubjects.sql" />
+    <Build Include="dbo\Tables\ExamSchedules.sql" />
+    <Build Include="dbo\Tables\Groups.sql" />
+    <Build Include="dbo\Tables\Sessions.sql" />
+    <Build Include="dbo\Tables\SessionsResults.sql" />
+    <Build Include="dbo\Tables\Students.sql" />
+    <Build Include="dbo\Tables\Subjects.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocation\SQLServer.Task7.Database.publish.xml" />
+  </ItemGroup>
+</Project>

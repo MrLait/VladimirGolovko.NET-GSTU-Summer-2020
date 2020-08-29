@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AAD36CCF-9FD1-45EB-8C18-9F7D6707272E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C58384CE-F995-4EA3-925C-A21AF731BDF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xlsxData", "xlsxData", "{44506C9B-DF7C-40B1-A407-DF16DC283D56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{A5C523E4-3941-49BA-9C35-B6ACA12DE810}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLServer.Task7.Database", "src\SQLServer.Task7.Database\SQLServer.Task7.Database.sqlproj", "{0E8CBE6D-5D5C-43EF-867A-8B627402B862}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E83C1FB-42FB-4EB0-9899-758624C42C31}
+	EndGlobalSection
+EndGlobal
