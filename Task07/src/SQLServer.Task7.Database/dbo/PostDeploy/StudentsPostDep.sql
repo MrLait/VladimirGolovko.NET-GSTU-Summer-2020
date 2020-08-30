@@ -4,7 +4,7 @@ DECLARE @QuantityGroups INT;
 DECLARE @number INT;
 DECLARE @Random INT;
 DECLARE @StudentsNum INT;
-DECLARE @FirstNamePrefix NVARCHAR(40), @LastNamePrefix NVARCHAR(40), @MiddleNamePrefix NVARCHAR(40), @Gender NVARCHAR(40);
+DECLARE @FirstNamePrefix NVARCHAR(50), @LastNamePrefix NVARCHAR(50), @MiddleNamePrefix NVARCHAR(50), @Gender NVARCHAR(50);
 SET @QuantityGroups = (SELECT COUNT(*) FROM Groups) + 1;
 SET @number = 1;
 SET @StudentsNum = 10

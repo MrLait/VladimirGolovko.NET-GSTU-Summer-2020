@@ -1,4 +1,6 @@
-﻿EXEC GroupsPostDep; 
+﻿EXEC SpecialtiesPostDep;
+EXEC ExaminersPostDep;
+EXEC GroupsPostDep; 
 EXEC StudentsPostDep;
 EXEC SessionsPostDep;
 EXEC SubjectsPostDep;
