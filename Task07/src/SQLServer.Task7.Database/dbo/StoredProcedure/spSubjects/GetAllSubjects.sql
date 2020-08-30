@@ -1,4 +1,0 @@
-﻿CREATE PROCEDURE GetAllSubjects
-AS
-	SELECT * FROM Subjects
-GO
