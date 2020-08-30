@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocument
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLServer.Task7.Database", "src\SQLServer.Task7.Database\SQLServer.Task7.Database.sqlproj", "{0E8CBE6D-5D5C-43EF-867A-8B627402B862}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task7.Domain", "src\SQLServer.Task7.Domain\SQLServer.Task7.Domain.csproj", "{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +27,17 @@ Global
 		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0E8CBE6D-5D5C-43EF-867A-8B627402B862} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
+		{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E83C1FB-42FB-4EB0-9899-758624C42C31}
