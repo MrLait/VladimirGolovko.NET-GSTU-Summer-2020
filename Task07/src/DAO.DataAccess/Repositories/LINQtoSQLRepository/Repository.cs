@@ -1,12 +1,8 @@
 ﻿using DAO.DataAccess.Interfaces;
-using DAO.DataAccess.Repositories.Exstension;
 using SQLServer.Task7.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Reflection;
+using System.Data.Linq;
 
 namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
 {
@@ -14,20 +10,19 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
     /// Abstract repository with implemented CRUD methods.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class Repository<T> : ICRUD<T> where T : IEntity, new()
+    public class Repository<T> : ICRUD<T> where T :class, IEntity, new()
     {
         /// <summary>
         /// Connection string to database
         /// </summary>
-        protected string DbConString { get; private set; }
+        protected DataContext DataContext { get; private set; }
 
-        /// <summary>
-        /// Constructor <see cref="Repository{T}"/>
-        /// </summary>
-        /// <param name="dbConString"><see cref="DbConString"/></param>
         public Repository(string dbConString)
         {
-            DbConString = dbConString;
+            DataContext = new DataContext(dbConString)
+            {
+                DeferredLoadingEnabled = false
+            };
         }
 
         /// <summary>
@@ -39,27 +34,9 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
             if (entity == null)
                 throw new ArgumentNullException(typeof(T).Name + "object Should not be Null when Saving to database");
 
-            var storedProcedure = "Add" + entity.GetType().Name;
+            DataContext.GetTable<T>().InsertOnSubmit(entity);
+            DataContext.SubmitChanges();
 
-            using (SqlConnection sqlConnection = new SqlConnection(DbConString))
-            {
-                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection); //using
-                
-                try
-                {
-                    sqlCommand.Parameters.AddRange(GetAddParameter(entity).ToArray());
-                    sqlConnection.Open();
-                    sqlCommand.ExecuteScalar();
-                }
-                catch (SqlException sqlEx)
-                {
-                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-            }
         }
 
         /// <summary>
@@ -268,5 +245,9 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
             return sqlParams;
         }
 
+        IEnumerable<T> ICRUD<T>.GetAll()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
