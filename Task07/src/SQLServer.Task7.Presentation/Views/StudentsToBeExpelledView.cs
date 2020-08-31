@@ -114,7 +114,12 @@ namespace SQLServer.Task7.Presentation.Views
             for (int i = 0; i < dataArray.Length; i++)
             {
                 foreach (var item in dataArray[i])
-                    appendedLine.AppendLine($"{item.StudentId}; {item.SessionName}; {item.GroupName}; {item.FirstName}; {item.LastName}; {item.MiddleName}");
+                {
+                    if (i < dataArray.Length - 1)
+                        appendedLine.AppendLine($"{item.StudentId}; {item.SessionName}; {item.GroupName}; {item.FirstName}; {item.LastName}; {item.MiddleName}");
+                    if (i == dataArray.Length - 1)
+                        appendedLine.Append($"{item.StudentId}; {item.SessionName}; {item.GroupName}; {item.FirstName}; {item.LastName}; {item.MiddleName}");
+                }
             }
             return appendedLine.ToString();
         }
