@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Linq;
 using System.Linq;
+using System.Reflection;
 
 namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
 {
@@ -86,107 +87,35 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
             if (entity == null)
                 throw new ArgumentNullException();
 
-            string tableName = new T().GetType().Name;
-            string storedProcedure = "Update" + tableName;
-
-            using (SqlConnection sqlConnection = new SqlConnection(DbConString))
-            {
-                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection);
-                sqlCommand.Parameters.AddRange(GetUpdateParameter(entity).ToArray());
-
-                SqlDataAdapter adpt = new SqlDataAdapter(sqlCommand);
-                DataSet ds = new DataSet();
-
-                try
-                {
-                    adpt.Fill(ds);
-                    return ds.Tables[0].ToEnumerable<T>().ToList().SingleOrDefault();
-                }
-                catch (SqlException sqlEx)
-                {
-                    throw new ArgumentException("Class Name and Table name must be same for this method. See inner exception", sqlEx);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
+            var tableElement = DataContext.GetTable<T>().Where(x => x.Id.Equals(entity.Id)).Single();
+            var updatedElement = GetUpdateParameter(entity, tableElement);
+            DataContext.SubmitChanges();
+            return updatedElement;
         }
 
         /// <summary>
-        /// Creating sqlCommand.
+        /// Updata fields from one object to other.
         /// </summary>
-        /// <param name="storedProcedure">Name of stored procedure.</param>
-        /// <param name="sqlConnection"> Sql connection sting</param>
-        /// <returns>return sql command</returns>
-        private SqlCommand SqlCommandInstance(string storedProcedure, SqlConnection sqlConnection)
+        /// <param name="from">Main object.</param>
+        /// <param name="to">Target object.</param>
+        /// <returns>Returns updated object.</returns>
+        private static T GetUpdateParameter(T from, T to)
         {
-            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection)
-            {
-                CommandType = CommandType.StoredProcedure
-            };
-            return sqlCommand;
-        }
+            PropertyInfo[] fieldsTo = to.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            PropertyInfo[] fieldsFrom = from.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
-        /// <summary>
-        /// Private method for get property from objects and add their to list for sqlParameters
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns>returns list of sqlParameters.</returns>
-        private List<SqlParameter> GetUpdateParameter(object obj)
-        {
-            PropertyInfo[] fields = obj.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
-            var sqlParams = new List<SqlParameter>();
-            foreach (var f in fields)
+            foreach (var fTo in fieldsTo)
             {
-                sqlParams.Add(new SqlParameter(f.Name, f.GetValue(obj, null)));
-            }
-            return sqlParams;
-        }
-
-        /// <summary>
-        /// Creating sqlCommand.
-        /// </summary>
-        /// <param name="storedProcedure">Name of stored procedure.</param>
-        /// <param name="sqlConnection"> Sql connection sting</param>
-        /// <param name="sqlParamArr"> SqlParameters</param>
-        /// <returns>return sql command</returns>
-        private SqlCommand SqlCommandInstance(string storedProcedure, SqlConnection sqlConnection, SqlParameter[] sqlParamArr)
-        {
-            SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection);
-            sqlCommand.Parameters.AddRange(sqlParamArr);
-            return sqlCommand;
-        }
-
-        /// <summary>
-        /// Private method for get property from objects and add their to list for sqlParameters
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns>returns list of sqlParameters.</returns>
-        private List<SqlParameter> GetAddParameter(object obj)
-        {
-            PropertyInfo[] fields = obj.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
-            var sqlParams = new List<SqlParameter>();
-            foreach (var f in fields)
-            {
-                if (f.GetCustomAttributes(false).Length != 0)
+                foreach (var fFrom in fieldsFrom)
                 {
-                    if (f.GetCustomAttributesData()[0].AttributeType.Name != "KeyAttribute") //f.GetCustomAttributes(false).Length == 0 && 
+                    if (fTo.Name == fFrom.Name)
                     {
-                        sqlParams.Add(new SqlParameter(f.Name, f.GetValue(obj, null)));
+                        fTo.SetValue(to, fFrom.GetValue(from));
+                        break;
                     }
                 }
-                else
-                {
-                    sqlParams.Add(new SqlParameter(f.Name, f.GetValue(obj, null)));
-                }
             }
-            return sqlParams;
-        }
-
-        IEnumerable<T> ICRUD<T>.GetAll()
-        {
-            throw new System.NotImplementedException();
+            return to;
         }
     }
 }
