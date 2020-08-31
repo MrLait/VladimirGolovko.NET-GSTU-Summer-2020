@@ -3,6 +3,7 @@ using SQLServer.Task7.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Linq;
+using System.Linq;
 
 namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
 {
@@ -48,27 +49,9 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
             if (byId == 0)
                 throw new ArgumentNullException("byId should not be 0");
 
-            string tableName = new T().GetType().Name;
-            string storedProcedure = "Delete" + tableName + "ById";
+            DataContext.GetTable<T>().DeleteOnSubmit(DataContext.GetTable<T>().Where(x => x.Id.Equals(byId)).SingleOrDefault());
+            DataContext.SubmitChanges();
 
-            using (SqlConnection sqlConnection = new SqlConnection(DbConString))
-            {
-                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection, new SqlParameter[] { new SqlParameter("Id", byId) });
-
-                try
-                {
-                    sqlConnection.Open();
-                    sqlCommand.ExecuteNonQuery();
-                }
-                catch (SqlException sqlEx)
-                {
-                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
         }
 
         /// <summary>
