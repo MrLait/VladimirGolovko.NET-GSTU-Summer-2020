@@ -60,29 +60,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
         /// <returns></returns>
         public IEnumerable<T> GetAll()
         {
-            string tableName = new T().GetType().Name;
-            string storedProcedure = "GetAll" + tableName;
-
-            using (SqlConnection sqlConnection = new SqlConnection(DbConString))
-            {
-                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection);
-                SqlDataAdapter adpt = new SqlDataAdapter(sqlCommand); //using
-                
-                try
-                {
-                    DataSet ds = new DataSet();
-                    adpt.Fill(ds);
-                    return ds.Tables[0].ToEnumerable<T>();
-                }
-                catch (SqlException sqlEx)
-                {
-                    throw new ArgumentException("Some Error occured at database, if error in stored procedure. See inner exception for more detail exception." + storedProcedure, sqlEx);
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-            }
+            return DataContext.GetTable<T>();
         }
 
         /// <summary>
