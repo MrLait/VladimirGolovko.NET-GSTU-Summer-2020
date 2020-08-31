@@ -1,43 +1,43 @@
 ﻿using SQLServer.Task7.Domain.Interfaces;
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Linq.Mapping;
 
-namespace SQLServer.Task6.Domain.Models
+namespace SQLServer.Task7.Domain.Models
 {
     /// <summary>
     /// Exam schedules table in database.
     /// </summary>
-    [Table("ExamSchedules")]
+    [Table(Name = "ExamSchedules")]
     public class ExamSchedules : IEntity
     {
         /// <summary>
         /// Id column in table.
         /// </summary>
-        [Key]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
 
         /// <summary>
         /// SessionsId column in table.
         /// </summary>
-        [ForeignKey("SessionsId")]
+        [Column(Name = "SessionsId")]
         public int SessionsId { get; set; }
 
         /// <summary>
         /// GroupsId column in table.
         /// </summary>
-        [ForeignKey("GroupsId")]
+        [Column(Name = "GroupsId")]
         public int GroupsId { get; set; }
 
         /// <summary>
         /// SubjectsId column in table.
         /// </summary>
-        [ForeignKey("SubjectsId")]
+        [Column(Name = "SubjectsId")]
         public int SubjectsId { get; set; }
 
         /// <summary>
         /// Exam date column in table.
         /// </summary>
+        [Column(Name = "ExamDate")]
         public DateTime ExamDate { get; set; }
     }
 }

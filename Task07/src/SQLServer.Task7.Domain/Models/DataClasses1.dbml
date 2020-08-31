@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SQLServer.Task7.Database" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAIT-PC\SQLEXPRESS;Initial Catalog=SQLServer.Task7.Database;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="SQLServer.Task7.Domain.Properties.Settings" SettingsPropertyName="SQLServer_Task7_DatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ExamSchedules" Member="ExamSchedules">
+    <Type Name="ExamSchedule">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SessionsId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GroupsId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SubjectsId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExamDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ExamSchedule_SessionsResult" Member="SessionsResults" ThisKey="Id" OtherKey="ExamSchedulesId" Type="SessionsResult" />
+      <Association Name="Group_ExamSchedule" Member="Group" ThisKey="GroupsId" OtherKey="Id" Type="Group" IsForeignKey="true" />
+      <Association Name="Session_ExamSchedule" Member="Session" ThisKey="SessionsId" OtherKey="Id" Type="Session" IsForeignKey="true" />
+      <Association Name="Subject_ExamSchedule" Member="Subject" ThisKey="SubjectsId" OtherKey="Id" Type="Subject" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Groups" Member="Groups">
+    <Type Name="Group">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SpecialtiesId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Group_ExamSchedule" Member="ExamSchedules" ThisKey="Id" OtherKey="GroupsId" Type="ExamSchedule" />
+      <Association Name="Group_Student" Member="Students" ThisKey="Id" OtherKey="GroupsId" Type="Student" />
+      <Association Name="Specialty_Group" Member="Specialty" ThisKey="SpecialtiesId" OtherKey="Id" Type="Specialty" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sessions" Member="Sessions">
+    <Type Name="Session">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Session_ExamSchedule" Member="ExamSchedules" ThisKey="Id" OtherKey="SessionsId" Type="ExamSchedule" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SessionsResults" Member="SessionsResults">
+    <Type Name="SessionsResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentsId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExamSchedulesId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ExamSchedule_SessionsResult" Member="ExamSchedule" ThisKey="ExamSchedulesId" OtherKey="Id" Type="ExamSchedule" IsForeignKey="true" />
+      <Association Name="Student_SessionsResult" Member="Student" ThisKey="StudentsId" OtherKey="Id" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Specialties" Member="Specialties">
+    <Type Name="Specialty">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Info" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Specialty_Group" Member="Groups" ThisKey="Id" OtherKey="SpecialtiesId" Type="Group" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Students" Member="Students">
+    <Type Name="Student">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfBirthday" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="GroupsId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Student_SessionsResult" Member="SessionsResults" ThisKey="Id" OtherKey="StudentsId" Type="SessionsResult" />
+      <Association Name="Group_Student" Member="Group" ThisKey="GroupsId" OtherKey="Id" Type="Group" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Subjects" Member="Subjects">
+    <Type Name="Subject">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsAssessment" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ExaminersId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Subject_ExamSchedule" Member="ExamSchedules" ThisKey="Id" OtherKey="SubjectsId" Type="ExamSchedule" />
+      <Association Name="Examiner_Subject" Member="Examiner" ThisKey="ExaminersId" OtherKey="Id" Type="Examiner" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Students" Member="Examiners">
+    <Type Name="Examiner">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Examiner_Subject" Member="Subjects" ThisKey="Id" OtherKey="ExaminersId" Type="Subject" />
+    </Type>
+  </Table>
+</Database>

@@ -1,36 +1,36 @@
 ﻿using SQLServer.Task7.Domain.Interfaces;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Linq.Mapping;
 
 namespace SQLServer.Task7.Domain.Models
 {
     /// <summary>
     /// SessionsResults table.
     /// </summary>
-    [Table("SessionsResults")]
+    [Table(Name = "SessionsResults")]
     public class SessionsResults : IEntity
     {
         /// <summary>
         /// Id column.
         /// </summary>
-        [Key]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
 
         /// <summary>
         /// StudentsId column.
         /// </summary>
-        [ForeignKey("StudentsId")]
+        [Column(Name = "StudentsId")]
         public int StudentsId { get; set; }
 
         /// <summary>
         /// ExamSchedulesId column.
         /// </summary>
-        [ForeignKey("ExamSchedulesId")]
+        [Column(Name = "ExamSchedulesId")]
         public int ExamSchedulesId { get; set; }
 
         /// <summary>
         /// Value column.
         /// </summary>
+        [Column(Name = "Value")]
         public string Value { get; set; }
     }
 }

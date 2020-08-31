@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Data.Linq.Mapping;
 
 namespace SQLServer.Task7.Domain.Interfaces
 {
@@ -10,7 +10,7 @@ namespace SQLServer.Task7.Domain.Interfaces
         /// <summary>
         /// Id column in table.
         /// </summary>
-        [Key]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         int Id { get; set; }
     }
 }

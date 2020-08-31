@@ -1,29 +1,30 @@
 ﻿using SQLServer.Task7.Domain.Interfaces;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Linq.Mapping;
 
 namespace SQLServer.Task7.Domain.Models
 {
     /// <summary>
     /// Groups table in database.
     /// </summary>
-    [Table("Groups")]
+    [Table(Name = "Groups")]
     public class Groups : IEntity
     {
         /// <summary>
         /// Id column in table.
         /// </summary>
-        [Key]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
 
         /// <summary>
         /// Name column in table.
         /// </summary>
+        [Column(Name = "Name")]
         public string Name { get; set; }
 
         /// <summary>
         /// SpecialtiesId column in table.
         /// </summary>
+        [Column(Name = "SpecialtiesId")]
         public string SpecialtiesId { get; set; }
     }
 }

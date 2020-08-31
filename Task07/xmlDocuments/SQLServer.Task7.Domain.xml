@@ -14,6 +14,36 @@
             Id column in table.
             </summary>
         </member>
+        <member name="T:SQLServer.Task7.Domain.Models.ExamSchedules">
+            <summary>
+            Exam schedules table in database.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.ExamSchedules.Id">
+            <summary>
+            Id column in table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.ExamSchedules.SessionsId">
+            <summary>
+            SessionsId column in table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.ExamSchedules.GroupsId">
+            <summary>
+            GroupsId column in table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.ExamSchedules.SubjectsId">
+            <summary>
+            SubjectsId column in table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.ExamSchedules.ExamDate">
+            <summary>
+            Exam date column in table.
+            </summary>
+        </member>
         <member name="T:SQLServer.Task7.Domain.Models.Groups">
             <summary>
             Groups table in database.
@@ -137,36 +167,6 @@
         <member name="P:SQLServer.Task7.Domain.Models.Subjects.ExaminersId">
             <summary>
             ExaminersId collumn.
-            </summary>
-        </member>
-        <member name="T:SQLServer.Task6.Domain.Models.ExamSchedules">
-            <summary>
-            Exam schedules table in database.
-            </summary>
-        </member>
-        <member name="P:SQLServer.Task6.Domain.Models.ExamSchedules.Id">
-            <summary>
-            Id column in table.
-            </summary>
-        </member>
-        <member name="P:SQLServer.Task6.Domain.Models.ExamSchedules.SessionsId">
-            <summary>
-            SessionsId column in table.
-            </summary>
-        </member>
-        <member name="P:SQLServer.Task6.Domain.Models.ExamSchedules.GroupsId">
-            <summary>
-            GroupsId column in table.
-            </summary>
-        </member>
-        <member name="P:SQLServer.Task6.Domain.Models.ExamSchedules.SubjectsId">
-            <summary>
-            SubjectsId column in table.
-            </summary>
-        </member>
-        <member name="P:SQLServer.Task6.Domain.Models.ExamSchedules.ExamDate">
-            <summary>
-            Exam date column in table.
             </summary>
         </member>
     </members>
