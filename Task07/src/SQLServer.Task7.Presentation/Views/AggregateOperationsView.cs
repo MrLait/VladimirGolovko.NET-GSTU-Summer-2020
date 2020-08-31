@@ -1,5 +1,4 @@
 ﻿using DAO.DataAccess.Singleton;
-using SQLServer.Task7.Presentation.Views;
 using SQLServer.Task7.Presentation.Interfaces;
 using System;
 using System.Linq;

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{406E5C30-E0C2-457F-AEE9-0057D1D13A64}</ProjectGuid>
+    <ProjectGuid>{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DAO.DataAccess</RootNamespace>
-    <AssemblyName>DAO.DataAccess</AssemblyName>
+    <RootNamespace>CvsReportManager.Services</RootNamespace>
+    <AssemblyName>CvsReportManager.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\xmlDocuments\DAO.DataAccess.xml</DocumentationFile>
+    <DocumentationFile>..\..\xmlDocuments\CvsReportManager.Services.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,7 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,20 +42,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factory\RepositoryFactory.cs" />
-    <Compile Include="Factory\AbstractFactory.cs" />
-    <Compile Include="Interfaces\ICRUD.cs" />
+    <Compile Include="Utils\Excel.cs" />
+    <Compile Include="Interfaces\IPrint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ADONetUsingReflection\Exstension\ExtencionHelpers.cs" />
-    <Compile Include="Repositories\ADONetUsingReflection\Repository.cs" />
-    <Compile Include="Repositories\LINQtoSQLRepository\Repository.cs" />
-    <Compile Include="Singleton\SingletonDboAccess.cs" />
+    <Compile Include="CvsReportManager.cs" />
+    <Compile Include="Interfaces\IRead.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SQLServer.Task7.Domain\SQLServer.Task7.Domain.csproj">
-      <Project>{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}</Project>
-      <Name>SQLServer.Task7.Domain</Name>
-    </ProjectReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

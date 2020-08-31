@@ -56,7 +56,7 @@
     </ProjectReference>
     <ProjectReference Include="..\SQLServer.Task7.Domain\SQLServer.Task7.Domain.csproj">
       <Project>{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}</Project>
-      <Name>SQLServer.Task6.Domain</Name>
+      <Name>SQLServer.Task7.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
