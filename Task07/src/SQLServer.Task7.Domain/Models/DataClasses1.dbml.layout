@@ -99,7 +99,7 @@
         <classShapeMoniker Id="56f53098-b7e7-49ed-b039-a3477444f93a" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.25 : 6.41429768880208); (6.5 : 6.41429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(7.25 : 6.41429768880208); (6.5 : 6.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClasses1DataContext/Examiner/Examiner_Subject" />
       <nodes>
         <classShapeMoniker Id="323ce599-73fe-4354-a3c4-4ccb225aa0cc" />
