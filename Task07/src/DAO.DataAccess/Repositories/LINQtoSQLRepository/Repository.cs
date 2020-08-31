@@ -88,9 +88,9 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
                 throw new ArgumentNullException();
 
             var tableElement = DataContext.GetTable<T>().Where(x => x.Id.Equals(entity.Id)).Single();
-            var updatedElement = GetUpdateParameter(entity, tableElement);
+            var updatedTableElement = GetUpdateParameter(entity, tableElement);
             DataContext.SubmitChanges();
-            return updatedElement;
+            return updatedTableElement;
         }
 
         /// <summary>
