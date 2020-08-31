@@ -73,29 +73,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
             if (byId == 0)
                 throw new ArgumentNullException("byId should not be 0");
 
-            string tableName = new T().GetType().Name;
-            string storedProcedure = "Get" + tableName + "ById";
-
-            using (SqlConnection sqlConnection = new SqlConnection(DbConString))
-            {
-                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection, new SqlParameter[] { new SqlParameter("Id", byId) });
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
-
-                try
-                {
-                    DataSet ds = new DataSet();
-                    sqlDataAdapter.Fill(ds);
-                    return ds.Tables[0].ToEnumerable<T>().ToList().SingleOrDefault(); 
-                }
-                catch (SqlException sqlEx)
-                {
-                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-            }
+            return DataContext.GetTable<T>().Where(x => x.Id.Equals(byId)).Single();
         }
 
         /// <summary>
