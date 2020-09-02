@@ -1,25 +1,24 @@
 ﻿using DAO.DataAccess.Interfaces;
 using SQLServer.Task7.Domain.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Data.Linq;
 using System.Linq;
 using System.Reflection;
 
-namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
+namespace DAO.DataAccess.Repositories.LINQtoSQLRepositories
 {
     /// <summary>
     /// Abstract repository with implemented CRUD methods.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class Repository<T> : ICRUD<T> where T :class, IEntity, new()
+    public class LinqToSqlRepository<T> : ICRUD<T> where T : class, IEntity, new()
     {
         /// <summary>
         /// Connection string to database
         /// </summary>
         protected DataContext DataContext { get; private set; }
 
-        public Repository(string dbConString)
+        public LinqToSqlRepository(string dbConString)
         {
             DataContext = new DataContext(dbConString)
             {
@@ -27,10 +26,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
             };
         }
 
-        /// <summary>
-        /// Implementation Add <see cref="ICRUD{T}.Add(T)"/>
-        /// </summary>
-        /// <param name="entity">Models.</param>
+        /// <inheritdoc/>
         public void Add(T entity)
         {
             if (entity == null)
@@ -47,8 +43,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
         /// <param name="byId">Id.</param>
         public void Delete(int byId)
         {
-            if (byId == 0)
-                throw new ArgumentNullException("byId should not be 0");
+            if (byId == 0) throw new ArgumentNullException("byId should not be 0");
 
             DataContext.GetTable<T>().DeleteOnSubmit(DataContext.GetTable<T>().Where(x => x.Id.Equals(byId)).SingleOrDefault());
             DataContext.SubmitChanges();
@@ -59,7 +54,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
         /// Implementation GetAll <see cref="ICRUD{T}.GetAll"/>
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<T> GetAll()
+        public IQueryable<T> GetAll()
         {
             return DataContext.GetTable<T>();
         }
@@ -71,8 +66,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
         /// <returns>Returns object.</returns>
         public T GetByID(int byId)
         {
-            if (byId == 0)
-                throw new ArgumentNullException("byId should not be 0");
+            if (byId == 0) throw new ArgumentNullException("byId should not be 0");
 
             return DataContext.GetTable<T>().Where(x => x.Id.Equals(byId)).Single();
         }
@@ -84,8 +78,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
         /// <returns>Returns updated elements.</returns>
         public T Update(T entity)
         {
-            if (entity == null)
-                throw new ArgumentNullException();
+            if (entity == null) throw new ArgumentNullException();
 
             var tableElement = DataContext.GetTable<T>().Where(x => x.Id.Equals(entity.Id)).Single();
             var updatedTableElement = GetUpdateParameter(entity, tableElement);
@@ -99,7 +92,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepository
         /// <param name="from">Main object.</param>
         /// <param name="to">Target object.</param>
         /// <returns>Returns updated object.</returns>
-        private static T GetUpdateParameter(T from, T to)
+        private T GetUpdateParameter(T from, T to)
         {
             PropertyInfo[] fieldsTo = to.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
             PropertyInfo[] fieldsFrom = from.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);

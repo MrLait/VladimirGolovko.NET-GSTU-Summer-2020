@@ -98,7 +98,7 @@ namespace DAO.DataAccess.Repositories.ADONetUsingReflection
         /// Implementation GetAll <see cref="ICRUD{T}.GetAll"/>
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<T> GetAll()
+        public IQueryable<T> GetAll()
         {
             string tableName = new T().GetType().Name;
             string storedProcedure = "GetAll" + tableName;
@@ -112,7 +112,7 @@ namespace DAO.DataAccess.Repositories.ADONetUsingReflection
                 {
                     DataSet ds = new DataSet();
                     adpt.Fill(ds);
-                    return ds.Tables[0].ToEnumerable<T>();
+                    return (IQueryable<T>)ds.Tables[0].ToEnumerable<T>();
                 }
                 catch (SqlException sqlEx)
                 {

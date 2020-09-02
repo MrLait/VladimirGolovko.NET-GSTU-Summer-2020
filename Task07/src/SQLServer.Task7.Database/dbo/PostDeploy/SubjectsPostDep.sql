@@ -6,7 +6,7 @@ DECLARE @SybjectsPrefix NVARCHAR(50), @IsAssessment NVARCHAR(50);
 DECLARE @Random INT;
 DECLARE @ExaminersId INT;
 SET @number = 1;
-SET @QuantitySubject = 4;
+SET @QuantitySubject = 12;
 SET @SybjectsPrefix = 'Subject-';
 SET @IsAssessment = 'False';
 SET @QuantityExaminers = (SELECT COUNT(e.Id) FROM Examiners e);
@@ -26,12 +26,13 @@ BEGIN
 			ELSE
 				SET @IsAssessment = 'False';
 
-			IF (@ExaminersId < @QuantityExaminers)
-				IF (@IsAssessment = 'False')
+			IF (@IsAssessment = 'False')
+				IF @ExaminersId = @QuantityExaminers
+					SET @ExaminersId = 1;
+				ELSE
 					SET @ExaminersId = @ExaminersId + 1;
 
-			IF @ExaminersId = @QuantityExaminers
-				SET @ExaminersId = 1;
+
 		END;
 END;	
 GO

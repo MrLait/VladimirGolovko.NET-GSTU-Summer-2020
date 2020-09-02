@@ -5,7 +5,7 @@ DECLARE @Random INT;
 DECLARE @ExaminersNum INT;
 DECLARE @FirstNamePrefix NVARCHAR(50), @LastNamePrefix NVARCHAR(50), @MiddleNamePrefix NVARCHAR(50)
 SET @number = 1;
-SET @ExaminersNum = 2
+SET @ExaminersNum = 3
 SET @FirstNamePrefix = 'FirstName';
 SET @LastNamePrefix = 'LastName';
 SET @MiddleNamePrefix = 'MiddleName';

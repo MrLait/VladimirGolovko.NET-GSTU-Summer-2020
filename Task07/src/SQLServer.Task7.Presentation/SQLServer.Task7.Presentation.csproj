@@ -45,6 +45,9 @@
     <Compile Include="Interfaces\IView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\AggregateOperationsView.cs" />
+    <Compile Include="Views\AverageScoreByExaminer.cs" />
+    <Compile Include="Views\AverageScoreBySpecialty.cs" />
+    <Compile Include="Views\AverageScoreSubjectByYears.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Views\SessionsResultsView.cs" />
     <Compile Include="Views\StudentsToBeExpelledView.cs" />

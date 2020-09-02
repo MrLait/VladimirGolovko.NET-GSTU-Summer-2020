@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace DAO.DataAccess.Interfaces
 {
@@ -38,6 +39,6 @@ namespace DAO.DataAccess.Interfaces
         /// Method to get all objects from database table.
         /// </summary>
         /// <returns>Returns list of objects</returns>
-        IEnumerable<T> GetAll();
+        IQueryable<T> GetAll();
     }
 }

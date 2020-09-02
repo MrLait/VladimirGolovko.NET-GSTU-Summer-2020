@@ -287,50 +287,47 @@
             <param name="obj"></param>
             <returns>returns list of sqlParameters.</returns>
         </member>
-        <member name="T:DAO.DataAccess.Repositories.LINQtoSQLRepository.Repository`1">
+        <member name="T:DAO.DataAccess.Repositories.LINQtoSQLRepositories.LinqToSqlRepository`1">
             <summary>
             Abstract repository with implemented CRUD methods.
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="P:DAO.DataAccess.Repositories.LINQtoSQLRepository.Repository`1.DataContext">
+        <member name="P:DAO.DataAccess.Repositories.LINQtoSQLRepositories.LinqToSqlRepository`1.DataContext">
             <summary>
             Connection string to database
             </summary>
         </member>
-        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepository.Repository`1.Add(`0)">
-            <summary>
-            Implementation Add <see cref="M:DAO.DataAccess.Interfaces.ICRUD`1.Add(`0)"/>
-            </summary>
-            <param name="entity">Models.</param>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.LinqToSqlRepository`1.Add(`0)">
+            <inheritdoc/>
         </member>
-        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepository.Repository`1.Delete(System.Int32)">
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.LinqToSqlRepository`1.Delete(System.Int32)">
             <summary>
             Implementation Delete <see cref="M:DAO.DataAccess.Interfaces.ICRUD`1.Delete(System.Int32)"/>
             </summary>
             <param name="byId">Id.</param>
         </member>
-        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepository.Repository`1.GetAll">
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.LinqToSqlRepository`1.GetAll">
             <summary>
             Implementation GetAll <see cref="M:DAO.DataAccess.Interfaces.ICRUD`1.GetAll"/>
             </summary>
             <returns></returns>
         </member>
-        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepository.Repository`1.GetByID(System.Int32)">
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.LinqToSqlRepository`1.GetByID(System.Int32)">
             <summary>
             Get object by ID from table in database.
             </summary>
             <param name="byId">Id.</param>
             <returns>Returns object.</returns>
         </member>
-        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepository.Repository`1.Update(`0)">
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.LinqToSqlRepository`1.Update(`0)">
             <summary>
             Implementation Update <see cref="M:DAO.DataAccess.Interfaces.ICRUD`1.Update(`0)"/>
             </summary>
             <param name="entity"></param>
             <returns>Returns updated elements.</returns>
         </member>
-        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepository.Repository`1.GetUpdateParameter(`0,`0)">
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.LinqToSqlRepository`1.GetUpdateParameter(`0,`0)">
             <summary>
             Updata fields from one object to other.
             </summary>

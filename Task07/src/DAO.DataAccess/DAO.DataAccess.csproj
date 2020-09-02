@@ -49,7 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ADONetUsingReflection\Exstension\ExtencionHelpers.cs" />
     <Compile Include="Repositories\ADONetUsingReflection\Repository.cs" />
-    <Compile Include="Repositories\LINQtoSQLRepository\Repository.cs" />
+    <Compile Include="Repositories\LINQtoSQLRepositories\LinqToSqlRepository.cs" />
     <Compile Include="Singleton\SingletonDboAccess.cs" />
   </ItemGroup>
   <ItemGroup>
