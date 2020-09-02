@@ -11,7 +11,7 @@ namespace SQLServer.Task7.Presentation.Views
         /// <summary>
         /// Acceess to database.
         /// </summary>
-        protected SingletonDboAccess SingletonDboAccess { get; private set; }
+        protected SingletonLinqToSql SingletonDboAccess { get; private set; }
 
         /// <summary>
         /// Tables for view.
@@ -34,6 +34,6 @@ namespace SQLServer.Task7.Presentation.Views
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
         /// <param name="view">View parameter.</param>
-        public BaseView(SingletonDboAccess singletonDboAccess, IView view) : this(view) => SingletonDboAccess = singletonDboAccess;
+        public BaseView(SingletonLinqToSql singletonDboAccess, IView view) : this(view) => SingletonDboAccess = singletonDboAccess;
     }
 }

@@ -1,5 +1,5 @@
 ﻿using DAO.DataAccess.Interfaces;
-using DAO.DataAccess.Repositories.ADONetUsingReflection;
+using DAO.DataAccess.Repositories.LINQtoSQLRepositories;
 using SQLServer.Task7.Domain.Models;
 
 namespace DAO.DataAccess.Factory
@@ -7,62 +7,62 @@ namespace DAO.DataAccess.Factory
     /// <summary>
     /// ADO repository factory class.
     /// </summary>
-    public class ADORepositoryFactory : AbstractFactory
+    public class LinqToSqlRepositoryFactory : AbstractFactory
     {
         /// <summary>
         /// Represent access to ExamSchedules table.
         /// </summary>
-        protected internal Repository<ExamSchedules> ExamSchedules { get;  set; }
+        protected internal LinqToSqlRepository<ExamSchedules> ExamSchedules { get;  set; }
 
         /// <summary>
         /// Represent access to Groups.
         /// </summary>
-        protected internal Repository<Groups> Groups { get;  set; }
+        protected internal LinqToSqlRepository<Groups> Groups { get;  set; }
 
         /// <summary>
         /// Represent access to Sessions.
         /// </summary>
-        protected internal Repository<Sessions> Sessions { get;  set; }
+        protected internal LinqToSqlRepository<Sessions> Sessions { get;  set; }
 
         /// <summary>
         /// Represent access to SessionsResults.
         /// </summary>
-        protected internal Repository<SessionsResults> SessionsResults { get;  set; }
+        protected internal LinqToSqlRepository<SessionsResults> SessionsResults { get;  set; }
 
         /// <summary>
         /// Represent access to Students.
         /// </summary>
-        protected internal Repository<Students> Students { get;  set; }
+        protected internal LinqToSqlRepository<Students> Students { get;  set; }
 
         /// <summary>
         /// Represent access to Subjects.
         /// </summary>
-        protected internal Repository<Subjects> Subjects { get;  set; }
+        protected internal LinqToSqlRepository<Subjects> Subjects { get;  set; }
 
         /// <summary>
         /// Represent access to Examiners.
         /// </summary>
-        protected internal Repository<Examiners> Examiners { get; set; }
+        protected internal LinqToSqlRepository<Examiners> Examiners { get; set; }
 
         /// <summary>
         /// Represent access to Specialties.
         /// </summary>
-        protected internal Repository<Specialties> Specialties { get; set; }
+        protected internal LinqToSqlRepository<Specialties> Specialties { get; set; }
 
         /// <summary>
         /// Constructor to initializing access with tables and get connection string to database.
         /// </summary>
-        /// <param name="dbConnectionStrig"></param>
-        public ADORepositoryFactory(string dbConnectionStrig)
+        /// <param name="dbConnectionStrig">Connection string.</param>
+        public LinqToSqlRepositoryFactory(string dbConnectionStrig)
         {
-            ExamSchedules = new Repository<ExamSchedules>(dbConnectionStrig);
-            Groups = new Repository<Groups>(dbConnectionStrig);
-            Sessions = new Repository<Sessions>(dbConnectionStrig);
-            SessionsResults = new Repository<SessionsResults>(dbConnectionStrig);
-            Students = new Repository<Students>(dbConnectionStrig);
-            Subjects = new Repository<Subjects>(dbConnectionStrig);
-            Examiners = new Repository<Examiners>(dbConnectionStrig);
-            Specialties = new Repository<Specialties>(dbConnectionStrig);
+            ExamSchedules = new LinqToSqlRepository<ExamSchedules>(dbConnectionStrig);
+            Groups = new LinqToSqlRepository<Groups>(dbConnectionStrig);
+            Sessions = new LinqToSqlRepository<Sessions>(dbConnectionStrig);
+            SessionsResults = new LinqToSqlRepository<SessionsResults>(dbConnectionStrig);
+            Students = new LinqToSqlRepository<Students>(dbConnectionStrig);
+            Subjects = new LinqToSqlRepository<Subjects>(dbConnectionStrig);
+            Examiners = new LinqToSqlRepository<Examiners>(dbConnectionStrig);
+            Specialties = new LinqToSqlRepository<Specialties>(dbConnectionStrig);
         }
 
         /// <summary>

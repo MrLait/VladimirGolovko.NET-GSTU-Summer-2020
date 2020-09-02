@@ -90,7 +90,7 @@
             </summary>
             <param name="view">View parameter.</param>
         </member>
-        <member name="M:SQLServer.Task7.Presentation.Views.AggregateOperationsView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task7.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task7.Presentation.Views.AggregateOperationsView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql,SQLServer.Task7.Presentation.Interfaces.IView)">
             <summary>
             Constructor for initialazing view and singletonDboAccess.
             </summary>
@@ -138,7 +138,7 @@
             </summary>
             <param name="view">View property.</param>
         </member>
-        <member name="M:SQLServer.Task7.Presentation.Views.BaseView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task7.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task7.Presentation.Views.BaseView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql,SQLServer.Task7.Presentation.Interfaces.IView)">
             <summary>
             Iitialazing access to database and view.
             </summary>
@@ -196,7 +196,7 @@
             </summary>
             <param name="view">View parameter.</param>
         </member>
-        <member name="M:SQLServer.Task7.Presentation.Views.SessionsResultsView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task7.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task7.Presentation.Views.SessionsResultsView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql,SQLServer.Task7.Presentation.Interfaces.IView)">
             <summary>
             Constructor for initialazing view and singletonDboAccess.
             </summary>
@@ -264,7 +264,7 @@
             </summary>
             <param name="view">View parameter.</param>
         </member>
-        <member name="M:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task7.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql,SQLServer.Task7.Presentation.Interfaces.IView)">
             <summary>
             Constructor for initialazing view and singletonDboAccess.
             </summary>

@@ -14,7 +14,7 @@ namespace SQLServer.Task7.Presentation.Views
 
         public AverageScoreByExaminer(IView view) : base(view) { }
 
-        public AverageScoreByExaminer(SingletonDboAccess singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
+        public AverageScoreByExaminer(SingletonLinqToSql singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
 
         public string SessionName { get; private set; }
         public string FirstName { get; private set; }

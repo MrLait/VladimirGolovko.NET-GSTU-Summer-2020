@@ -25,6 +25,6 @@ namespace SQLServer.Task7.Domain.Models
         /// SpecialtiesId column in table.
         /// </summary>
         [Column(Name = "SpecialtiesId")]
-        public string SpecialtiesId { get; set; }
+        public int SpecialtiesId { get; set; }
     }
 }

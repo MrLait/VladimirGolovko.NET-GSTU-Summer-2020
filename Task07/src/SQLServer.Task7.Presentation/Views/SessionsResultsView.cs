@@ -61,7 +61,7 @@ namespace SQLServer.Task7.Presentation.Views
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
         /// <param name="view">View parameter.</param>
-        public SessionsResultsView(SingletonDboAccess singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
+        public SessionsResultsView(SingletonLinqToSql singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
 
         /// <summary>
         /// Method for get view.
