@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D875099A-1C9B-4A68-9033-D81D8EE7A91E}</ProjectGuid>
+    <ProjectGuid>{F8205E4A-1E96-4C8D-8EA4-5059D56DD229}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DAO.DataAccessTests</RootNamespace>
-    <AssemblyName>DAO.DataAccessTests</AssemblyName>
+    <RootNamespace>SQLServer.Task7.PresentationTests</RootNamespace>
+    <AssemblyName>SQLServer.Task7.PresentationTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -46,10 +46,13 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Factory\LinqToSqlRepositoryFactoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\LINQtoSQLRepositories\LinqToSqlRepositoryTests.cs" />
-    <Compile Include="Singleton\SingletonLinqToSqlTests.cs" />
+    <Compile Include="Views\AggregateOperationsViewTests.cs" />
+    <Compile Include="Views\AverageScoreByExaminerTests.cs" />
+    <Compile Include="Views\AverageScoreBySpecialtyTests.cs" />
+    <Compile Include="Views\AverageScoreSubjectByYearsTests.cs" />
+    <Compile Include="Views\SessionsResultsViewTests.cs" />
+    <Compile Include="Views\StudentsToBeExpelledViewTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NUnit">
@@ -60,13 +63,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DAO.DataAccess\DAO.DataAccess.csproj">
-      <Project>{406E5C30-E0C2-457F-AEE9-0057D1D13A64}</Project>
-      <Name>DAO.DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\SQLServer.Task7.Domain\SQLServer.Task7.Domain.csproj">
-      <Project>{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}</Project>
-      <Name>SQLServer.Task7.Domain</Name>
+    <ProjectReference Include="..\..\src\SQLServer.Task7.Presentation\SQLServer.Task7.Presentation.csproj">
+      <Project>{14226881-2B56-4E2B-85A9-75B1A12F7454}</Project>
+      <Name>SQLServer.Task7.Presentation</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

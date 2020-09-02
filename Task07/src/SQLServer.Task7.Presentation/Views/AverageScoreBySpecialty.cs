@@ -10,16 +10,13 @@ namespace SQLServer.Task7.Presentation.Views
 {
     public class AverageScoreBySpecialty : BaseView
     {
-        public AverageScoreBySpecialty()
-        {
-        }
+        /// <inheritdoc/>
+        public AverageScoreBySpecialty() { }
 
-        public AverageScoreBySpecialty(IView view) : base(view)
-        {
-        }
+        /// <inheritdoc/>
+        public AverageScoreBySpecialty(IView view) : base(view) { }
 
-        public AverageScoreBySpecialty(SingletonLinqToSql singletonDboAccess, IView view) : base(singletonDboAccess, view)
-        {
-        }
+        /// <inheritdoc/>
+        public AverageScoreBySpecialty(SingletonLinqToSql singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
     }
 }
