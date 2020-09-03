@@ -44,16 +44,16 @@ namespace SQLServer.Task7.Presentation.Views
                     & string.IsNullOrEmpty(itemSessionsResult.Value) != true
                 select new
                 {
-                    SessionName = itemSessions.Name,
-                    FirstName = itemExaminers.FirstName,
-                    LastName = itemExaminers.LastName,
-                    MiddleName = itemExaminers.MiddleName,
+                    itemSessions.Name,
+                    itemExaminers.FirstName,
+                    itemExaminers.LastName,
+                    itemExaminers.MiddleName,
                     itemSessionsResult.Value
                 };
 
             return new AverageScoreByExaminer()
             {
-                SessionName = sessionName,
+                SessionName =  sessionName,
                 FirstName = firstName,
                 LastName = lastName,
                 MiddleName = middleName,

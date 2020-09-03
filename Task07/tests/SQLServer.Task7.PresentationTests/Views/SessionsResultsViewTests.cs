@@ -1,20 +1,46 @@
 ﻿using NUnit.Framework;
-using SQLServer.Task7.Presentation.Views;
-using System;
+using SQLServer.Task7.PresentationTests;
+using SQLServer.Task7.PresentationTests.TestCaseSources;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SQLServer.Task7.Presentation.Views.Tests
 {
     [TestFixture()]
-    public class SessionsResultsViewTests
+    public class SessionsResultsViewTests : MockBaseView
     {
-        [Test()]
-        public void GetViewTest()
+        /// <summary>
+        /// Test for sessions results view no ordered.
+        /// </summary>
+        /// <param name="sessionName">Session name parameter.</param>
+        /// <param name="groupName">Group name parameter.</param>
+        /// <returns>Returns string.</returns>
+        [Test, TestCaseSource(typeof(MyFactorySessionsResultsViewTests), "GiveToString_WhenNoOrdered_ThenOutIsToString")]
+        public string GiveToString_WhenNoOrdered_ThenOutIsToString(int sessionName, string groupName)
         {
-            Assert.Fail();
+            //Arrange
+            SessionsResultsView sessionsResultsView = new SessionsResultsView(Mock.Object);
+            //Act
+            IEnumerable<SessionsResultsView> actual = sessionsResultsView.GetView(sessionName, groupName).ToList();
+            var actualString = sessionsResultsView.ToString(actual);
+            return actualString;
+        }
+
+        /// <summary>
+        /// Test for sessions results view ordered by descending first name and value.
+        /// </summary>
+        /// <param name="sessionName">Session name parameter.</param>
+        /// <param name="groupName">Group name parameter.</param>
+        /// <returns>Returns string.</returns>
+        [Test, TestCaseSource(typeof(MyFactorySessionsResultsViewTests), "GiveToString_WhenOrderByDescendingFirstNameAndValue_ThenOutIsToStringOrderBy")]
+        public string GiveToString_WhenOrderByDescendingFirstNameAndValue_ThenOutIsToStringOrderBy(int sessionName, string groupName)
+        {
+            //Arrange
+            SessionsResultsView sessionsResultsView = new SessionsResultsView(Mock.Object);
+            //Act
+            var actual = sessionsResultsView.GetView(sessionName, groupName).ToList().OrderByDescending(f => f.FirstName).ThenByDescending(v => v.Value);
+            var actualString = sessionsResultsView.ToString(actual);
+            return actualString;
         }
     }
 }

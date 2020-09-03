@@ -49,6 +49,7 @@
     <Compile Include="MockBaseView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCaseSources\MyFactoryAggregateOperationsViewTests.cs" />
+    <Compile Include="TestCaseSources\MyFactorySessionsResultsViewTests.cs" />
     <Compile Include="Views\AggregateOperationsViewTests.cs" />
     <Compile Include="Views\AverageScoreByExaminerTests.cs" />
     <Compile Include="Views\AverageScoreBySpecialtyTests.cs" />
