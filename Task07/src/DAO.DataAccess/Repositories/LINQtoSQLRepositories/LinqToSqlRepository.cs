@@ -68,7 +68,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepositories
         {
             if (byId == 0) throw new ArgumentNullException("byId should not be 0");
 
-            return DataContext.GetTable<T>().Where(x => x.Id.Equals(byId)).Single();
+            return DataContext.GetTable<T>().Where(x => x.Id.Equals(byId)).SingleOrDefault();
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepositories
         {
             if (entity == null) throw new ArgumentNullException();
 
-            var tableElement = DataContext.GetTable<T>().Where(x => x.Id.Equals(entity.Id)).Single();
+            var tableElement = DataContext.GetTable<T>().Where(x => x.Id.Equals(entity.Id)).SingleOrDefault();
             var updatedTableElement = GetUpdateParameter(entity, tableElement);
             DataContext.SubmitChanges();
             return updatedTableElement;
@@ -94,6 +94,9 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepositories
         /// <returns>Returns updated object.</returns>
         private T GetUpdateParameter(T from, T to)
         {
+            if (from == null) throw new ArgumentNullException();
+            if (to == null) throw new ArgumentNullException();
+
             PropertyInfo[] fieldsTo = to.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
             PropertyInfo[] fieldsFrom = from.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
 

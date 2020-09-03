@@ -27,7 +27,6 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests
         [OneTimeSetUp]
         public void RepositoryFactoryInit()
         {
-            
             specialtiesRepository = SingletonLinqToSql.GetInstance().LinqToSqlRepositoryFactory.CreateSpecialties();
             specialties = specialtiesRepository.GetAll();
         }
@@ -70,7 +69,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests
             specialtiesRepository.Add(actual);
             allSpecialties.Add(actual);
 
-            var actualSelectRepositoryName = specialtiesRepository.GetAll().Select(x => x.Name);
+            var actualSelectRepositoryName = specialtiesRepository.GetAll().Select(x => x.Name).ToList();
             var expectedSelectAllSpecialties = allSpecialties.ToList().Select(x => x.Name);
 
             var lastAddedName = specialtiesRepository.GetAll().ToList().Last().Name;
@@ -157,8 +156,8 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests
         /// Given Update for checkin on null.
         /// </summary>
         [TestCase()]
-        public void GivenUpdate_WhenArgumentIsNotFound_ThenOutIsNull() =>
-            Assert.AreEqual(null, specialtiesRepository.Update(new Specialties() { Id = 20, Name = "vov" }));
+        public void GivenUpdate_WhenArgumentIsNotFound_ThenOutIsArgumentNullException() =>
+            Assert.That(() => specialtiesRepository.Update(new Specialties() { Id = 20, Name = "vov" }), Throws.TypeOf<ArgumentNullException>());
 
         /// <summary>
         /// Given add for checkin on ArgumentNullException. 
@@ -172,7 +171,7 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests
         /// </summary>
         [TestCase()]
         public void GivenAdd_WhenObjectIsEmpty_ThenOutIsArgumentException() =>
-            Assert.That(() => specialtiesRepository.Add(new Specialties()), Throws.TypeOf<ArgumentException>());
+            Assert.That(() => specialtiesRepository.Add(null), Throws.TypeOf<ArgumentNullException>());
 
         /// <summary>
         /// Give Delete for checkin on ArgumentNullException.
