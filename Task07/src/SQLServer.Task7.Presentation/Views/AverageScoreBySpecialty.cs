@@ -14,9 +14,9 @@ namespace SQLServer.Task7.Presentation.Views
         public AverageScoreBySpecialty() { }
 
         /// <inheritdoc/>
-        public AverageScoreBySpecialty(IView view) : base(view) { }
+        public AverageScoreBySpecialty(ITables view) : base(view) { }
 
         /// <inheritdoc/>
-        public AverageScoreBySpecialty(SingletonLinqToSql singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
+        public AverageScoreBySpecialty(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
     }
 }

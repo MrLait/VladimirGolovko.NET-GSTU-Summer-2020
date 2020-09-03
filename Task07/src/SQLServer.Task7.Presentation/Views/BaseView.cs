@@ -1,5 +1,8 @@
 ﻿using DAO.DataAccess.Singleton;
+using SQLServer.Task7.Domain.Models;
 using SQLServer.Task7.Presentation.Interfaces;
+using SQLServer.Task7.Presentation.Models;
+using System.Linq;
 
 namespace SQLServer.Task7.Presentation.Views
 {
@@ -16,7 +19,7 @@ namespace SQLServer.Task7.Presentation.Views
         /// <summary>
         /// Tables for view.
         /// </summary>
-        protected IView View;
+        protected ITables Tables;
 
         /// <summary>
         /// Empty constructor.
@@ -27,13 +30,27 @@ namespace SQLServer.Task7.Presentation.Views
         /// Initial view.
         /// </summary>
         /// <param name="view">View property.</param>
-        public BaseView(IView view) : this() => View = view;
+        public BaseView(ITables view) : this() => Tables = view;
 
         /// <summary>
         /// Iitialazing access to database and view.
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
-        /// <param name="view">View parameter.</param>
-        public BaseView(SingletonLinqToSql singletonDboAccess, IView view) : this(view) => SingletonDboAccess = singletonDboAccess;
+        public BaseView(SingletonLinqToSql singletonDboAccess)
+        {
+            SingletonDboAccess = singletonDboAccess;
+
+            Tables = new Tables()
+            {
+                Examiners = SingletonDboAccess.LinqToSqlRepositoryFactory.CreateExaminers().GetAll(),
+                Groups = SingletonDboAccess.LinqToSqlRepositoryFactory.CreateGroups().GetAll(),
+                Sessions = SingletonDboAccess.LinqToSqlRepositoryFactory.CreateSessions().GetAll(),
+                Students = SingletonDboAccess.LinqToSqlRepositoryFactory.CreateStudents().GetAll(),
+                ExamSchedules = SingletonDboAccess.LinqToSqlRepositoryFactory.CreateExamSchedules().GetAll(),
+                SessionsResults = SingletonDboAccess.LinqToSqlRepositoryFactory.CreateSessionsResults().GetAll(),
+                Specialties = SingletonDboAccess.LinqToSqlRepositoryFactory.CreateSpecialties().GetAll(),
+                Subjects = SingletonDboAccess.LinqToSqlRepositoryFactory.CreateSubjects().GetAll()
+            };
+        }
     }
 }

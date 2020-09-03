@@ -13,7 +13,7 @@ namespace SQLServer.Task7.Presentation.Views
         /// <summary>
         /// SessionName column.
         /// </summary>
-        public string SessionName { get; private set; }
+        public int SessionName { get; private set; }
 
         /// <summary>
         /// GroupName column.
@@ -43,15 +43,14 @@ namespace SQLServer.Task7.Presentation.Views
         /// <summary>
         /// Constructor for initialazing view.
         /// </summary>
-        /// <param name="view">View parameter.</param>
-        public AggregateOperationsView(IView view) : base(view) { }
+        /// <param name="tables">View parameter.</param>
+        public AggregateOperationsView(ITables tables) : base(tables) { }
 
         /// <summary>
         /// Constructor for initialazing view and singletonDboAccess.
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
-        /// <param name="view">View parameter.</param>
-        public AggregateOperationsView(SingletonLinqToSql singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
+        public AggregateOperationsView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
 
         /// <summary>
         /// Method for get view.
@@ -59,22 +58,21 @@ namespace SQLServer.Task7.Presentation.Views
         /// <param name="sessionName">Session name parameter.</param>
         /// <param name="groupName">Group name parameter.</param>
         /// <returns>Returns new view.</returns>
-        public AggregateOperationsView GetView(string sessionName, string groupName)
+        public AggregateOperationsView GetView(int sessionName, string groupName)
         {
+
             var aggregateValue =
-                from itemSessionsResult in View.SessionsResults
-                join itemStudents in View.Students
+                from itemSessionsResult in Tables.SessionsResults.Where(x => string.IsNullOrEmpty(x.Value) != true).AsEnumerable()
+                join itemStudents in Tables.Students.AsEnumerable()
                     on itemSessionsResult.StudentsId equals itemStudents.Id
-                join itemExamShedules in View.ExamSchedules
+                join itemExamShedules in Tables.ExamSchedules.AsEnumerable()
                     on itemSessionsResult.ExamSchedulesId equals itemExamShedules.Id
-                join itemGroups in View.Groups
+                join itemGroups in Tables.Groups.Where(x => x.Name == groupName).AsEnumerable()
                     on itemStudents.GroupsId equals itemGroups.Id
-                join itemSessions in View.Sessions
+                join itemSessions in Tables.Sessions.Where(x => x.Name == sessionName).AsEnumerable()
                     on itemExamShedules.SessionsId equals itemSessions.Id
-                join itemSubjects in View.Subjects
+                join itemSubjects in Tables.Subjects.Where(x => x.IsAssessment == "True").AsEnumerable()
                     on itemExamShedules.SubjectsId equals itemSubjects.Id
-                where itemSessions.Name == sessionName & itemGroups.Name == groupName & itemSubjects.IsAssessment == "True"
-                    & string.IsNullOrEmpty(itemSessionsResult.Value) != true
                 select new
                 {
                     SessionName = itemSessions.Name,

@@ -14,11 +14,11 @@ namespace SQLServer.Task7.Presentation.Views
         {
         }
 
-        public AverageScoreSubjectByYears(IView view) : base(view)
+        public AverageScoreSubjectByYears(ITables view) : base(view)
         {
         }
 
-        public AverageScoreSubjectByYears(SingletonLinqToSql singletonDboAccess, IView view) : base(singletonDboAccess, view)
+        public AverageScoreSubjectByYears(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess)
         {
         }
     }

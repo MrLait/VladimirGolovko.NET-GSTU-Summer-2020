@@ -3,7 +3,7 @@ AS
 DECLARE @number INT, @SessionsNum INT;
 DECLARE @GroupNum INT;
 SET @number = 1;
-SET @SessionsNum = 2
+SET @SessionsNum = 3
 
 IF NOT EXISTS(SELECT * FROM Sessions WHERE Id = @SessionsNum)
 BEGIN

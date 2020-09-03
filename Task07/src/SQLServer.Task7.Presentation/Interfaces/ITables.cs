@@ -1,51 +1,52 @@
-﻿using SQLServer.Task7.Domain.Models;
-using System.Collections.Generic;
+﻿using DAO.DataAccess.Interfaces;
+using SQLServer.Task7.Domain.Models;
+using System.Linq;
 
 namespace SQLServer.Task7.Presentation.Interfaces
 {
     /// <summary>
     /// Interface with tables contract.
     /// </summary>
-    public interface IView
+    public interface ITables
     {
         /// <summary>
         /// Examiners table.
         /// </summary>
-        IEnumerable<Examiners> Examiners { get; }
+        IQueryable<Examiners> Examiners { get; set; }
 
         /// <summary>
         /// Groups table.
         /// </summary>
-        IEnumerable<Groups> Groups { get; }
+        IQueryable<Groups> Groups { get; set; }
 
         /// <summary>
         /// Sessions table.
         /// </summary>
-        IEnumerable<Sessions> Sessions { get; }
+        IQueryable<Sessions> Sessions { get; set; }
 
         /// <summary>
         /// Students table.
         /// </summary>
-        IEnumerable<Students> Students { get; }
+        IQueryable<Students> Students { get; set; }
 
         /// <summary>
         /// Exam schedules table.
         /// </summary>
-        IEnumerable<ExamSchedules> ExamSchedules { get; }
+        IQueryable<ExamSchedules> ExamSchedules { get; set; }
 
         /// <summary>
         /// Sessions results table.
         /// </summary>
-        IEnumerable<SessionsResults> SessionsResults { get; }
+        IQueryable<SessionsResults> SessionsResults { get; set; }
 
         /// <summary>
         /// Sessions results table.
         /// </summary>
-        IEnumerable<Specialties> Specialties { get; }
+        IQueryable<Specialties> Specialties { get; set; }
 
         /// <summary>
         /// Subjects table.
         /// </summary>
-        IEnumerable<Subjects> Subjects { get; }
+        IQueryable<Subjects> Subjects { get; set; }
     }
 }

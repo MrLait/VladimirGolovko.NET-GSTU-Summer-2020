@@ -20,7 +20,7 @@ namespace SQLServer.Task7.Presentation.Views
         /// <summary>
         /// SessionName column.
         /// </summary>
-        public string SessionName { get; private set; }
+        public int SessionName { get; private set; }
 
         /// <summary>
         /// GroupName column.
@@ -50,15 +50,14 @@ namespace SQLServer.Task7.Presentation.Views
         /// <summary>
         /// Constructor for initialazing view.
         /// </summary>
-        /// <param name="view">View parameter.</param>
-        public StudentsToBeExpelledView(IView view) : base(view) { }
+        /// <param name="tables">View parameter.</param>
+        public StudentsToBeExpelledView(ITables tables) : base(tables) { }
 
         /// <summary>
         /// Constructor for initialazing view and singletonDboAccess.
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
-        /// <param name="view">View parameter.</param>
-        public StudentsToBeExpelledView(SingletonLinqToSql singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
+        public StudentsToBeExpelledView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
 
         /// <summary>
         /// Method for get view.
@@ -66,19 +65,19 @@ namespace SQLServer.Task7.Presentation.Views
         /// <param name="sessionName">Session name parameter.</param>
         /// <param name="minPassingGrade">Session minimum passing grade parameter.</param>
         /// <returns>Returns new view.</returns>
-        public IEnumerable<IGrouping<string, StudentsToBeExpelledView>> GetView(string sessionName, int minPassingGrade)
+        public IEnumerable<IGrouping<string, StudentsToBeExpelledView>> GetView(int sessionName, int minPassingGrade)
         {
             IEnumerable<StudentsToBeExpelledView> studentsToBeExpelled =
-                (from itemSessionsResult in View.SessionsResults
-                 join itemStudents in View.Students
+                (from itemSessionsResult in Tables.SessionsResults.AsEnumerable()
+                 join itemStudents in Tables.Students.AsEnumerable()
                      on itemSessionsResult.StudentsId equals itemStudents.Id
-                 join itemExamShedules in View.ExamSchedules
+                 join itemExamShedules in Tables.ExamSchedules.AsEnumerable()
                      on itemSessionsResult.ExamSchedulesId equals itemExamShedules.Id
-                 join itemGroups in View.Groups
+                 join itemGroups in Tables.Groups.AsEnumerable()
                      on itemStudents.GroupsId equals itemGroups.Id
-                 join itemSessions in View.Sessions
+                 join itemSessions in Tables.Sessions.AsEnumerable()
                      on itemExamShedules.SessionsId equals itemSessions.Id
-                 join itemSubjects in View.Subjects
+                 join itemSubjects in Tables.Subjects.AsEnumerable()
                      on itemExamShedules.SubjectsId equals itemSubjects.Id
                  where itemSessions.Name == sessionName & itemSubjects.IsAssessment == "True"
                      & itemSessionsResult.Value != string.Empty

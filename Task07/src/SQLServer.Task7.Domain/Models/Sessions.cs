@@ -19,6 +19,6 @@ namespace SQLServer.Task7.Domain.Models
         /// Name column.
         /// </summary>
         [Column(Name = "Name")]
-        public string Name { get; set; }
+        public int Name { get; set; }
     }
 }

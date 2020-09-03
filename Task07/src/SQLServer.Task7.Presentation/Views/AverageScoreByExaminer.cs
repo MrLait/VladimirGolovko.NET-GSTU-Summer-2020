@@ -12,31 +12,31 @@ namespace SQLServer.Task7.Presentation.Views
     {
         public AverageScoreByExaminer() { }
 
-        public AverageScoreByExaminer(IView view) : base(view) { }
+        public AverageScoreByExaminer(ITables view) : base(view) { }
 
-        public AverageScoreByExaminer(SingletonLinqToSql singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
+        public AverageScoreByExaminer(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
 
-        public string SessionName { get; private set; }
+        public int SessionName { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public string MiddleName { get; private set; }
         public double AverageValue { get; private set; }
 
-        public AverageScoreByExaminer GetView(string sessionName, string firstName, string lastName, string middleName)
+        public AverageScoreByExaminer GetView(int sessionName, string firstName, string lastName, string middleName)
         {
             var scoreResultsByExaminer =
-                from itemSessionsResult in View.SessionsResults
-                join itemStudents in View.Students
+                from itemSessionsResult in Tables.SessionsResults.AsEnumerable()
+                join itemStudents in Tables.Students.AsEnumerable()
                     on itemSessionsResult.StudentsId equals itemStudents.Id
-                join itemExamShedules in View.ExamSchedules
+                join itemExamShedules in Tables.ExamSchedules.AsEnumerable()
                     on itemSessionsResult.ExamSchedulesId equals itemExamShedules.Id
-                join itemGroups in View.Groups
+                join itemGroups in Tables.Groups.AsEnumerable()
                     on itemStudents.GroupsId equals itemGroups.Id
-                join itemSessions in View.Sessions
+                join itemSessions in Tables.Sessions.AsEnumerable()
                     on itemExamShedules.SessionsId equals itemSessions.Id
-                join itemSubjects in View.Subjects
+                join itemSubjects in Tables.Subjects.AsEnumerable()
                     on itemExamShedules.SubjectsId equals itemSubjects.Id
-                join itemExaminers in View.Examiners
+                join itemExaminers in Tables.Examiners.AsEnumerable()
                     on itemSubjects.ExaminersId equals itemExaminers.Id
                     where itemExaminers.FirstName == firstName & itemExaminers.LastName == lastName
                     & itemExaminers.MiddleName == middleName
