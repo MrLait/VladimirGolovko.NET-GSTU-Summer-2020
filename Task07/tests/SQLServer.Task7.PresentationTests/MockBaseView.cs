@@ -24,6 +24,11 @@ namespace SQLServer.Task7.PresentationTests
         public IQueryable<ExamSchedules> ExamSchedules { get; set; }
 
         /// <summary>
+        /// Specialties table.
+        /// </summary>
+        public IQueryable<Specialties> Specialties { get; set; }
+
+        /// <summary>
         /// Groups table.
         /// </summary>
         public IQueryable<Groups> Groups { get; set; }
@@ -85,10 +90,16 @@ namespace SQLServer.Task7.PresentationTests
                 new ExamSchedules(){ Id = 16, SessionsId = 2, GroupsId = 2, SubjectsId = 4, ExamDate = new DateTime( 2020,06, 12, 13, 03,24) }
             }.AsQueryable();
 
+            Specialties = new List<Specialties>()
+            {
+              new Specialties(){ Id = 1, Name = "Specialty-1", Info = "Info-1" },
+              new Specialties(){ Id = 2, Name = "Specialty-2", Info = "Info-2" }
+            }.AsQueryable();
+
             Groups = new List<Groups>()
             {
-                new Groups(){ Id = 1, Name = "PM-1"},
-                new Groups(){ Id = 2, Name = "PM-2"}
+                new Groups(){ Id = 1, Name = "PM-1", SpecialtiesId = 1},
+                new Groups(){ Id = 2, Name = "PM-2", SpecialtiesId = 2}
             }.AsQueryable();
 
             Sessions = new List<Sessions>()
@@ -207,6 +218,7 @@ namespace SQLServer.Task7.PresentationTests
             Mock.Setup(x => x.Examiners).Returns(Examiners);
             Mock.Setup(x => x.ExamSchedules).Returns(ExamSchedules);
             Mock.Setup(x => x.Groups).Returns(Groups);
+            Mock.Setup(x => x.Specialties).Returns(Specialties);
             Mock.Setup(x => x.Sessions).Returns(Sessions);
             Mock.Setup(x => x.SessionsResults).Returns(SessionsResults);
             Mock.Setup(x => x.Students).Returns(Students);
