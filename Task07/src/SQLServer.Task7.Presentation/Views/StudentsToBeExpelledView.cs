@@ -109,15 +109,26 @@ namespace SQLServer.Task7.Presentation.Views
             string[] header = { "StudentId; SessionName; GroupName; FirstName; LastName; MiddleName" };
             var dataArray = studentsToBeExpelledGrouped.ToArray();
             var appendedLine = new StringBuilder().AppendLine(string.Concat(header));
-
+            
             for (int i = 0; i < dataArray.Length; i++)
             {
+                var elementsInArrCount = dataArray[dataArray.Length - 1].ToList().Count;
+                int curElementIndex = default;
+
                 foreach (var item in dataArray[i])
                 {
-                    if (i < dataArray.Length - 1)
-                        appendedLine.AppendLine($"{item.StudentId}; {item.SessionName}; {item.GroupName}; {item.FirstName}; {item.LastName}; {item.MiddleName}");
                     if (i == dataArray.Length - 1)
-                        appendedLine.Append($"{item.StudentId}; {item.SessionName}; {item.GroupName}; {item.FirstName}; {item.LastName}; {item.MiddleName}");
+                    {
+                        if (curElementIndex == elementsInArrCount - 1)
+                            appendedLine.Append($"{item.StudentId}; {item.SessionName}; {item.GroupName}; {item.FirstName}; {item.LastName}; {item.MiddleName}");
+                        else
+                            appendedLine.AppendLine($"{item.StudentId}; {item.SessionName}; {item.GroupName}; {item.FirstName}; {item.LastName}; {item.MiddleName}");
+                        curElementIndex++;
+                    }
+                    else
+                    {
+                        appendedLine.AppendLine($"{item.StudentId}; {item.SessionName}; {item.GroupName}; {item.FirstName}; {item.LastName}; {item.MiddleName}");
+                    }
                 }
             }
             return appendedLine.ToString();
