@@ -134,6 +134,13 @@
             <param name="view">Aggregate operations view parameter.</param>
             <returns>Returns string.</returns>
         </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView.ToString(System.Collections.Generic.IEnumerable{SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView})">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="view">Aggregate operations view parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
         <member name="T:SQLServer.Task7.Presentation.Views.BaseView">
             <summary>
             Base class for view.

@@ -51,6 +51,7 @@
     <Compile Include="TestCaseSources\MyFactoryAggregateOperationsViewTests.cs" />
     <Compile Include="TestCaseSources\MyFactoryAverageScoreByExaminerTests.cs" />
     <Compile Include="TestCaseSources\MyFactoryAverageScoreBySpecialtyTests.cs" />
+    <Compile Include="TestCaseSources\MyFactoryAverageScoreSubjectByYearsTests.cs" />
     <Compile Include="TestCaseSources\MyFactorySessionsResultsViewTests.cs" />
     <Compile Include="TestCaseSources\MyFactoryStudentsToBeExpelledViewTests.cs" />
     <Compile Include="Views\AggregateOperationsViewTests.cs" />

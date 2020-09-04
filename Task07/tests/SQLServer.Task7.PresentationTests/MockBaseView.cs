@@ -72,22 +72,22 @@ namespace SQLServer.Task7.PresentationTests
 
             ExamSchedules = new List<ExamSchedules>()
             {
-                new ExamSchedules(){ Id = 1, SessionsId = 1, GroupsId = 1, SubjectsId = 1, ExamDate = new DateTime( 2020,07, 28, 13, 03,24) },
-                new ExamSchedules(){ Id = 2, SessionsId = 1, GroupsId = 1, SubjectsId = 2, ExamDate = new DateTime( 2020,06, 13, 13, 03,24) },
-                new ExamSchedules(){ Id = 3, SessionsId = 1, GroupsId = 1, SubjectsId = 3, ExamDate = new DateTime( 2020,08, 23, 13, 03,24) },
-                new ExamSchedules(){ Id = 4, SessionsId = 1, GroupsId = 1, SubjectsId = 4, ExamDate = new DateTime( 2020,06, 09, 13, 03,24) },
-                new ExamSchedules(){ Id = 5, SessionsId = 1, GroupsId = 2, SubjectsId = 1, ExamDate = new DateTime( 2020,07, 01, 13, 03,24) },
-                new ExamSchedules(){ Id = 6, SessionsId = 1, GroupsId = 2, SubjectsId = 2, ExamDate = new DateTime( 2020,05, 23, 13, 03,24) },
-                new ExamSchedules(){ Id = 7, SessionsId = 1, GroupsId = 2, SubjectsId = 3, ExamDate = new DateTime( 2020,05, 22, 13, 03,24) },
-                new ExamSchedules(){ Id = 8, SessionsId = 1, GroupsId = 2, SubjectsId = 4, ExamDate = new DateTime( 2020,06, 18, 13, 03,24) },
+                new ExamSchedules(){ Id = 1, SessionsId = 1, GroupsId = 1, SubjectsId = 1, ExamDate = new DateTime( 2018,07, 28, 13, 03,24) },
+                new ExamSchedules(){ Id = 2, SessionsId = 1, GroupsId = 1, SubjectsId = 2, ExamDate = new DateTime( 2018,06, 13, 13, 03,24) },
+                new ExamSchedules(){ Id = 3, SessionsId = 1, GroupsId = 1, SubjectsId = 3, ExamDate = new DateTime( 2018,08, 23, 13, 03,24) },
+                new ExamSchedules(){ Id = 4, SessionsId = 1, GroupsId = 1, SubjectsId = 4, ExamDate = new DateTime( 2019,06, 09, 13, 03,24) },
+                new ExamSchedules(){ Id = 5, SessionsId = 1, GroupsId = 2, SubjectsId = 1, ExamDate = new DateTime( 2019,07, 01, 13, 03,24) },
+                new ExamSchedules(){ Id = 6, SessionsId = 1, GroupsId = 2, SubjectsId = 2, ExamDate = new DateTime( 2019,05, 23, 13, 03,24) },
+                new ExamSchedules(){ Id = 7, SessionsId = 1, GroupsId = 2, SubjectsId = 3, ExamDate = new DateTime( 2019,05, 22, 13, 03,24) },
+                new ExamSchedules(){ Id = 8, SessionsId = 1, GroupsId = 2, SubjectsId = 4, ExamDate = new DateTime( 2019,06, 18, 13, 03,24) },
                 new ExamSchedules(){ Id = 9, SessionsId = 2, GroupsId = 1, SubjectsId = 1, ExamDate = new DateTime( 2020,05, 20, 13, 03,24) },
                 new ExamSchedules(){ Id = 10, SessionsId = 2, GroupsId = 1, SubjectsId = 2, ExamDate = new DateTime( 2020,07, 20, 13, 03,24) },
                 new ExamSchedules(){ Id = 11, SessionsId = 2, GroupsId = 1, SubjectsId = 3, ExamDate = new DateTime( 2020,08, 14, 13, 03,24) },
                 new ExamSchedules(){ Id = 12, SessionsId = 2, GroupsId = 1, SubjectsId = 4, ExamDate = new DateTime( 2020,07, 04, 13, 03,24) },
-                new ExamSchedules(){ Id = 13, SessionsId = 2, GroupsId = 2, SubjectsId = 1, ExamDate = new DateTime( 2020,08, 04, 13, 03,24) },
-                new ExamSchedules(){ Id = 14, SessionsId = 2, GroupsId = 2, SubjectsId = 2, ExamDate = new DateTime( 2020,05, 29, 13, 03,24) },
-                new ExamSchedules(){ Id = 15, SessionsId = 2, GroupsId = 2, SubjectsId = 3, ExamDate = new DateTime( 2020,07, 30, 13, 03,24) },
-                new ExamSchedules(){ Id = 16, SessionsId = 2, GroupsId = 2, SubjectsId = 4, ExamDate = new DateTime( 2020,06, 12, 13, 03,24) }
+                new ExamSchedules(){ Id = 13, SessionsId = 2, GroupsId = 2, SubjectsId = 1, ExamDate = new DateTime( 2018,08, 04, 13, 03,24) },
+                new ExamSchedules(){ Id = 14, SessionsId = 2, GroupsId = 2, SubjectsId = 2, ExamDate = new DateTime( 2018,05, 29, 13, 03,24) },
+                new ExamSchedules(){ Id = 15, SessionsId = 2, GroupsId = 2, SubjectsId = 3, ExamDate = new DateTime( 2018,07, 30, 13, 03,24) },
+                new ExamSchedules(){ Id = 16, SessionsId = 2, GroupsId = 2, SubjectsId = 4, ExamDate = new DateTime( 2018,06, 12, 13, 03,24) }
             }.AsQueryable();
 
             Specialties = new List<Specialties>()

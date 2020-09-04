@@ -1,5 +1,4 @@
 ﻿using DAO.DataAccess.Singleton;
-using SQLServer.Task7.Domain.Models;
 using SQLServer.Task7.Presentation.Interfaces;
 using SQLServer.Task7.Presentation.Models;
 using System.Linq;
@@ -14,7 +13,7 @@ namespace SQLServer.Task7.Presentation.Views
         /// <summary>
         /// Acceess to database.
         /// </summary>
-        protected SingletonLinqToSql SingletonDboAccess { get; private set; }
+        protected internal SingletonLinqToSql SingletonDboAccess { get; private set; }
 
         /// <summary>
         /// Tables for view.
