@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace SQLServer.Task7.Presentation.Views
 {
-    public class AverageScoreByExaminer : BaseView
+    public class AverageScoreByExaminerView : BaseView
     {
-        public AverageScoreByExaminer() { }
+        public AverageScoreByExaminerView() { }
 
-        public AverageScoreByExaminer(ITables view) : base(view) { }
+        public AverageScoreByExaminerView(ITables view) : base(view) { }
 
-        public AverageScoreByExaminer(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
+        public AverageScoreByExaminerView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
 
         public int SessionName { get; private set; }
         public string FirstName { get; private set; }
@@ -22,26 +22,22 @@ namespace SQLServer.Task7.Presentation.Views
         public string MiddleName { get; private set; }
         public double AverageValue { get; private set; }
 
-        public AverageScoreByExaminer GetView(int sessionName, string firstName, string lastName, string middleName)
+        public AverageScoreByExaminerView GetView(int sessionName, string firstName, string lastName, string middleName)
         {
             var scoreResultsByExaminer =
-                from itemSessionsResult in Tables.SessionsResults.AsEnumerable()
+                from itemSessionsResult in Tables.SessionsResults.Where(x => string.IsNullOrEmpty(x.Value) != true).AsEnumerable()
                 join itemStudents in Tables.Students.AsEnumerable()
                     on itemSessionsResult.StudentsId equals itemStudents.Id
                 join itemExamShedules in Tables.ExamSchedules.AsEnumerable()
                     on itemSessionsResult.ExamSchedulesId equals itemExamShedules.Id
                 join itemGroups in Tables.Groups.AsEnumerable()
                     on itemStudents.GroupsId equals itemGroups.Id
-                join itemSessions in Tables.Sessions.AsEnumerable()
+                join itemSessions in Tables.Sessions.Where(x => x.Name == sessionName).AsEnumerable()
                     on itemExamShedules.SessionsId equals itemSessions.Id
-                join itemSubjects in Tables.Subjects.AsEnumerable()
+                join itemSubjects in Tables.Subjects.Where(x => x.IsAssessment == "True").AsEnumerable()
                     on itemExamShedules.SubjectsId equals itemSubjects.Id
-                join itemExaminers in Tables.Examiners.AsEnumerable()
+                join itemExaminers in Tables.Examiners.Where(x => x.FirstName == firstName & x.LastName == lastName & x.MiddleName == middleName).AsEnumerable()
                     on itemSubjects.ExaminersId equals itemExaminers.Id
-                    where itemExaminers.FirstName == firstName & itemExaminers.LastName == lastName
-                    & itemExaminers.MiddleName == middleName
-                where itemSessions.Name == sessionName & itemSubjects.IsAssessment == "True"
-                    & string.IsNullOrEmpty(itemSessionsResult.Value) != true
                 select new
                 {
                     itemSessions.Name,
@@ -51,7 +47,7 @@ namespace SQLServer.Task7.Presentation.Views
                     itemSessionsResult.Value
                 };
 
-            return new AverageScoreByExaminer()
+            return new AverageScoreByExaminerView()
             {
                 SessionName =  sessionName,
                 FirstName = firstName,
@@ -59,7 +55,19 @@ namespace SQLServer.Task7.Presentation.Views
                 MiddleName = middleName,
                 AverageValue = scoreResultsByExaminer.Average(x => Convert.ToDouble(x.Value))
             };
+        }
 
+        /// <summary>
+        /// Conver view to string.
+        /// </summary>
+        /// <param name="view">Aggregate operations view parameter.</param>
+        /// <returns>Returns string.</returns>
+        public string ToString(AverageScoreByExaminerView view)
+        {
+            string[] header = { "SessionName; FirstName; LastName; MiddleName; AverageValue" };
+            string[] data = { $"{view.SessionName}; {view.FirstName}; {view.LastName}; {view.MiddleName}; {view.AverageValue.ToString()};" };
+
+            return string.Join(Environment.NewLine, header.Concat(data));
         }
     }
 }

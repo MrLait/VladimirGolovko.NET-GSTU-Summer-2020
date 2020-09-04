@@ -1,20 +1,46 @@
 ﻿using NUnit.Framework;
-using SQLServer.Task7.Presentation.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SQLServer.Task7.PresentationTests;
+using SQLServer.Task7.PresentationTests.TestCaseSources;
 
 namespace SQLServer.Task7.Presentation.Views.Tests
 {
     [TestFixture()]
-    public class AverageScoreByExaminerTests
+    public class AverageScoreByExaminerTests : MockBaseView
     {
-        [Test()]
-        public void GetViewTest()
+        /// <summary>
+        /// Tests for Average score by examiner.
+        /// </summary>
+        /// <param name="sessionName">Session name.</param>
+        /// <param name="groupName">Group name.</param>
+        /// <param name="expected">Expected.</param>
+        [TestCase(1, "FirstName1", "LastName1", "MiddleName1", 29.8)]
+        [TestCase(1, "FirstName2", "LastName2", "MiddleName2", 60.833333333333336)]
+        [TestCase(2, "FirstName1", "LastName1", "MiddleName1", 30.333333333333332)]
+        [TestCase(2, "FirstName2", "LastName2", "MiddleName2", 30.166666666666668)]
+        public void GiveGetView_WhenAverageValue_ThenOutIsAverageValue(int sessionName, string firstName, string lastName, string middleName, double expected)
         {
-            Assert.Fail();
+            //Arrange
+            AverageScoreByExaminerView averageScoreByExaminer = new AverageScoreByExaminerView(Mock.Object);
+            //Act
+            var actual = averageScoreByExaminer.GetView(sessionName, firstName, lastName, middleName).AverageValue;
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        /// Test for AggregateOperations.
+        /// </summary>
+        /// <param name="sessionName">Session name.</param>
+        /// <param name="groupName">Group name.</param>
+        [Test, TestCaseSource(typeof(MyFactoryAverageScoreByExaminerTests), "GiveToString_ThenOutIsToString")]
+        public string GiveToString_ThenOutIsToString(int sessionName, string firstName, string lastName, string middleName)
+        {
+            //Arrange
+            AverageScoreByExaminerView averageScoreByExaminer = new AverageScoreByExaminerView(Mock.Object);
+            //Act
+            var actual = averageScoreByExaminer.GetView(sessionName, firstName, lastName, middleName);
+            var actualString = averageScoreByExaminer.ToString(actual);
+            return actualString;
         }
     }
 }

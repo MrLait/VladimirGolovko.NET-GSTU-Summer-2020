@@ -16,6 +16,11 @@ namespace SQLServer.Task7.PresentationTests
         /// <summary>
         /// Exam schedules table.
         /// </summary>
+        public IQueryable<Examiners> Examiners { get; set; }
+
+        /// <summary>
+        /// Exam schedules table.
+        /// </summary>
         public IQueryable<ExamSchedules> ExamSchedules { get; set; }
 
         /// <summary>
@@ -54,6 +59,12 @@ namespace SQLServer.Task7.PresentationTests
         [SetUp]
         public void InitialMock()
         {
+            Examiners = new List<Examiners>()
+            {
+               new Examiners(){ Id = 1, FirstName = "FirstName1", LastName = "LastName1", MiddleName = "MiddleName1" },
+               new Examiners(){ Id = 2, FirstName = "FirstName2", LastName = "LastName2", MiddleName = "MiddleName2" }
+            }.AsQueryable();
+
             ExamSchedules = new List<ExamSchedules>()
             {
                 new ExamSchedules(){ Id = 1, SessionsId = 1, GroupsId = 1, SubjectsId = 1, ExamDate = new DateTime( 2020,07, 28, 13, 03,24) },
@@ -186,13 +197,14 @@ namespace SQLServer.Task7.PresentationTests
 
             Subjects = new List<Subjects>()
             {
-                new Subjects(){ Id = 1, Name = "Subject-1.0", IsAssessment = "False"},
-                new Subjects(){ Id = 2, Name = "Subject-1.0", IsAssessment = "True"},
-                new Subjects(){ Id = 3, Name = "Subject-2.0", IsAssessment = "False"},
-                new Subjects(){ Id = 4, Name = "Subject-2.0", IsAssessment = "True"}
+                new Subjects(){ Id = 1, Name = "Subject-1.0", IsAssessment = "False", ExaminersId = 1},
+                new Subjects(){ Id = 2, Name = "Subject-1.0", IsAssessment = "True", ExaminersId = 1},
+                new Subjects(){ Id = 3, Name = "Subject-2.0", IsAssessment = "False", ExaminersId = 2},
+                new Subjects(){ Id = 4, Name = "Subject-2.0", IsAssessment = "True", ExaminersId = 2}
             }.AsQueryable();
 
             Mock = new Mock<ITables>();
+            Mock.Setup(x => x.Examiners).Returns(Examiners);
             Mock.Setup(x => x.ExamSchedules).Returns(ExamSchedules);
             Mock.Setup(x => x.Groups).Returns(Groups);
             Mock.Setup(x => x.Sessions).Returns(Sessions);

@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace SQLServer.Task7.Presentation.Views
 {
-    public class AverageScoreBySpecialty : BaseView
+    public class AverageScoreBySpecialtyView : BaseView
     {
         /// <inheritdoc/>
-        public AverageScoreBySpecialty() { }
+        public AverageScoreBySpecialtyView() { }
 
         /// <inheritdoc/>
-        public AverageScoreBySpecialty(ITables view) : base(view) { }
+        public AverageScoreBySpecialtyView(ITables view) : base(view) { }
 
         /// <inheritdoc/>
-        public AverageScoreBySpecialty(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
+        public AverageScoreBySpecialtyView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
     }
 }

@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace SQLServer.Task7.Presentation.Views
 {
-    public class AverageScoreSubjectByYears : BaseView
+    public class AverageScoreSubjectByYearsView : BaseView
     {
-        public AverageScoreSubjectByYears()
+        public AverageScoreSubjectByYearsView()
         {
         }
 
-        public AverageScoreSubjectByYears(ITables view) : base(view)
+        public AverageScoreSubjectByYearsView(ITables view) : base(view)
         {
         }
 
-        public AverageScoreSubjectByYears(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess)
+        public AverageScoreSubjectByYearsView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess)
         {
         }
     }

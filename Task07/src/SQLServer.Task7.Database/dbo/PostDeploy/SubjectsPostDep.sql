@@ -6,7 +6,7 @@ DECLARE @SybjectsPrefix NVARCHAR(50), @IsAssessment NVARCHAR(50);
 DECLARE @Random INT;
 DECLARE @ExaminersId INT;
 SET @number = 1;
-SET @QuantitySubject = 2;
+SET @QuantitySubject = 4;
 SET @SybjectsPrefix = 'Subject-';
 SET @IsAssessment = 'False';
 SET @QuantityExaminers = (SELECT COUNT(e.Id) FROM Examiners e);

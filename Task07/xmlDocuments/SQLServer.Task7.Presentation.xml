@@ -111,13 +111,20 @@
             <param name="view">Aggregate operations view parameter.</param>
             <returns>Returns string.</returns>
         </member>
-        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialty.#ctor">
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.ToString(SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView)">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="view">Aggregate operations view parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.#ctor">
             <inheritdoc/>
         </member>
-        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialty.#ctor(SQLServer.Task7.Presentation.Interfaces.ITables)">
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.#ctor(SQLServer.Task7.Presentation.Interfaces.ITables)">
             <inheritdoc/>
         </member>
-        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialty.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql)">
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql)">
             <inheritdoc/>
         </member>
         <member name="T:SQLServer.Task7.Presentation.Views.BaseView">
