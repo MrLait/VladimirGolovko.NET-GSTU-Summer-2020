@@ -8,6 +8,9 @@ using DAO.DataAccess.Interfaces;
 
 namespace DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests
 {
+    /// <summary>
+    /// Test cases for LinqToSqlRepository.
+    /// </summary>
     [TestFixture()]
     public class LinqToSqlRepositoryTests
     {

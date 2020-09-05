@@ -14,6 +14,31 @@
             Id column in table.
             </summary>
         </member>
+        <member name="T:SQLServer.Task7.Domain.Models.Examiners">
+            <summary>
+            Examiners table in database.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.Examiners.Id">
+            <summary>
+            Id column in table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.Examiners.FirstName">
+            <summary>
+            First name column in table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.Examiners.LastName">
+            <summary>
+            Last name column in table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.Examiners.MiddleName">
+            <summary>
+            Middle name column in table.
+            </summary>
+        </member>
         <member name="T:SQLServer.Task7.Domain.Models.ExamSchedules">
             <summary>
             Exam schedules table in database.
@@ -102,6 +127,26 @@
         <member name="P:SQLServer.Task7.Domain.Models.SessionsResults.Value">
             <summary>
             Value column.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task7.Domain.Models.Specialties">
+            <summary>
+            Specialties table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.Specialties.Id">
+            <summary>
+            Id column in table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.Specialties.Name">
+            <summary>
+            Name column in table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Domain.Models.Specialties.Info">
+            <summary>
+            Info column in table. 
             </summary>
         </member>
         <member name="T:SQLServer.Task7.Domain.Models.Students">

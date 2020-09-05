@@ -60,7 +60,6 @@ namespace SQLServer.Task7.Presentation.Views
         /// Constructor for initialazing view and singletonDboAccess.
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
-        /// <param name="view">View parameter.</param>
         public SessionsResultsView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
 
         /// <summary>

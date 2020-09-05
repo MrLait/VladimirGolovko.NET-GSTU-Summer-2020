@@ -5,10 +5,24 @@ using System.Linq;
 
 namespace SQLServer.Task7.Presentation.Views
 {
+    /// <summary>
+    /// Class to view AverageScoreBySpecialtyView.
+    /// </summary>
     public class AverageScoreBySpecialtyView : BaseView
     {
+        /// <summary>
+        /// SessionName property.
+        /// </summary>
         public int SessionName { get; private set; }
+
+        /// <summary>
+        /// SpecialtyName property.
+        /// </summary>
         public string SpecialtyName { get; private set; }
+
+        /// <summary>
+        /// AverageValue property.
+        /// </summary>
         public double AverageValue { get; private set; }
 
         /// <inheritdoc/>
@@ -20,6 +34,12 @@ namespace SQLServer.Task7.Presentation.Views
         /// <inheritdoc/>
         public AverageScoreBySpecialtyView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
 
+        /// <summary>
+        /// Get view method
+        /// </summary>
+        /// <param name="sessionName">Session name.</param>
+        /// <param name="specialtyName">Specialty name.</param>
+        /// <returns>Returns view.</returns>
         public AverageScoreBySpecialtyView GetView(int sessionName, string specialtyName)
         {
             var scoreResultsBySpecialty =

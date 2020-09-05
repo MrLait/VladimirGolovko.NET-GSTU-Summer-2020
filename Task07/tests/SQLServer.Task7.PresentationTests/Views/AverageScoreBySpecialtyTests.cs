@@ -4,14 +4,17 @@ using SQLServer.Task7.PresentationTests.TestCaseSources;
 
 namespace SQLServer.Task7.Presentation.Views.Tests
 {
+    /// <summary>
+    /// Test cases for Average score by specialty.
+    /// </summary>
     [TestFixture()]
     public class AverageScoreBySpecialtyTests : MockBaseView
     {
         /// <summary>
-        /// Tests for Average score by examiner.
+        /// Tests for Average score by specialty.
         /// </summary>
         /// <param name="sessionName">Session name.</param>
-        /// <param name="groupName">Group name.</param>
+        /// <param name="specialtyName">Specialty name.</param>
         /// <param name="expected">Expected.</param>
         [TestCase(1, "Specialty-1", 58.4)]
         [TestCase(1, "Specialty-2", 37)]
@@ -28,10 +31,10 @@ namespace SQLServer.Task7.Presentation.Views.Tests
         }
 
         /// <summary>
-        /// Test for AggregateOperations.
+        /// Tests for Average score by specialty.
         /// </summary>
         /// <param name="sessionName">Session name.</param>
-        /// <param name="groupName">Group name.</param>
+        /// <param name="specialtyName">Specialty name.</param>
         [Test, TestCaseSource(typeof(MyFactoryAverageScoreBySpecialtyTests), "GiveToString_ThenOutIsToString")]
         public string GiveToString_ThenOutIsToString(int sessionName, string specialtyName)
         {

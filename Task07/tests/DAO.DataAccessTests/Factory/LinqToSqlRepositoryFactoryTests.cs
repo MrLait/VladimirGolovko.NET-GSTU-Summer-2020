@@ -1,21 +1,21 @@
 ﻿using NUnit.Framework;
-using DAO.DataAccess.Factory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DAO.DataAccess.Interfaces;
 using SQLServer.Task7.Domain.Models;
 using DAO.DataAccess.Singleton;
 
 namespace DAO.DataAccess.Factory.Tests
 {
+    /// <summary>
+    /// Test cases for LinqToSqlRepositoryFactory class.
+    /// </summary>
     [TestFixture()]
     public class LinqToSqlRepositoryFactoryTests
     {
         private AbstractFactory _linqToSqlRepositoryFactory;
 
+        /// <summary>
+        /// Initialize _linqToSqlRepositoryFactory.
+        /// </summary>
         [OneTimeSetUp]
         public void RepositoryFactoryInit()
         {

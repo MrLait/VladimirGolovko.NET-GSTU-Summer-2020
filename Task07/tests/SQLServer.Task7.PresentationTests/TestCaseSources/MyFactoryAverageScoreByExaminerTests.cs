@@ -3,6 +3,9 @@ using System.Collections;
 
 namespace SQLServer.Task7.PresentationTests.TestCaseSources
 {
+    /// <summary>
+    /// Factory for AverageScoreByExaminerTests.
+    /// </summary>
     public class MyFactoryAverageScoreByExaminerTests
     {
         /// <summary>

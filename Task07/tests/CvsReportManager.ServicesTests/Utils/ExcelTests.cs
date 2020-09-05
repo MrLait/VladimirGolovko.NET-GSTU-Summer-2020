@@ -1,16 +1,18 @@
-﻿using CvsReportManager.Services.Utils;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.IO;
 
 namespace CvsReportManager.Services.Utils.Tests
 {
+    /// <summary>
+    /// Test cases for Excel class.
+    /// </summary>
     [TestFixture()]
     public class ExcelTests
     {
         /// <summary>
         /// Full name to directory path.
         /// </summary>
-        private string directoryInfoFullName = new DirectoryInfo(@"xlsxData\\").FullName;
+        private readonly string directoryInfoFullName = new DirectoryInfo(@"xlsxData\\").FullName;
 
         /// <summary>
         /// Test case to tests Read method.

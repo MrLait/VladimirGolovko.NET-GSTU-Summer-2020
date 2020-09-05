@@ -4,8 +4,11 @@ using SQLServer.Task7.PresentationTests.TestCaseSources;
 
 namespace SQLServer.Task7.Presentation.Views.Tests
 {
+    /// <summary>
+    /// Test cases to AggregateOperationsView.
+    /// </summary>
     [TestFixture()]
-    public class AggregateOperationsViewTests: MockBaseView
+    public class AggregateOperationsViewTests : MockBaseView
     {
         /// <summary>
         /// Test for AggregateOperations.

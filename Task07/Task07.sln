@@ -8,6 +8,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xlsxData", "xlsxData", "{44506C9B-DF7C-40B1-A407-DF16DC283D56}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{A5C523E4-3941-49BA-9C35-B6ACA12DE810}"
+	ProjectSection(SolutionItems) = preProject
+		xmlDocuments\CvsReportManager.Services.xml = xmlDocuments\CvsReportManager.Services.xml
+		xmlDocuments\CvsReportManager.ServicesTests.xml = xmlDocuments\CvsReportManager.ServicesTests.xml
+		xmlDocuments\DAO.DataAccess.xml = xmlDocuments\DAO.DataAccess.xml
+		xmlDocuments\DAO.DataAccessTests.xml = xmlDocuments\DAO.DataAccessTests.xml
+		xmlDocuments\SQLServer.Task7.Domain.xml = xmlDocuments\SQLServer.Task7.Domain.xml
+		xmlDocuments\SQLServer.Task7.Presentation.xml = xmlDocuments\SQLServer.Task7.Presentation.xml
+		xmlDocuments\SQLServer.Task7.PresentationTests.xml = xmlDocuments\SQLServer.Task7.PresentationTests.xml
+	EndProjectSection
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLServer.Task7.Database", "src\SQLServer.Task7.Database\SQLServer.Task7.Database.sqlproj", "{0E8CBE6D-5D5C-43EF-867A-8B627402B862}"
 EndProject

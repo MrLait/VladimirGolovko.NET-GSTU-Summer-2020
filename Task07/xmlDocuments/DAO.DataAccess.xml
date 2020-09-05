@@ -205,6 +205,12 @@
             Connection string to database
             </summary>
         </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.LinqToSqlRepository`1.#ctor(System.String)">
+            <summary>
+            Initialize DataContext.
+            </summary>
+            <param name="dbConString">Connection string.</param>
+        </member>
         <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.LinqToSqlRepository`1.Add(`0)">
             <inheritdoc/>
         </member>

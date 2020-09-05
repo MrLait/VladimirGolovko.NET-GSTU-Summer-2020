@@ -5,20 +5,53 @@ using System.Linq;
 
 namespace SQLServer.Task7.Presentation.Views
 {
+    /// <summary>
+    /// Class to view AverageScoreByExaminerView.
+    /// </summary>
     public class AverageScoreByExaminerView : BaseView
     {
-        public AverageScoreByExaminerView() { }
-
-        public AverageScoreByExaminerView(ITables view) : base(view) { }
-
-        public AverageScoreByExaminerView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
-
+        /// <summary>
+        /// Session name property.
+        /// </summary>
         public int SessionName { get; private set; }
+
+        /// <summary>
+        /// First name property.
+        /// </summary>
         public string FirstName { get; private set; }
+
+        /// <summary>
+        /// Last name property.
+        /// </summary>
         public string LastName { get; private set; }
+
+        /// <summary>
+        /// Middle name property.
+        /// </summary>
         public string MiddleName { get; private set; }
+
+        /// <summary>
+        /// Average value property.
+        /// </summary>
         public double AverageValue { get; private set; }
 
+        /// <inheritdoc/>
+        public AverageScoreByExaminerView() { }
+
+        /// <inheritdoc/>
+        public AverageScoreByExaminerView(ITables view) : base(view) { }
+
+        /// <inheritdoc/>
+        public AverageScoreByExaminerView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess) { }
+
+        /// <summary>
+        /// Get view method.
+        /// </summary>
+        /// <param name="sessionName">Session name.</param>
+        /// <param name="firstName">First name.</param>
+        /// <param name="lastName"></param>
+        /// <param name="middleName">Middle name.</param>
+        /// <returns>Returns view.</returns>
         public AverageScoreByExaminerView GetView(int sessionName, string firstName, string lastName, string middleName)
         {
             var scoreResultsByExaminer =
@@ -57,7 +90,7 @@ namespace SQLServer.Task7.Presentation.Views
         /// <summary>
         /// Conver view to string.
         /// </summary>
-        /// <param name="view">Aggregate operations view parameter.</param>
+        /// <param name="view">Average score by examiner view parameter.</param>
         /// <returns>Returns string.</returns>
         public string ToString(AverageScoreByExaminerView view)
         {

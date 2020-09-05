@@ -2,6 +2,9 @@
 
 namespace DAO.DataAccess.Singleton.Tests
 {
+    /// <summary>
+    /// Test cases for Singleton linq to sql.
+    /// </summary>
     [TestFixture()]
     public class SingletonLinqToSqlTests
     {

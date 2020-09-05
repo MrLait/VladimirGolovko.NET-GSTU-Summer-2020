@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CvsReportManager.ServicesTests</name>
+    </assembly>
+    <members>
+        <member name="T:CvsReportManager.Services.Tests.CvsReportManagerTests">
+            <summary>
+            Test cases for Cvs report manager.
+            </summary>
+        </member>
+        <member name="F:CvsReportManager.Services.Tests.CvsReportManagerTests.directoryInfoFullName">
+            <summary>
+            Full name to directory path.
+            </summary>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenSessionsResultsView_ThenOutIsSessionOneGroupPM_1_Ordered(System.String)">
+            <summary>
+            Print SessionsResultsView.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenSessionsResultsView_ThenOutIsSessionOneGroupPM_2_Ordered(System.String)">
+            <summary>
+            Print SessionsResultsView.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenSessionsResultsView_ThenOutIsSessionTwoGroupPM_1_Ordered(System.String)">
+            <summary>
+            Print SessionsResultsView.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenSessionsResultsView_ThenOutIsSessionTwoGroupPM_2_Ordered(System.String)">
+            <summary>
+            Print SessionsResultsView.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionOneGroupPM_1(System.String)">
+            <summary>
+            Print AggregateOperations.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionOneGroupPM_2(System.String)">
+            <summary>
+            Print AggregateOperations.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionTwoGroupPM_1(System.String)">
+            <summary>
+            Print AggregateOperations.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAggregateOperationsView_ThenOutIsSessionTwoGroupPM_2(System.String)">
+            <summary>
+            Print AggregateOperations.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade30(System.String)">
+            <summary>
+            Print StudentsToBeExpelled.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade50(System.String)">
+            <summary>
+            Print StudentsToBeExpelled.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade20Ordered(System.String)">
+            <summary>
+            Print StudentsToBeExpelled.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenStudentsToBeExpelledView_ThenOutIsSessionOneGrade40Ordered(System.String)">
+            <summary>
+            Print StudentsToBeExpelled.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAverageScoreByExaminerView_ThenOutIsSessionOneExaminerOne(System.String)">
+            <summary>
+            Print AverageScoreByExaminer.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAverageScoreByExaminerView_ThenOutIsSessionOneExaminerTwo(System.String)">
+            <summary>
+            Print AverageScoreByExaminer.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAverageScoreByExaminerView_ThenOutIsSessionTwoExaminerOne(System.String)">
+            <summary>
+            Print AverageScoreByExaminer.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAverageScoreByExaminerView_ThenOutIsSessionTwoExaminerTwo(System.String)">
+            <summary>
+            Print AverageScoreByExaminer.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAverageScoreBySpecialtyView_ThenOutIsSessionOneSpecialtyOne(System.String)">
+            <summary>
+            Print AverageScoreBySpecialty.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAverageScoreBySpecialtyView_ThenOutIsSessionOneSpecialtyTwo(System.String)">
+            <summary>
+            Print AverageScoreBySpecialty.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAverageScoreBySpecialtyView_ThenOutIsSessionTwoSpecialtyOne(System.String)">
+            <summary>
+            Print AverageScoreBySpecialty.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAverageScoreBySpecialtyView_ThenOutIsSessionTwoSpecialtyTwo(System.String)">
+            <summary>
+            Print AverageScoreBySpecialty.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAverageScoreSubjectByYearsView_ThenOutIsSubjectOne(System.String)">
+            <summary>
+            Print AverageScoreSubjectByYears.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Tests.CvsReportManagerTests.GivenPrint_WhenAverageScoreSubjectByYearsView_ThenOutIsSubjectTwo(System.String)">
+            <summary>
+            Print AverageScoreSubjectByYears.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="T:CvsReportManager.Services.Utils.Tests.ExcelTests">
+            <summary>
+            Test cases for Excel class.
+            </summary>
+        </member>
+        <member name="F:CvsReportManager.Services.Utils.Tests.ExcelTests.directoryInfoFullName">
+            <summary>
+            Full name to directory path.
+            </summary>
+        </member>
+        <member name="M:CvsReportManager.Services.Utils.Tests.ExcelTests.GivenRead_WhenInXlsxFile_ThenOutIsInputXlsxFile(System.String,System.String,System.Char)">
+            <summary>
+            Test case to tests Read method.
+            </summary>
+            <param name="actual">Actrual string.</param>
+            <param name="fileName">File name.</param>
+            <param name="seporator">Seporator between word.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Utils.Tests.ExcelTests.GivenPrint_WhenInXlsxFile_ThenOutIsXlsxFile(System.String,System.String,System.Char)">
+            <summary>
+            Test case to tests Print method.
+            </summary>
+            <param name="actual">Actrual string.</param>
+            <param name="fileName">File name.</param>
+            <param name="seporator">Seporator between words.</param>
+        </member>
+        <member name="M:CvsReportManager.Services.Utils.Tests.ExcelTests.GivenPrint_WhenInExcelTestsWithDouble_ThenOutIsXlsxFile(System.String,System.String,System.Char)">
+            <summary>
+            Test case to tests Print method.
+            </summary>
+            <param name="actual">Actrual string.</param>
+            <param name="fileName">File name.</param>
+            <param name="seporator">Seporator between words.</param>
+        </member>
+    </members>
+</doc>

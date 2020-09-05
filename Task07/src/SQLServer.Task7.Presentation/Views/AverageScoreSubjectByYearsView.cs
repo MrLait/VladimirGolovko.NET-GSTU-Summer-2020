@@ -3,29 +3,43 @@ using SQLServer.Task7.Presentation.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SQLServer.Task7.Presentation.Views
 {
+    /// <summary>
+    /// Class to view average score subject by years.
+    /// </summary>
     public class AverageScoreSubjectByYearsView : BaseView
     {
+        /// <summary>
+        /// SubjectName property.
+        /// </summary>
         public string SubjectName { get; set; }
+
+        /// <summary>
+        /// Year property.
+        /// </summary>
         public int Year { get; set; }
+
+        /// <summary>
+        /// AverageValue property.
+        /// </summary>
         public double AverageValue { get; set; }
 
-        public AverageScoreSubjectByYearsView()
-        {
-        }
+        /// <inheritdoc/>
+        public AverageScoreSubjectByYearsView(){ }
 
-        public AverageScoreSubjectByYearsView(ITables view) : base(view)
-        {
-        }
+        /// <inheritdoc/>
+        public AverageScoreSubjectByYearsView(ITables view) : base(view){}
 
-        public AverageScoreSubjectByYearsView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess)
-        {
-        }
+        /// <inheritdoc/>
+        public AverageScoreSubjectByYearsView(SingletonLinqToSql singletonDboAccess) : base(singletonDboAccess){}
 
+        /// <summary>
+        /// Get view method.
+        /// </summary>
+        /// <param name="subjectName">Subject name.</param>
+        /// <returns>Returns view.</returns>
         public IEnumerable<AverageScoreSubjectByYearsView> GetView(string subjectName)
         {
             var scoreResultsBySubjectByYears =
@@ -44,13 +58,13 @@ namespace SQLServer.Task7.Presentation.Views
                      on itemExamShedules.SubjectsId equals itemSubjects.Id
                  select new
                  {
-                     Id = itemSubjects.Id,
-                     Name = itemSubjects.Name,
-                     Year = itemExamShedules.ExamDate.Year,
-                     Value = itemSessionsResult.Value
+                     itemSubjects.Id,
+                     itemSubjects.Name,
+                     itemExamShedules.ExamDate.Year,
+                     itemSessionsResult.Value
                  })
                  .GroupBy(x => new { x.Id, x.Name, x.Year })
-                 .Select( y => new { Name = y.Key.Name, Year = y.Key.Year, AverageValue = y.Average(a => Convert.ToDouble(a.Value)) });
+                 .Select( y => new { y.Key.Name, y.Key.Year, AverageValue = y.Average(a => Convert.ToDouble(a.Value)) });
 
             return scoreResultsBySubjectByYears
                 .Select(x => new AverageScoreSubjectByYearsView { SubjectName = x.Name, AverageValue = x.AverageValue, Year = x.Year });

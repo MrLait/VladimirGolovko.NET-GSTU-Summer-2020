@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace SQLServer.Task7.Presentation.Views.Tests
 {
+    /// <summary>
+    /// Test cases for Students to be expelled.
+    /// </summary>
     [TestFixture()]
     public class StudentsToBeExpelledViewTests : MockBaseView
     {

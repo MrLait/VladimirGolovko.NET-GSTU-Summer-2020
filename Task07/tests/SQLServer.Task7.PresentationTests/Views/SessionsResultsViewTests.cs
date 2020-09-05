@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace SQLServer.Task7.Presentation.Views.Tests
 {
+    /// <summary>
+    /// Test cases for Sessions results view. 
+    /// </summary>
     [TestFixture()]
     public class SessionsResultsViewTests : MockBaseView
     {

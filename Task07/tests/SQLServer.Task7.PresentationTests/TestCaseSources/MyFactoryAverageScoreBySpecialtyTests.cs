@@ -3,6 +3,9 @@ using System.Collections;
 
 namespace SQLServer.Task7.PresentationTests.TestCaseSources
 {
+    /// <summary>
+    /// Factory for AverageScoreBySpecialtyTests.
+    /// </summary>
     public class MyFactoryAverageScoreBySpecialtyTests
     {
         /// <summary>
@@ -33,7 +36,7 @@ namespace SQLServer.Task7.PresentationTests.TestCaseSources
             "2; Specialty-2; 19,5";
 
         /// <summary>
-        /// Parameters for tests AverageScoreByExaminerView.
+        /// Parameters for tests AverageScoreBySpecialtyView.
         /// </summary>
         public static IEnumerable GiveToString_ThenOutIsToString
         {

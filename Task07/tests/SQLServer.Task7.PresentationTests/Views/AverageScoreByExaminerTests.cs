@@ -4,6 +4,9 @@ using SQLServer.Task7.PresentationTests.TestCaseSources;
 
 namespace SQLServer.Task7.Presentation.Views.Tests
 {
+    /// <summary>
+    /// Test cases for Average score by examiner.
+    /// </summary>
     [TestFixture()]
     public class AverageScoreByExaminerTests : MockBaseView
     {
@@ -11,7 +14,9 @@ namespace SQLServer.Task7.Presentation.Views.Tests
         /// Tests for Average score by examiner.
         /// </summary>
         /// <param name="sessionName">Session name.</param>
-        /// <param name="groupName">Group name.</param>
+        /// <param name="firstName">First name.</param>
+        /// <param name="lastName">Last name.</param>
+        /// <param name="middleName">Middle name.</param>
         /// <param name="expected">Expected.</param>
         [TestCase(1, "FirstName1", "LastName1", "MiddleName1", 29.8)]
         [TestCase(1, "FirstName2", "LastName2", "MiddleName2", 60.833333333333336)]
@@ -31,7 +36,9 @@ namespace SQLServer.Task7.Presentation.Views.Tests
         /// Test for AggregateOperations.
         /// </summary>
         /// <param name="sessionName">Session name.</param>
-        /// <param name="groupName">Group name.</param>
+        /// /// <param name="firstName">First name.</param>
+        /// <param name="lastName">Last name.</param>
+        /// <param name="middleName">Middle name.</param>
         [Test, TestCaseSource(typeof(MyFactoryAverageScoreByExaminerTests), "GiveToString_ThenOutIsToString")]
         public string GiveToString_ThenOutIsToString(int sessionName, string firstName, string lastName, string middleName)
         {

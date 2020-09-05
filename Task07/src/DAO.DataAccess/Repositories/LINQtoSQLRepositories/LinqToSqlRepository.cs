@@ -18,6 +18,10 @@ namespace DAO.DataAccess.Repositories.LINQtoSQLRepositories
         /// </summary>
         protected DataContext DataContext { get; private set; }
 
+        /// <summary>
+        /// Initialize DataContext.
+        /// </summary>
+        /// <param name="dbConString">Connection string.</param>
         public LinqToSqlRepository(string dbConString)
         {
             DataContext = new DataContext(dbConString)

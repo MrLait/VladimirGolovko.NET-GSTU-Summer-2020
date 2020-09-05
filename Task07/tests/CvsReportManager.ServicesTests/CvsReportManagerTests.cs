@@ -5,13 +5,16 @@ using System.IO;
 
 namespace CvsReportManager.Services.Tests
 {
+    /// <summary>
+    /// Test cases for Cvs report manager.
+    /// </summary>
     [TestFixture()]
     public class CvsReportManagerTests
     {
         /// <summary>
         /// Full name to directory path.
         /// </summary>
-        private string directoryInfoFullName = new DirectoryInfo(@"xlsxData\\").FullName;
+        private readonly string directoryInfoFullName = new DirectoryInfo(@"xlsxData\\").FullName;
 
         /// <summary>
         /// Print SessionsResultsView.
@@ -358,12 +361,12 @@ namespace CvsReportManager.Services.Tests
         /// Print AverageScoreSubjectByYears.
         /// </summary>
         /// <param name="fileName">File name.</param>
-        [TestCase("AvgScoreSubjectByYearsSesOne")]
-        public void GivenPrint_WhenAverageScoreSubjectByYearsView_ThenOutIsSessionOne(string fileName)
+        [TestCase("AvgScoreSubjectByYearsSubjOne")]
+        public void GivenPrint_WhenAverageScoreSubjectByYearsView_ThenOutIsSubjectOne(string fileName)
         {
             //Arrange
-            CvsReportManager cvsReportManager = new CvsReportManager(new Excel(directoryInfoFullName, fileName), MyFactoryAverageScoreSubjectByYearsTests.SessionOne, ';');
-            var expected = MyFactoryAverageScoreSubjectByYearsTests.SessionOne.Replace(" ", "");
+            CvsReportManager cvsReportManager = new CvsReportManager(new Excel(directoryInfoFullName, fileName), MyFactoryAverageScoreSubjectByYearsTests.SubjectOne, ';');
+            var expected = MyFactoryAverageScoreSubjectByYearsTests.SubjectOne.Replace(" ", "");
             //Act
             cvsReportManager.Print();
             var actual = new Excel(directoryInfoFullName, fileName).Read(';').Replace(" ", "");
@@ -375,8 +378,8 @@ namespace CvsReportManager.Services.Tests
         /// Print AverageScoreSubjectByYears.
         /// </summary>
         /// <param name="fileName">File name.</param>
-        [TestCase("AvgScoreSubjectByYearsSesTwo")]
-        public void GivenPrint_WhenAverageScoreSubjectByYearsView_ThenOutIsSessionTwo(string fileName)
+        [TestCase("AvgScoreSubjectByYearsSubjTwo")]
+        public void GivenPrint_WhenAverageScoreSubjectByYearsView_ThenOutIsSubjectTwo(string fileName)
         {
             //Arrange
             CvsReportManager cvsReportManager = new CvsReportManager(new Excel(directoryInfoFullName, fileName), MyFactoryAverageScoreSubjectByYearsTests.SubjectTwo, ';');
