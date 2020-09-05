@@ -6,6 +6,32 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C58384CE-F995-4EA3-925C-A21AF731BDF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xlsxData", "xlsxData", "{44506C9B-DF7C-40B1-A407-DF16DC283D56}"
+	ProjectSection(SolutionItems) = preProject
+		xlsxData\AggregateOperationsSesOnePM_1.xlsx = xlsxData\AggregateOperationsSesOnePM_1.xlsx
+		xlsxData\AggregateOperationsSesOnePM_2.xlsx = xlsxData\AggregateOperationsSesOnePM_2.xlsx
+		xlsxData\AggregateOperationsSesTwoPM_1.xlsx = xlsxData\AggregateOperationsSesTwoPM_1.xlsx
+		xlsxData\AggregateOperationsSesTwoPM_2.xlsx = xlsxData\AggregateOperationsSesTwoPM_2.xlsx
+		xlsxData\AvgScoreByExaminerSesOneExamOne.xlsx = xlsxData\AvgScoreByExaminerSesOneExamOne.xlsx
+		xlsxData\AvgScoreByExaminerSesOneExamTwo.xlsx = xlsxData\AvgScoreByExaminerSesOneExamTwo.xlsx
+		xlsxData\AvgScoreByExaminerSesTwoExamOne.xlsx = xlsxData\AvgScoreByExaminerSesTwoExamOne.xlsx
+		xlsxData\AvgScoreByExaminerSesTwoExamTwo.xlsx = xlsxData\AvgScoreByExaminerSesTwoExamTwo.xlsx
+		xlsxData\AvgScoreBySpecSesOneSpecOne.xlsx = xlsxData\AvgScoreBySpecSesOneSpecOne.xlsx
+		xlsxData\AvgScoreBySpecSesOneSpecTwo.xlsx = xlsxData\AvgScoreBySpecSesOneSpecTwo.xlsx
+		xlsxData\AvgScoreBySpecSesTwoSpecOne.xlsx = xlsxData\AvgScoreBySpecSesTwoSpecOne.xlsx
+		xlsxData\AvgScoreBySpecSesTwoSpecTwo.xlsx = xlsxData\AvgScoreBySpecSesTwoSpecTwo.xlsx
+		xlsxData\AvgScoreSubjectByYearsSubjOne.xlsx = xlsxData\AvgScoreSubjectByYearsSubjOne.xlsx
+		xlsxData\AvgScoreSubjectByYearsSubjTwo.xlsx = xlsxData\AvgScoreSubjectByYearsSubjTwo.xlsx
+		xlsxData\ExcelTestsOne.xlsx = xlsxData\ExcelTestsOne.xlsx
+		xlsxData\ExcelTestsWithDouble.xlsx = xlsxData\ExcelTestsWithDouble.xlsx
+		xlsxData\SessionsResultsSesOnePM_1.xlsx = xlsxData\SessionsResultsSesOnePM_1.xlsx
+		xlsxData\SessionsResultsSesOnePM_2.xlsx = xlsxData\SessionsResultsSesOnePM_2.xlsx
+		xlsxData\SessionsResultsSesTwoPM_1.xlsx = xlsxData\SessionsResultsSesTwoPM_1.xlsx
+		xlsxData\SessionsResultsSesTwoPM_2.xlsx = xlsxData\SessionsResultsSesTwoPM_2.xlsx
+		xlsxData\StudentsExpelledSesOne20Ordered.xlsx = xlsxData\StudentsExpelledSesOne20Ordered.xlsx
+		xlsxData\StudentsExpelledSesOne30.xlsx = xlsxData\StudentsExpelledSesOne30.xlsx
+		xlsxData\StudentsExpelledSesOne40Ordered.xlsx = xlsxData\StudentsExpelledSesOne40Ordered.xlsx
+		xlsxData\StudentsExpelledSesOne50.xlsx = xlsxData\StudentsExpelledSesOne50.xlsx
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{A5C523E4-3941-49BA-9C35-B6ACA12DE810}"
 	ProjectSection(SolutionItems) = preProject
