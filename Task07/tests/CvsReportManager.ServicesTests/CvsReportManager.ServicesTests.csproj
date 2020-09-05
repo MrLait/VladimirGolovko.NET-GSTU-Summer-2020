@@ -60,8 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\CvsReportManager.Services\CvsReportManager.Services.csproj">
-      <Project>{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}</Project>
+      <Project>{b6c66855-03c2-4f5d-b1c7-bd7e8d609ccc}</Project>
       <Name>CvsReportManager.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLServer.Task7.PresentationTests\SQLServer.Task7.PresentationTests.csproj">
+      <Project>{F8205E4A-1E96-4C8D-8EA4-5059D56DD229}</Project>
+      <Name>SQLServer.Task7.PresentationTests</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

@@ -1,4 +1,4 @@
-﻿namespace SQLServer.Task6.CvsReportManager.Services.Interfaces
+﻿namespace CvsReportManager.Services.Interfaces
 {
     /// <summary>
     /// Intarface with print contract.

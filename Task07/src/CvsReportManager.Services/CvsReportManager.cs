@@ -1,6 +1,6 @@
-﻿using SQLServer.Task6.CvsReportManager.Services.Interfaces;
+﻿using CvsReportManager.Services.Interfaces;
 
-namespace SQLServer.Task6.CvsReportManager.Services
+namespace CvsReportManager.Services
 {
     /// <summary>
     /// Cvs report manager.
@@ -34,7 +34,7 @@ namespace SQLServer.Task6.CvsReportManager.Services
             CvsText = cvsText;
             Separator = separator;
         }
-        
+
         /// <summary>
         /// Print text.
         /// </summary>

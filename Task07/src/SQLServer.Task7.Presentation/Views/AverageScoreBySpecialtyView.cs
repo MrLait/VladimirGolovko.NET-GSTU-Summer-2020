@@ -58,7 +58,7 @@ namespace SQLServer.Task7.Presentation.Views
         public string ToString(AverageScoreBySpecialtyView view)
         {
             string[] header = { "SessionName; SpecialtyName; AverageValue" };
-            string[] data = { $"{view.SessionName}; {view.SpecialtyName}; {view.AverageValue.ToString()};" };
+            string[] data = { $"{view.SessionName}; {view.SpecialtyName}; {view.AverageValue.ToString()}" };
 
             return string.Join(Environment.NewLine, header.Concat(data));
         }

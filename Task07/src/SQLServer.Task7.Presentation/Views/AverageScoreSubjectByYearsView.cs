@@ -63,8 +63,8 @@ namespace SQLServer.Task7.Presentation.Views
         /// <returns>Returns string.</returns>
         public string ToString(IEnumerable<AverageScoreSubjectByYearsView> view)
         {
-            string[] header = { "SubjectName; Year; AverageValue;"};
-            string[] data = view.Select(p => string.Format("{0}; {1}; {2};", p.SubjectName, p.Year, p.AverageValue)).ToArray();
+            string[] header = { "SubjectName; Year; AverageValue"};
+            string[] data = view.Select(p => string.Format("{0}; {1}; {2}", p.SubjectName, p.Year, p.AverageValue)).ToArray();
 
             return string.Join(Environment.NewLine, header.Concat(data));
         }

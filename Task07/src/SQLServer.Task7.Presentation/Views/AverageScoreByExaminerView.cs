@@ -1,10 +1,7 @@
 ﻿using DAO.DataAccess.Singleton;
 using SQLServer.Task7.Presentation.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SQLServer.Task7.Presentation.Views
 {
@@ -65,7 +62,7 @@ namespace SQLServer.Task7.Presentation.Views
         public string ToString(AverageScoreByExaminerView view)
         {
             string[] header = { "SessionName; FirstName; LastName; MiddleName; AverageValue" };
-            string[] data = { $"{view.SessionName}; {view.FirstName}; {view.LastName}; {view.MiddleName}; {view.AverageValue.ToString()};" };
+            string[] data = { $"{view.SessionName}; {view.FirstName}; {view.LastName}; {view.MiddleName}; {view.AverageValue.ToString()}" };
 
             return string.Join(Environment.NewLine, header.Concat(data));
         }

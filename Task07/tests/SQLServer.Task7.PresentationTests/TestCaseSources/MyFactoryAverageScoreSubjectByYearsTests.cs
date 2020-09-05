@@ -9,19 +9,19 @@ namespace SQLServer.Task7.PresentationTests.TestCaseSources
         /// String implementation for subject one.
         /// </summary>
         public static readonly string SessionOne =
-            "SubjectName; Year; AverageValue;\r\n" +
-            "Subject-1.0; 2018; 20;\r\n" +
-            "Subject-1.0; 2019; 29,25;\r\n" +
-            "Subject-1.0; 2020; 57;";
+            "SubjectName; Year; AverageValue\r\n" +
+            "Subject-1.0; 2018; 20\r\n" +
+            "Subject-1.0; 2019; 29,25\r\n" +
+            "Subject-1.0; 2020; 57";
 
         /// <summary>
         /// String implementation for subject two.
         /// </summary>
         public static readonly string SubjectTwo =
-            "SubjectName; Year; AverageValue;\r\n" +
-            "Subject-2.0; 2018; 22;\r\n" +
-            "Subject-2.0; 2019; 60,8333333333333;\r\n" +
-            "Subject-2.0; 2020; 46,5;";
+            "SubjectName; Year; AverageValue\r\n" +
+            "Subject-2.0; 2018; 22\r\n" +
+            "Subject-2.0; 2019; 60,8333333333333\r\n" +
+            "Subject-2.0; 2020; 46,5";
 
         /// <summary>
         /// Parameters for tests AverageScoreByExaminerView.

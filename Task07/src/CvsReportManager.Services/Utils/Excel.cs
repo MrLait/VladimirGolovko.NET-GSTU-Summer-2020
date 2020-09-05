@@ -1,10 +1,10 @@
-﻿using Microsoft.Office.Interop.Excel;
-using SQLServer.Task6.CvsReportManager.Services.Interfaces;
+﻿using CvsReportManager.Services.Interfaces;
+using Microsoft.Office.Interop.Excel;
 using System;
 using System.IO;
 using System.Text;
 
-namespace SQLServer.Task6.CvsReportManager.Services.Utils
+namespace CvsReportManager.Services.Utils
 {
     /// <summary>
     /// Excel reader and writer.
@@ -45,13 +45,12 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
 
             if (!Directory.Exists(_directoryPath))
                 Directory.CreateDirectory(_directoryPath);
-
-            _excelWorkbook = _excelApplication.Workbooks.Add();
-            _excelWorksheet = (Worksheet)_excelWorkbook.Sheets[1];
-            _excelWorksheet.Name = _fileName;
-
             try
             {
+                _excelWorkbook = _excelApplication.Workbooks.Add();
+                _excelWorksheet = (Worksheet)_excelWorkbook.Sheets[1];
+                _excelWorksheet.Name = _fileName;
+
                 int row = 0;
                 int cells = 1;
 
@@ -62,7 +61,11 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
 
                     foreach (var cellValue in item.Split(separator))
                     {
-                        _excelWorksheet.Cells[row, cells] = cellValue;
+                        if (double.TryParse(cellValue, out double doubleValue)) 
+                            _excelWorksheet.Cells[row, cells] = doubleValue;
+                        else
+                            _excelWorksheet.Cells[row, cells] = cellValue;
+
                         cells++;
                     }
                 }
@@ -72,7 +75,7 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception(ex.Message);
             }
             finally
             {
@@ -97,7 +100,7 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
 
             try
             {
-                _excelWorkbook = _excelApplication.Workbooks.Open(_directoryPath + _fileName +_xlslExtension, 0, true, 5, "", "", true, XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+                _excelWorkbook = _excelApplication.Workbooks.Open(_directoryPath + _fileName + _xlslExtension, 0, true, 5, "", "", true, XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
                 _excelWorksheet = (Worksheet)_excelWorkbook.Worksheets.get_Item(1);
                 range = _excelWorksheet.UsedRange;
 
@@ -121,7 +124,7 @@ namespace SQLServer.Task6.CvsReportManager.Services.Utils
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception(ex.Message);
             }
             finally
             {
