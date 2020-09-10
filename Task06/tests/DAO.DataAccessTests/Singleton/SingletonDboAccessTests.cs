@@ -1,6 +1,4 @@
 ﻿using NUnit.Framework;
-using DAO.DataAccess.Factory;
-using DAO.DataAccessTests;
 
 namespace DAO.DataAccess.Singleton.Tests
 {
@@ -8,7 +6,7 @@ namespace DAO.DataAccess.Singleton.Tests
     /// Test cases for singleton dbo access class.
     /// </summary>
     [TestFixture()]
-    public class SingletonDboAccessTests : DatabaseConnectionBase
+    public class SingletonDboAccessTests
     {
         /// <summary>
         /// Checkin to create instance.
@@ -18,10 +16,10 @@ namespace DAO.DataAccess.Singleton.Tests
         public void GivenGetInstance_ThenOutIsNotNullInstance(bool expectedIsInstanceCreate)
         {
             //Arrange
-            SingletonDboAccess singleton = SingletonDboAccess.GetInstance(new ADORepositoryFactory(DbConnString));
+            SingletonDboAccess singleton = SingletonDboAccess.GetInstance();
             var actualIsInstanceCreate = false;
             //Act
-            if (singleton.RepositoryFactory != null)
+            if (singleton.ADORepositoryFactory != null)
                 actualIsInstanceCreate = true;
             //Assert
             Assert.AreEqual(expectedIsInstanceCreate, actualIsInstanceCreate);

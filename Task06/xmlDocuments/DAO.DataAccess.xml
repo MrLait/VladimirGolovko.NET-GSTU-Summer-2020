@@ -258,27 +258,30 @@
             Access to database with singleton pattern.
             </summary>
         </member>
+        <member name="F:DAO.DataAccess.Singleton.SingletonDboAccess._dbConnString">
+            <summary>
+            Connection string to database.
+            </summary>
+        </member>
         <member name="F:DAO.DataAccess.Singleton.SingletonDboAccess._instance">
             <summary>
             Static field with singleton instance.
             </summary>
         </member>
-        <member name="P:DAO.DataAccess.Singleton.SingletonDboAccess.RepositoryFactory">
+        <member name="P:DAO.DataAccess.Singleton.SingletonDboAccess.ADORepositoryFactory">
             <summary>
             RepositoryFactory property witch represent access to table models.
             </summary>
         </member>
-        <member name="M:DAO.DataAccess.Singleton.SingletonDboAccess.#ctor(DAO.DataAccess.Factory.AbstractFactory)">
+        <member name="M:DAO.DataAccess.Singleton.SingletonDboAccess.#ctor">
             <summary>
             Private constructor with AbstractFactory parameter.
             </summary>
-            <param name="factory">AbstractFactory parameter.</param>
         </member>
-        <member name="M:DAO.DataAccess.Singleton.SingletonDboAccess.GetInstance(DAO.DataAccess.Factory.AbstractFactory)">
+        <member name="M:DAO.DataAccess.Singleton.SingletonDboAccess.GetInstance">
             <summary>
             Method to create singleton instance.
             </summary>
-            <param name="factory">Input database factory.</param>
             <returns>Singleton instance.</returns>
         </member>
     </members>

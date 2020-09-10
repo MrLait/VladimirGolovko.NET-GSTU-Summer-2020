@@ -7,6 +7,9 @@ namespace DAO.DataAccess.Singleton
     /// </summary>
     public sealed class SingletonLinqToSql
     {
+        /// <summary>
+        /// Connection string to database.
+        /// </summary>
         private static string _dbConnString = @"Data Source=LAIT-PC\SQLEXPRESS;Initial Catalog=SQLServer.Task7.Database;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         /// <summary>
