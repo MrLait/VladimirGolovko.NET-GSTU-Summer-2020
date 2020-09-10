@@ -1,0 +1,474 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SQLServer.Task7.Presentation</name>
+    </assembly>
+    <members>
+        <member name="T:SQLServer.Task7.Presentation.Interfaces.ITables">
+            <summary>
+            Interface with tables contract.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Interfaces.ITables.Examiners">
+            <summary>
+            Examiners table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Interfaces.ITables.Groups">
+            <summary>
+            Groups table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Interfaces.ITables.Sessions">
+            <summary>
+            Sessions table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Interfaces.ITables.Students">
+            <summary>
+            Students table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Interfaces.ITables.ExamSchedules">
+            <summary>
+            Exam schedules table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Interfaces.ITables.SessionsResults">
+            <summary>
+            Sessions results table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Interfaces.ITables.Specialties">
+            <summary>
+            Sessions results table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Interfaces.ITables.Subjects">
+            <summary>
+            Subjects table.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Models.Tables">
+            <summary>
+            Tables from database.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Models.Tables.Examiners">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Models.Tables.Groups">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Models.Tables.Sessions">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Models.Tables.Students">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Models.Tables.ExamSchedules">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Models.Tables.SessionsResults">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Models.Tables.Specialties">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Models.Tables.Subjects">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.AggregateOperationsView">
+            <summary>
+            Aggregate operations view.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AggregateOperationsView.SessionName">
+            <summary>
+            SessionName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AggregateOperationsView.GroupName">
+            <summary>
+            GroupName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AggregateOperationsView.MaxValue">
+            <summary>
+            MaxValue column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AggregateOperationsView.MinValue">
+            <summary>
+            MinValue column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AggregateOperationsView.AverageValue">
+            <summary>
+            AverageValue column.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AggregateOperationsView.#ctor">
+            <summary>
+            Constructur without parameters.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AggregateOperationsView.#ctor(SQLServer.Task7.Presentation.Interfaces.ITables)">
+            <summary>
+            Constructor for initialazing view.
+            </summary>
+            <param name="tables">View parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AggregateOperationsView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql)">
+            <summary>
+            Constructor for initialazing view and singletonDboAccess.
+            </summary>
+            <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AggregateOperationsView.GetView(System.Int32,System.String)">
+            <summary>
+            Method for get view.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="groupName">Group name parameter.</param>
+            <returns>Returns new view.</returns>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AggregateOperationsView.ToString(SQLServer.Task7.Presentation.Views.AggregateOperationsView)">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="view">Aggregate operations view parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView">
+            <summary>
+            Class to view AverageScoreByExaminerView.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.SessionName">
+            <summary>
+            Session name property.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.FirstName">
+            <summary>
+            First name property.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.LastName">
+            <summary>
+            Last name property.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.MiddleName">
+            <summary>
+            Middle name property.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.AverageValue">
+            <summary>
+            Average value property.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.#ctor(SQLServer.Task7.Presentation.Interfaces.ITables)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.GetView(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Get view method.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="firstName">First name.</param>
+            <param name="lastName"></param>
+            <param name="middleName">Middle name.</param>
+            <returns>Returns view.</returns>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView.ToString(SQLServer.Task7.Presentation.Views.AverageScoreByExaminerView)">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="view">Average score by examiner view parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView">
+            <summary>
+            Class to view AverageScoreBySpecialtyView.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.SessionName">
+            <summary>
+            SessionName property.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.SpecialtyName">
+            <summary>
+            SpecialtyName property.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.AverageValue">
+            <summary>
+            AverageValue property.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.#ctor(SQLServer.Task7.Presentation.Interfaces.ITables)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.GetView(System.Int32,System.String)">
+            <summary>
+            Get view method
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="specialtyName">Specialty name.</param>
+            <returns>Returns view.</returns>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView.ToString(SQLServer.Task7.Presentation.Views.AverageScoreBySpecialtyView)">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="view">Aggregate operations view parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView">
+            <summary>
+            Class to view average score subject by years.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView.SubjectName">
+            <summary>
+            SubjectName property.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView.Year">
+            <summary>
+            Year property.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView.AverageValue">
+            <summary>
+            AverageValue property.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView.#ctor(SQLServer.Task7.Presentation.Interfaces.ITables)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql)">
+            <inheritdoc/>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView.GetView(System.String)">
+            <summary>
+            Get view method.
+            </summary>
+            <param name="subjectName">Subject name.</param>
+            <returns>Returns view.</returns>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView.ToString(System.Collections.Generic.IEnumerable{SQLServer.Task7.Presentation.Views.AverageScoreSubjectByYearsView})">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="view">Aggregate operations view parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.BaseView">
+            <summary>
+            Base class for view.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.BaseView.SingletonDboAccess">
+            <summary>
+            Acceess to database.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.Presentation.Views.BaseView.Tables">
+            <summary>
+            Tables for view.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.BaseView.#ctor">
+            <summary>
+            Empty constructor.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.BaseView.#ctor(SQLServer.Task7.Presentation.Interfaces.ITables)">
+            <summary>
+            Initial view.
+            </summary>
+            <param name="view">View property.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.BaseView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql)">
+            <summary>
+            Iitialazing access to database and view.
+            </summary>
+            <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.SessionsResultsView">
+            <summary>
+            Sessions results view.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.SessionsResultsView.SessionName">
+            <summary>
+            SessionName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.SessionsResultsView.GroupName">
+            <summary>
+            GroupName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.SessionsResultsView.FirstName">
+            <summary>
+            FirstName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.SessionsResultsView.LastName">
+            <summary>
+            LastName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.SessionsResultsView.MiddleName">
+            <summary>
+            MiddleName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.SessionsResultsView.SubjectName">
+            <summary>
+            SubjectName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.SessionsResultsView.Value">
+            <summary>
+            Value column.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.SessionsResultsView.#ctor">
+            <summary>
+            Constructur without parameters.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.SessionsResultsView.#ctor(SQLServer.Task7.Presentation.Interfaces.ITables)">
+            <summary>
+            Constructor for initialazing view.
+            </summary>
+            <param name="view">View parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.SessionsResultsView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql)">
+            <summary>
+            Constructor for initialazing view and singletonDboAccess.
+            </summary>
+            <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.SessionsResultsView.GetView(System.Int32,System.String)">
+            <summary>
+            Method for get view.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="groupName">Group name parameter.</param>
+            <returns>Returns new view.</returns>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.SessionsResultsView.ToString(System.Collections.Generic.IEnumerable{SQLServer.Task7.Presentation.Views.SessionsResultsView})">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="sessionResultView">Session result view parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView">
+            <summary>
+            Students to be expelled view.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.StudentId">
+            <summary>
+            StudentId column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.SessionName">
+            <summary>
+            SessionName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.GroupName">
+            <summary>
+            GroupName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.FirstName">
+            <summary>
+             column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.LastName">
+            <summary>
+            LastName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.MiddleName">
+            <summary>
+            MiddleName column.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.#ctor">
+            <summary>
+            Constructur without parameters.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.#ctor(SQLServer.Task7.Presentation.Interfaces.ITables)">
+            <summary>
+            Constructor for initialazing view.
+            </summary>
+            <param name="tables">View parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.#ctor(DAO.DataAccess.Singleton.SingletonLinqToSql)">
+            <summary>
+            Constructor for initialazing view and singletonDboAccess.
+            </summary>
+            <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.GetView(System.Int32,System.Int32)">
+            <summary>
+            Method for get view.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="minPassingGrade">Session minimum passing grade parameter.</param>
+            <returns>Returns new view.</returns>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView.ToString(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{SQLServer.Task7.Presentation.Views.StudentsToBeExpelledView}})">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="studentsToBeExpelledGrouped">Students to be expelled grouped parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+    </members>
+</doc>

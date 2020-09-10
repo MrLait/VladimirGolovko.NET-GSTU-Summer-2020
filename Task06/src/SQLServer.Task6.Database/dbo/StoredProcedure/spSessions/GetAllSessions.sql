@@ -1,0 +1,4 @@
+﻿CREATE PROCEDURE GetAllSessions
+AS
+	SELECT * FROM Sessions
+GO

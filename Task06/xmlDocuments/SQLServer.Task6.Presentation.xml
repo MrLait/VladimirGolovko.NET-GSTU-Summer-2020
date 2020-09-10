@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SQLServer.Task6.Presentation</name>
+    </assembly>
+    <members>
+        <member name="T:SQLServer.Task6.Presentation.Interfaces.IView">
+            <summary>
+            Interface with tables contract.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.Groups">
+            <summary>
+            Groups table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.Sessions">
+            <summary>
+            Sessions table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.Students">
+            <summary>
+            Students table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.ExamSchedules">
+            <summary>
+            Exam schedules table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.SessionsResults">
+            <summary>
+            Sessions results table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.Subjects">
+            <summary>
+            Subjects table.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task6.Presentation.Views.AggregateOperationsView">
+            <summary>
+            Aggregate operations view.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.AggregateOperationsView.SessionName">
+            <summary>
+            SessionName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.AggregateOperationsView.GroupName">
+            <summary>
+            GroupName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.AggregateOperationsView.MaxValue">
+            <summary>
+            MaxValue column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.AggregateOperationsView.MinValue">
+            <summary>
+            MinValue column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.AggregateOperationsView.AverageValue">
+            <summary>
+            AverageValue column.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.AggregateOperationsView.#ctor">
+            <summary>
+            Constructur without parameters.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.AggregateOperationsView.#ctor(SQLServer.Task6.Presentation.Interfaces.IView)">
+            <summary>
+            Constructor for initialazing view.
+            </summary>
+            <param name="view">View parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.AggregateOperationsView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task6.Presentation.Interfaces.IView)">
+            <summary>
+            Constructor for initialazing view and singletonDboAccess.
+            </summary>
+            <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
+            <param name="view">View parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.AggregateOperationsView.GetView(System.String,System.String)">
+            <summary>
+            Method for get view.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="groupName">Group name parameter.</param>
+            <returns>Returns new view.</returns>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.AggregateOperationsView.ToString(SQLServer.Task6.Presentation.Views.AggregateOperationsView)">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="view">Aggregate operations view parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="T:SQLServer.Task6.Presentation.Views.BaseView">
+            <summary>
+            Base class for view.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.BaseView.SingletonDboAccess">
+            <summary>
+            Acceess to database.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task6.Presentation.Views.BaseView.View">
+            <summary>
+            Tables for view.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.BaseView.#ctor">
+            <summary>
+            Empty constructor.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.BaseView.#ctor(SQLServer.Task6.Presentation.Interfaces.IView)">
+            <summary>
+            Initial view.
+            </summary>
+            <param name="view">View property.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.BaseView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task6.Presentation.Interfaces.IView)">
+            <summary>
+            Iitialazing access to database and view.
+            </summary>
+            <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
+            <param name="view">View parameter.</param>
+        </member>
+        <member name="T:SQLServer.Task6.Presentation.Views.SessionsResultsView">
+            <summary>
+            Sessions results view.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.SessionsResultsView.SessionName">
+            <summary>
+            SessionName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.SessionsResultsView.GroupName">
+            <summary>
+            GroupName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.SessionsResultsView.FirstName">
+            <summary>
+            FirstName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.SessionsResultsView.LastName">
+            <summary>
+            LastName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.SessionsResultsView.MiddleName">
+            <summary>
+            MiddleName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.SessionsResultsView.SubjectName">
+            <summary>
+            SubjectName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.SessionsResultsView.Value">
+            <summary>
+            Value column.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.SessionsResultsView.#ctor">
+            <summary>
+            Constructur without parameters.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.SessionsResultsView.#ctor(SQLServer.Task6.Presentation.Interfaces.IView)">
+            <summary>
+            Constructor for initialazing view.
+            </summary>
+            <param name="view">View parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.SessionsResultsView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task6.Presentation.Interfaces.IView)">
+            <summary>
+            Constructor for initialazing view and singletonDboAccess.
+            </summary>
+            <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
+            <param name="view">View parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.SessionsResultsView.GetView(System.String,System.String)">
+            <summary>
+            Method for get view.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="groupName">Group name parameter.</param>
+            <returns>Returns new view.</returns>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.SessionsResultsView.ToString(System.Collections.Generic.IEnumerable{SQLServer.Task6.Presentation.Views.SessionsResultsView})">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="sessionResultView">Session result view parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="T:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView">
+            <summary>
+            Students to be expelled view.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.StudentId">
+            <summary>
+            StudentId column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.SessionName">
+            <summary>
+            SessionName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.GroupName">
+            <summary>
+            GroupName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.FirstName">
+            <summary>
+             column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.LastName">
+            <summary>
+            LastName column.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.MiddleName">
+            <summary>
+            MiddleName column.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.#ctor">
+            <summary>
+            Constructur without parameters.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.#ctor(SQLServer.Task6.Presentation.Interfaces.IView)">
+            <summary>
+            Constructor for initialazing view.
+            </summary>
+            <param name="view">View parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task6.Presentation.Interfaces.IView)">
+            <summary>
+            Constructor for initialazing view and singletonDboAccess.
+            </summary>
+            <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
+            <param name="view">View parameter.</param>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.GetView(System.String,System.Int32)">
+            <summary>
+            Method for get view.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="minPassingGrade">Session minimum passing grade parameter.</param>
+            <returns>Returns new view.</returns>
+        </member>
+        <member name="M:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.ToString(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView}})">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="studentsToBeExpelledGrouped">Students to be expelled grouped parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+    </members>
+</doc>

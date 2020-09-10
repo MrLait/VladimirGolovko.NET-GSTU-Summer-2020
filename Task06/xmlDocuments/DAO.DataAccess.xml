@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DAO.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:DAO.DataAccess.Factory.ADORepositoryFactory">
+            <summary>
+            ADO repository factory class.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.ExamSchedules">
+            <summary>
+            Represent access to ExamSchedules table.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.Groups">
+            <summary>
+            Represent access to Groups.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.Sessions">
+            <summary>
+            Represent access to Sessions.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.SessionsResults">
+            <summary>
+            Represent access to SessionsResults.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.Students">
+            <summary>
+            Represent access to Students.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Factory.ADORepositoryFactory.Subjects">
+            <summary>
+            Represent access to Subjects.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.#ctor(System.String)">
+            <summary>
+            Constructor to initializing access with tables and get connection string to database.
+            </summary>
+            <param name="dbConnectionStrig"></param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateExamSchedules">
+            <summary>
+            Factory method to create ExamSchedules table.
+            </summary>
+            <returns>Returns ExamSchedules.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateGroups">
+            <summary>
+            Factory method to create Groups table.
+            </summary>
+            <returns>Returns Groups.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateSessions">
+            <summary>
+            Factory method to create Sessions table.
+            </summary>
+            <returns>Returns Sessions.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateSessionsResults">
+            <summary>
+            Factory method to create SessionsResults table.
+            </summary>
+            <returns>Returns SessionsResults.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateStudents">
+            <summary>
+            Factory method to create Students table.
+            </summary>
+            <returns>Returns Students.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.ADORepositoryFactory.CreateSubjects">
+            <summary>
+            Factory method to create Subjects table.
+            </summary>
+            <returns>Returns Subjects.</returns>
+        </member>
+        <member name="T:DAO.DataAccess.Factory.AbstractFactory">
+            <summary>
+            Abstract factory to get access to database tables.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.AbstractFactory.CreateExamSchedules">
+            <summary>
+            Create exam schedules.
+            </summary>
+            <returns>Returns exam schedules.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.AbstractFactory.CreateGroups">
+            <summary>
+            Create groups
+            </summary>
+            <returns>Returns groups.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.AbstractFactory.CreateSessions">
+            <summary>
+            Create sessions.
+            </summary>
+            <returns>Returns sessions</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.AbstractFactory.CreateSessionsResults">
+            <summary>
+            Create sessions results.
+            </summary>
+            <returns>Returns sessions results</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.AbstractFactory.CreateStudents">
+            <summary>
+            Create students.
+            </summary>
+            <returns>Returns students.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.AbstractFactory.CreateSubjects">
+            <summary>
+            Create subjects.
+            </summary>
+            <returns>Returns subjects.</returns>
+        </member>
+        <member name="T:DAO.DataAccess.Interfaces.ICRUD`1">
+            <summary>
+            That interface describes CRUD method.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:DAO.DataAccess.Interfaces.ICRUD`1.GetByID(System.Int32)">
+            <summary>
+            Get object by Id from table in database.
+            </summary>
+            <param name="byId">Object id.</param>
+            <returns>Returns object by id.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Interfaces.ICRUD`1.Add(`0)">
+            <summary>
+            Add object to database.
+            </summary>
+            <param name="entity">Object to add in database.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Interfaces.ICRUD`1.Delete(System.Int32)">
+            <summary>
+            Delete object from table by Id.
+            </summary>
+            <param name="byId">Id oject.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Interfaces.ICRUD`1.Update(`0)">
+            <summary>
+            Modify an existing object. 
+            </summary>
+            <param name="entity">Object with parameters to be changed.</param>
+            <returns>Returns changed object.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Interfaces.ICRUD`1.GetAll">
+            <summary>
+            Method to get all objects from database table.
+            </summary>
+            <returns>Returns list of objects</returns>
+        </member>
+        <member name="T:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1">
+            <summary>
+            Abstract repository with implemented CRUD methods.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.DbConString">
+            <summary>
+            Connection string to database
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.#ctor(System.String)">
+            <summary>
+            Constructor <see cref="T:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1"/>
+            </summary>
+            <param name="dbConString"><see cref="P:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.DbConString"/></param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.Add(`0)">
+            <summary>
+            Implementation Add <see cref="M:DAO.DataAccess.Interfaces.ICRUD`1.Add(`0)"/>
+            </summary>
+            <param name="entity">Models.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.Delete(System.Int32)">
+            <summary>
+            Implementation Delete <see cref="M:DAO.DataAccess.Interfaces.ICRUD`1.Delete(System.Int32)"/>
+            </summary>
+            <param name="byId">Id.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.GetAll">
+            <summary>
+            Implementation GetAll <see cref="M:DAO.DataAccess.Interfaces.ICRUD`1.GetAll"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.GetByID(System.Int32)">
+            <summary>
+            Get object by ID from table in database.
+            </summary>
+            <param name="byId">Id.</param>
+            <returns>Returns object.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.Update(`0)">
+            <summary>
+            Implementation Update <see cref="M:DAO.DataAccess.Interfaces.ICRUD`1.Update(`0)"/>
+            </summary>
+            <param name="entity"></param>
+            <returns>Returns updated elements.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.SqlCommandInstance(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Creating sqlCommand.
+            </summary>
+            <param name="storedProcedure">Name of stored procedure.</param>
+            <param name="sqlConnection"> Sql connection sting</param>
+            <returns>return sql command</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.GetUpdateParameter(System.Object)">
+            <summary>
+            Private method for get property from objects and add their to list for sqlParameters
+            </summary>
+            <param name="obj"></param>
+            <returns>returns list of sqlParameters.</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.SqlCommandInstance(System.String,System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Creating sqlCommand.
+            </summary>
+            <param name="storedProcedure">Name of stored procedure.</param>
+            <param name="sqlConnection"> Sql connection sting</param>
+            <param name="sqlParamArr"> SqlParameters</param>
+            <returns>return sql command</returns>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.ADO.NetUsingReflection.ADORepository`1.GetAddParameter(System.Object)">
+            <summary>
+            Private method for get property from objects and add their to list for sqlParameters
+            </summary>
+            <param name="obj"></param>
+            <returns>returns list of sqlParameters.</returns>
+        </member>
+        <member name="T:DAO.DataAccess.Repositories.Exstension.ExtensionHelpers">
+            <summary>
+            Extension helpers for convert to list
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.Exstension.ExtensionHelpers.ToEnumerable``1(System.Data.DataTable)">
+            <summary>
+            Method to convert table to IEnumerable
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="table">Input table</param>
+            <returns>Returns IEnumerable of table</returns>
+        </member>
+        <member name="T:DAO.DataAccess.Singleton.SingletonDboAccess">
+            <summary>
+            Access to database with singleton pattern.
+            </summary>
+        </member>
+        <member name="F:DAO.DataAccess.Singleton.SingletonDboAccess._dbConnString">
+            <summary>
+            Connection string to database.
+            </summary>
+        </member>
+        <member name="F:DAO.DataAccess.Singleton.SingletonDboAccess._instance">
+            <summary>
+            Static field with singleton instance.
+            </summary>
+        </member>
+        <member name="P:DAO.DataAccess.Singleton.SingletonDboAccess.ADORepositoryFactory">
+            <summary>
+            RepositoryFactory property witch represent access to table models.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Singleton.SingletonDboAccess.#ctor">
+            <summary>
+            Private constructor with AbstractFactory parameter.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Singleton.SingletonDboAccess.GetInstance">
+            <summary>
+            Method to create singleton instance.
+            </summary>
+            <returns>Singleton instance.</returns>
+        </member>
+    </members>
+</doc>

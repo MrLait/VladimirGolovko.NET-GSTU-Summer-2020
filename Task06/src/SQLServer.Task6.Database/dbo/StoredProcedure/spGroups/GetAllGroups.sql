@@ -1,0 +1,4 @@
+﻿CREATE PROCEDURE GetAllGroups
+AS
+	SELECT * FROM Groups
+GO

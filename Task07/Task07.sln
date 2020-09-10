@@ -1,0 +1,122 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C58384CE-F995-4EA3-925C-A21AF731BDF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xlsxData", "xlsxData", "{44506C9B-DF7C-40B1-A407-DF16DC283D56}"
+	ProjectSection(SolutionItems) = preProject
+		xlsxData\AggregateOperationsSesOnePM_1.xlsx = xlsxData\AggregateOperationsSesOnePM_1.xlsx
+		xlsxData\AggregateOperationsSesOnePM_2.xlsx = xlsxData\AggregateOperationsSesOnePM_2.xlsx
+		xlsxData\AggregateOperationsSesTwoPM_1.xlsx = xlsxData\AggregateOperationsSesTwoPM_1.xlsx
+		xlsxData\AggregateOperationsSesTwoPM_2.xlsx = xlsxData\AggregateOperationsSesTwoPM_2.xlsx
+		xlsxData\AvgScoreByExaminerSesOneExamOne.xlsx = xlsxData\AvgScoreByExaminerSesOneExamOne.xlsx
+		xlsxData\AvgScoreByExaminerSesOneExamTwo.xlsx = xlsxData\AvgScoreByExaminerSesOneExamTwo.xlsx
+		xlsxData\AvgScoreByExaminerSesTwoExamOne.xlsx = xlsxData\AvgScoreByExaminerSesTwoExamOne.xlsx
+		xlsxData\AvgScoreByExaminerSesTwoExamTwo.xlsx = xlsxData\AvgScoreByExaminerSesTwoExamTwo.xlsx
+		xlsxData\AvgScoreBySpecSesOneSpecOne.xlsx = xlsxData\AvgScoreBySpecSesOneSpecOne.xlsx
+		xlsxData\AvgScoreBySpecSesOneSpecTwo.xlsx = xlsxData\AvgScoreBySpecSesOneSpecTwo.xlsx
+		xlsxData\AvgScoreBySpecSesTwoSpecOne.xlsx = xlsxData\AvgScoreBySpecSesTwoSpecOne.xlsx
+		xlsxData\AvgScoreBySpecSesTwoSpecTwo.xlsx = xlsxData\AvgScoreBySpecSesTwoSpecTwo.xlsx
+		xlsxData\AvgScoreSubjectByYearsSubjOne.xlsx = xlsxData\AvgScoreSubjectByYearsSubjOne.xlsx
+		xlsxData\AvgScoreSubjectByYearsSubjTwo.xlsx = xlsxData\AvgScoreSubjectByYearsSubjTwo.xlsx
+		xlsxData\ExcelTestsOne.xlsx = xlsxData\ExcelTestsOne.xlsx
+		xlsxData\ExcelTestsWithDouble.xlsx = xlsxData\ExcelTestsWithDouble.xlsx
+		xlsxData\SessionsResultsSesOnePM_1.xlsx = xlsxData\SessionsResultsSesOnePM_1.xlsx
+		xlsxData\SessionsResultsSesOnePM_2.xlsx = xlsxData\SessionsResultsSesOnePM_2.xlsx
+		xlsxData\SessionsResultsSesTwoPM_1.xlsx = xlsxData\SessionsResultsSesTwoPM_1.xlsx
+		xlsxData\SessionsResultsSesTwoPM_2.xlsx = xlsxData\SessionsResultsSesTwoPM_2.xlsx
+		xlsxData\StudentsExpelledSesOne20Ordered.xlsx = xlsxData\StudentsExpelledSesOne20Ordered.xlsx
+		xlsxData\StudentsExpelledSesOne30.xlsx = xlsxData\StudentsExpelledSesOne30.xlsx
+		xlsxData\StudentsExpelledSesOne40Ordered.xlsx = xlsxData\StudentsExpelledSesOne40Ordered.xlsx
+		xlsxData\StudentsExpelledSesOne50.xlsx = xlsxData\StudentsExpelledSesOne50.xlsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{A5C523E4-3941-49BA-9C35-B6ACA12DE810}"
+	ProjectSection(SolutionItems) = preProject
+		xmlDocuments\CvsReportManager.Services.xml = xmlDocuments\CvsReportManager.Services.xml
+		xmlDocuments\CvsReportManager.ServicesTests.xml = xmlDocuments\CvsReportManager.ServicesTests.xml
+		xmlDocuments\DAO.DataAccess.xml = xmlDocuments\DAO.DataAccess.xml
+		xmlDocuments\DAO.DataAccessTests.xml = xmlDocuments\DAO.DataAccessTests.xml
+		xmlDocuments\SQLServer.Task7.Domain.xml = xmlDocuments\SQLServer.Task7.Domain.xml
+		xmlDocuments\SQLServer.Task7.Presentation.xml = xmlDocuments\SQLServer.Task7.Presentation.xml
+		xmlDocuments\SQLServer.Task7.PresentationTests.xml = xmlDocuments\SQLServer.Task7.PresentationTests.xml
+	EndProjectSection
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLServer.Task7.Database", "src\SQLServer.Task7.Database\SQLServer.Task7.Database.sqlproj", "{0E8CBE6D-5D5C-43EF-867A-8B627402B862}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task7.Domain", "src\SQLServer.Task7.Domain\SQLServer.Task7.Domain.csproj", "{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.DataAccess", "src\DAO.DataAccess\DAO.DataAccess.csproj", "{406E5C30-E0C2-457F-AEE9-0057D1D13A64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task7.Presentation", "src\SQLServer.Task7.Presentation\SQLServer.Task7.Presentation.csproj", "{14226881-2B56-4E2B-85A9-75B1A12F7454}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CvsReportManager.Services", "src\CvsReportManager.Services\CvsReportManager.Services.csproj", "{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C98A94B2-8BA9-47AD-B263-55E9DA1C02DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.DataAccessTests", "tests\DAO.DataAccessTests\DAO.DataAccessTests.csproj", "{D875099A-1C9B-4A68-9033-D81D8EE7A91E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CvsReportManager.ServicesTests", "tests\CvsReportManager.ServicesTests\CvsReportManager.ServicesTests.csproj", "{242FCD6C-82AB-417C-88DC-EA4EA387A869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServer.Task7.PresentationTests", "tests\SQLServer.Task7.PresentationTests\SQLServer.Task7.PresentationTests.csproj", "{F8205E4A-1E96-4C8D-8EA4-5059D56DD229}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{406E5C30-E0C2-457F-AEE9-0057D1D13A64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{406E5C30-E0C2-457F-AEE9-0057D1D13A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{406E5C30-E0C2-457F-AEE9-0057D1D13A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{406E5C30-E0C2-457F-AEE9-0057D1D13A64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14226881-2B56-4E2B-85A9-75B1A12F7454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14226881-2B56-4E2B-85A9-75B1A12F7454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14226881-2B56-4E2B-85A9-75B1A12F7454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14226881-2B56-4E2B-85A9-75B1A12F7454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D875099A-1C9B-4A68-9033-D81D8EE7A91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D875099A-1C9B-4A68-9033-D81D8EE7A91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D875099A-1C9B-4A68-9033-D81D8EE7A91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D875099A-1C9B-4A68-9033-D81D8EE7A91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{242FCD6C-82AB-417C-88DC-EA4EA387A869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{242FCD6C-82AB-417C-88DC-EA4EA387A869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{242FCD6C-82AB-417C-88DC-EA4EA387A869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{242FCD6C-82AB-417C-88DC-EA4EA387A869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8205E4A-1E96-4C8D-8EA4-5059D56DD229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8205E4A-1E96-4C8D-8EA4-5059D56DD229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8205E4A-1E96-4C8D-8EA4-5059D56DD229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8205E4A-1E96-4C8D-8EA4-5059D56DD229}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E8CBE6D-5D5C-43EF-867A-8B627402B862} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
+		{0B05E1C3-D7B6-4BC9-903E-0DBD559B1DE7} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
+		{406E5C30-E0C2-457F-AEE9-0057D1D13A64} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
+		{14226881-2B56-4E2B-85A9-75B1A12F7454} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
+		{B6C66855-03C2-4F5D-B1C7-BD7E8D609CCC} = {C58384CE-F995-4EA3-925C-A21AF731BDF3}
+		{D875099A-1C9B-4A68-9033-D81D8EE7A91E} = {C98A94B2-8BA9-47AD-B263-55E9DA1C02DE}
+		{242FCD6C-82AB-417C-88DC-EA4EA387A869} = {C98A94B2-8BA9-47AD-B263-55E9DA1C02DE}
+		{F8205E4A-1E96-4C8D-8EA4-5059D56DD229} = {C98A94B2-8BA9-47AD-B263-55E9DA1C02DE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E83C1FB-42FB-4EB0-9899-758624C42C31}
+	EndGlobalSection
+EndGlobal
