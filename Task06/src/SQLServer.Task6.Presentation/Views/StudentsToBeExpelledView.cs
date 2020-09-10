@@ -51,14 +51,14 @@ namespace SQLServer.Task6.Presentation.Views
         /// Constructor for initialazing view.
         /// </summary>
         /// <param name="view">View parameter.</param>
-        public StudentsToBeExpelledView(IView view) : base(view) { }
+        public StudentsToBeExpelledView(ITables view) : base(view) { }
 
         /// <summary>
         /// Constructor for initialazing view and singletonDboAccess.
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
         /// <param name="view">View parameter.</param>
-        public StudentsToBeExpelledView(SingletonDboAccess singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
+        public StudentsToBeExpelledView(SingletonDboAccess singletonDboAccess, ITables view) : base(singletonDboAccess, view) { }
 
         /// <summary>
         /// Method for get view.

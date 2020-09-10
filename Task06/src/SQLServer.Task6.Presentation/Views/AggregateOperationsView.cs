@@ -44,14 +44,14 @@ namespace SQLServer.Task6.Presentation.Views
         /// Constructor for initialazing view.
         /// </summary>
         /// <param name="view">View parameter.</param>
-        public AggregateOperationsView(IView view) : base(view){}
+        public AggregateOperationsView(ITables view) : base(view){}
 
         /// <summary>
         /// Constructor for initialazing view and singletonDboAccess.
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
         /// <param name="view">View parameter.</param>
-        public AggregateOperationsView(SingletonDboAccess singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
+        public AggregateOperationsView(SingletonDboAccess singletonDboAccess, ITables view) : base(singletonDboAccess, view) { }
 
         /// <summary>
         /// Method for get view.

@@ -54,14 +54,14 @@ namespace SQLServer.Task6.Presentation.Views
         /// Constructor for initialazing view.
         /// </summary>
         /// <param name="view">View parameter.</param>
-        public SessionsResultsView(IView view) : base(view) { }
+        public SessionsResultsView(ITables view) : base(view) { }
 
         /// <summary>
         /// Constructor for initialazing view and singletonDboAccess.
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
         /// <param name="view">View parameter.</param>
-        public SessionsResultsView(SingletonDboAccess singletonDboAccess, IView view) : base(singletonDboAccess, view) { }
+        public SessionsResultsView(SingletonDboAccess singletonDboAccess, ITables view) : base(singletonDboAccess, view) { }
 
         /// <summary>
         /// Method for get view.
