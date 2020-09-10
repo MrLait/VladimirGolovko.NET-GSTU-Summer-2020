@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SQLServer.Task7.PresentationTests</name>
+    </assembly>
+    <members>
+        <member name="T:SQLServer.Task7.PresentationTests.MockBaseView">
+            <summary>
+            Mock base class to simulete data from tables.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.MockBaseView.Examiners">
+            <summary>
+            Exam schedules table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.MockBaseView.ExamSchedules">
+            <summary>
+            Exam schedules table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.MockBaseView.Specialties">
+            <summary>
+            Specialties table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.MockBaseView.Groups">
+            <summary>
+            Groups table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.MockBaseView.Sessions">
+            <summary>
+            Sessions table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.MockBaseView.SessionsResults">
+            <summary>
+            Sessions results table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.MockBaseView.Students">
+            <summary>
+            Students table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.MockBaseView.Subjects">
+            <summary>
+            Subjects table.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.MockBaseView.Mock">
+            <summary>
+            Mock property.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.PresentationTests.MockBaseView.InitialMock">
+            <summary>
+            Initialize property tables.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAggregateOperationsViewTests">
+            <summary>
+            Factory aggregate operations view.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAggregateOperationsViewTests.SessionOneGroupPM_1">
+            <summary>
+            String implementation for session one and group PM-1.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAggregateOperationsViewTests.SessionOneGroupPM_2">
+            <summary>
+            String implementation for session one and group PM-2.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAggregateOperationsViewTests.SessionTwoGroupPM_1">
+            <summary>
+            String implementation for session two and group PM-1.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAggregateOperationsViewTests.SessionTwoGroupPM_2">
+            <summary>
+            String implementation for session two and group PM-2.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAggregateOperationsViewTests.GiveToString_ThenOutIsToString">
+            <summary>
+            Parameters for tests AggregateOperationsView.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreByExaminerTests">
+            <summary>
+            Factory for AverageScoreByExaminerTests.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreByExaminerTests.SessionOneExaminerOne">
+            <summary>
+            String implementation for session one and examiner one.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreByExaminerTests.SessionOneExaminersTwo">
+            <summary>
+            String implementation for session one and examiner two.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreByExaminerTests.SessionTwoExaminerOne">
+            <summary>
+            String implementation for session two and examiner one.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreByExaminerTests.SessionTwoExaminerTwo">
+            <summary>
+            String implementation for session two and examiner two.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreByExaminerTests.GiveToString_ThenOutIsToString">
+            <summary>
+            Parameters for tests AverageScoreByExaminerView.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreBySpecialtyTests">
+            <summary>
+            Factory for AverageScoreBySpecialtyTests.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreBySpecialtyTests.SessionOneSpecialtyOne">
+            <summary>
+            String implementation for session one and specialty one.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreBySpecialtyTests.SessionOneSpecialtyTwo">
+            <summary>
+            String implementation for session one and specialty two.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreBySpecialtyTests.SessionTwoSpecialtyOne">
+            <summary>
+            String implementation for session two and specialty one.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreBySpecialtyTests.SessionTwoSpecialtyTwo">
+            <summary>
+            String implementation for session two and specialty two.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreBySpecialtyTests.GiveToString_ThenOutIsToString">
+            <summary>
+            Parameters for tests AverageScoreBySpecialtyView.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreSubjectByYearsTests">
+            <summary>
+            Factory for AverageScoreSubjectByYearsTests.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreSubjectByYearsTests.SubjectOne">
+            <summary>
+            String implementation for subject one.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreSubjectByYearsTests.SubjectTwo">
+            <summary>
+            String implementation for session two.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryAverageScoreSubjectByYearsTests.GiveToString_ThenOutIsToString">
+            <summary>
+            Parameters for tests AverageScoreSubjectByYears.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests">
+            <summary>
+            Factory sessions results view.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests.SessionOneGroupPM_1_NoOrdered">
+            <summary>
+            String implementation for session one group PM-1 and no ordered.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests.SessionOneGroupPM_2_NoOrdered">
+            <summary>
+            String implementation for session one group PM-2 and no ordered.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests.SessionTwoGroupPM_1_NoOrdered">
+            <summary>
+            String implementation for session two group PM-1 and no ordered.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests.SessionTwoGroupPM_2_NoOrdered">
+            <summary>
+            String implementation for session two group PM-2 and no ordered.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests.SessionOneGroupPM_1_Ordered">
+            <summary>
+            String implementation for session one group PM-1 and ordered.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests.SessionOneGroupPM_2_Ordered">
+            <summary>
+            String implementation for session one group PM-2 and ordered.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests.SessionTwoGroupPM_1_Ordered">
+            <summary>
+            String implementation for session two group PM-1 and ordered.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests.SessionTwoGroupPM_2_Ordered">
+            <summary>
+            String implementation for session two group PM-2 and ordered.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests.GiveToString_WhenNoOrdered_ThenOutIsToString">
+            <summary>
+            Parameters for tests MyFactorySessionsResultsView
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactorySessionsResultsViewTests.GiveToString_WhenOrderByDescendingFirstNameAndValue_ThenOutIsToStringOrderBy">
+            <summary>
+            Parameters for tests MyFactorySessionsResultsView and ordered.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryStudentsToBeExpelledViewTests">
+            <summary>
+            Factory students to be expelled view.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryStudentsToBeExpelledViewTests.SessionOneGrade30">
+            <summary>
+            String implementation for session one and grade 30.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryStudentsToBeExpelledViewTests.SessionOneGrade50">
+            <summary>
+            String implementation for session one and grade 50.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryStudentsToBeExpelledViewTests.SessionOneGrade20Ordered">
+            <summary>
+            String implementation for session one and grade 20 and ordered.
+            </summary>
+        </member>
+        <member name="F:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryStudentsToBeExpelledViewTests.SessionOneGrade40Ordered">
+            <summary>
+            String implementation for session one and grade 40 and ordered.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryStudentsToBeExpelledViewTests.GiveToString_WhenNoOrdered_ThenOutIsToString">
+            <summary>
+            Parameters for tests StudentsToBeExpelledView
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task7.PresentationTests.TestCaseSources.MyFactoryStudentsToBeExpelledViewTests.GiveToString_WhenOrderByGroupNameAndStudentId_ThenOutIsToStringOrderByGroupNameAndStudentId">
+            <summary>
+            Parameters for tests StudentsToBeExpelledView and ordered.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.Tests.AggregateOperationsViewTests">
+            <summary>
+            Test cases to AggregateOperationsView.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AggregateOperationsViewTests.GiveGetView_WhenMaxValue_ThenOutIsMaxValue(System.Int32,System.String,System.Int32)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AggregateOperationsViewTests.GiveGetView_WhenMinValue_ThenOutIsMinValue(System.Int32,System.String,System.Int32)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AggregateOperationsViewTests.GiveGetView_WhenAverageValue_ThenOutIsAverageValue(System.Int32,System.String,System.Double)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AggregateOperationsViewTests.GiveGetView_WhenSessionName_ThenOutIsSessionName(System.Int32,System.String,System.Int32)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AggregateOperationsViewTests.GiveGetView_WhenGroupName_ThenOutIsGroupName(System.Int32,System.String,System.String)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AggregateOperationsViewTests.GiveToString_ThenOutIsToString(System.Int32,System.String)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="groupName">Group name.</param>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.Tests.AverageScoreByExaminerTests">
+            <summary>
+            Test cases for Average score by examiner.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AverageScoreByExaminerTests.GiveGetView_WhenAverageValue_ThenOutIsAverageValue(System.Int32,System.String,System.String,System.String,System.Double)">
+            <summary>
+            Tests for Average score by examiner.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="firstName">First name.</param>
+            <param name="lastName">Last name.</param>
+            <param name="middleName">Middle name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AverageScoreByExaminerTests.GiveToString_ThenOutIsToString(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            /// <param name="firstName">First name.</param>
+            <param name="lastName">Last name.</param>
+            <param name="middleName">Middle name.</param>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.Tests.AverageScoreBySpecialtyTests">
+            <summary>
+            Test cases for Average score by specialty.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AverageScoreBySpecialtyTests.GiveGetView_WhenAverageValue_ThenOutIsAverageValue(System.Int32,System.String,System.Double)">
+            <summary>
+            Tests for Average score by specialty.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="specialtyName">Specialty name.</param>
+            <param name="expected">Expected.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AverageScoreBySpecialtyTests.GiveToString_ThenOutIsToString(System.Int32,System.String)">
+            <summary>
+            Tests for Average score by specialty.
+            </summary>
+            <param name="sessionName">Session name.</param>
+            <param name="specialtyName">Specialty name.</param>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.Tests.AverageScoreSubjectByYearsTests">
+            <summary>
+            Test cases for Average score subject by years.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AverageScoreSubjectByYearsTests.GiveGetView_WhenAverageValue_ThenOutIsAverageValue(System.String,System.Double,System.Double,System.Double)">
+            <summary>
+            Tests for Average score by examiner.
+            </summary>
+            <param name="subjectName">Subject name.</param>
+            <param name="expectedYear18">Expected average value for year 2018.</param>
+            <param name="expectedYear19">Expected average value for year 2019.</param>
+            <param name="expectedYear20">Expected average value for year 2020.</param>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.AverageScoreSubjectByYearsTests.GiveToString_ThenOutIsToString(System.String)">
+            <summary>
+            Test for AggregateOperations.
+            </summary>
+            <param name="subjectName">Subject name.</param>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.Tests.SessionsResultsViewTests">
+            <summary>
+            Test cases for Sessions results view. 
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.SessionsResultsViewTests.GiveToString_WhenNoOrdered_ThenOutIsToString(System.Int32,System.String)">
+            <summary>
+            Test for sessions results view no ordered.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="groupName">Group name parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.SessionsResultsViewTests.GiveToString_WhenOrderByDescendingFirstNameAndValue_ThenOutIsToStringOrderBy(System.Int32,System.String)">
+            <summary>
+            Test for sessions results view ordered by descending first name and value.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="groupName">Group name parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="T:SQLServer.Task7.Presentation.Views.Tests.StudentsToBeExpelledViewTests">
+            <summary>
+            Test cases for Students to be expelled.
+            </summary>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.StudentsToBeExpelledViewTests.GiveToString_WhenNoOrdered_ThenOutIsToString(System.Int32,System.Int32)">
+            <summary>
+            Test for students to be expelled view no ordered.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="minPassingGrade">Minimum passing grade parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="M:SQLServer.Task7.Presentation.Views.Tests.StudentsToBeExpelledViewTests.GiveToString_WhenOrderByGroupNameAndStudentId_ThenOutIsToStringOrderByGroupNameAndStudentId(System.Int32,System.Int32)">
+            <summary>
+            Test for students to be expelled view no ordered.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="minPassingGrade">Minimum passing grade parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+    </members>
+</doc>

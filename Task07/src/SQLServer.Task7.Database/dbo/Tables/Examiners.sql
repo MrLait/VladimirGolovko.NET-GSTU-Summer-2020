@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Examiners]
+(
+	[Id]        INT IDENTITY(1,1)	PRIMARY KEY,
+	FirstName	NVARCHAR(50)		NOT NULL,
+	LastName	NVARCHAR(50)		NOT NULL,
+	MiddleName	NVARCHAR(50)		NOT NULL
+)

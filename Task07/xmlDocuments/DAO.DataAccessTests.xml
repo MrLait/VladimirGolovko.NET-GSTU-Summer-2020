@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DAO.DataAccessTests</name>
+    </assembly>
+    <members>
+        <member name="T:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests">
+            <summary>
+            Test cases for LinqToSqlRepositoryFactory class.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.RepositoryFactoryInit">
+            <summary>
+            Initialize _linqToSqlRepositoryFactory.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateExamSchedules_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateExamSchedules_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateGroups_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateGroups_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateSessions_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateSessions_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateSessionsResults_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateSessionsResults_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateStudents_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateStudents_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateSubjects_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateSubjects_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateExaminers_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateExaminers_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateSpecialties_ThenOutIsCheckTypeIsTrue(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Factory.Tests.LinqToSqlRepositoryFactoryTests.GivenCreateSpecialties_ThenOutIsCheckTypeIsFalse(System.Boolean)">
+            <summary>
+            Checking the creation of the expected factory method type.
+            </summary>
+            <param name="expected">Expected bool.</param>
+        </member>
+        <member name="T:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests">
+            <summary>
+            Test cases for LinqToSqlRepository.
+            </summary>
+        </member>
+        <member name="F:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.specialtiesRepository">
+            <summary>
+            Field with group repository.
+            </summary>
+        </member>
+        <member name="F:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.specialties">
+            <summary>
+            Field with specialties.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.RepositoryFactoryInit">
+            <summary>
+            Initialize repository.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenAdd_ThenOutIsActualName(System.String)">
+            <summary>
+            Test cases for Add.
+            </summary>
+            <param name="actualName">Name parameter.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenGetAll_WhenAddedSpecialties_ThenOutGetThisSpecialties(System.String)">
+            <summary>
+            Test cases for GetAll method.
+            </summary>
+            <param name="actualName"> Name parameter.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenGetByID_WhenAdded_ThenOutGetThisSpecialtiesById(System.String)">
+            <summary>
+            Test cases for GetById method.
+            </summary>
+            <param name="expectedName"> Expected name.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenUpdate_WhenAdded_ThenOutUpdateThisSpecialties(System.String,System.String)">
+            <summary>
+            Test cases Update method.
+            </summary>
+            <param name="name">Name parameter.</param>
+            <param name="actualUpdateName">Actual update name.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenDelete_WhenAddedOneSpecialties_ThenOutIsDelete(System.String)">
+            <summary>
+            Test cases for Delete method.
+            </summary>
+            <param name="name">Name.</param>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenGetByID_WhenArgumentIsNotFound_ThenOutIsNull">
+            <summary>
+            Given GetById for checkin on null.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenUpdate_WhenArgumentIsNotFound_ThenOutIsArgumentNullException">
+            <summary>
+            Given Update for checkin on null.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenAdd_WhenArgumentIsNull_ThenOutIsArgumentNullException">
+            <summary>
+            Given add for checkin on ArgumentNullException. 
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenAdd_WhenObjectIsEmpty_ThenOutIsArgumentException">
+            <summary>
+            Given add for checkin on ArgumentException. 
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenDelete_WhenArgumentIsZero_ThenOutIsArgumentNullException">
+            <summary>
+            Give Delete for checkin on ArgumentNullException.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenGetByID_WhenArgumentIsZero_ThenOutIsArgumentNullException">
+            <summary>
+            Given GetById for checkin on ArgumentNullException.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Repositories.LINQtoSQLRepositories.Tests.LinqToSqlRepositoryTests.GivenUpdate_WhenArgumentIsNull_ThenOutIsArgumentNullException">
+            <summary>
+            Given Update for checkin on ArgumentNullException. 
+            </summary>
+        </member>
+        <member name="T:DAO.DataAccess.Singleton.Tests.SingletonLinqToSqlTests">
+            <summary>
+            Test cases for Singleton linq to sql.
+            </summary>
+        </member>
+        <member name="M:DAO.DataAccess.Singleton.Tests.SingletonLinqToSqlTests.GivenGetInstance_ThenOutIsNotNullInstance(System.Boolean)">
+            <summary>
+            Checkin to create instance.
+            </summary>
+            <param name="expectedIsInstanceCreate">Is instance created?</param>
+        </member>
+    </members>
+</doc>
