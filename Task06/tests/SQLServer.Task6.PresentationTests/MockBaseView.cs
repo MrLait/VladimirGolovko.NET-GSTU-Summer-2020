@@ -45,7 +45,7 @@ namespace SQLServer.Task6.PresentationTests
         /// <summary>
         /// Mock property.
         /// </summary>
-        public Mock<IView> Mock { get; set; }
+        public Mock<ITables> Mock { get; set; }
 
         /// <summary>
         /// Initialize property tables.
@@ -191,7 +191,7 @@ namespace SQLServer.Task6.PresentationTests
                 new Subjects(){ Id = 4, Name = "Subject-2.0", IsAssessment = "True"}
             };
 
-            Mock = new Mock<IView>();
+            Mock = new Mock<ITables>();
             Mock.Setup(x => x.ExamSchedules).Returns(ExamSchedules);
             Mock.Setup(x => x.Groups).Returns(Groups);
             Mock.Setup(x => x.Sessions).Returns(Sessions);

@@ -6,36 +6,36 @@ namespace SQLServer.Task6.Presentation.Interfaces
     /// <summary>
     /// Interface with tables contract.
     /// </summary>
-    public interface IView
+    public interface ITables
     {
         /// <summary>
         /// Groups table.
         /// </summary>
-        IEnumerable<Groups> Groups { get; }
+        IEnumerable<Groups> Groups { get; set; }
 
         /// <summary>
         /// Sessions table.
         /// </summary>
-        IEnumerable<Sessions> Sessions { get; }
+        IEnumerable<Sessions> Sessions { get; set; }
 
         /// <summary>
         /// Students table.
         /// </summary>
-        IEnumerable<Students> Students { get; }
+        IEnumerable<Students> Students { get; set; }
 
         /// <summary>
         /// Exam schedules table.
         /// </summary>
-        IEnumerable<ExamSchedules> ExamSchedules { get; }
+        IEnumerable<ExamSchedules> ExamSchedules { get; set; }
 
         /// <summary>
         /// Sessions results table.
         /// </summary>
-        IEnumerable<SessionsResults> SessionsResults { get; }
+        IEnumerable<SessionsResults> SessionsResults { get; set; }
 
         /// <summary>
         /// Subjects table.
         /// </summary>
-        IEnumerable<Subjects> Subjects { get; }
+        IEnumerable<Subjects> Subjects { get; set; }
     }
 }

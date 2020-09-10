@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IView.cs" />
+    <Compile Include="Interfaces\ITables.cs" />
+    <Compile Include="Models\Tables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\AggregateOperationsView.cs" />
     <Compile Include="Views\BaseView.cs" />

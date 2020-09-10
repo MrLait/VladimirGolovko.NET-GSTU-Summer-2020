@@ -1,5 +1,6 @@
 ﻿using DAO.DataAccess.Singleton;
 using SQLServer.Task6.Presentation.Interfaces;
+using SQLServer.Task6.Presentation.Models;
 
 namespace SQLServer.Task6.Presentation.Views
 {
@@ -16,7 +17,7 @@ namespace SQLServer.Task6.Presentation.Views
         /// <summary>
         /// Tables for view.
         /// </summary>
-        protected IView View;
+        protected ITables Tables;
 
         /// <summary>
         /// Empty constructor.
@@ -26,14 +27,26 @@ namespace SQLServer.Task6.Presentation.Views
         /// <summary>
         /// Initial view.
         /// </summary>
-        /// <param name="view">View property.</param>
-        public BaseView(IView view) : this() => View = view;
+        /// <param name="tables">Tables property.</param>
+        public BaseView(ITables tables) : this() => Tables = tables;
 
         /// <summary>
         /// Iitialazing access to database and view.
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
-        /// <param name="view">View parameter.</param>
-        public BaseView(SingletonDboAccess singletonDboAccess, IView view) : this(view) => SingletonDboAccess = singletonDboAccess;
+        public BaseView(SingletonDboAccess singletonDboAccess)
+        {
+            SingletonDboAccess = singletonDboAccess;
+
+            Tables = new Tables()
+            {
+                Groups = SingletonDboAccess.ADORepositoryFactory.CreateGroups().GetAll(),
+                Sessions = SingletonDboAccess.ADORepositoryFactory.CreateSessions().GetAll(),
+                Students = SingletonDboAccess.ADORepositoryFactory.CreateStudents().GetAll(),
+                ExamSchedules = SingletonDboAccess.ADORepositoryFactory.CreateExamSchedules().GetAll(),
+                SessionsResults = SingletonDboAccess.ADORepositoryFactory.CreateSessionsResults().GetAll(),
+                Subjects = SingletonDboAccess.ADORepositoryFactory.CreateSubjects().GetAll()
+            };
+        }
     }
 }
