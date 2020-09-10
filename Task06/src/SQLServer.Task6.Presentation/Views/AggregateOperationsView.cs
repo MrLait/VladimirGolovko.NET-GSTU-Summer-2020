@@ -50,8 +50,7 @@ namespace SQLServer.Task6.Presentation.Views
         /// Constructor for initialazing view and singletonDboAccess.
         /// </summary>
         /// <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
-        /// <param name="view">View parameter.</param>
-        public AggregateOperationsView(SingletonDboAccess singletonDboAccess, ITables view) : base(singletonDboAccess, view) { }
+        public AggregateOperationsView(SingletonDboAccess singletonDboAccess) : base(singletonDboAccess) { }
 
         /// <summary>
         /// Method for get view.
@@ -62,16 +61,16 @@ namespace SQLServer.Task6.Presentation.Views
         public AggregateOperationsView GetView(string sessionName, string groupName)
         {
             var aggregateValue =
-                from itemSessionsResult in View.SessionsResults
-                join itemStudents in View.Students
+                from itemSessionsResult in Tables.SessionsResults
+                join itemStudents in Tables.Students
                     on itemSessionsResult.StudentsId equals itemStudents.Id
-                join itemExamShedules in View.ExamSchedules
+                join itemExamShedules in Tables.ExamSchedules
                     on itemSessionsResult.ExamSchedulesId equals itemExamShedules.Id
-                join itemGroups in View.Groups
+                join itemGroups in Tables.Groups
                     on itemStudents.GroupsId equals itemGroups.Id
-                join itemSessions in View.Sessions
+                join itemSessions in Tables.Sessions
                     on itemExamShedules.SessionsId equals itemSessions.Id
-                join itemSubjects in View.Subjects
+                join itemSubjects in Tables.Subjects
                     on itemExamShedules.SubjectsId equals itemSubjects.Id
                 where itemSessions.Name == sessionName & itemGroups.Name == groupName & itemSubjects.IsAssessment == "True"
                     & string.IsNullOrEmpty(itemSessionsResult.Value) != true

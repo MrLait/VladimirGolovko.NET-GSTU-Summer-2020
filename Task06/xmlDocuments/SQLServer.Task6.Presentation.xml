@@ -4,39 +4,74 @@
         <name>SQLServer.Task6.Presentation</name>
     </assembly>
     <members>
-        <member name="T:SQLServer.Task6.Presentation.Interfaces.IView">
+        <member name="T:SQLServer.Task6.Presentation.Interfaces.ITables">
             <summary>
             Interface with tables contract.
             </summary>
         </member>
-        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.Groups">
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.ITables.Groups">
             <summary>
             Groups table.
             </summary>
         </member>
-        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.Sessions">
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.ITables.Sessions">
             <summary>
             Sessions table.
             </summary>
         </member>
-        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.Students">
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.ITables.Students">
             <summary>
             Students table.
             </summary>
         </member>
-        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.ExamSchedules">
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.ITables.ExamSchedules">
             <summary>
             Exam schedules table.
             </summary>
         </member>
-        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.SessionsResults">
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.ITables.SessionsResults">
             <summary>
             Sessions results table.
             </summary>
         </member>
-        <member name="P:SQLServer.Task6.Presentation.Interfaces.IView.Subjects">
+        <member name="P:SQLServer.Task6.Presentation.Interfaces.ITables.Subjects">
             <summary>
             Subjects table.
+            </summary>
+        </member>
+        <member name="T:SQLServer.Task6.Presentation.Models.Tables">
+            <summary>
+            Tables from database.
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Models.Tables.Groups">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Models.Tables.Sessions">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Models.Tables.Students">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Models.Tables.ExamSchedules">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Models.Tables.SessionsResults">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:SQLServer.Task6.Presentation.Models.Tables.Subjects">
+            <summary>
+            <inheritdoc/>
             </summary>
         </member>
         <member name="T:SQLServer.Task6.Presentation.Views.AggregateOperationsView">
@@ -74,18 +109,17 @@
             Constructur without parameters.
             </summary>
         </member>
-        <member name="M:SQLServer.Task6.Presentation.Views.AggregateOperationsView.#ctor(SQLServer.Task6.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task6.Presentation.Views.AggregateOperationsView.#ctor(SQLServer.Task6.Presentation.Interfaces.ITables)">
             <summary>
             Constructor for initialazing view.
             </summary>
             <param name="view">View parameter.</param>
         </member>
-        <member name="M:SQLServer.Task6.Presentation.Views.AggregateOperationsView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task6.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task6.Presentation.Views.AggregateOperationsView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess)">
             <summary>
             Constructor for initialazing view and singletonDboAccess.
             </summary>
             <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
-            <param name="view">View parameter.</param>
         </member>
         <member name="M:SQLServer.Task6.Presentation.Views.AggregateOperationsView.GetView(System.String,System.String)">
             <summary>
@@ -112,7 +146,7 @@
             Acceess to database.
             </summary>
         </member>
-        <member name="F:SQLServer.Task6.Presentation.Views.BaseView.View">
+        <member name="F:SQLServer.Task6.Presentation.Views.BaseView.Tables">
             <summary>
             Tables for view.
             </summary>
@@ -122,18 +156,17 @@
             Empty constructor.
             </summary>
         </member>
-        <member name="M:SQLServer.Task6.Presentation.Views.BaseView.#ctor(SQLServer.Task6.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task6.Presentation.Views.BaseView.#ctor(SQLServer.Task6.Presentation.Interfaces.ITables)">
             <summary>
             Initial view.
             </summary>
-            <param name="view">View property.</param>
+            <param name="tables">Tables property.</param>
         </member>
-        <member name="M:SQLServer.Task6.Presentation.Views.BaseView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task6.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task6.Presentation.Views.BaseView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess)">
             <summary>
             Iitialazing access to database and view.
             </summary>
             <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
-            <param name="view">View parameter.</param>
         </member>
         <member name="T:SQLServer.Task6.Presentation.Views.SessionsResultsView">
             <summary>
@@ -180,18 +213,17 @@
             Constructur without parameters.
             </summary>
         </member>
-        <member name="M:SQLServer.Task6.Presentation.Views.SessionsResultsView.#ctor(SQLServer.Task6.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task6.Presentation.Views.SessionsResultsView.#ctor(SQLServer.Task6.Presentation.Interfaces.ITables)">
             <summary>
             Constructor for initialazing view.
             </summary>
             <param name="view">View parameter.</param>
         </member>
-        <member name="M:SQLServer.Task6.Presentation.Views.SessionsResultsView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task6.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task6.Presentation.Views.SessionsResultsView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess)">
             <summary>
             Constructor for initialazing view and singletonDboAccess.
             </summary>
             <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
-            <param name="view">View parameter.</param>
         </member>
         <member name="M:SQLServer.Task6.Presentation.Views.SessionsResultsView.GetView(System.String,System.String)">
             <summary>
@@ -248,18 +280,17 @@
             Constructur without parameters.
             </summary>
         </member>
-        <member name="M:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.#ctor(SQLServer.Task6.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.#ctor(SQLServer.Task6.Presentation.Interfaces.ITables)">
             <summary>
             Constructor for initialazing view.
             </summary>
             <param name="view">View parameter.</param>
         </member>
-        <member name="M:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess,SQLServer.Task6.Presentation.Interfaces.IView)">
+        <member name="M:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.#ctor(DAO.DataAccess.Singleton.SingletonDboAccess)">
             <summary>
             Constructor for initialazing view and singletonDboAccess.
             </summary>
             <param name="singletonDboAccess">SingletonDboAccess parameter.</param>
-            <param name="view">View parameter.</param>
         </member>
         <member name="M:SQLServer.Task6.Presentation.Views.StudentsToBeExpelledView.GetView(System.String,System.Int32)">
             <summary>
