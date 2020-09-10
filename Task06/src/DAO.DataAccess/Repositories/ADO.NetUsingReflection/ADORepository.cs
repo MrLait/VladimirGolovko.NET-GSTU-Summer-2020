@@ -43,21 +43,22 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
 
             using (SqlConnection sqlConnection = new SqlConnection(DbConString))
             {
-                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection); //using
-                
-                try
+                using (SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection))
                 {
-                    sqlCommand.Parameters.AddRange(GetAddParameter(entity).ToArray());
-                    sqlConnection.Open();
-                    sqlCommand.ExecuteScalar();
-                }
-                catch (SqlException sqlEx)
-                {
-                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
+                    try
+                    {
+                        sqlCommand.Parameters.AddRange(GetAddParameter(entity).ToArray());
+                        sqlConnection.Open();
+                        sqlCommand.ExecuteScalar();
+                    }
+                    catch (SqlException sqlEx)
+                    {
+                        throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception(ex.Message);
+                    }
                 }
             }
         }
@@ -76,20 +77,21 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
 
             using (SqlConnection sqlConnection = new SqlConnection(DbConString))
             {
-                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection, new SqlParameter[] { new SqlParameter("Id", byId) });
-
-                try
+                using (SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection, new SqlParameter[] { new SqlParameter("Id", byId) }))
                 {
-                    sqlConnection.Open();
-                    sqlCommand.ExecuteNonQuery();
-                }
-                catch (SqlException sqlEx)
-                {
-                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
+                    try
+                    {
+                        sqlConnection.Open();
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                    catch (SqlException sqlEx)
+                    {
+                        throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
                 }
             }
         }
@@ -105,22 +107,24 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
 
             using (SqlConnection sqlConnection = new SqlConnection(DbConString))
             {
-                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection);
-                SqlDataAdapter adpt = new SqlDataAdapter(sqlCommand); //using
-                
-                try
+                using (SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection))
                 {
-                    DataSet ds = new DataSet();
-                    adpt.Fill(ds);
-                    return ds.Tables[0].ToEnumerable<T>();
-                }
-                catch (SqlException sqlEx)
-                {
-                    throw new ArgumentException("Some Error occured at database, if error in stored procedure. See inner exception for more detail exception." + storedProcedure, sqlEx);
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
+                    SqlDataAdapter adpt = new SqlDataAdapter(sqlCommand);
+
+                    try
+                    {
+                        DataSet ds = new DataSet();
+                        adpt.Fill(ds);
+                        return ds.Tables[0].ToEnumerable<T>();
+                    }
+                    catch (SqlException sqlEx)
+                    {
+                        throw new ArgumentException("Some Error occured at database, if error in stored procedure. See inner exception for more detail exception." + storedProcedure, sqlEx);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception(ex.Message);
+                    }
                 }
             }
         }
@@ -140,22 +144,24 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
 
             using (SqlConnection sqlConnection = new SqlConnection(DbConString))
             {
-                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection, new SqlParameter[] { new SqlParameter("Id", byId) });
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                using (SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection, new SqlParameter[] { new SqlParameter("Id", byId) }))
+                {
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
 
-                try
-                {
-                    DataSet ds = new DataSet();
-                    sqlDataAdapter.Fill(ds);
-                    return ds.Tables[0].ToEnumerable<T>().ToList().SingleOrDefault(); 
-                }
-                catch (SqlException sqlEx)
-                {
-                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
+                    try
+                    {
+                        DataSet ds = new DataSet();
+                        sqlDataAdapter.Fill(ds);
+                        return ds.Tables[0].ToEnumerable<T>().ToList().SingleOrDefault();
+                    }
+                    catch (SqlException sqlEx)
+                    {
+                        throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception(ex.Message);
+                    }
                 }
             }
         }
@@ -175,24 +181,26 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
 
             using (SqlConnection sqlConnection = new SqlConnection(DbConString))
             {
-                SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection);
-                sqlCommand.Parameters.AddRange(GetUpdateParameter(entity).ToArray());
+                using (SqlCommand sqlCommand = SqlCommandInstance(storedProcedure, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddRange(GetUpdateParameter(entity).ToArray());
 
-                SqlDataAdapter adpt = new SqlDataAdapter(sqlCommand);
-                DataSet ds = new DataSet();
+                    SqlDataAdapter adpt = new SqlDataAdapter(sqlCommand);
+                    DataSet ds = new DataSet();
 
-                try
-                {
-                    adpt.Fill(ds);
-                    return ds.Tables[0].ToEnumerable<T>().ToList().SingleOrDefault();
-                }
-                catch (SqlException sqlEx)
-                {
-                    throw new ArgumentException("Class Name and Table name must be same for this method. See inner exception", sqlEx);
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
+                    try
+                    {
+                        adpt.Fill(ds);
+                        return ds.Tables[0].ToEnumerable<T>().ToList().SingleOrDefault();
+                    }
+                    catch (SqlException sqlEx)
+                    {
+                        throw new ArgumentException("Class Name and Table name must be same for this method. See inner exception", sqlEx);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
                 }
             }
         }
@@ -256,17 +264,12 @@ namespace DAO.DataAccess.Repositories.ADO.NetUsingReflection
                 if (f.GetCustomAttributes(false).Length != 0)
                 {
                     if (f.GetCustomAttributesData()[0].AttributeType.Name != "KeyAttribute") //f.GetCustomAttributes(false).Length == 0 && 
-                    {
                         sqlParams.Add(new SqlParameter(f.Name, f.GetValue(obj, null)));
-                    }
                 }
                 else
-                {
                     sqlParams.Add(new SqlParameter(f.Name, f.GetValue(obj, null)));
-                }
             }
             return sqlParams;
         }
-
     }
 }

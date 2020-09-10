@@ -7,7 +7,10 @@ namespace DAO.DataAccess.Singleton
     /// </summary>
     public sealed class SingletonDboAccess
     {
-        private static string _dbConnString = @"Data Source=LAIT-PC\SQLEXPRESS;Initial Catalog=SQLServer.Task6.Database;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        /// <summary>
+        /// Connection string to database.
+        /// </summary>
+        private static readonly string _dbConnString = @"Data Source=LAIT-PC\SQLEXPRESS;Initial Catalog=SQLServer.Task6.Database;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         /// <summary>
         /// Static field with singleton instance.
