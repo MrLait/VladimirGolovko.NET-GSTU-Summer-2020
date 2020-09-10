@@ -21,7 +21,7 @@ namespace DAO.DataAccess.Singleton.Tests
             SingletonDboAccess singleton = SingletonDboAccess.GetInstance(new ADORepositoryFactory(DbConnString));
             var actualIsInstanceCreate = false;
             //Act
-            if (singleton.RepositoryFactory != null)
+            if (singleton.ADORepositoryFactory != null)
                 actualIsInstanceCreate = true;
             //Assert
             Assert.AreEqual(expectedIsInstanceCreate, actualIsInstanceCreate);
